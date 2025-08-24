@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://xkejdsqg7rww"]
+
+[ext_resource type="Script" uid="uid://c1ss1ymytve7t" path="res://Scripts/crab-test.gd" id="1_cchfa"]
+[ext_resource type="Texture2D" uid="uid://dh8geog4m7emt" path="res://Sprites/crab_mc.png" id="2_6go4b"]
+[ext_resource type="Texture2D" uid="uid://bpcd8fdqms0bh" path="res://Sprites/under_sprite.png" id="3_s0xu5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_cchfa")
+
+[node name="Crab_MC" type="Sprite2D" parent="."]
+position = Vector2(152, 116)
+texture = ExtResource("2_6go4b")
+
+[node name="UnderSprite" type="Sprite2D" parent="Crab_MC"]
+show_behind_parent = true
+position = Vector2(0, 7)
+texture = ExtResource("3_s0xu5")

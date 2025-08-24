@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://dixapswls2xjs"]
+
+[ext_resource type="Texture2D" uid="uid://dh8geog4m7emt" path="res://Sprites/crab_mc.png" id="1_xfk5q"]
+[ext_resource type="Texture2D" uid="uid://bpcd8fdqms0bh" path="res://Sprites/under_sprite.png" id="2_7p6j4"]
+[ext_resource type="Script" uid="uid://fhis8wfbrrev" path="res://Scripts/player_(crab).gd" id="2_6444e"]
+[ext_resource type="PackedScene" uid="uid://dvd2gv1fmuyk" path="res://Scenes/enemy-warble.tscn" id="3_xfk5q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbghi"]
+size = Vector2(230, 160)
+
+[node name="Level_1" type="Node2D"]
+
+[node name="Player (Crab)" type="Sprite2D" parent="."]
+position = Vector2(123, 82)
+texture = ExtResource("1_xfk5q")
+script = ExtResource("2_6444e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player (Crab)"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_hbghi")
+
+[node name="UnderSprite" type="Sprite2D" parent="Player (Crab)"]
+show_behind_parent = true
+position = Vector2(0, 4)
+texture = ExtResource("2_7p6j4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="e_warble" parent="." instance=ExtResource("3_xfk5q")]
+position = Vector2(312, 2)
+
+[node name="e_warble2" parent="." instance=ExtResource("3_xfk5q")]
+position = Vector2(415, 7)
+
+[node name="e_warble3" parent="." instance=ExtResource("3_xfk5q")]
+position = Vector2(508, 9)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvd2gv1fmuyk"]
+
+[ext_resource type="Texture2D" uid="uid://kj07jmvw4ye" path="res://Sprites/warble-enemy.png" id="1_l5kg2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l5kg2"]
+size = Vector2(67.4117, 58.6441)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Warble-enemy" type="Sprite2D" parent="."]
+position = Vector2(4, -3)
+rotation = 0.261799
+texture = ExtResource("1_l5kg2")
+
+[node name="Warble-speed" type="Sprite2D" parent="Warble-enemy"]
+modulate = Color(0.31802, 0.31802, 0.31802, 1)
+show_behind_parent = true
+position = Vector2(-8.69333, 2.32937)
+texture = ExtResource("1_l5kg2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Warble-enemy"]
+position = Vector2(-11.1614, 0.968405)
+shape = SubResource("RectangleShape2D_l5kg2")
