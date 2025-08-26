@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://dixapswls2xjs"]
+[gd_scene load_steps=10 format=3 uid="uid://dixapswls2xjs"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_8ffim"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_7p6j4"]
+[ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="3_lsmp6"]
 [ext_resource type="PackedScene" uid="uid://dvd2gv1fmuyk" path="res://Scenes/enemy-warble.tscn" id="3_xfk5q"]
 [ext_resource type="Texture2D" uid="uid://ml8y1vr8k0jr" path="res://Sprites/ground.png" id="4_7p6j4"]
-[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://bg_music.mp3" id="5_6444e"]
+[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Other/bg_music.mp3" id="5_6444e"]
+[ext_resource type="FontFile" uid="uid://u14b3iosdcdh" path="res://Other/Silkscreen-Bold.ttf" id="6_lsmp6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ffim"]
 size = Vector2(1154, 125.5)
@@ -16,7 +18,78 @@ size = Vector2(133.5, 3126)
 position = Vector2(0, -5)
 
 [node name="Player" parent="." instance=ExtResource("1_8ffim")]
-z_index = 1
+z_index = 2
+
+[node name="border" type="StaticBody2D" parent="." groups=["border"]]
+position = Vector2(-1, 379)
+
+[node name="Bottom" type="CollisionShape2D" parent="border" groups=["border"]]
+position = Vector2(1, -110.25)
+shape = SubResource("RectangleShape2D_8ffim")
+
+[node name="Top" type="CollisionShape2D" parent="border" groups=["border"]]
+position = Vector2(3, -3172)
+shape = SubResource("RectangleShape2D_8ffim")
+
+[node name="Left" type="CollisionShape2D" parent="border" groups=["border"]]
+position = Vector2(-513.75, -1616)
+shape = SubResource("RectangleShape2D_7p6j4")
+
+[node name="Left2" type="CollisionShape2D" parent="border" groups=["border"]]
+position = Vector2(517, -1609)
+shape = SubResource("RectangleShape2D_7p6j4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("3_7p6j4")
+
+[node name="info" parent="." instance=ExtResource("3_lsmp6")]
+
+[node name="Ground" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(2, -1342)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("4_7p6j4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_6444e")
+autoplay = true
+max_distance = 2e+08
+playback_type = 1
+parameters/looping = true
+
+[node name="Welcome" type="RichTextLabel" parent="."]
+z_as_relative = false
+offset_left = -454.0
+offset_top = -153.0
+offset_right = 46.0
+offset_bottom = -25.0
+theme_override_fonts/bold_font = ExtResource("6_lsmp6")
+bbcode_enabled = true
+text = "[font_size=30]Hello, Krabby!
+Use the arrow keys to move
+[/font_size]"
+tab_size = 8
+horizontal_alignment = 1
+
+[node name="Attack_Instructions" type="RichTextLabel" parent="."]
+offset_left = -122.0
+offset_top = -555.0
+offset_right = 386.0
+offset_bottom = -425.0
+bbcode_enabled = true
+text = "[font_size=30]Go over to the yellow creatures (warbles) and press A to attack.[/font_size]"
+horizontal_alignment = 1
+
+[node name="End_of_Lvl" type="RichTextLabel" parent="."]
+offset_left = -258.0
+offset_top = -2717.0
+offset_right = 267.0
+offset_bottom = -2383.0
+bbcode_enabled = true
+text = "[font_size=50]You've reached the end of floor 1
+
+Congrats![/font_size]"
+horizontal_alignment = 1
 
 [node name="e_warble" parent="." instance=ExtResource("3_xfk5q")]
 position = Vector2(-241, -503)
@@ -26,56 +99,6 @@ position = Vector2(251, -707)
 
 [node name="e_warble3" parent="." instance=ExtResource("3_xfk5q")]
 position = Vector2(-243, -924)
-
-[node name="border" type="StaticBody2D" parent="."]
-position = Vector2(-1, 379)
-
-[node name="Bottom" type="CollisionShape2D" parent="border"]
-position = Vector2(1, -110.25)
-shape = SubResource("RectangleShape2D_8ffim")
-
-[node name="Top" type="CollisionShape2D" parent="border"]
-position = Vector2(3, -3172)
-shape = SubResource("RectangleShape2D_8ffim")
-
-[node name="Left" type="CollisionShape2D" parent="border"]
-position = Vector2(-513.75, -1616)
-shape = SubResource("RectangleShape2D_7p6j4")
-
-[node name="Left2" type="CollisionShape2D" parent="border"]
-position = Vector2(517, -1609)
-shape = SubResource("RectangleShape2D_7p6j4")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("3_7p6j4")
-
-[node name="Ground" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(2, -1342)
-scale = Vector2(0.85, 0.85)
-texture = ExtResource("4_7p6j4")
-
-[node name="Welcome" type="RichTextLabel" parent="."]
-z_as_relative = false
-offset_left = -456.0
-offset_top = -69.0
-offset_right = 44.0
-offset_bottom = 30.0
-bbcode_enabled = true
-text = "[i][font_size=30]Hello, Krabby!
-Use the arrow keys to move
-[/font_size][/i]"
-tab_size = 8
-horizontal_alignment = 1
-
-[node name="Attack_Instructions" type="RichTextLabel" parent="."]
-offset_left = -122.0
-offset_top = -555.0
-offset_right = 386.0
-offset_bottom = -454.0
-bbcode_enabled = true
-text = "[font_size=30][i]Go over to the yellow creatures (warbles) and press A to attack.[/i][/font_size]"
-horizontal_alignment = 1
 
 [node name="e_warble4" parent="." instance=ExtResource("3_xfk5q")]
 position = Vector2(220, -1170)
@@ -91,21 +114,3 @@ position = Vector2(5, -1940)
 
 [node name="e_warble8" parent="." instance=ExtResource("3_xfk5q")]
 position = Vector2(-3, -2177)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -266.0
-offset_top = -2649.0
-offset_right = 259.0
-offset_bottom = -2341.0
-bbcode_enabled = true
-text = "[font_size=50][i]You've reached the end of floor 1
-
-Congrats![/i][/font_size]"
-horizontal_alignment = 1
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_6444e")
-autoplay = true
-max_distance = 2e+08
-playback_type = 1
-parameters/looping = true

@@ -1,28 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvd2gv1fmuyk"]
+[gd_scene load_steps=5 format=3 uid="uid://dvd2gv1fmuyk"]
 
 [ext_resource type="Texture2D" uid="uid://kj07jmvw4ye" path="res://Sprites/warble-enemy.png" id="1_l5kg2"]
 [ext_resource type="Script" uid="uid://bavq4r2a1qh6m" path="res://Scripts/enemy_warble.gd" id="1_qh6vf"]
+[ext_resource type="Script" uid="uid://bfrg14qxccwtp" path="res://Scenes/enemyHP.gd" id="3_2q77u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5kg2"]
 size = Vector2(67.4117, 58.6441)
 
-[node name="enemy_warble" type="Area2D" groups=["Enemy"]]
+[node name="enemy_warble" type="Area2D" groups=["Enemy", "warble"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_qh6vf")
 
-[node name="Warble-enemy" type="Sprite2D" parent="."]
+[node name="e_warble" type="Sprite2D" parent="."]
 position = Vector2(4, -3)
-rotation = 0.261799
 texture = ExtResource("1_l5kg2")
 
-[node name="Warble-speed" type="Sprite2D" parent="Warble-enemy"]
+[node name="Warble-speed" type="Sprite2D" parent="e_warble"]
 visible = false
 modulate = Color(0.31802, 0.31802, 0.31802, 1)
 show_behind_parent = true
 position = Vector2(-8.69333, 2.32937)
 texture = ExtResource("1_l5kg2")
 
+[node name="HP" type="RichTextLabel" parent="e_warble"]
+z_index = 2
+offset_left = -56.5
+offset_top = -60.0
+offset_right = 68.5
+offset_bottom = -20.0
+theme_override_colors/default_color = Color(0.999331, 0.336299, 0.271501, 1)
+horizontal_alignment = 1
+script = ExtResource("3_2q77u")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-7.03173, -4.95337)
-rotation = 0.261799
 shape = SubResource("RectangleShape2D_l5kg2")
+
+[connection signal="send_health" from="." to="e_warble/HP" method="_on_enemy_warble_send_health"]

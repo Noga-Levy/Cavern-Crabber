@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmw75e17qya2i"]
+
+[ext_resource type="Script" uid="uid://ckcb6cv8wm00s" path="res://Scenes/enemies_left.gd" id="1_rft2l"]
+
+[node name="info" type="Node2D"]
+
+[node name="Enemies_Left" type="RichTextLabel" parent="."]
+offset_left = -573.0
+offset_top = -325.0
+offset_right = -347.0
+offset_bottom = -285.0
+script = ExtResource("1_rft2l")
