@@ -55,8 +55,8 @@ func _ready():
 	
 
 # Called every frame:
-func _process(delta: float) -> void:  # void tells us that this function returns none, void.
-	print("I'm a beautiful frame! Delta = {}".format([delta], "{}"))
+func _process(_delta: float) -> void:  # void tells us that this function returns none, void.
+	print("I'm a beautiful frame! Delta = {}".format([_delta], "{}"))
 	# We can put functions from the future here as well
 	_private_funct()
 

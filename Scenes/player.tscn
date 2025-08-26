@@ -1,8 +1,49 @@
-[gd_scene load_steps=5 format=3 uid="uid://coeqwi0sejihi"]
+[gd_scene load_steps=11 format=3 uid="uid://coeqwi0sejihi"]
 
-[ext_resource type="Texture2D" uid="uid://dh8geog4m7emt" path="res://Sprites/crab_mc.png" id="1_6t5aa"]
 [ext_resource type="Script" uid="uid://clxfhopiusl0b" path="res://Scripts/movement.gd" id="1_vgqql"]
+[ext_resource type="Texture2D" uid="uid://biyrontgkf8og" path="res://Sprites/Crab/crab_normal.png" id="2_vgqql"]
 [ext_resource type="Texture2D" uid="uid://bpcd8fdqms0bh" path="res://Sprites/under_sprite.png" id="3_fkybt"]
+[ext_resource type="Texture2D" uid="uid://bjnr75njv2px1" path="res://Sprites/Crab/crab_forwards.png" id="3_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://dp5cc3tt3k5hr" path="res://Sprites/Crab/crab_left.png" id="4_fkybt"]
+[ext_resource type="Texture2D" uid="uid://brn6yxvgr683" path="res://Sprites/Crab/crab_left2.png" id="5_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://drey7pg3x03yd" path="res://Sprites/Crab/crab_right.png" id="6_8erm5"]
+[ext_resource type="Texture2D" uid="uid://0bl45acywkuc" path="res://Sprites/Crab/crab_right2.png" id="7_f1ek2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vgqql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x3wgy")
+}],
+"loop": true,
+"name": &"walking_down",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_fkybt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x3wgy")
+}],
+"loop": true,
+"name": &"walking_left",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8erm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f1ek2")
+}],
+"loop": true,
+"name": &"walking_right",
+"speed": 8.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3wgy"]
 size = Vector2(230, 160)
@@ -10,9 +51,10 @@ size = Vector2(230, 160)
 [node name="Player" type="CharacterBody2D" groups=["damager"]]
 script = ExtResource("1_vgqql")
 
-[node name="Player (Crab)" type="Sprite2D" parent="."]
+[node name="Player (Crab)" type="AnimatedSprite2D" parent="."]
 position = Vector2(123, 82)
-texture = ExtResource("1_6t5aa")
+sprite_frames = SubResource("SpriteFrames_3smsa")
+animation = &"walking_left"
 
 [node name="UnderSprite" type="Sprite2D" parent="Player (Crab)"]
 show_behind_parent = true
