@@ -4,7 +4,7 @@ var enemies_total
 var enemies
 
 func _ready() -> void:
-	enemies_total = get_tree().get_nodes_in_group("warble").size()
+	enemies_total = get_tree().get_nodes_in_group("Enemy").size()
 	enemies = enemies_total
 	self.text = "ENEMIES LEFT: {0}/{1}".format([str(enemies), str(enemies_total)])
 	position.x = -555  # Max: -575

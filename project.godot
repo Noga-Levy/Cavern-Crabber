@@ -34,6 +34,7 @@ Enemy="they're the bad guys"
 damager="They can deal damage"
 border="It's a game border"
 warble="it's a warble"
+Player=""
 
 [gui]
 

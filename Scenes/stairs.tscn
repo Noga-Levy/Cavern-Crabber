@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://c46nal4qk2m5a"]
+
+[ext_resource type="Script" uid="uid://byq5m186rm22p" path="res://Scripts/stairs.gd" id="1_tl8cb"]
+[ext_resource type="Texture2D" uid="uid://bb8gvgmnnrkwb" path="res://Sprites/brown_stairs.png" id="2_idtik"]
+[ext_resource type="Texture2D" uid="uid://7yf0oessfdyd" path="res://Sprites/locked_stairs.png" id="3_py8fu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tl8cb"]
+size = Vector2(200, 200)
+
+[node name="stairs" type="Node2D"]
+script = ExtResource("1_tl8cb")
+
+[node name="BrownStairs" type="Sprite2D" parent="."]
+position = Vector2(2, -1)
+texture = ExtResource("2_idtik")
+
+[node name="LockedStairs" type="Area2D" parent="."]
+position = Vector2(2, -2)
+
+[node name="LockedStairs2" type="Sprite2D" parent="LockedStairs"]
+position = Vector2(0, 1)
+texture = ExtResource("3_py8fu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LockedStairs"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_tl8cb")
+
+[node name="warning" type="RichTextLabel" parent="."]
+offset_left = -152.0
+offset_top = 111.0
+offset_right = 152.0
+offset_bottom = 163.0
+text = "You must eliminate all the enemies before leaving"
+horizontal_alignment = 1
