@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmw75e17qya2i"]
 
-[ext_resource type="Script" uid="uid://ckcb6cv8wm00s" path="res://Scenes/enemies_left.gd" id="1_rft2l"]
-[ext_resource type="Script" uid="uid://y47ds36s7lf2" path="res://Scenes/crab_hp.gd" id="2_ocyjs"]
+[ext_resource type="Script" uid="uid://ckcb6cv8wm00s" path="res://Scripts/enemies_left.gd" id="1_rft2l"]
+[ext_resource type="Script" uid="uid://y47ds36s7lf2" path="res://Scripts/crab_hp.gd" id="2_ocyjs"]
 
 [node name="info" type="Node2D"]
 

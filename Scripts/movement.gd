@@ -19,7 +19,7 @@ func _physics_process(_delta: float) -> void:
 		
 		if Global.crabHP <= 0:
 			self.queue_free()
-			# TODO: Add an end screen
+			# TODO: Add an end screen and level up screen
 			get_tree().quit()
 	
 	crab_vector = Vector2.ZERO
