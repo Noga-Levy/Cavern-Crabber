@@ -8,6 +8,7 @@ var original_color
 
 func _ready():
 	original_color = $"Player (Crab)".modulate
+	Global.crabHP = 10 + (Global.level - 1) * 5
 
 func _physics_process(_delta: float) -> void:
 	

@@ -27,7 +27,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5kg2"]
 size = Vector2(67.4117, 58.6441)
 
-[node name="enemy_warble" type="Area2D" groups=["Enemy", "warble"]]
+[node name="enemy_warble" type="Area2D" groups=["Enemy", "enemy-of-level", "warble"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_qh6vf")
 
@@ -50,4 +50,5 @@ script = ExtResource("3_2q77u")
 position = Vector2(-7.03173, -4.95337)
 shape = SubResource("RectangleShape2D_l5kg2")
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="send_health" from="." to="e_warble/HP" method="_on_enemy_warble_send_health"]

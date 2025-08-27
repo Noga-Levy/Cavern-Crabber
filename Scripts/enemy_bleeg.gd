@@ -7,10 +7,10 @@ var inside_bleeg = []
 signal send_health(health, total_health)  # Custom signal
 
 # Movement
-var direction = 1
+var direction = 1  # x direction
 var SPEED = 7
-var rng = RandomNumberGenerator.new()
-var random_integer
+var rng = RandomNumberGenerator.new()  # To generate the y direction
+var random_integer  # To save the y direction
 
 func _ready() -> void:
 	# Connecting signals to functions so that I can control what happens when I receive the signal
@@ -46,7 +46,7 @@ func _on_Area2D_body_entered(body: Node2D):
 			$Bleeg.play("right")"""
 		
 func _on_body_exited(body: Node2D):
-	print("A body exited the warble: " + body.name)
+	print("A body exited the bleeg: " + body.name)
 	
 	if body.is_in_group("damager"):
 		inside_bleeg.erase(body)

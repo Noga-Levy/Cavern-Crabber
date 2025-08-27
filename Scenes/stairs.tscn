@@ -7,23 +7,19 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tl8cb"]
 size = Vector2(200, 200)
 
-[node name="stairs" type="Node2D"]
+[node name="stairs" type="Area2D"]
 script = ExtResource("1_tl8cb")
 
 [node name="BrownStairs" type="Sprite2D" parent="."]
 position = Vector2(2, -1)
 texture = ExtResource("2_idtik")
 
-[node name="LockedStairs" type="Area2D" parent="."]
+[node name="LockedStairs" type="Sprite2D" parent="."]
 position = Vector2(2, -2)
 
 [node name="LockedStairs2" type="Sprite2D" parent="LockedStairs"]
 position = Vector2(0, 1)
 texture = ExtResource("3_py8fu")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LockedStairs"]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_tl8cb")
 
 [node name="warning" type="RichTextLabel" parent="."]
 offset_left = -152.0
@@ -32,3 +28,9 @@ offset_right = 152.0
 offset_bottom = 163.0
 text = "You must eliminate all the enemies before leaving"
 horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1)
+shape = SubResource("RectangleShape2D_tl8cb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

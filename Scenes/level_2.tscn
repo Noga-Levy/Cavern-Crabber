@@ -1,22 +1,22 @@
 [gd_scene load_steps=10 format=3 uid="uid://dapf0o6nua77s"]
 
-[ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_tkffg"]
-[ext_resource type="Texture2D" uid="uid://ml8y1vr8k0jr" path="res://Sprites/ground.png" id="2_3tln8"]
-[ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_0sw3d"]
-[ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_u6f77"]
-[ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="5_bdbk8"]
-[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Other/bg_music.mp3" id="6_ouy8t"]
-[ext_resource type="PackedScene" uid="uid://d03s2myh7tjf8" path="res://Scenes/bleeg.tscn" id="7_udp0q"]
+[ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_055b2"]
+[ext_resource type="Texture2D" uid="uid://ml8y1vr8k0jr" path="res://Sprites/ground.png" id="2_2mgoq"]
+[ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_uhnj4"]
+[ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_42uki"]
+[ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="5_t7v2y"]
+[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Other/bg_music.mp3" id="6_ait6c"]
+[ext_resource type="PackedScene" uid="uid://d03s2myh7tjf8" path="res://Scenes/bleeg.tscn" id="7_vcilj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc4ci"]
 size = Vector2(1154, 125.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18xhp"]
-size = Vector2(133.5, 3126)
+size = Vector2(133.5, 2937)
 
 [node name="Level_2" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_tkffg")]
+[node name="Player" parent="." instance=ExtResource("1_055b2")]
 z_index = 2
 
 [node name="border" type="StaticBody2D" parent="." groups=["border"]]
@@ -28,7 +28,7 @@ modulate = Color(0.584314, 1, 1, 1)
 show_behind_parent = true
 position = Vector2(3, -1721)
 scale = Vector2(0.85, 0.85)
-texture = ExtResource("2_3tln8")
+texture = ExtResource("2_2mgoq")
 
 [node name="Bottom" type="CollisionShape2D" parent="border" groups=["border"]]
 position = Vector2(1, -110.25)
@@ -39,43 +39,43 @@ position = Vector2(3, -3172)
 shape = SubResource("RectangleShape2D_jc4ci")
 
 [node name="Left" type="CollisionShape2D" parent="border" groups=["border"]]
-position = Vector2(-513.75, -1616)
+position = Vector2(-513.75, -1641.5)
 shape = SubResource("RectangleShape2D_18xhp")
 
 [node name="Left2" type="CollisionShape2D" parent="border" groups=["border"]]
-position = Vector2(517, -1609)
+position = Vector2(517, -1642)
 shape = SubResource("RectangleShape2D_18xhp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("3_0sw3d")
+script = ExtResource("3_uhnj4")
 
-[node name="stairs" parent="." instance=ExtResource("4_u6f77")]
+[node name="stairs" parent="." instance=ExtResource("4_42uki")]
 modulate = Color(0.584314, 1, 1, 1)
 position = Vector2(0, -2534)
 
-[node name="info" parent="." instance=ExtResource("5_bdbk8")]
+[node name="info" parent="." instance=ExtResource("5_t7v2y")]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_ouy8t")
+stream = ExtResource("6_ait6c")
 autoplay = true
 max_distance = 2e+08
 playback_type = 1
 parameters/looping = true
 
-[node name="bleeg" parent="." instance=ExtResource("7_udp0q")]
+[node name="bleeg" parent="." instance=ExtResource("7_vcilj")]
 position = Vector2(-356, -164)
 
-[node name="bleeg2" parent="." instance=ExtResource("7_udp0q")]
+[node name="bleeg2" parent="." instance=ExtResource("7_vcilj")]
 position = Vector2(313, -581)
 
-[node name="bleeg3" parent="." instance=ExtResource("7_udp0q")]
+[node name="bleeg3" parent="." instance=ExtResource("7_vcilj")]
 position = Vector2(-348, -916)
 
-[node name="bleeg4" parent="." instance=ExtResource("7_udp0q")]
+[node name="bleeg4" parent="." instance=ExtResource("7_vcilj")]
 position = Vector2(206, -1311)
 
-[node name="bleeg5" parent="." instance=ExtResource("7_udp0q")]
+[node name="bleeg5" parent="." instance=ExtResource("7_vcilj")]
 position = Vector2(-337, -1684)
 
-[node name="bleeg6" parent="." instance=ExtResource("7_udp0q")]
+[node name="bleeg6" parent="." instance=ExtResource("7_vcilj")]
 position = Vector2(270, -2095)
