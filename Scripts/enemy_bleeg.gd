@@ -9,6 +9,8 @@ signal send_health(health, total_health)  # Custom signal
 # Movement
 var direction = 1
 var SPEED = 7
+var rng = RandomNumberGenerator.new()
+var random_integer
 
 func _ready() -> void:
 	# Connecting signals to functions so that I can control what happens when I receive the signal
@@ -19,7 +21,7 @@ func _ready() -> void:
 	send_health.emit(health, total_health)
 
 func attack():
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.7).timeout
 	if inside_bleeg.size() > 0:
 		Global.crabHP -= 3
 
@@ -35,6 +37,7 @@ func _on_Area2D_body_entered(body: Node2D):
 	# Turning around
 	if body.is_in_group("border"):
 		direction *= -1
+		random_integer = rng.randi_range(1, 2)  # 1 is true, 2 is false
 		
 		# Animation
 		"""if direction == -1:
@@ -60,3 +63,7 @@ func _process(_delta: float) -> void:
 	send_health.emit(health, total_health)
 	
 	position.x += direction * SPEED
+	if random_integer == 1:
+		position.y += direction * SPEED/2
+	else:
+		position.y -= direction * SPEED/2

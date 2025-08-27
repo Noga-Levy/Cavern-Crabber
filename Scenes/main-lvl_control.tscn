@@ -20,6 +20,7 @@ size = Vector2(133.5, 3126)
 z_index = 2
 
 [node name="border" type="StaticBody2D" parent="." groups=["border"]]
+modulate = Color(0.584314, 1, 1, 1)
 position = Vector2(-1, 379)
 
 [node name="Ground" type="Sprite2D" parent="border"]
@@ -62,3 +63,19 @@ playback_type = 1
 parameters/looping = true
 
 [node name="bleeg" parent="." instance=ExtResource("7_udp0q")]
+position = Vector2(-356, -164)
+
+[node name="bleeg2" parent="." instance=ExtResource("7_udp0q")]
+position = Vector2(313, -581)
+
+[node name="bleeg3" parent="." instance=ExtResource("7_udp0q")]
+position = Vector2(-348, -916)
+
+[node name="bleeg4" parent="." instance=ExtResource("7_udp0q")]
+position = Vector2(206, -1311)
+
+[node name="bleeg5" parent="." instance=ExtResource("7_udp0q")]
+position = Vector2(-337, -1684)
+
+[node name="bleeg6" parent="." instance=ExtResource("7_udp0q")]
+position = Vector2(270, -2095)

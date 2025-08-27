@@ -10,17 +10,18 @@ size = Vector2(181, 122)
 [node name="bleeg" type="Area2D"]
 script = ExtResource("1_g588y")
 
-[node name="Bleeg" type="Sprite2D" parent="."]
+[node name="Bleeg" type="Sprite2D" parent="." groups=["Enemy", "enemy-of-level"]]
 position = Vector2(8, -1)
 texture = ExtResource("1_oy3v1")
 
 [node name="HP" type="RichTextLabel" parent="Bleeg"]
 z_index = 2
-offset_left = -88.0
-offset_top = -75.0
-offset_right = 37.0
-offset_bottom = -35.0
+offset_left = -92.0
+offset_top = -115.0
+offset_right = 91.0
+offset_bottom = -75.0
 theme_override_colors/default_color = Color(0.999331, 0.336299, 0.271501, 1)
+bbcode_enabled = true
 horizontal_alignment = 1
 script = ExtResource("2_jvq0k")
 
