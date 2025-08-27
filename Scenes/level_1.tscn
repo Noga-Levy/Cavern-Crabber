@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dixapswls2xjs"]
+[gd_scene load_steps=11 format=3 uid="uid://dixapswls2xjs"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_8ffim"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_7p6j4"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ml8y1vr8k0jr" path="res://Sprites/ground.png" id="4_7p6j4"]
 [ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Other/bg_music.mp3" id="5_6444e"]
 [ext_resource type="FontFile" uid="uid://u14b3iosdcdh" path="res://Other/Silkscreen-Bold.ttf" id="6_lsmp6"]
+[ext_resource type="Texture2D" uid="uid://bb8gvgmnnrkwb" path="res://Sprites/brown_stairs.png" id="8_xrdnt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ffim"]
 size = Vector2(1154, 125.5)
@@ -80,17 +81,6 @@ bbcode_enabled = true
 text = "[font_size=30]Go over to the yellow creatures (warbles) and press A to attack.[/font_size]"
 horizontal_alignment = 1
 
-[node name="End_of_Lvl" type="RichTextLabel" parent="."]
-offset_left = -258.0
-offset_top = -2717.0
-offset_right = 267.0
-offset_bottom = -2383.0
-bbcode_enabled = true
-text = "[font_size=50]You've reached the end of floor 1
-
-Congrats![/font_size]"
-horizontal_alignment = 1
-
 [node name="e_warble" parent="." instance=ExtResource("3_xfk5q")]
 position = Vector2(-241, -503)
 
@@ -114,3 +104,7 @@ position = Vector2(5, -1940)
 
 [node name="e_warble8" parent="." instance=ExtResource("3_xfk5q")]
 position = Vector2(-3, -2177)
+
+[node name="BrownStairs" type="Sprite2D" parent="."]
+position = Vector2(1, -2549)
+texture = ExtResource("8_xrdnt")

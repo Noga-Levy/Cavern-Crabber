@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddwt4mc8f22m8"
-path="res://.godot/imported/crab_forwards.png-5cf018b32366b181bf7dd84f16d961e8.ctex"
+uid="uid://bb8gvgmnnrkwb"
+path="res://.godot/imported/brown_stairs.png-752874b2d8087b1f70c0e3a1c5447d72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Crab/crab_forwards.png"
-dest_files=["res://.godot/imported/crab_forwards.png-5cf018b32366b181bf7dd84f16d961e8.ctex"]
+source_file="res://Sprites/brown_stairs.png"
+dest_files=["res://.godot/imported/brown_stairs.png-752874b2d8087b1f70c0e3a1c5447d72.ctex"]
 
 [params]
 

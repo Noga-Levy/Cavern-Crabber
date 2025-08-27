@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://coeqwi0sejihi"]
+[gd_scene load_steps=13 format=3 uid="uid://coeqwi0sejihi"]
 
 [ext_resource type="Script" uid="uid://clxfhopiusl0b" path="res://Scripts/movement.gd" id="1_vgqql"]
 [ext_resource type="Texture2D" uid="uid://biyrontgkf8og" path="res://Sprites/Crab/crab_normal.png" id="2_vgqql"]
 [ext_resource type="Texture2D" uid="uid://bpcd8fdqms0bh" path="res://Sprites/under_sprite.png" id="3_fkybt"]
-[ext_resource type="Texture2D" uid="uid://bjnr75njv2px1" path="res://Sprites/Crab/crab_forwards.png" id="3_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://db6odrud4wu26" path="res://Sprites/Crab/crab_normal2.png" id="3_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://ddwt4mc8f22m8" path="res://Sprites/Crab/crab_forwards.png" id="3_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://dp5cc3tt3k5hr" path="res://Sprites/Crab/crab_left.png" id="4_fkybt"]
+[ext_resource type="Texture2D" uid="uid://cnsv1soi387r7" path="res://Sprites/Crab/crab_forwards2.png" id="5_gymyn"]
 [ext_resource type="Texture2D" uid="uid://brn6yxvgr683" path="res://Sprites/Crab/crab_left2.png" id="5_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://drey7pg3x03yd" path="res://Sprites/Crab/crab_right.png" id="6_8erm5"]
 [ext_resource type="Texture2D" uid="uid://0bl45acywkuc" path="res://Sprites/Crab/crab_right2.png" id="7_f1ek2"]
@@ -16,11 +18,22 @@ animations = [{
 "texture": ExtResource("2_vgqql")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_x3wgy")
+"texture": ExtResource("3_tx1dd")
 }],
 "loop": true,
 "name": &"walking_down",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_x3wgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gymyn")
+}],
+"loop": true,
+"name": &"walking_forwards",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -54,7 +67,7 @@ script = ExtResource("1_vgqql")
 [node name="Player (Crab)" type="AnimatedSprite2D" parent="."]
 position = Vector2(123, 82)
 sprite_frames = SubResource("SpriteFrames_3smsa")
-animation = &"walking_left"
+animation = &"walking_down"
 
 [node name="UnderSprite" type="Sprite2D" parent="Player (Crab)"]
 show_behind_parent = true
