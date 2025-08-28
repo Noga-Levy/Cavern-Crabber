@@ -7,11 +7,10 @@ var inside_bleeg = []
 signal send_health(health, total_health)  # Custom signal
 
 # Movement
-var direction_x = 1  # x direction
+var direction = 1  # x direction
 var SPEED = 7
-var direction_y = [1, -1]
-var pick_direction = direction_y.pick_random()
-
+var rng = RandomNumberGenerator.new()  # To generate the y direction
+var random_integer  # To save the y direction
 
 func _ready() -> void:
 	# Connecting signals to functions so that I can control what happens when I receive the signal
@@ -37,18 +36,11 @@ func _on_Area2D_body_entered(body: Node2D):
 	
 	# Turning around
 	if body.is_in_group("border"):
-		if body.is_in_group("r-border"):
-			direction_x = 1
-			pick_direction = direction_y.pick_random()
-		elif body.is_in_group("l-border"):
-			direction_x = -1
-			pick_direction = direction_y.pick_random()
-		else:
-			pick_direction = direction_y.pick_random()
-			direction_x *= -1
+		direction *= -1
+		random_integer = rng.randi_range(1, 2)  # 1 is true, 2 is false
 		
 		# Animation
-		"""if direction_x == -1:
+		"""if direction == -1:
 			$Bleeg.play("left")
 		else:
 			$Bleeg.play("right")"""
@@ -63,11 +55,15 @@ func _on_body_exited(body: Node2D):
 func _process(_delta: float) -> void:
 	
 	if inside_bleeg.size() > 0 and Input.is_action_just_pressed("attack"):
-		health -= Global.crabDMG * 2
+		health -= 3
+		print(health)
 		if health <= 0:
 			self.queue_free()
 	
 	send_health.emit(health, total_health)
 	
-	position.x += direction_x * SPEED
-	position.y += pick_direction * SPEED/2
+	position.x += direction * SPEED
+	if random_integer == 1:
+		position.y += direction * SPEED/2
+	else:
+		position.y -= direction * SPEED/2
