@@ -1,9 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://coeqwi0sejihi"]
+[gd_scene load_steps=17 format=3 uid="uid://coeqwi0sejihi"]
 
 [ext_resource type="Script" uid="uid://clxfhopiusl0b" path="res://Scripts/movement.gd" id="1_vgqql"]
+[ext_resource type="Texture2D" uid="uid://cxs33x4d5hru5" path="res://Sprites/Crab/crab315.png" id="2_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://ce2qfd5ficqc6" path="res://Sprites/Crab/crab45.png" id="2_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://biyrontgkf8og" path="res://Sprites/Crab/crab_normal.png" id="2_vgqql"]
 [ext_resource type="Texture2D" uid="uid://bpcd8fdqms0bh" path="res://Sprites/under_sprite.png" id="3_fkybt"]
+[ext_resource type="Texture2D" uid="uid://dfk6k73ssruyk" path="res://Sprites/Crab/crab315-2.png" id="3_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://db6odrud4wu26" path="res://Sprites/Crab/crab_normal2.png" id="3_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://irn5y6s4ffh1" path="res://Sprites/Crab/crab45-2.png" id="3_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://ddwt4mc8f22m8" path="res://Sprites/Crab/crab_forwards.png" id="3_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://dp5cc3tt3k5hr" path="res://Sprites/Crab/crab_left.png" id="4_fkybt"]
 [ext_resource type="Texture2D" uid="uid://cnsv1soi387r7" path="res://Sprites/Crab/crab_forwards2.png" id="5_gymyn"]
@@ -13,6 +17,28 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7dp3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h4iuc")
+}],
+"loop": true,
+"name": &"walking_315",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pu2lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ukyrk")
+}],
+"loop": true,
+"name": &"walking_45",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_vgqql")
@@ -67,7 +93,7 @@ script = ExtResource("1_vgqql")
 [node name="Player (Crab)" type="AnimatedSprite2D" parent="."]
 position = Vector2(123, 82)
 sprite_frames = SubResource("SpriteFrames_3smsa")
-animation = &"walking_down"
+animation = &"walking_315"
 
 [node name="UnderSprite" type="Sprite2D" parent="Player (Crab)"]
 show_behind_parent = true

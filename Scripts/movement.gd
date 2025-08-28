@@ -25,20 +25,44 @@ func _physics_process(_delta: float) -> void:
 	
 	crab_vector = Vector2.ZERO
 	
-	if Input.is_key_pressed(KEY_DOWN):
-		crab_vector.y += change_amt
-		$"Player (Crab)".play("walking_down")
-	if Input.is_key_pressed(KEY_UP):
-		crab_vector.y -= change_amt
-		$"Player (Crab)".play("walking_forwards")
+	var left = Input.is_key_pressed(KEY_LEFT)
+	var right = Input.is_key_pressed(KEY_RIGHT)
+	var up = Input.is_key_pressed(KEY_UP)
+	var down = Input.is_key_pressed(KEY_DOWN)
+	var direction_array = [left, right, up, down]
 	
-	if Input.is_key_pressed(KEY_LEFT):
-		crab_vector.x -= change_amt
-		$"Player (Crab)".play("walking_left")
-	if Input.is_key_pressed(KEY_RIGHT):
-		crab_vector.x += change_amt
-		$"Player (Crab)".play("walking_right")
-
+	if direction_array.count(true) >= 2:
+		if left and down:
+			$"Player (Crab)".play("walking_45")
+			crab_vector.x -= change_amt
+			crab_vector.y += change_amt
+		if right and down:
+			$"Player (Crab)".play("walking_315")
+			crab_vector.x += change_amt
+			crab_vector.y += change_amt
+		
+		if left and up:
+			crab_vector.x -= change_amt
+			crab_vector.y -= change_amt
+		if right and up:
+			crab_vector.x += change_amt
+			crab_vector.y -= change_amt	
+		
+	else:
+		if Input.is_key_pressed(KEY_DOWN):
+			crab_vector.y += change_amt
+			$"Player (Crab)".play("walking_down")
+		elif  Input.is_key_pressed(KEY_UP):
+			crab_vector.y -= change_amt
+			$"Player (Crab)".play("walking_forwards")
+		
+		elif  Input.is_key_pressed(KEY_LEFT):
+			crab_vector.x -= change_amt
+			$"Player (Crab)".play("walking_left")
+		elif Input.is_key_pressed(KEY_RIGHT):
+			crab_vector.x += change_amt
+			$"Player (Crab)".play("walking_right")
+		
 	# normalize diagonal movement, scale by speed
 	if crab_vector != Vector2.ZERO:
 		crab_vector = crab_vector.normalized()

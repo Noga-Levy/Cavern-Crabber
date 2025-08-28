@@ -10,7 +10,7 @@ signal send_health(health, total_health)  # Custom signal
 var direction = 1  # x direction
 var SPEED = 7
 var rng = RandomNumberGenerator.new()  # To generate the y direction
-var random_integer  # To save the y direction
+var random_integer = 0  # To save the y direction
 
 func _ready() -> void:
 	# Connecting signals to functions so that I can control what happens when I receive the signal
@@ -37,7 +37,7 @@ func _on_Area2D_body_entered(body: Node2D):
 	# Turning around
 	if body.is_in_group("border"):
 		direction *= -1
-		random_integer = rng.randi_range(1, 2)  # 1 is true, 2 is false
+		random_integer = [-1, 1].pick_random()
 		
 		# Animation
 		if direction == -1:
@@ -63,10 +63,7 @@ func _process(_delta: float) -> void:
 	send_health.emit(health, total_health)
 	
 	position.x += direction * SPEED
-	if random_integer == 1:
-		position.y += direction * SPEED/2
-	else:
-		position.y -= direction * SPEED/2
+	position.y += random_integer * SPEED/2
 	
 	if direction == -1:
 		$Bleeg.play("left")
