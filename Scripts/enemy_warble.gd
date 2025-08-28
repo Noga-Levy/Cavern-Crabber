@@ -51,7 +51,7 @@ func _on_body_exited(body: Node2D):
 func _process(_delta: float) -> void:
 	
 	if inside_warble.size() > 0 and Input.is_action_just_pressed("attack"):
-		health -= 3
+		health -= Global.crabDMG
 		print(health)
 		if health <= 0:
 			self.queue_free()

@@ -32,9 +32,9 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 Enemy="they're the bad guys"
 damager="They can deal damage"
-border="It's a game border"
 Player=""
 enemy-of-level="it's a warble"
+border="It's a game border"
 
 [gui]
 
