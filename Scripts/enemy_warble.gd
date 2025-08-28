@@ -59,3 +59,7 @@ func _process(_delta: float) -> void:
 	send_health.emit(health, total_health)
 	
 	position.x += direction * SPEED
+
+
+func _on_send_health(HP: Variant, total_HP: Variant) -> void:
+	pass # Replace with function body.

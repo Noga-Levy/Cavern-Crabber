@@ -40,10 +40,10 @@ func _on_Area2D_body_entered(body: Node2D):
 		random_integer = rng.randi_range(1, 2)  # 1 is true, 2 is false
 		
 		# Animation
-		"""if direction == -1:
+		if direction == -1:
 			$Bleeg.play("left")
 		else:
-			$Bleeg.play("right")"""
+			$Bleeg.play("right")
 		
 func _on_body_exited(body: Node2D):
 	print("A body exited the bleeg: " + body.name)
@@ -55,7 +55,7 @@ func _on_body_exited(body: Node2D):
 func _process(_delta: float) -> void:
 	
 	if inside_bleeg.size() > 0 and Input.is_action_just_pressed("attack"):
-		health -= 3
+		health -= 4
 		print(health)
 		if health <= 0:
 			self.queue_free()
@@ -67,3 +67,8 @@ func _process(_delta: float) -> void:
 		position.y += direction * SPEED/2
 	else:
 		position.y -= direction * SPEED/2
+	
+	if direction == -1:
+		$Bleeg.play("left")
+	else:
+		$Bleeg.play("right")

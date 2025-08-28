@@ -1,8 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://d03s2myh7tjf8"]
+[gd_scene load_steps=9 format=3 uid="uid://d03s2myh7tjf8"]
 
 [ext_resource type="Script" uid="uid://bmo7vfw061y5d" path="res://Scripts/enemy_bleeg.gd" id="1_g588y"]
-[ext_resource type="Texture2D" uid="uid://bnqr07frsho23" path="res://Sprites/bleeg.png" id="1_oy3v1"]
+[ext_resource type="Texture2D" uid="uid://c42xblj57xn5b" path="res://Sprites/Bleeg/bleeg.png" id="1_oy3v1"]
 [ext_resource type="Script" uid="uid://cckcaruqxv1bi" path="res://Scripts/bleegHP.gd" id="2_jvq0k"]
+[ext_resource type="Texture2D" uid="uid://v344mbruwk5s" path="res://Sprites/Bleeg/L-bleeg.png" id="2_ug08o"]
+[ext_resource type="Texture2D" uid="uid://0ckvcfx5sy7c" path="res://Sprites/Bleeg/L-bleeg2.png" id="3_iax02"]
+[ext_resource type="Texture2D" uid="uid://bngtomjoinuwp" path="res://Sprites/Bleeg/bleeg2.png" id="5_ug08o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iax02"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_iax02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ug08o")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_oy3v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ug08o")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvq0k"]
 size = Vector2(181, 122)
@@ -10,16 +38,17 @@ size = Vector2(181, 122)
 [node name="bleeg" type="Area2D"]
 script = ExtResource("1_g588y")
 
-[node name="Bleeg" type="Sprite2D" parent="." groups=["Enemy", "enemy-of-level"]]
+[node name="Bleeg" type="AnimatedSprite2D" parent="." groups=["Enemy", "enemy-of-level"]]
 position = Vector2(8, -1)
-texture = ExtResource("1_oy3v1")
+sprite_frames = SubResource("SpriteFrames_iax02")
+animation = &"left"
 
 [node name="HP" type="RichTextLabel" parent="Bleeg"]
 z_index = 2
-offset_left = -92.0
-offset_top = -115.0
-offset_right = 91.0
-offset_bottom = -75.0
+offset_left = -101.0
+offset_top = -104.0
+offset_right = 119.0
+offset_bottom = -13.0
 theme_override_colors/default_color = Color(0.999331, 0.336299, 0.271501, 1)
 bbcode_enabled = true
 horizontal_alignment = 1
