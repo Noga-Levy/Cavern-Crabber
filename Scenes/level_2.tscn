@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dapf0o6nua77s"]
+[gd_scene load_steps=9 format=3 uid="uid://dapf0o6nua77s"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_055b2"]
 [ext_resource type="Texture2D" uid="uid://ml8y1vr8k0jr" path="res://Sprites/ground.png" id="2_2mgoq"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_uhnj4"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_42uki"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="5_t7v2y"]
-[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Other/bg_music.mp3" id="6_ait6c"]
 [ext_resource type="PackedScene" uid="uid://d03s2myh7tjf8" path="res://Scenes/bleeg.tscn" id="7_vcilj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc4ci"]
@@ -54,14 +53,6 @@ modulate = Color(0.584314, 1, 1, 1)
 position = Vector2(0, -2534)
 
 [node name="info" parent="." instance=ExtResource("5_t7v2y")]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_ait6c")
-volume_db = -10.0
-autoplay = true
-max_distance = 2e+09
-playback_type = 1
-parameters/looping = true
 
 [node name="bleeg" parent="." instance=ExtResource("7_vcilj")]
 position = Vector2(-286, -247)

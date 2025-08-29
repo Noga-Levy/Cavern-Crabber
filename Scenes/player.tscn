@@ -1,11 +1,15 @@
-[gd_scene load_steps=17 format=3 uid="uid://coeqwi0sejihi"]
+[gd_scene load_steps=24 format=3 uid="uid://coeqwi0sejihi"]
 
 [ext_resource type="Script" uid="uid://clxfhopiusl0b" path="res://Scripts/movement.gd" id="1_vgqql"]
 [ext_resource type="Texture2D" uid="uid://cxs33x4d5hru5" path="res://Sprites/Crab/crab315.png" id="2_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://ce7epwsd1p02f" path="res://Sprites/Crab/crab225.png" id="2_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://b5ycmhgsq63j1" path="res://Sprites/Crab/crab135.png" id="2_igrcy"]
 [ext_resource type="Texture2D" uid="uid://ce2qfd5ficqc6" path="res://Sprites/Crab/crab45.png" id="2_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://biyrontgkf8og" path="res://Sprites/Crab/crab_normal.png" id="2_vgqql"]
 [ext_resource type="Texture2D" uid="uid://bpcd8fdqms0bh" path="res://Sprites/under_sprite.png" id="3_fkybt"]
+[ext_resource type="Texture2D" uid="uid://do2e3g2o3udon" path="res://Sprites/Crab/crab135-2.png" id="3_fs7ks"]
 [ext_resource type="Texture2D" uid="uid://dfk6k73ssruyk" path="res://Sprites/Crab/crab315-2.png" id="3_h4iuc"]
+[ext_resource type="Texture2D" uid="uid://bcbg40ndtxk0l" path="res://Sprites/Crab/crab225-2.png" id="3_qqcod"]
 [ext_resource type="Texture2D" uid="uid://db6odrud4wu26" path="res://Sprites/Crab/crab_normal2.png" id="3_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://irn5y6s4ffh1" path="res://Sprites/Crab/crab45-2.png" id="3_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://ddwt4mc8f22m8" path="res://Sprites/Crab/crab_forwards.png" id="3_x3wgy"]
@@ -14,9 +18,34 @@
 [ext_resource type="Texture2D" uid="uid://brn6yxvgr683" path="res://Sprites/Crab/crab_left2.png" id="5_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://drey7pg3x03yd" path="res://Sprites/Crab/crab_right.png" id="6_8erm5"]
 [ext_resource type="Texture2D" uid="uid://0bl45acywkuc" path="res://Sprites/Crab/crab_right2.png" id="7_f1ek2"]
+[ext_resource type="AudioStream" uid="uid://dh7s3dlovnau2" path="res://Other/snap-sound-effect.mp3" id="19_l6n3p"]
+[ext_resource type="Script" uid="uid://dju4t1xho8jio" path="res://Scripts/snap_sounds.gd" id="20_olqyp"]
+[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Other/bg_music.mp3" id="21_olqyp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_igrcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fs7ks")
+}],
+"loop": true,
+"name": &"walking_135",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fd4e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qqcod")
+}],
+"loop": true,
+"name": &"walking_225",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_7dp3o")
@@ -93,12 +122,26 @@ script = ExtResource("1_vgqql")
 [node name="Player (Crab)" type="AnimatedSprite2D" parent="."]
 position = Vector2(123, 82)
 sprite_frames = SubResource("SpriteFrames_3smsa")
-animation = &"walking_315"
+animation = &"walking_135"
 
 [node name="UnderSprite" type="Sprite2D" parent="Player (Crab)"]
 show_behind_parent = true
 position = Vector2(0, 4)
 texture = ExtResource("3_fkybt")
+
+[node name="snap-sound" type="AudioStreamPlayer2D" parent="Player (Crab)"]
+position = Vector2(-123, -82)
+stream = ExtResource("19_l6n3p")
+volume_db = -5.0
+script = ExtResource("20_olqyp")
+
+[node name="bg-music" type="AudioStreamPlayer2D" parent="Player (Crab)"]
+stream = ExtResource("21_olqyp")
+volume_db = -10.0
+autoplay = true
+max_distance = 1000.0
+playback_type = 1
+parameters/looping = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(123, 86)

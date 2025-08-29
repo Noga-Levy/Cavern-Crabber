@@ -42,9 +42,11 @@ func _physics_process(_delta: float) -> void:
 			crab_vector.y += change_amt
 		
 		if left and up:
+			$"Player (Crab)".play("walking_135")
 			crab_vector.x -= change_amt
 			crab_vector.y -= change_amt
 		if right and up:
+			$"Player (Crab)".play("walking_225")
 			crab_vector.x += change_amt
 			crab_vector.y -= change_amt	
 		

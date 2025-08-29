@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dixapswls2xjs"]
+[gd_scene load_steps=10 format=3 uid="uid://dixapswls2xjs"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_8ffim"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_7p6j4"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dvd2gv1fmuyk" path="res://Scenes/enemy-warble.tscn" id="3_xfk5q"]
 [ext_resource type="Texture2D" uid="uid://ml8y1vr8k0jr" path="res://Sprites/ground.png" id="4_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_xrdnt"]
-[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Other/bg_music.mp3" id="5_6444e"]
 [ext_resource type="FontFile" uid="uid://u14b3iosdcdh" path="res://Other/Silkscreen-Bold.ttf" id="6_lsmp6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ffim"]
@@ -53,14 +52,6 @@ script = ExtResource("3_7p6j4")
 position = Vector2(0, -2534)
 
 [node name="info" parent="." instance=ExtResource("3_lsmp6")]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_6444e")
-volume_db = -10.0
-autoplay = true
-max_distance = 2e+08
-playback_type = 1
-parameters/looping = true
 
 [node name="Welcome" type="RichTextLabel" parent="."]
 z_as_relative = false
