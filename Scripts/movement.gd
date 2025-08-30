@@ -17,11 +17,6 @@ func _physics_process(_delta: float) -> void:
 		$"Player (Crab)".modulate = Color(1, 1, 1, 0.7)
 		await get_tree().create_timer(0.5).timeout
 		$"Player (Crab)".modulate = original_color
-		
-		if Global.crabHP <= 0:
-			self.queue_free()
-			# TODO: Add an end screen and level up screen
-			get_tree().quit()
 	
 	crab_vector = Vector2.ZERO
 	
@@ -74,3 +69,10 @@ func _physics_process(_delta: float) -> void:
 	velocity = crab_vector * SPEED
 	move_and_slide()
 	Global.crab_pos = position
+
+
+# To show the game over scene, we need to call this outside of _physics_process
+func _process(delta: float) -> void:
+	if Global.crabHP <= 0:
+		self.queue_free()
+		get_tree().change_scene_to_file("res://Scenes/game-over-lost.tscn")
