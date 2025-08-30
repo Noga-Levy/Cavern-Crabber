@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu81fj773v10a"
-path="res://.godot/imported/warble_left.png-a2060ee41c070d72a308c4e2bd156e58.ctex"
+uid="uid://6x5waciccdg2"
+path="res://.godot/imported/lbleeg-attack.png-a3f4862e1e8ba159a9bc0ee15dab2507.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/warble_left.png"
-dest_files=["res://.godot/imported/warble_left.png-a2060ee41c070d72a308c4e2bd156e58.ctex"]
+source_file="res://Sprites/Bleeg/lbleeg-attack.png"
+dest_files=["res://.godot/imported/lbleeg-attack.png-a3f4862e1e8ba159a9bc0ee15dab2507.ctex"]
 
 [params]
 

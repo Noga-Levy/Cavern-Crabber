@@ -11,6 +11,7 @@ var direction = 1
 var SPEED = 5
 
 func _ready() -> void:
+	$e_warble.play("right")
 	# Connecting signals to functions so that I can control what happens when I receive the signal
 	connect("body_entered", Callable(self, "_on_Area2D_body_entered"))
 	print("Connected enter")
@@ -18,9 +19,23 @@ func _ready() -> void:
 	print("Connected exit")
 
 func attack():
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.6).timeout
+	$attack.play()
+	
+	if direction == -1:
+			$e_warble.play("left-attack")
+	else:
+		$e_warble.play("right-attack")
+	
+	await get_tree().create_timer(0.4).timeout
+	
 	if inside_warble.size() > 0:
 		Global.crabHP -= 2
+	
+	if direction == -1:
+		$e_warble.play("left")
+	else:
+		$e_warble.play("right")
 
 func _on_Area2D_body_entered(body: Node2D):
 	print("A body entered the warble: " + body.name)

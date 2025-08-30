@@ -35,6 +35,10 @@ damager="They can deal damage"
 Player=""
 enemy-of-level="it's a warble"
 border="It's a game border"
+b-border=""
+l-border=""
+r-border=""
+t-border=""
 
 [gui]
 

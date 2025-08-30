@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://coo65js7npbyw" path="res://Scripts/restart_game.gd" id="1_myn1l"]
 [ext_resource type="Texture2D" uid="uid://dgyyjmr2iuefe" path="res://Other/game-over.png" id="1_ytabi"]
-[ext_resource type="AudioStream" uid="uid://buc8at51vtk07" path="res://Other/wobbler-arpeggio-transition-fx-178635.mp3" id="3_00xqr"]
+[ext_resource type="AudioStream" uid="uid://buc8at51vtk07" path="res://Audio/wobbler-arpeggio-transition-fx-178635.mp3" id="3_00xqr"]
 
 [node name="Lost-screen" type="Node2D"]
 script = ExtResource("1_myn1l")

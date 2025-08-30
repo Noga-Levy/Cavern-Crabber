@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnqr07frsho23"
-path="res://.godot/imported/bleeg.png-55de3e10ea5eb4ed1eabaaf2cf362fd1.ctex"
+uid="uid://btt2njmtfrb2v"
+path="res://.godot/imported/rbleeg-attack.png-74e82170092e9a95828e168adcbccf79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/bleeg.png"
-dest_files=["res://.godot/imported/bleeg.png-55de3e10ea5eb4ed1eabaaf2cf362fd1.ctex"]
+source_file="res://Sprites/Bleeg/rbleeg-attack.png"
+dest_files=["res://.godot/imported/rbleeg-attack.png-74e82170092e9a95828e168adcbccf79.ctex"]
 
 [params]
 

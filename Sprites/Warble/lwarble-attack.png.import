@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3s2lvk1ck1ys"
-path="res://.godot/imported/warble_right.png-635b5765f55aebed4507d48f76d2f5f8.ctex"
+uid="uid://blwg1g2ly6gq8"
+path="res://.godot/imported/lwarble-attack.png-ba68adff8d8ba19d9d1e45903be61daa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/warble_right.png"
-dest_files=["res://.godot/imported/warble_right.png-635b5765f55aebed4507d48f76d2f5f8.ctex"]
+source_file="res://Sprites/Warble/lwarble-attack.png"
+dest_files=["res://.godot/imported/lwarble-attack.png-ba68adff8d8ba19d9d1e45903be61daa.ctex"]
 
 [params]
 

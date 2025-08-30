@@ -18,9 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://brn6yxvgr683" path="res://Sprites/Crab/crab_left2.png" id="5_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://drey7pg3x03yd" path="res://Sprites/Crab/crab_right.png" id="6_8erm5"]
 [ext_resource type="Texture2D" uid="uid://0bl45acywkuc" path="res://Sprites/Crab/crab_right2.png" id="7_f1ek2"]
-[ext_resource type="AudioStream" uid="uid://dh7s3dlovnau2" path="res://Other/snap-sound-effect.mp3" id="19_l6n3p"]
+[ext_resource type="AudioStream" uid="uid://dh7s3dlovnau2" path="res://Audio/snap-sound-effect.mp3" id="19_l6n3p"]
 [ext_resource type="Script" uid="uid://dju4t1xho8jio" path="res://Scripts/snap_sounds.gd" id="20_olqyp"]
-[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Other/bg_music.mp3" id="21_olqyp"]
+[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Audio/bg_music.mp3" id="21_olqyp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
 animations = [{

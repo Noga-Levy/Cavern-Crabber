@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://d03s2myh7tjf8"]
+[gd_scene load_steps=12 format=3 uid="uid://d03s2myh7tjf8"]
 
 [ext_resource type="Script" uid="uid://bmo7vfw061y5d" path="res://Scripts/enemy_bleeg.gd" id="1_g588y"]
 [ext_resource type="Texture2D" uid="uid://c42xblj57xn5b" path="res://Sprites/Bleeg/bleeg.png" id="1_oy3v1"]
+[ext_resource type="Texture2D" uid="uid://6x5waciccdg2" path="res://Sprites/Bleeg/lbleeg-attack.png" id="2_amkd7"]
 [ext_resource type="Script" uid="uid://cckcaruqxv1bi" path="res://Scripts/bleegHP.gd" id="2_jvq0k"]
 [ext_resource type="Texture2D" uid="uid://v344mbruwk5s" path="res://Sprites/Bleeg/L-bleeg.png" id="2_ug08o"]
 [ext_resource type="Texture2D" uid="uid://0ckvcfx5sy7c" path="res://Sprites/Bleeg/L-bleeg2.png" id="3_iax02"]
 [ext_resource type="Texture2D" uid="uid://bngtomjoinuwp" path="res://Sprites/Bleeg/bleeg2.png" id="5_ug08o"]
+[ext_resource type="Texture2D" uid="uid://btt2njmtfrb2v" path="res://Sprites/Bleeg/rbleeg-attack.png" id="7_pfysm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iax02"]
 animations = [{
@@ -22,6 +24,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("2_amkd7")
+}],
+"loop": true,
+"name": &"left-attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("1_oy3v1")
 }, {
 "duration": 1.0,
@@ -30,18 +40,29 @@ animations = [{
 "loop": true,
 "name": &"right",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_pfysm")
+}],
+"loop": true,
+"name": &"right-attack",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvq0k"]
 size = Vector2(181, 122)
 
-[node name="bleeg" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amkd7"]
+size = Vector2(189, 130)
+
+[node name="bleeg" type="CharacterBody2D"]
 script = ExtResource("1_g588y")
 
 [node name="Bleeg" type="AnimatedSprite2D" parent="." groups=["Enemy", "enemy-of-level"]]
 position = Vector2(8, -1)
 sprite_frames = SubResource("SpriteFrames_iax02")
-animation = &"left"
+animation = &"left-attack"
 
 [node name="HP" type="RichTextLabel" parent="Bleeg"]
 z_index = 2
@@ -54,8 +75,15 @@ bbcode_enabled = true
 horizontal_alignment = 1
 script = ExtResource("2_jvq0k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Bleeg_body" type="CollisionShape2D" parent="."]
+z_index = 1
 position = Vector2(8.5, -1)
 shape = SubResource("RectangleShape2D_jvq0k")
 
-[connection signal="send_health" from="." to="Bleeg/HP" method="_on_bleeg_send_health"]
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+position = Vector2(8.5, -1)
+shape = SubResource("RectangleShape2D_amkd7")
+
+[connection signal="area_entered" from="Collision" to="." method="_on_collision_area_entered"]
