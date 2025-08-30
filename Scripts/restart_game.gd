@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready() -> void:
+	$AudioStreamPlayer2D.play()
+
 # Whole sequence boils down to "detect an input --> is the input a key pressed --> ok, restart"
 func _input(event):
 	if event is InputEventKey:
