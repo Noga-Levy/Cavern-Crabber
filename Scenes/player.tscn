@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://coeqwi0sejihi"]
+[gd_scene load_steps=23 format=3 uid="uid://coeqwi0sejihi"]
 
 [ext_resource type="Script" uid="uid://clxfhopiusl0b" path="res://Scripts/movement.gd" id="1_vgqql"]
 [ext_resource type="Texture2D" uid="uid://cxs33x4d5hru5" path="res://Sprites/Crab/crab315.png" id="2_7dp3o"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b5ycmhgsq63j1" path="res://Sprites/Crab/crab135.png" id="2_igrcy"]
 [ext_resource type="Texture2D" uid="uid://ce2qfd5ficqc6" path="res://Sprites/Crab/crab45.png" id="2_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://biyrontgkf8og" path="res://Sprites/Crab/crab_normal.png" id="2_vgqql"]
-[ext_resource type="Texture2D" uid="uid://bpcd8fdqms0bh" path="res://Sprites/under_sprite.png" id="3_fkybt"]
 [ext_resource type="Texture2D" uid="uid://do2e3g2o3udon" path="res://Sprites/Crab/crab135-2.png" id="3_fs7ks"]
 [ext_resource type="Texture2D" uid="uid://dfk6k73ssruyk" path="res://Sprites/Crab/crab315-2.png" id="3_h4iuc"]
 [ext_resource type="Texture2D" uid="uid://bcbg40ndtxk0l" path="res://Sprites/Crab/crab225-2.png" id="3_qqcod"]
@@ -117,17 +116,13 @@ animations = [{
 size = Vector2(230, 160)
 
 [node name="Player" type="CharacterBody2D" groups=["Player", "damager"]]
+z_index = 10
 script = ExtResource("1_vgqql")
 
 [node name="Player (Crab)" type="AnimatedSprite2D" parent="."]
 position = Vector2(123, 82)
 sprite_frames = SubResource("SpriteFrames_3smsa")
 animation = &"walking_135"
-
-[node name="UnderSprite" type="Sprite2D" parent="Player (Crab)"]
-show_behind_parent = true
-position = Vector2(0, 4)
-texture = ExtResource("3_fkybt")
 
 [node name="snap-sound" type="AudioStreamPlayer2D" parent="Player (Crab)"]
 position = Vector2(-123, -82)

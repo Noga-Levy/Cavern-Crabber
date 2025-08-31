@@ -18,7 +18,7 @@ size = Vector2(133.5, 2937)
 [node name="Player" parent="." instance=ExtResource("1_055b2")]
 z_index = 2
 
-[node name="b-border" type="StaticBody2D" parent="." groups=["border"]]
+[node name="b-border" type="StaticBody2D" parent="." groups=["b-border", "border"]]
 modulate = Color(0.584314, 1, 1, 1)
 position = Vector2(-1, 379)
 
@@ -26,19 +26,19 @@ position = Vector2(-1, 379)
 position = Vector2(1, -110.25)
 shape = SubResource("RectangleShape2D_jc4ci")
 
-[node name="t-border" type="StaticBody2D" parent="." groups=["t-border"]]
+[node name="t-border" type="StaticBody2D" parent="." groups=["border", "t-border"]]
 
 [node name="Top" type="CollisionShape2D" parent="t-border" groups=["border", "t-border"]]
 position = Vector2(2, -2793)
 shape = SubResource("RectangleShape2D_jc4ci")
 
-[node name="l-border" type="StaticBody2D" parent="." groups=["l-border"]]
+[node name="l-border" type="StaticBody2D" parent="." groups=["border", "l-border"]]
 
 [node name="Left" type="CollisionShape2D" parent="l-border" groups=["border", "l-border"]]
 position = Vector2(-514.75, -1262.5)
 shape = SubResource("RectangleShape2D_18xhp")
 
-[node name="r-border" type="StaticBody2D" parent="." groups=["r-border"]]
+[node name="r-border" type="StaticBody2D" parent="." groups=["border", "r-border"]]
 
 [node name="Right" type="CollisionShape2D" parent="r-border" groups=["border", "r-border"]]
 position = Vector2(516, -1263)
