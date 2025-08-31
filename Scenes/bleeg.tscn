@@ -56,7 +56,7 @@ size = Vector2(181, 122)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amkd7"]
 size = Vector2(189, 130)
 
-[node name="bleeg" type="CharacterBody2D"]
+[node name="bleeg" type="CharacterBody2D" groups=["Bleeg"]]
 script = ExtResource("1_g588y")
 
 [node name="Bleeg" type="AnimatedSprite2D" parent="." groups=["Enemy", "enemy-of-level"]]

@@ -1,80 +1,81 @@
-extends Area2D
+extends CharacterBody2D
+
+# Movement
+var warble_Vec = Vector2(0,0)
+var SPEED = 500
+var xdir = 1
+
+# Attack
+var inside_warble = []
+var ypos
 
 # Health
 var health = 6
 var total_health = 6
-var inside_warble = []
-signal send_health(HP, total_HP)  # Custpm signal
-
-# Movement
-var direction = 1
-var SPEED = 5
+signal send_health(HP, total_HP)
 
 func _ready() -> void:
 	$e_warble.play("right")
-	# Connecting signals to functions so that I can control what happens when I receive the signal
-	connect("body_entered", Callable(self, "_on_Area2D_body_entered"))
-	print("Connected enter")
-	connect("body_exited", Callable(self, "_on_body_exited"))
-	print("Connected exit")
+	ypos = position.y
+	
+
+func _physics_process(_delta: float) -> void:
+	warble_Vec = Vector2(xdir, 0)
+	
+	# normalize diagonal movement, scale by speed
+	if warble_Vec != Vector2.ZERO:
+		warble_Vec = warble_Vec.normalized()
+	else:
+		$e_warble.stop()
+	
+	velocity = SPEED * warble_Vec
+	move_and_slide()
+	
+	if inside_warble.size() > 0 and Input.is_action_just_pressed("attack"):
+		health -= 3
+	
+	send_health.emit(health, total_health)
+
+
+func _process(delta: float) -> void:
+	if health <= 0:
+		self.queue_free()
+
 
 func attack():
 	await get_tree().create_timer(0.6).timeout
-	$attack.play()
 	
-	if direction == -1:
-			$e_warble.play("left-attack")
+	if xdir == -1:
+		$e_warble.play("left-attack")
 	else:
 		$e_warble.play("right-attack")
+	
+	$attack.play()
 	
 	await get_tree().create_timer(0.4).timeout
 	
 	if inside_warble.size() > 0:
 		Global.crabHP -= 2
 	
-	if direction == -1:
+	if xdir == -1:
 		$e_warble.play("left")
 	else:
 		$e_warble.play("right")
 
-func _on_Area2D_body_entered(body: Node2D):
-	print("A body entered the warble: " + body.name)
-	
-	# Getting damaged
-	if body.is_in_group("damager"):
-		inside_warble.append(body)
-		print("Added {body} to array 'inside_warble'".format([body], "{body}"))
-		attack()
-	
-	# Turning around
+
+func _on_collision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("border"):
-		direction *= -1
+		xdir *= -1
 		
-		# Animation
-		if direction == -1:
+		if xdir < 0:
 			$e_warble.play("left")
 		else:
 			$e_warble.play("right")
-		
-func _on_body_exited(body: Node2D):
-	print("A body exited the warble: " + body.name)
 	
 	if body.is_in_group("damager"):
+		inside_warble.append(body)
+		attack()
+
+func _on_collision_body_exited(body: Node2D) -> void:
+	if body.is_in_group("damager"):
 		inside_warble.erase(body)
-		print("Erased {body} from array 'inside_warble'".format([body], "{body}"))
-
-func _process(_delta: float) -> void:
-	
-	if inside_warble.size() > 0 and Input.is_action_just_pressed("attack"):
-		health -= 3
-		print(health)
-		if health <= 0:
-			self.queue_free()
-	
-	send_health.emit(health, total_health)
-	
-	position.x += direction * SPEED
-
-
-func _on_send_health(HP: Variant, total_HP: Variant) -> void:
-	pass # Replace with function body.

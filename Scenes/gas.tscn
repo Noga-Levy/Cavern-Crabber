@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0piftk2uvxvt"]
+
+[ext_resource type="Script" uid="uid://dcp6ko5nd343y" path="res://gas.gd" id="1_s53b2"]
+[ext_resource type="Texture2D" uid="uid://dxd460sk1rr5p" path="res://Sprites/Bleeg/bleeg-gas.png" id="2_5qh84"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rdr4"]
+size = Vector2(509, 174)
+
+[node name="Gas" type="Area2D"]
+z_index = 6
+script = ExtResource("1_s53b2")
+
+[node name="Bleeg-gas" type="Sprite2D" parent="."]
+position = Vector2(-4, 1)
+texture = ExtResource("2_5qh84")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_3rdr4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

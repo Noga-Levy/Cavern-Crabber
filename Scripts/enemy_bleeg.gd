@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 # Movement
 var bleeg_Vec = Vector2(0,0)
-var SPEED = 500
+var SPEED = 1000
 var xdir = -1
 var ydir = -1
 
@@ -14,7 +14,7 @@ var health = 13
 var total_health = 13
 signal send_health(HP, total_HP)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	bleeg_Vec = Vector2(xdir, ydir)
 	
 	# normalize diagonal movement, scale by speed
@@ -69,7 +69,6 @@ func _on_collision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("damager"):
 		inside_warble.append(body)
 		attack()
-
 
 func _on_collision_body_exited(body: Node2D) -> void:
 	if body.is_in_group("damager"):

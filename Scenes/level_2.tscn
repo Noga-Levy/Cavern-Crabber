@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dapf0o6nua77s"]
+[gd_scene load_steps=10 format=3 uid="uid://dapf0o6nua77s"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_055b2"]
 [ext_resource type="Texture2D" uid="uid://ml8y1vr8k0jr" path="res://Sprites/ground.png" id="2_2mgoq"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_uhnj4"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_42uki"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="5_t7v2y"]
+[ext_resource type="Texture2D" uid="uid://dxd460sk1rr5p" path="res://Sprites/Bleeg/bleeg-gas.png" id="7_055b2"]
 [ext_resource type="PackedScene" uid="uid://d03s2myh7tjf8" path="res://Scenes/bleeg.tscn" id="7_vcilj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc4ci"]
@@ -77,3 +78,11 @@ show_behind_parent = true
 position = Vector2(2, -1342)
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_2mgoq")
+
+[node name="Bleeg-gas" type="Sprite2D" parent="."]
+position = Vector2(-117, -530)
+texture = ExtResource("7_055b2")
+
+[node name="Bleeg-gas2" type="Sprite2D" parent="."]
+position = Vector2(119, -1178)
+texture = ExtResource("7_055b2")

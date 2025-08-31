@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvd2gv1fmuyk"]
+[gd_scene load_steps=11 format=3 uid="uid://dvd2gv1fmuyk"]
 
 [ext_resource type="Script" uid="uid://bavq4r2a1qh6m" path="res://Scripts/enemy_warble.gd" id="1_qh6vf"]
 [ext_resource type="Texture2D" uid="uid://cu81fj773v10a" path="res://Sprites/Warble/warble_left.png" id="2_d4qjl"]
@@ -44,9 +44,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5kg2"]
-size = Vector2(67.4117, 58.6441)
+size = Vector2(57.5, 56)
 
-[node name="enemy_warble" type="Area2D" groups=["Enemy", "enemy-of-level", "warble"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0kxo8"]
+size = Vector2(68, 69)
+
+[node name="enemy_warble" type="CharacterBody2D" groups=["Enemy", "enemy-of-level", "warble"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_qh6vf")
 
@@ -66,12 +69,19 @@ bbcode_enabled = true
 horizontal_alignment = 1
 script = ExtResource("3_2q77u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7.03173, -4.95337)
+[node name="warble-body" type="CollisionShape2D" parent="."]
+position = Vector2(-6.25, -5)
 shape = SubResource("RectangleShape2D_l5kg2")
 
 [node name="attack" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_0kxo8")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+position = Vector2(-6.5, -5)
+shape = SubResource("RectangleShape2D_0kxo8")
+
 [connection signal="send_health" from="." to="e_warble/HP" method="_on_enemy_warble_send_health"]
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
+[connection signal="body_exited" from="Collision" to="." method="_on_collision_body_exited"]
