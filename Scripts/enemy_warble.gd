@@ -8,6 +8,7 @@ var xdir = 1
 # Attack
 var inside_warble = []
 var ypos
+var dodge = false
 
 # Health
 var health = 6
@@ -40,6 +41,11 @@ func _physics_process(_delta: float) -> void:
 func _process(delta: float) -> void:
 	if health <= 0:
 		self.queue_free()
+	
+	if Input.is_action_pressed("dodge"):
+		dodge = true
+	else:
+		dodge = false
 
 
 func attack():
@@ -54,7 +60,7 @@ func attack():
 	
 	await get_tree().create_timer(0.4).timeout
 	
-	if inside_warble.size() > 0:
+	if inside_warble.size() > 0 and not dodge:
 		Global.crabHP -= 2
 	
 	if xdir == -1:

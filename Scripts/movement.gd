@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 500  # pixels per second
+var SPEED = Global.crab_SPEED  # pixels per second
 var change_amt = 5
 var crab_vector = Vector2()
 var health = Global.crabHP

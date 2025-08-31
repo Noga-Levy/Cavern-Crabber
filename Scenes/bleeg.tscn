@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d03s2myh7tjf8"]
+[gd_scene load_steps=13 format=3 uid="uid://d03s2myh7tjf8"]
 
 [ext_resource type="Script" uid="uid://bmo7vfw061y5d" path="res://Scripts/enemy_bleeg.gd" id="1_g588y"]
 [ext_resource type="Texture2D" uid="uid://c42xblj57xn5b" path="res://Sprites/Bleeg/bleeg.png" id="1_oy3v1"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://0ckvcfx5sy7c" path="res://Sprites/Bleeg/L-bleeg2.png" id="3_iax02"]
 [ext_resource type="Texture2D" uid="uid://bngtomjoinuwp" path="res://Sprites/Bleeg/bleeg2.png" id="5_ug08o"]
 [ext_resource type="Texture2D" uid="uid://btt2njmtfrb2v" path="res://Sprites/Bleeg/rbleeg-attack.png" id="7_pfysm"]
+[ext_resource type="AudioStream" uid="uid://cvr7wnei0ph" path="res://Audio/bleeg-hiss.mp3" id="9_pfysm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iax02"]
 animations = [{
@@ -57,6 +58,7 @@ size = Vector2(181, 122)
 size = Vector2(189, 130)
 
 [node name="bleeg" type="CharacterBody2D" groups=["Bleeg"]]
+z_index = 1
 script = ExtResource("1_g588y")
 
 [node name="Bleeg" type="AnimatedSprite2D" parent="." groups=["Enemy", "enemy-of-level"]]
@@ -85,6 +87,9 @@ theme_override_colors/default_color = Color(0.999331, 0.336299, 0.271501, 1)
 bbcode_enabled = true
 horizontal_alignment = 1
 script = ExtResource("2_jvq0k")
+
+[node name="hiss" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_pfysm")
 
 [connection signal="send_health" from="." to="HP" method="_on_bleeg_send_health"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

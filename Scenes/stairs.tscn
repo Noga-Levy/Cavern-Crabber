@@ -15,10 +15,7 @@ position = Vector2(2, -1)
 texture = ExtResource("2_idtik")
 
 [node name="LockedStairs" type="Sprite2D" parent="."]
-position = Vector2(2, -2)
-
-[node name="LockedStairs2" type="Sprite2D" parent="LockedStairs"]
-position = Vector2(0, 1)
+position = Vector2(2, -1)
 texture = ExtResource("3_py8fu")
 
 [node name="warning" type="RichTextLabel" parent="."]

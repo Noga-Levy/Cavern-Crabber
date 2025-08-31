@@ -5,6 +5,7 @@ var bleeg_Vec = Vector2(0,0)
 var SPEED = 1000
 var xdir = -1
 var ydir = -1
+var dodge = false
 
 # Attack
 var inside_warble = []
@@ -35,10 +36,17 @@ func _physics_process(_delta: float) -> void:
 func _process(delta: float) -> void:
 	if health <= 0:
 		self.queue_free()
+		
+	if Input.is_action_pressed("dodge"):
+		dodge = true
+	else:
+		dodge = false
 
 
 func attack():
 	await get_tree().create_timer(0.3).timeout
+	
+	$hiss.play()
 	
 	if xdir == -1:
 		$Bleeg.play("left-attack")
@@ -47,7 +55,7 @@ func attack():
 	
 	await get_tree().create_timer(0.2).timeout
 	
-	if inside_warble.size() > 0:
+	if inside_warble.size() > 0 and not dodge:
 		Global.crabHP -= 4
 	
 	if xdir == -1:

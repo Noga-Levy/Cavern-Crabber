@@ -13,9 +13,10 @@ func _process(_delta: float) -> void:
 	if enemies == 0:
 		$BrownStairs.show()
 		$LockedStairs.hide()
-		$warning.text = "LEVEL UP! DMG + 1, HP + 5"
+		$warning.text = "LEVEL UP! DMG + 1, HP + 5, SPEED + 100"
 		if proceed_to_next_level:
 			Global.level += 1
+			Global.crab_SPEED = 500 + Global.level * 100
 			proceed_to_next_level = false
 		
 	else:
