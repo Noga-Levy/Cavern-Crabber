@@ -3,4 +3,4 @@
 $$Crab$$
 <p align="center">Cavern Crabber is a game where you--the mighty and feared crab--must delve through a dungeon to retrieve an artifact of revivification.</p>
 <p align="center">Currently a work in progress.</p>
-<p align="center">Lore to be revealed (whenever I can finish the art...)</p>
+<p align="center">Lore to be revealed--I'm working on the art</p>
