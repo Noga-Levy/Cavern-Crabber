@@ -11,6 +11,21 @@ func _ready():
 	original_color = $"Player (Crab)".modulate
 	Global.crabHP = 10 + (Global.level - 1) * 5
 
+
+func attack():
+	var walk_to_atk = {"walking_right" : "attack_right", "walking_left" : "attack_left",
+	"walking_forwards" : "attack_up", "walking_down" : "attack_down", "walking_45" : "attack45",
+	"walking_315" : "attack315", "walking_225" : "attack225", "walking_135" : "attack135"}
+	
+	var walking_animations = ["walking_right", "walking_left", "walking_forwards", "walking_down",
+	"walking_45", "walking_315", "walking_225", "walking_135"]
+	
+	var original_animation = $"Player (Crab)".animation
+	
+	if Input.is_action_pressed("attack") and original_animation in walking_animations:
+		$"Player (Crab)".play(walk_to_atk[original_animation])
+
+
 func _physics_process(_delta: float) -> void:
 	
 	if Global.crabHP != health:
@@ -44,7 +59,7 @@ func _physics_process(_delta: float) -> void:
 		if right and up:
 			$"Player (Crab)".play("walking_225")
 			crab_vector.x += change_amt
-			crab_vector.y -= change_amt	
+			crab_vector.y -= change_amt
 		
 	else:
 		if Input.is_key_pressed(KEY_DOWN):
@@ -60,7 +75,9 @@ func _physics_process(_delta: float) -> void:
 		elif Input.is_key_pressed(KEY_RIGHT):
 			crab_vector.x += change_amt
 			$"Player (Crab)".play("walking_right")
-		
+	
+	attack()
+	
 	# normalize diagonal movement, scale by speed
 	if crab_vector != Vector2.ZERO:
 		crab_vector = crab_vector.normalized()

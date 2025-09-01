@@ -1,7 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://coeqwi0sejihi"]
+[gd_scene load_steps=33 format=3 uid="uid://coeqwi0sejihi"]
 
 [ext_resource type="Script" uid="uid://clxfhopiusl0b" path="res://Scripts/movement.gd" id="1_vgqql"]
+[ext_resource type="Texture2D" uid="uid://qujrfuj6wn1d" path="res://Sprites/Crab/attack/crab135-a.png" id="2_0gysh"]
+[ext_resource type="Texture2D" uid="uid://bu8fy88eg68ic" path="res://Sprites/Crab/attack/crab315-a.png" id="2_2ijsl"]
 [ext_resource type="Texture2D" uid="uid://cxs33x4d5hru5" path="res://Sprites/Crab/crab315.png" id="2_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://bspjkkvv7y2a8" path="res://Sprites/Crab/attack/crab45-a.png" id="2_bi64h"]
 [ext_resource type="Texture2D" uid="uid://ce7epwsd1p02f" path="res://Sprites/Crab/crab225.png" id="2_fd4e3"]
 [ext_resource type="Texture2D" uid="uid://b5ycmhgsq63j1" path="res://Sprites/Crab/crab135.png" id="2_igrcy"]
 [ext_resource type="Texture2D" uid="uid://ce2qfd5ficqc6" path="res://Sprites/Crab/crab45.png" id="2_pu2lt"]
@@ -11,12 +14,17 @@
 [ext_resource type="Texture2D" uid="uid://bcbg40ndtxk0l" path="res://Sprites/Crab/crab225-2.png" id="3_qqcod"]
 [ext_resource type="Texture2D" uid="uid://db6odrud4wu26" path="res://Sprites/Crab/crab_normal2.png" id="3_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://irn5y6s4ffh1" path="res://Sprites/Crab/crab45-2.png" id="3_ukyrk"]
+[ext_resource type="Texture2D" uid="uid://cqwsv2vn56i1y" path="res://Sprites/Crab/attack/crab225-a.png" id="3_vfarp"]
 [ext_resource type="Texture2D" uid="uid://ddwt4mc8f22m8" path="res://Sprites/Crab/crab_forwards.png" id="3_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://dp5cc3tt3k5hr" path="res://Sprites/Crab/crab_left.png" id="4_fkybt"]
 [ext_resource type="Texture2D" uid="uid://cnsv1soi387r7" path="res://Sprites/Crab/crab_forwards2.png" id="5_gymyn"]
 [ext_resource type="Texture2D" uid="uid://brn6yxvgr683" path="res://Sprites/Crab/crab_left2.png" id="5_x3wgy"]
 [ext_resource type="Texture2D" uid="uid://drey7pg3x03yd" path="res://Sprites/Crab/crab_right.png" id="6_8erm5"]
+[ext_resource type="Texture2D" uid="uid://yxv3ujo81tix" path="res://Sprites/Crab/attack/crab_down-a.png" id="6_ypfnu"]
 [ext_resource type="Texture2D" uid="uid://0bl45acywkuc" path="res://Sprites/Crab/crab_right2.png" id="7_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://bklivinwvihc8" path="res://Sprites/Crab/attack/crab_left-a.png" id="7_xuaoq"]
+[ext_resource type="Texture2D" uid="uid://d367ymwip8ihd" path="res://Sprites/Crab/attack/crab_right-a.png" id="8_wohnl"]
+[ext_resource type="Texture2D" uid="uid://budeeqh53r52n" path="res://Sprites/Crab/attack/crab_up-a.png" id="9_36dho"]
 [ext_resource type="Script" uid="uid://d1bxfsbabn0y3" path="res://Scripts/crab_sounds.gd" id="18_olqyp"]
 [ext_resource type="AudioStream" uid="uid://dh7s3dlovnau2" path="res://Audio/snap-sound-effect.mp3" id="19_l6n3p"]
 [ext_resource type="AudioStream" uid="uid://b10ja8ygulg25" path="res://Audio/bg_music2.mp3" id="20_wpjfl"]
@@ -25,6 +33,70 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0gysh")
+}],
+"loop": true,
+"name": &"attack135",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vfarp")
+}],
+"loop": true,
+"name": &"attack225",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2ijsl")
+}],
+"loop": true,
+"name": &"attack315",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bi64h")
+}],
+"loop": true,
+"name": &"attack45",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ypfnu")
+}],
+"loop": true,
+"name": &"attack_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_xuaoq")
+}],
+"loop": true,
+"name": &"attack_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_wohnl")
+}],
+"loop": true,
+"name": &"attack_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_36dho")
+}],
+"loop": true,
+"name": &"attack_up",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_igrcy")
@@ -124,7 +196,7 @@ script = ExtResource("1_vgqql")
 [node name="Player (Crab)" type="AnimatedSprite2D" parent="."]
 position = Vector2(123, 82)
 sprite_frames = SubResource("SpriteFrames_3smsa")
-animation = &"walking_135"
+animation = &"attack_up"
 script = ExtResource("18_olqyp")
 
 [node name="snap-sound" type="AudioStreamPlayer2D" parent="Player (Crab)"]
