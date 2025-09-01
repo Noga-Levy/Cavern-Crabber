@@ -38,19 +38,23 @@ func _physics_process(_delta: float) -> void:
 	send_health.emit(health, total_health)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if health <= 0:
 		self.queue_free()
 	
 	if Input.is_action_pressed("dodge"):
-		dodge = true
-	else:
-		dodge = false
+		start_dodge()
+
+
+func start_dodge():
+	dodge = true
+	await get_tree().create_timer(0.1).timeout  # duration of dodge window
+	dodge = false
 
 
 func attack():
 	await get_tree().create_timer(0.6).timeout
-	
+		
 	if xdir == -1:
 		$e_warble.play("left-attack")
 	else:
@@ -60,7 +64,7 @@ func attack():
 	
 	await get_tree().create_timer(0.4).timeout
 	
-	if inside_warble.size() > 0 and not dodge:
+	if inside_warble.size() > 0 and dodge == false:
 		Global.crabHP -= 2
 	
 	if xdir == -1:

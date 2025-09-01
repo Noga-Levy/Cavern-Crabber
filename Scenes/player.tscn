@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://0bl45acywkuc" path="res://Sprites/Crab/crab_right2.png" id="7_f1ek2"]
 [ext_resource type="Script" uid="uid://d1bxfsbabn0y3" path="res://Scripts/crab_sounds.gd" id="18_olqyp"]
 [ext_resource type="AudioStream" uid="uid://dh7s3dlovnau2" path="res://Audio/snap-sound-effect.mp3" id="19_l6n3p"]
-[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Audio/bg_music.mp3" id="21_olqyp"]
+[ext_resource type="AudioStream" uid="uid://b10ja8ygulg25" path="res://Audio/bg_music2.mp3" id="20_wpjfl"]
 [ext_resource type="AudioStream" uid="uid://bdwgv0wbrxkj8" path="res://Audio/dodge-whoosh.mp3" id="21_wpjfl"]
 [ext_resource type="Script" uid="uid://vq00viwcm3ow" path="res://Scripts/whoosh.gd" id="22_wpjfl"]
 
@@ -133,7 +133,7 @@ stream = ExtResource("19_l6n3p")
 volume_db = -5.0
 
 [node name="bg-music" type="AudioStreamPlayer2D" parent="Player (Crab)"]
-stream = ExtResource("21_olqyp")
+stream = ExtResource("20_wpjfl")
 volume_db = -10.0
 autoplay = true
 max_distance = 1000.0

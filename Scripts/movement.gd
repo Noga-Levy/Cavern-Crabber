@@ -7,6 +7,7 @@ var health = Global.crabHP
 var original_color
 
 func _ready():
+	$"Player (Crab)".play("walking_down")
 	original_color = $"Player (Crab)".modulate
 	Global.crabHP = 10 + (Global.level - 1) * 5
 

@@ -20,6 +20,7 @@ position = Vector2(0, -5)
 
 [node name="Player" parent="." instance=ExtResource("1_8ffim")]
 z_index = 2
+position = Vector2(74, -164)
 
 [node name="border" type="StaticBody2D" parent="." groups=["border"]]
 position = Vector2(-1, 379)
@@ -62,20 +63,30 @@ offset_right = 46.0
 offset_bottom = -25.0
 theme_override_fonts/bold_font = ExtResource("6_lsmp6")
 bbcode_enabled = true
-text = "[font_size=30]Hello, Krabby!
+text = "[font_size=30]Hello, Akamo the crab!
 Use the arrow keys to move
 [/font_size]"
 tab_size = 8
 horizontal_alignment = 1
 
-[node name="Attack_Instructions" type="RichTextLabel" parent="."]
+[node name="Dodge_Instructions" type="RichTextLabel" parent="."]
 offset_left = -122.0
 offset_top = -555.0
 offset_right = 386.0
 offset_bottom = -425.0
 bbcode_enabled = true
-text = "[font_size=30]Go over to the yellow creatures (warbles) and press A to attack.[/font_size]"
+text = "[font_size=30]Be careful! The yellow creatures (warbles) bite. Press d to dodge[/font_size]"
 horizontal_alignment = 1
+
+[node name="Attack_Instructions" type="RichTextLabel" parent="."]
+offset_left = -386.0
+offset_top = -783.0
+offset_right = 122.0
+offset_bottom = -681.0
+bbcode_enabled = true
+text = "[font_size=30]You want to attack too? Press A to deal damage[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="e_warble" parent="." instance=ExtResource("3_xfk5q")]
 position = Vector2(-241, -503)

@@ -4,7 +4,7 @@ func _ready() -> void:
 	$AudioStreamPlayer2D.play()
 
 # Whole sequence boils down to "detect an input --> is the input a key pressed --> ok, restart"
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_SPACE):
 		Global.crabHP = 10
 		Global.level = 1

@@ -30,4 +30,14 @@ horizontal_alignment = 1
 position = Vector2(2, -1)
 shape = SubResource("RectangleShape2D_tl8cb")
 
+[node name="msg_from_dev" type="RichTextLabel" parent="."]
+visible = false
+offset_left = -141.0
+offset_top = 110.0
+offset_right = 141.0
+offset_bottom = 177.0
+text = "Level 3 is still in the works.
+Thanks for playing so far!"
+horizontal_alignment = 1
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
