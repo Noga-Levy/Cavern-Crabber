@@ -13,12 +13,12 @@ script = ExtResource("1_myn1l")
 texture = ExtResource("1_ytabi")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 298.0
-offset_top = -224.0
-offset_right = 504.0
-offset_bottom = 204.0
+offset_left = 273.0
+offset_top = -222.0
+offset_right = 530.0
+offset_bottom = 206.0
 bbcode_enabled = true
-text = "[color=black][font_size=50]Press the space bar to retry[/font_size][/color]"
+text = "[color=black][font_size=50]Press space to restart the game[/font_size][/color]"
 horizontal_alignment = 1
 vertical_alignment = 1
 

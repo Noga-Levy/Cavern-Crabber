@@ -98,8 +98,8 @@ position = Vector2(134, -2015)
 
 [node name="Darkness" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(23, -1390)
-scale = Vector2(13.7292, 37.2037)
+position = Vector2(23, -1243.5)
+scale = Vector2(13.7292, 39.9167)
 texture = ExtResource("8_2mgoq")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]

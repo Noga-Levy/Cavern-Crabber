@@ -43,7 +43,7 @@ func _process(_delta: float) -> void:
 
 func start_dodge():
 	dodge = true
-	await get_tree().create_timer(0.05).timeout  # duration of dodge window
+	await get_tree().create_timer(0.5).timeout  # duration of dodge window
 	dodge = false
 
 

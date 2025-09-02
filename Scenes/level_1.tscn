@@ -75,7 +75,7 @@ offset_top = -555.0
 offset_right = 386.0
 offset_bottom = -425.0
 bbcode_enabled = true
-text = "[font_size=30]Be careful! The yellow creatures (warbles) bite. Press d to dodge[/font_size]"
+text = "[font_size=30]Be careful! The yellow creatures (warbles) are stabby. Press d to dodge[/font_size]"
 horizontal_alignment = 1
 
 [node name="Attack_Instructions" type="RichTextLabel" parent="."]
@@ -114,6 +114,6 @@ position = Vector2(-3, -2177)
 
 [node name="Darkness" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(23, -1390)
-scale = Vector2(13.7292, 37.2037)
+position = Vector2(23, -1281)
+scale = Vector2(13.7292, 39.2222)
 texture = ExtResource("8_xrdnt")

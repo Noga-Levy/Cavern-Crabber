@@ -1,6 +1,12 @@
 extends Node2D
 
 func _ready() -> void:
+	var length = $AudioStreamPlayer2D.stream.get_length()
+	
+	$AudioStreamPlayer2D.play()
+	await get_tree().create_timer(length).timeout
+	
+	$AudioStreamPlayer2D.stream = load("res://Audio/game_lost_song.mp3")
 	$AudioStreamPlayer2D.play()
 
 # Whole sequence boils down to "detect an input --> is the input a key pressed --> ok, restart"
