@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://be2x2eabfcj57"]
+[gd_scene load_steps=5 format=3 uid="uid://be2x2eabfcj57"]
 
 [ext_resource type="Script" uid="uid://f7acchj3erl4" path="res://Scripts/scroll.gd" id="1_wx0dm"]
 [ext_resource type="Texture2D" uid="uid://dksn1mghfr0wj" path="res://Sprites/scroll.png" id="2_pd2jm"]
 [ext_resource type="Texture2D" uid="uid://cwkfbwt82p3r6" path="res://Sprites/ground-in-between-levels.png" id="2_xyluh"]
+[ext_resource type="AudioStream" uid="uid://b3tf6ibqgne0d" path="res://Audio/the crablevator by @Cisco.mp3" id="4_xyluh"]
 
 [node name="Scroll" type="Node2D"]
 script = ExtResource("1_wx0dm")
@@ -14,6 +15,8 @@ texture = ExtResource("2_xyluh")
 
 [node name="Scroll_Img" type="Sprite2D" parent="."]
 texture = ExtResource("2_pd2jm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Level_complete" type="RichTextLabel" parent="."]
 offset_left = -108.0
@@ -80,4 +83,13 @@ text = "[font_size=25][color=black]NEXT: WARBLES[/color][/font_size]
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Elevator music by Cisco" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_xyluh")
+autoplay = true
+
+[node name="Credit to Cisco" type="RichTextLabel" parent="."]
+offset_left = 374.0
+offset_top = 279.0
+offset_right = 549.0
+offset_bottom = 302.0
+text = "Music by @Cisco"
