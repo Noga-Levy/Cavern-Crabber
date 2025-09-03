@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://be2x2eabfcj57"]
+[gd_scene load_steps=4 format=3 uid="uid://be2x2eabfcj57"]
 
-[ext_resource type="Script" uid="uid://f7acchj3erl4" path="res://Scenes/scroll.gd" id="1_wx0dm"]
+[ext_resource type="Script" uid="uid://f7acchj3erl4" path="res://Scripts/scroll.gd" id="1_wx0dm"]
 [ext_resource type="Texture2D" uid="uid://dksn1mghfr0wj" path="res://Sprites/scroll.png" id="2_pd2jm"]
+[ext_resource type="Texture2D" uid="uid://cwkfbwt82p3r6" path="res://Sprites/ground-in-between-levels.png" id="2_xyluh"]
 
 [node name="Scroll" type="Node2D"]
 script = ExtResource("1_wx0dm")
+
+[node name="Ground-in-between-levels" type="Sprite2D" parent="."]
+position = Vector2(29, 40)
+scale = Vector2(7.16406, 7.35648)
+texture = ExtResource("2_xyluh")
 
 [node name="Scroll_Img" type="Sprite2D" parent="."]
 texture = ExtResource("2_pd2jm")

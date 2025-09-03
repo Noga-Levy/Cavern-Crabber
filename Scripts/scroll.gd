@@ -7,6 +7,9 @@ var all_info_shown = false
 var info
 
 func _ready() -> void:
+	var level_colors = {1 : "ffffff", 2 : "95ffff"}
+	$"Ground-in-between-levels".modulate = level_colors[Global.level]
+	
 	$Level_complete.text = level_done
 	info = [$HP, $DMG, $SPEED, $Special_Abilities, $Next_Enemy]
 	
