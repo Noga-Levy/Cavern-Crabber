@@ -45,3 +45,10 @@ func _process(delta: float) -> void:
 	elif not all_info_shown:
 		await get_tree().create_timer(0.5).timeout
 		show_all_info()
+	
+
+func _input(event):
+	if event is InputEventKey:
+		if event.pressed:
+			if Global.level == 2:
+				get_tree().change_scene_to_file("res://Scenes/level_2.tscn")

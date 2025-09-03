@@ -32,7 +32,7 @@ func _process(_delta: float) -> void:
 
 func switch_levels():
 	if Global.level == 2:
-		get_tree().change_scene_to_file("res://Scenes/level_2.tscn")
+		get_tree().change_scene_to_file("res://Scenes/scroll.tscn")
 
 
 func _on_body_entered(_body: Node2D) -> void:
