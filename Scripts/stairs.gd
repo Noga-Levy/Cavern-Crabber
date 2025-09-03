@@ -22,7 +22,6 @@ func _process(_delta: float) -> void:
 		
 			if proceed_to_next_level:
 				Global.level += 1
-				Global.crab_SPEED = 500 + Global.level * 100
 				proceed_to_next_level = false
 		
 	else:
@@ -39,4 +38,5 @@ func switch_levels():
 func _on_body_entered(_body: Node2D) -> void:
 	print("body entered")
 	if Global.level > current_level:
+		
 		call_deferred("switch_levels")

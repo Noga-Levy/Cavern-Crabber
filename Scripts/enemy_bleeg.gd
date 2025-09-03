@@ -69,7 +69,7 @@ func attack():
 
 
 func _on_collision_body_entered(body: Node2D) -> void:
-	if body.is_in_group("border"):
+	if body.is_in_group("border") or body.is_in_group("Bleeg"):
 		xdir *= -1
 		ydir = randi_range(-1, 1)
 		
