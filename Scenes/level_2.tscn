@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dapf0o6nua77s"]
+[gd_scene load_steps=19 format=3 uid="uid://dapf0o6nua77s"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_055b2"]
 [ext_resource type="Texture2D" uid="uid://ml8y1vr8k0jr" path="res://Sprites/Various Ground Sprites/ground.png" id="2_2mgoq"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d03s2myh7tjf8" path="res://Scenes/bleeg.tscn" id="7_vcilj"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="8_2mgoq"]
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="8_42uki"]
+[ext_resource type="PackedScene" uid="uid://cpl56ifkrmb0g" path="res://Scenes/health-box.tscn" id="11_t7v2y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc4ci"]
 size = Vector2(1154, 125.5)
@@ -155,3 +156,6 @@ bbcode_enabled = true
 text = "[font_size=30]Caution!
 The gas is extremely toxic[/font_size]"
 horizontal_alignment = 1
+
+[node name="HP-box" parent="." instance=ExtResource("11_t7v2y")]
+position = Vector2(-1656, -1519)
