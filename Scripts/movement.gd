@@ -90,7 +90,7 @@ func _physics_process(_delta: float) -> void:
 
 
 # To show the game over scene, we need to call this outside of _physics_process
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Global.crabHP <= 0:
 		self.queue_free()
 		get_tree().change_scene_to_file("res://Scenes/game-over-lost.tscn")

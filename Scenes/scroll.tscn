@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://f7acchj3erl4" path="res://Scripts/scroll.gd" id="1_wx0dm"]
 [ext_resource type="Texture2D" uid="uid://dksn1mghfr0wj" path="res://Sprites/scroll.png" id="2_pd2jm"]
-[ext_resource type="Texture2D" uid="uid://cwkfbwt82p3r6" path="res://Sprites/ground-in-between-levels.png" id="2_xyluh"]
+[ext_resource type="Texture2D" uid="uid://cwkfbwt82p3r6" path="res://Sprites/Various Ground Sprites/ground-in-between-levels.png" id="2_xyluh"]
 [ext_resource type="AudioStream" uid="uid://b3tf6ibqgne0d" path="res://Audio/the crablevator by @Cisco.mp3" id="4_xyluh"]
 
 [node name="Scroll" type="Node2D"]
@@ -88,8 +88,10 @@ stream = ExtResource("4_xyluh")
 autoplay = true
 
 [node name="Credit to Cisco" type="RichTextLabel" parent="."]
-offset_left = 374.0
-offset_top = 279.0
-offset_right = 549.0
-offset_bottom = 302.0
-text = "Music by @Cisco"
+offset_left = 264.0
+offset_top = 255.0
+offset_right = 561.0
+offset_bottom = 305.0
+text = "Music by @ciscoxwh
+https://github.com/ciscoxwh"
+horizontal_alignment = 2

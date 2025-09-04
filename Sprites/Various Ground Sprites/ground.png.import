@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwkfbwt82p3r6"
-path="res://.godot/imported/ground-in-between-levels.png-2adc14a8106f4a5a79e6d3b8a396a750.ctex"
+uid="uid://ml8y1vr8k0jr"
+path="res://.godot/imported/ground.png-96f2d7e3b0955f8c4d238a5ea9dadb98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ground-in-between-levels.png"
-dest_files=["res://.godot/imported/ground-in-between-levels.png-2adc14a8106f4a5a79e6d3b8a396a750.ctex"]
+source_file="res://Sprites/Various Ground Sprites/ground.png"
+dest_files=["res://.godot/imported/ground.png-96f2d7e3b0955f8c4d238a5ea9dadb98.ctex"]
 
 [params]
 

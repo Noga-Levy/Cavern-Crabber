@@ -40,7 +40,7 @@ func show_all_info():
 		await get_tree().create_timer(0.5).timeout
 		i.show()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not stream_text_finished:
 		stream_level_done()
 		stream_text_finished = true

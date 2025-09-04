@@ -11,3 +11,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	self.text = "HP: {0}/{1}".format([Global.crabHP, total_HP])
 	position.y = Global.crab_pos[1] - 290  # Max: -325
+	
+	if Global.crab_pos.x <= -476:
+		position.x = Global.crab_pos.x - 555
+	else:
+		position.x = -555 

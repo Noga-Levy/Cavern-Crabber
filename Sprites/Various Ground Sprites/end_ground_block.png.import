@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7yf0oessfdyd"
-path="res://.godot/imported/locked_stairs.png-751f3ec7471efb87e464bce001f5fef7.ctex"
+uid="uid://die65pvn3dt4c"
+path="res://.godot/imported/end_ground_block.png-4efc027ea57990f77834d84bbf165d41.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/locked_stairs.png"
-dest_files=["res://.godot/imported/locked_stairs.png-751f3ec7471efb87e464bce001f5fef7.ctex"]
+source_file="res://Sprites/Various Ground Sprites/end_ground_block.png"
+dest_files=["res://.godot/imported/end_ground_block.png-4efc027ea57990f77834d84bbf165d41.ctex"]
 
 [params]
 
