@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpl56ifkrmb0g"]
+[gd_scene load_steps=7 format=3 uid="uid://cpl56ifkrmb0g"]
 
 [ext_resource type="Script" uid="uid://d4nxcsr1qedlg" path="res://health-box.gd" id="1_geb8i"]
 [ext_resource type="Texture2D" uid="uid://btkayp8lkh4iw" path="res://Sprites/box-closed.png" id="2_nkxhm"]
@@ -24,7 +24,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="HP-box" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ev4oa"]
+size = Vector2(180, 125)
+
+[node name="HP-box" type="Area2D"]
 script = ExtResource("1_geb8i")
 
 [node name="Box" type="AnimatedSprite2D" parent="."]
@@ -42,4 +45,12 @@ horizontal_alignment = 1
 
 [node name="Health-potion" type="Sprite2D" parent="."]
 visible = false
+position = Vector2(-1, 7)
 texture = ExtResource("3_nkxhm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2.5)
+shape = SubResource("RectangleShape2D_ev4oa")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
