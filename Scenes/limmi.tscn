@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlrki3pi8omm8"]
+
+[ext_resource type="Script" uid="uid://hu24uos3n5ny" path="res://Scripts/limmi.gd" id="1_6u7vc"]
+[ext_resource type="Texture2D" uid="uid://da3yu671cxye1" path="res://Sprites/limmi/lim-l.png" id="2_sjf0y"]
+[ext_resource type="Texture2D" uid="uid://b31uy1kuu8pqj" path="res://Sprites/limmi/lim-l2.png" id="3_vrb08"]
+[ext_resource type="Texture2D" uid="uid://u7qm1a7nk43i" path="res://Sprites/limmi/lim-r.png" id="4_d3u7k"]
+[ext_resource type="Texture2D" uid="uid://docs0lro6embx" path="res://Sprites/limmi/lim-r2.png" id="5_5ndyx"]
+[ext_resource type="Script" uid="uid://4mgbf2u1mhep" path="res://Scripts/limmi-HP.gd" id="6_dukjf"]
+[ext_resource type="AudioStream" uid="uid://cvr7wnei0ph" path="res://Audio/bleeg-hiss.mp3" id="7_fvo7l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pi1cc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sjf0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vrb08")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_d3u7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5ndyx")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvq0k"]
+size = Vector2(115, 138)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u7vc"]
+size = Vector2(134, 154)
+
+[node name="limmi" type="CharacterBody2D" groups=["Enemy", "enemy-of-level", "limmi"]]
+z_index = 1
+script = ExtResource("1_6u7vc")
+
+[node name="limmi" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pi1cc")
+animation = &"right"
+
+[node name="limmi_body" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(2.5, 21)
+shape = SubResource("RectangleShape2D_jvq0k")
+
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+position = Vector2(2, 21)
+shape = SubResource("RectangleShape2D_6u7vc")
+
+[node name="HP" type="RichTextLabel" parent="."]
+z_index = 2
+offset_left = -105.0
+offset_top = -110.0
+offset_right = 115.0
+offset_bottom = -19.0
+theme_override_colors/default_color = Color(0.999331, 0.336299, 0.271501, 1)
+bbcode_enabled = true
+horizontal_alignment = 1
+script = ExtResource("6_dukjf")
+metadata/_edit_use_anchors_ = true
+
+[node name="hiss" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_fvo7l")
+
+[connection signal="send_health" from="." to="HP" method="_on_limmi_send_health"]
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
+[connection signal="body_exited" from="Collision" to="." method="_on_collision_body_exited"]

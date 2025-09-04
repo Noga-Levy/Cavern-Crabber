@@ -1,9 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://d0y4ns64s8ssl"]
+[gd_scene load_steps=27 format=3 uid="uid://d0y4ns64s8ssl"]
 
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="1_76ybr"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="2_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="3_vwg62"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="4_s8nj6"]
+[ext_resource type="PackedScene" uid="uid://dlrki3pi8omm8" path="res://Scenes/limmi.tscn" id="5_vwg62"]
+[ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="6_qf6rc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8nj6"]
 size = Vector2(1325.27, 593.548)
@@ -244,3 +246,8 @@ shape = SubResource("RectangleShape2D_hed5s")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="r-border"]
 position = Vector2(-1073, -425.75)
 shape = SubResource("RectangleShape2D_yykrm")
+
+[node name="limmi" parent="." instance=ExtResource("5_vwg62")]
+position = Vector2(-98, -219)
+
+[node name="info" parent="." instance=ExtResource("6_qf6rc")]
