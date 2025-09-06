@@ -37,7 +37,7 @@ animations = [{
 size = Vector2(115, 138)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6u7vc"]
-size = Vector2(134, 154)
+size = Vector2(124, 146)
 
 [node name="limmi" type="CharacterBody2D" groups=["Enemy", "enemy-of-level", "limmi"]]
 z_index = 1
@@ -55,7 +55,7 @@ shape = SubResource("RectangleShape2D_jvq0k")
 [node name="Collision" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
-position = Vector2(2, 21)
+position = Vector2(2, 22)
 shape = SubResource("RectangleShape2D_6u7vc")
 
 [node name="HP" type="RichTextLabel" parent="."]

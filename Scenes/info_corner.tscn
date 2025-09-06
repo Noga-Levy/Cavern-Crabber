@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://y47ds36s7lf2" path="res://Scripts/crab_hp.gd" id="2_ocyjs"]
 
 [node name="info" type="Node2D"]
+z_index = 10
 
 [node name="Enemies_Left" type="RichTextLabel" parent="."]
 offset_left = -573.0

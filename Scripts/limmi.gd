@@ -11,9 +11,12 @@ var dodge = false
 var inside_limmi = []
 
 # Health
-var health = 20
-var total_health = 20
+var health = 25
+var total_health = 25
 signal send_health(HP, total_HP)
+
+# Lava
+var time = 0
 
 func _physics_process(_delta: float) -> void:
 	limmi_Vec = Vector2(xdir, ydir)
@@ -31,6 +34,12 @@ func _physics_process(_delta: float) -> void:
 		health -= 5
 	
 	send_health.emit(health, total_health)
+	
+	time += _delta
+	if time > 5:
+		print(time)
+		create_lava()
+		time = 0
 
 
 func _process(_delta: float) -> void:
@@ -39,6 +48,7 @@ func _process(_delta: float) -> void:
 		
 	if Input.is_action_pressed("dodge"):
 		start_dodge()
+	
 
 
 func start_dodge():
@@ -51,7 +61,7 @@ func attack():
 	await get_tree().create_timer(0.3).timeout
 	
 	if inside_limmi.size() > 0 and not dodge:
-		Global.crabHP -= 6
+		Global.crabHP -= 2
 	
 	if xdir == -1:
 		$limmi.play("left")
@@ -59,8 +69,17 @@ func attack():
 		$limmi.play("right")
 
 
+func create_lava():
+	var lava_scene = preload("res://Scenes/lava.tscn")
+	var lava_instance = lava_scene.instantiate()
+	
+	get_tree().root.get_node("level3").add_child(lava_instance)
+	
+	lava_instance.position = position
+
+
 func _on_collision_body_entered(body: Node2D) -> void:
-	if body.is_in_group("border") or body.is_in_group("Bleeg"):
+	if body.is_in_group("border") or body.is_in_group("limmi"):
 		xdir *= -1
 		ydir = randi_range(-1, 1)
 		

@@ -114,6 +114,6 @@ position = Vector2(-3, -2177)
 
 [node name="Darkness" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(23, -1281)
-scale = Vector2(13.7292, 39.2222)
+position = Vector2(23, -1096)
+scale = Vector2(13.7292, 42.6481)
 texture = ExtResource("8_xrdnt")

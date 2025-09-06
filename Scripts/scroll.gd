@@ -7,7 +7,7 @@ var all_info_shown = false
 var info
 
 func _ready() -> void:
-	var level_colors = {1 : "ffffff", 2 : "95ffff"}
+	var level_colors = {1 : "ffffff", 2 : "95ffff", 3: "fda9a6"}
 	$"Ground-in-between-levels".modulate = level_colors[Global.level]
 	
 	$Level_complete.text = level_done
@@ -17,12 +17,12 @@ func _ready() -> void:
 	
 	$DMG.text = "[font_size=25][color=darkred]DMG[/color][/font_size]\n[color=darkred]" + str(Global.level + 1) + " -> " + str(Global.level + 2) + "[/color]"
 	
-	$SPEED.text = "[font_size=25][color=orange]SPEED[/color][/font_size]\n[color=orange]" + str(500 + (Global.level - 1) * 100) + " -> " + str(500 + Global.level * 100) +"[/color]"
+	$SPEED.text = "[font_size=25][color=orange]SPEED[/color][/font_size]\n[color=orange]" + str(500 + (Global.level - 2) * 100) + " -> " + str(500 + (Global.level - 1) * 100) +"[/color]"
 	Global.crab_SPEED = 500 + (Global.level - 1) * 100
 	
 	$Special_Abilities.text = "[font_size=25][color=blue]SPECIALS/NEW[/color][/font_size]\n[color=blue]" + Global.special_abilities + "[/color]"
 	
-	var enemies = ["Warbles", "Bleegs"]
+	var enemies = ["Warbles", "Bleegs", "Limmis"]
 	$Next_Enemy.text = "[font_size=25][color=black]NEXT UP: " + enemies[Global.level - 1] + "[/color][/font_size]\n[color=black]Press any key to continue[/color]"
 	
 	for i in info:
@@ -55,3 +55,5 @@ func _input(event):
 		if event.pressed:
 			if Global.level == 2:
 				get_tree().change_scene_to_file("res://Scenes/level_2.tscn")
+			else:
+				get_tree().change_scene_to_file("res://Scenes/level_3.tscn")

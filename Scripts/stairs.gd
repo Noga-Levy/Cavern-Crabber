@@ -14,7 +14,7 @@ func _process(_delta: float) -> void:
 		$BrownStairs.show()
 		$LockedStairs.hide()
 		
-		if Global.level == 3:
+		if Global.level == 4:
 			$warning.hide()
 			$msg_from_dev.show()
 		else:
@@ -31,7 +31,7 @@ func _process(_delta: float) -> void:
 		
 
 func switch_levels():
-	if Global.level == 2:
+	if Global.level < 4:
 		get_tree().change_scene_to_file("res://Scenes/scroll.tscn")
 
 

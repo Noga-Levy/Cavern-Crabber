@@ -15,7 +15,11 @@ func _process(_delta: float) -> void:
 	self.text = "ENEMIES LEFT: {0}/{1}".format([str(enemies), str(enemies_total)])
 	position.y = Global.crab_pos[1] - 310  # Max: -325
 	
-	if Global.crab_pos.x <= -476:
+	if Global.crab_pos.x <= -480:
 		position.x = Global.crab_pos.x - 555
+	
+	elif Global.crab_pos.x >= 470:
+		position.x = Global.crab_pos.x - 555
+	
 	else:
 		position.x = -555 
