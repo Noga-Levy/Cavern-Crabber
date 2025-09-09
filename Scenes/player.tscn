@@ -221,7 +221,8 @@ script = ExtResource("18_olqyp")
 [node name="snap-sound" type="AudioStreamPlayer2D" parent="Player (Crab)"]
 position = Vector2(-123, -82)
 stream = SubResource("AudioStreamRandomizer_sbwqj")
-volume_db = 2.0
+volume_db = -2.0
+bus = &"ReverbBus"
 
 [node name="bg-music" type="AudioStreamPlayer2D" parent="Player (Crab)"]
 stream = ExtResource("20_wpjfl")
@@ -235,6 +236,7 @@ parameters/looping = true
 position = Vector2(-246, -164)
 stream = SubResource("AudioStreamRandomizer_nv4vc")
 volume_db = 5.0
+bus = &"ReverbBus"
 script = ExtResource("22_wpjfl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

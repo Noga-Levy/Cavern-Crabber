@@ -37,8 +37,7 @@ func _physics_process(_delta: float) -> void:
 	send_health.emit(health, total_health)
 	
 	time += _delta
-	if time > 5:
-		print(time)
+	if time > 4:
 		create_lava()
 		time = 0
 

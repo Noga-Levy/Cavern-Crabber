@@ -90,6 +90,7 @@ script = ExtResource("2_jvq0k")
 
 [node name="hiss" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_pfysm")
+bus = &"ReverbBus"
 
 [connection signal="send_health" from="." to="HP" method="_on_bleeg_send_health"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

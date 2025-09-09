@@ -86,6 +86,7 @@ shape = SubResource("RectangleShape2D_l5kg2")
 
 [node name="attack" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_rqpnq")
+bus = &"ReverbBus"
 
 [node name="Collision" type="Area2D" parent="."]
 
