@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7utp"]
 size = Vector2(100, 100)
 
-[node name="Node2D" type="Area2D"]
+[node name="lava" type="Area2D"]
 script = ExtResource("1_nbwm5")
 
 [node name="Lava" type="Sprite2D" parent="."]

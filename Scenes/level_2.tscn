@@ -92,22 +92,16 @@ position = Vector2(0, -2534)
 [node name="info" parent="." instance=ExtResource("5_t7v2y")]
 
 [node name="bleeg" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(-286, -247)
+position = Vector2(302, -527)
 
 [node name="bleeg2" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(298, -544)
+position = Vector2(-278, -1414)
 
 [node name="bleeg3" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(-283, -941)
+position = Vector2(262, -2172)
 
 [node name="bleeg4" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(273, -1373)
-
-[node name="bleeg5" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(-267, -1855)
-
-[node name="bleeg6" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(221, -2203)
+position = Vector2(-1354, -1486)
 
 [node name="Ground" type="Sprite2D" parent="."]
 modulate = Color(0.584314, 1, 1, 1)
@@ -152,6 +146,3 @@ horizontal_alignment = 1
 
 [node name="HP-box" parent="." instance=ExtResource("11_t7v2y")]
 position = Vector2(-1656, -1519)
-
-[node name="bleeg7" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(-1354, -1486)

@@ -1,0 +1,117 @@
+[gd_scene load_steps=9 format=3 uid="uid://3f8h3b32728d"]
+
+[ext_resource type="Texture2D" uid="uid://cvjgiqs8gwerj" path="res://Sprites/main-menu.png" id="1_r18jl"]
+[ext_resource type="Texture2D" uid="uid://kxaw0a2upjmr" path="res://Sprites/white.png" id="2_gryuy"]
+[ext_resource type="Script" uid="uid://dg48j47wny5hf" path="res://Scripts/return-to-menu.gd" id="3_1bamb"]
+[ext_resource type="Texture2D" uid="uid://dt8qctfjajhib" path="res://Sprites/border.png" id="3_ccovl"]
+[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Audio/main_menu.mp3" id="5_uah1q"]
+[ext_resource type="Script" uid="uid://sv3du61ahf51" path="res://Scripts/main_menu_music.gd" id="6_uah1q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccovl"]
+size = Vector2(392.5, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bamb"]
+size = Vector2(3.95e+07, 5.8e+06)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Main-menu" type="Sprite2D" parent="."]
+modulate = Color(0.2484, 0.2484, 0.2484, 1)
+texture = ExtResource("1_r18jl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.2, 1.2)
+
+[node name="Who-did-what" type="RichTextLabel" parent="."]
+offset_left = 23.0
+offset_top = -241.0
+offset_right = 464.0
+offset_bottom = -172.0
+bbcode_enabled = true
+text = "[font_size=50]WHO DID WHAT[/font_size]"
+horizontal_alignment = 1
+
+[node name="Credits" type="RichTextLabel" parent="."]
+offset_left = 62.0
+offset_top = -161.0
+offset_right = 407.0
+offset_bottom = 159.0
+bbcode_enabled = true
+text = "[font_size=17]Code - Noga Levy
+
+Assets - Noga levy
+
+Audio
+Menu - Noga levy
+Crab attack - Cisco
+Crab dodge - Cisco
+Scroll music - Cisco
+WARble attack - cisco
+
+All other audio is from the  pixalbay selection
+[/font_size]"
+horizontal_alignment = 1
+
+[node name="Go-back" type="Area2D" parent="."]
+modulate = Color(0.584314, 1, 1, 1)
+position = Vector2(0, 208)
+
+[node name="White" type="Sprite2D" parent="Go-back"]
+position = Vector2(-1.52588e-05, 0.5)
+scale = Vector2(3.92, 1.06)
+texture = ExtResource("2_gryuy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Go-back"]
+position = Vector2(-0.25, 0.5)
+shape = SubResource("RectangleShape2D_ccovl")
+
+[node name="Button-text" type="RichTextLabel" parent="Go-back"]
+offset_left = -193.0
+offset_top = -21.0
+offset_right = 193.0
+offset_bottom = 19.0
+bbcode_enabled = true
+text = "[color=black][font_size=17]RETURN TO MENU (PRESS SPACE)[/font_size][/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Border" type="Area2D" parent="." groups=["select-button"]]
+position = Vector2(3, 208)
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("3_1bamb")
+
+[node name="Border" type="Sprite2D" parent="Border"]
+position = Vector2(-175051, 199974)
+scale = Vector2(158200, 46400.4)
+texture = ExtResource("3_ccovl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border"]
+position = Vector2(-250000, 200001)
+shape = SubResource("RectangleShape2D_1bamb")
+
+[node name="The-people" type="RichTextLabel" parent="."]
+offset_left = -471.0
+offset_top = -240.0
+offset_right = -30.0
+offset_bottom = -51.0
+bbcode_enabled = true
+text = "[font_size=40]THE THE PEOPLE BEHIND THIS[/font_size]"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -418.0
+offset_top = -112.0
+offset_right = -71.0
+offset_bottom = 78.0
+bbcode_enabled = true
+text = "[font_size=17]CISCO:
+@ciscoxwh
+https://github.com/ciscoxwh
+
+NOGA LEVY:
+https://github.com/Noga-Levy[/font_size]"
+horizontal_alignment = 1
+
+[node name="BG-music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_uah1q")
+script = ExtResource("6_uah1q")

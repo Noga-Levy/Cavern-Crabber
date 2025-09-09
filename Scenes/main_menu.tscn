@@ -1,0 +1,113 @@
+[gd_scene load_steps=11 format=3 uid="uid://bhwq6yoi3an1"]
+
+[ext_resource type="Texture2D" uid="uid://cvjgiqs8gwerj" path="res://Sprites/main-menu.png" id="1_opfnp"]
+[ext_resource type="Script" uid="uid://07myvaktphlo" path="res://Scripts/start_button.gd" id="2_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://kxaw0a2upjmr" path="res://Sprites/white.png" id="3_yhxw7"]
+[ext_resource type="Script" uid="uid://chv0a35hdchux" path="res://Scripts/credits_button.gd" id="4_trj04"]
+[ext_resource type="Script" uid="uid://bhmuoc2eo705n" path="res://Scripts/select_main-menu_opt.gd" id="5_16hvj"]
+[ext_resource type="Texture2D" uid="uid://dt8qctfjajhib" path="res://Sprites/border.png" id="6_vr1f0"]
+[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Audio/main_menu.mp3" id="7_cp0ys"]
+[ext_resource type="Script" uid="uid://sv3du61ahf51" path="res://Scripts/main_menu_music.gd" id="8_yhxw7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fu7sn"]
+size = Vector2(392.5, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlkkf"]
+size = Vector2(3.95e+07, 5.8e+06)
+
+[node name="Main menu" type="Node2D"]
+
+[node name="Main-menu" type="Sprite2D" parent="."]
+texture = ExtResource("1_opfnp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.2, 1.2)
+
+[node name="title" type="RichTextLabel" parent="."]
+offset_left = -477.0
+offset_top = -247.0
+offset_right = 479.0
+offset_bottom = -154.0
+bbcode_enabled = true
+text = "[font_size=50]cavern crabber[/font_size]"
+horizontal_alignment = 1
+
+[node name="Start" type="Area2D" parent="."]
+position = Vector2(0, -17)
+script = ExtResource("2_cp0ys")
+
+[node name="White" type="Sprite2D" parent="Start"]
+position = Vector2(-1.52588e-05, 0.5)
+scale = Vector2(3.92, 1.06)
+texture = ExtResource("3_yhxw7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Start"]
+position = Vector2(-0.25, 0.5)
+shape = SubResource("RectangleShape2D_fu7sn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Start"]
+offset_left = -158.0
+offset_top = -20.0
+offset_right = 173.0
+offset_bottom = 20.0
+bbcode_enabled = true
+text = "[color=black][font_size=30]START[/font_size][/color]"
+horizontal_alignment = 1
+
+[node name="Credits" type="Area2D" parent="."]
+position = Vector2(0, 105)
+script = ExtResource("4_trj04")
+
+[node name="White" type="Sprite2D" parent="Credits"]
+position = Vector2(-1, 0)
+scale = Vector2(3.92, 1.06)
+texture = ExtResource("3_yhxw7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Credits"]
+shape = SubResource("RectangleShape2D_fu7sn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits"]
+offset_left = -159.0
+offset_top = -21.0
+offset_right = 172.0
+offset_bottom = 19.0
+bbcode_enabled = true
+text = "[color=black][font_size=30]Credits[/font_size][/color]"
+horizontal_alignment = 1
+
+[node name="Border" type="Area2D" parent="." groups=["select-button"]]
+position = Vector2(3, -17)
+scale = Vector2(1e-05, 1e-05)
+script = ExtResource("5_16hvj")
+
+[node name="Border" type="Sprite2D" parent="Border"]
+position = Vector2(-175051, 199974)
+scale = Vector2(158200, 46400.4)
+texture = ExtResource("6_vr1f0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border"]
+position = Vector2(-250000, 200001)
+shape = SubResource("RectangleShape2D_nlkkf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -169.0
+offset_top = -162.0
+offset_right = 169.0
+offset_bottom = -68.0
+text = "Use the arrow keys to change the selected button.
+
+use space to press the button."
+horizontal_alignment = 1
+
+[node name="BG-music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_cp0ys")
+script = ExtResource("8_yhxw7")
+
+[connection signal="area_entered" from="Start" to="Start" method="_on_area_entered"]
+[connection signal="area_exited" from="Start" to="Start" method="_on_area_exited"]
+[connection signal="selected" from="Start" to="Border" method="_on_start_selected"]
+[connection signal="send_pos" from="Start" to="Border" method="_on_start_send_pos"]
+[connection signal="area_entered" from="Credits" to="Credits" method="_on_area_entered"]
+[connection signal="area_exited" from="Credits" to="Credits" method="_on_area_exited"]
+[connection signal="selected" from="Credits" to="Border" method="_on_credits_selected"]
+[connection signal="send_pos" from="Credits" to="Border" method="_on_credits_send_pos"]

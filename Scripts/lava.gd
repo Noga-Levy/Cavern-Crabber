@@ -2,8 +2,8 @@ extends Area2D
 
 
 var inside_lava = false
-var burn_cd = 0.0
-
+var burn_cd = 0.0  # cd = cooldown
+var death_cd = 10.0
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -14,12 +14,19 @@ func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		inside_lava = false
 
-func die():
+
+# Damagers --> Lavas
+func destroy_lava():
 	await get_tree().create_timer(10).timeout
-	self.queue_free()
+	$lava.queue_free()
+	print("lava gone")
 
 
 func _process(delta: float) -> void:
+	death_cd -= delta
+	if death_cd <= 0:
+		self.queue_free()
+	
 	if inside_lava:
 		burn_cd -= delta
 		if burn_cd <= 0.0:

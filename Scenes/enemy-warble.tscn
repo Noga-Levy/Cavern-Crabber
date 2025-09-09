@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvd2gv1fmuyk"]
+[gd_scene load_steps=15 format=3 uid="uid://dvd2gv1fmuyk"]
 
 [ext_resource type="Script" uid="uid://bavq4r2a1qh6m" path="res://Scripts/enemy_warble.gd" id="1_qh6vf"]
 [ext_resource type="Texture2D" uid="uid://cu81fj773v10a" path="res://Sprites/Warble/warble_left.png" id="2_d4qjl"]
@@ -6,7 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://blwg1g2ly6gq8" path="res://Sprites/Warble/lwarble-attack.png" id="3_aakr0"]
 [ext_resource type="Texture2D" uid="uid://d3s2lvk1ck1ys" path="res://Sprites/Warble/warble_right.png" id="3_erejn"]
 [ext_resource type="Texture2D" uid="uid://dd32cg3my04iu" path="res://Sprites/Warble/rwarble-attack.png" id="5_0kxo8"]
-[ext_resource type="AudioStream" uid="uid://3o573a4c75md" path="res://Audio/warble-attack.mp3" id="7_0kxo8"]
+[ext_resource type="AudioStream" uid="uid://dfxpr56mr2n7x" path="res://Audio/warble-attack/swordattack1.mp3" id="7_saqo4"]
+[ext_resource type="AudioStream" uid="uid://cwjjh2pw35tp0" path="res://Audio/warble-attack/swordattack2.mp3" id="8_h1b3u"]
+[ext_resource type="AudioStream" uid="uid://rnv50skh1v6j" path="res://Audio/warble-attack/swordattack3.mp3" id="9_vvpxi"]
+[ext_resource type="AudioStream" uid="uid://b8kv036rfwmme" path="res://Audio/warble-attack/swordattack4.mp3" id="10_53ytb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_aakr0"]
 animations = [{
@@ -46,6 +49,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l5kg2"]
 size = Vector2(57.5, 56)
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_rqpnq"]
+playback_mode = 1
+streams_count = 4
+stream_0/stream = ExtResource("7_saqo4")
+stream_1/stream = ExtResource("8_h1b3u")
+stream_2/stream = ExtResource("9_vvpxi")
+stream_3/stream = ExtResource("10_53ytb")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kxo8"]
 size = Vector2(68, 69)
 
@@ -74,7 +85,7 @@ position = Vector2(-6.25, -5)
 shape = SubResource("RectangleShape2D_l5kg2")
 
 [node name="attack" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("7_0kxo8")
+stream = SubResource("AudioStreamRandomizer_rqpnq")
 
 [node name="Collision" type="Area2D" parent="."]
 
