@@ -4,11 +4,11 @@ var SPEED = Global.crab_SPEED  # pixels per second
 var change_amt = 5
 var crab_vector = Vector2()
 var health
-var original_color
 
 func _ready():
+	$damaged.hide()
+	$Shield.hide()
 	$"Player (Crab)".play("walking_down")
-	original_color = $"Player (Crab)".modulate
 	Global.crabHP = 10 + (Global.level - 1) * 5
 	health = Global.crabHP
 
@@ -26,19 +26,25 @@ func attack():
 	if Input.is_action_pressed("attack") and original_animation in walking_animations:
 		$"Player (Crab)".play(walk_to_atk[original_animation])
 
+func dodge():
+	$Shield.show()
+	await get_tree().create_timer(1.5).timeout
+	$Shield.hide()
+
 
 func _physics_process(_delta: float) -> void:
 	
 	if Global.crabHP < health:
 		health = Global.crabHP
-		$"Player (Crab)".modulate = Color(1, 1, 1, 0.7)
 		
 		$damaged.show()
 		$damaged.play("default")
 		
 		await get_tree().create_timer(0.5).timeout
-		$"Player (Crab)".modulate = original_color
 		$damaged.hide()
+	
+	if Input.is_action_just_pressed("dodge"):
+		dodge()
 	
 	crab_vector = Vector2.ZERO
 	

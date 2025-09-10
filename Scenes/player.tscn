@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://coeqwi0sejihi"]
+[gd_scene load_steps=51 format=3 uid="uid://coeqwi0sejihi"]
 
 [ext_resource type="Script" uid="uid://clxfhopiusl0b" path="res://Scripts/movement.gd" id="1_vgqql"]
 [ext_resource type="Texture2D" uid="uid://qujrfuj6wn1d" path="res://Sprites/Crab/attack/crab135-a.png" id="2_0gysh"]
@@ -36,6 +36,7 @@
 [ext_resource type="AudioStream" uid="uid://lmlwwurb41tn" path="res://Audio/crab-attack/crabattack4.mp3" id="30_qpa8y"]
 [ext_resource type="AudioStream" uid="uid://dop8w0yx37kvg" path="res://Audio/crab-dodge/crabdodge3.mp3" id="31_yh6i2"]
 [ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="36_8gxox"]
+[ext_resource type="Texture2D" uid="uid://de41nuqlbny1h" path="res://Sprites/shield.png" id="37_11gg7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
 animations = [{
@@ -280,7 +281,7 @@ script = ExtResource("1_vgqql")
 [node name="Player (Crab)" type="AnimatedSprite2D" parent="."]
 position = Vector2(123, 82)
 sprite_frames = SubResource("SpriteFrames_3smsa")
-animation = &"attack_up"
+animation = &"walking_right"
 script = ExtResource("18_olqyp")
 
 [node name="snap-sound" type="AudioStreamPlayer2D" parent="Player (Crab)"]
@@ -314,3 +315,7 @@ modulate = Color(0, 1, 1, 1)
 position = Vector2(104, 76)
 sprite_frames = SubResource("SpriteFrames_nmr2m")
 frame = 1
+
+[node name="Shield" type="Sprite2D" parent="."]
+position = Vector2(130, 83)
+texture = ExtResource("37_11gg7")
