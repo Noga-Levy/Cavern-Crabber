@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dlrki3pi8omm8"]
+[gd_scene load_steps=21 format=3 uid="uid://dlrki3pi8omm8"]
 
 [ext_resource type="Script" uid="uid://hu24uos3n5ny" path="res://Scripts/limmi.gd" id="1_6u7vc"]
 [ext_resource type="Texture2D" uid="uid://da3yu671cxye1" path="res://Sprites/limmi/lim-l.png" id="2_sjf0y"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://docs0lro6embx" path="res://Sprites/limmi/lim-r2.png" id="5_5ndyx"]
 [ext_resource type="Script" uid="uid://4mgbf2u1mhep" path="res://Scripts/limmi-HP.gd" id="6_dukjf"]
 [ext_resource type="AudioStream" uid="uid://cvr7wnei0ph" path="res://Audio/bleeg-hiss.mp3" id="7_fvo7l"]
+[ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="8_sjf0y"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pi1cc"]
 animations = [{
@@ -38,6 +39,70 @@ size = Vector2(115, 138)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6u7vc"]
 size = Vector2(124, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11gg7"]
+atlas = ExtResource("8_sjf0y")
+region = Rect2(0, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpa8y"]
+atlas = ExtResource("8_sjf0y")
+region = Rect2(276, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbwqj"]
+atlas = ExtResource("8_sjf0y")
+region = Rect2(552, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwi16"]
+atlas = ExtResource("8_sjf0y")
+region = Rect2(828, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sweqm"]
+atlas = ExtResource("8_sjf0y")
+region = Rect2(1104, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph33w"]
+atlas = ExtResource("8_sjf0y")
+region = Rect2(1380, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ldla"]
+atlas = ExtResource("8_sjf0y")
+region = Rect2(1656, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7t2e"]
+atlas = ExtResource("8_sjf0y")
+region = Rect2(1932, 0, 276, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vrb08"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11gg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpa8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbwqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwi16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sweqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph33w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ldla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7t2e")
+}],
+"loop": false,
+"name": &"default",
+"speed": 70.0
+}]
 
 [node name="limmi" type="CharacterBody2D" groups=["Enemy", "enemy-of-level", "limmi"]]
 z_index = 1
@@ -72,6 +137,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="hiss" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_fvo7l")
+
+[node name="damaged" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(0, 0.6, 0.411765, 1)
+position = Vector2(0.999996, -16)
+scale = Vector2(0.547101, 0.546875)
+sprite_frames = SubResource("SpriteFrames_vrb08")
+frame = 7
+frame_progress = 1.0
 
 [connection signal="send_health" from="." to="HP" method="_on_limmi_send_health"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

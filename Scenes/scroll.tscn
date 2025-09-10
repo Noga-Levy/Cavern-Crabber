@@ -85,12 +85,3 @@ vertical_alignment = 1
 [node name="Elevator music by Cisco" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_xyluh")
 autoplay = true
-
-[node name="Credit to Cisco" type="RichTextLabel" parent="."]
-offset_left = 264.0
-offset_top = 255.0
-offset_right = 561.0
-offset_bottom = 305.0
-text = "Music by @ciscoxwh
-https://github.com/ciscoxwh"
-horizontal_alignment = 2

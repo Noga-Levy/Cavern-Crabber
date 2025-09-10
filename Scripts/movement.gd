@@ -3,13 +3,14 @@ extends CharacterBody2D
 var SPEED = Global.crab_SPEED  # pixels per second
 var change_amt = 5
 var crab_vector = Vector2()
-var health = Global.crabHP
+var health
 var original_color
 
 func _ready():
 	$"Player (Crab)".play("walking_down")
 	original_color = $"Player (Crab)".modulate
 	Global.crabHP = 10 + (Global.level - 1) * 5
+	health = Global.crabHP
 
 
 func attack():
@@ -28,11 +29,16 @@ func attack():
 
 func _physics_process(_delta: float) -> void:
 	
-	if Global.crabHP != health:
+	if Global.crabHP < health:
 		health = Global.crabHP
 		$"Player (Crab)".modulate = Color(1, 1, 1, 0.7)
+		
+		$damaged.show()
+		$damaged.play("default")
+		
 		await get_tree().create_timer(0.5).timeout
 		$"Player (Crab)".modulate = original_color
+		$damaged.hide()
 	
 	crab_vector = Vector2.ZERO
 	

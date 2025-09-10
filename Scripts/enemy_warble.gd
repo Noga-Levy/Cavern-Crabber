@@ -34,6 +34,7 @@ func _physics_process(_delta: float) -> void:
 	
 	if inside_warble.size() > 0 and Input.is_action_just_pressed("attack"):
 		health -= 3
+		damaged_animation()
 	
 	send_health.emit(health, total_health)
 
@@ -44,6 +45,13 @@ func _process(_delta: float) -> void:
 	
 	if Input.is_action_pressed("dodge"):
 		start_dodge()
+
+
+func damaged_animation():
+	$damaged.show()
+	$damaged.play("default")
+	await get_tree().create_timer(0.5).timeout
+	$damaged.hide()
 
 
 func start_dodge():

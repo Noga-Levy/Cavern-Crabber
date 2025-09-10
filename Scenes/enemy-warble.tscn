@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dvd2gv1fmuyk"]
+[gd_scene load_steps=25 format=3 uid="uid://dvd2gv1fmuyk"]
 
 [ext_resource type="Script" uid="uid://bavq4r2a1qh6m" path="res://Scripts/enemy_warble.gd" id="1_qh6vf"]
 [ext_resource type="Texture2D" uid="uid://cu81fj773v10a" path="res://Sprites/Warble/warble_left.png" id="2_d4qjl"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://cwjjh2pw35tp0" path="res://Audio/warble-attack/swordattack2.mp3" id="8_h1b3u"]
 [ext_resource type="AudioStream" uid="uid://rnv50skh1v6j" path="res://Audio/warble-attack/swordattack3.mp3" id="9_vvpxi"]
 [ext_resource type="AudioStream" uid="uid://b8kv036rfwmme" path="res://Audio/warble-attack/swordattack4.mp3" id="10_53ytb"]
+[ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="11_h1b3u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_aakr0"]
 animations = [{
@@ -60,6 +61,70 @@ stream_3/stream = ExtResource("10_53ytb")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0kxo8"]
 size = Vector2(68, 69)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_11gg7"]
+atlas = ExtResource("11_h1b3u")
+region = Rect2(0, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpa8y"]
+atlas = ExtResource("11_h1b3u")
+region = Rect2(276, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbwqj"]
+atlas = ExtResource("11_h1b3u")
+region = Rect2(552, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwi16"]
+atlas = ExtResource("11_h1b3u")
+region = Rect2(828, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sweqm"]
+atlas = ExtResource("11_h1b3u")
+region = Rect2(1104, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph33w"]
+atlas = ExtResource("11_h1b3u")
+region = Rect2(1380, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ldla"]
+atlas = ExtResource("11_h1b3u")
+region = Rect2(1656, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7t2e"]
+atlas = ExtResource("11_h1b3u")
+region = Rect2(1932, 0, 276, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vvpxi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11gg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpa8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbwqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwi16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sweqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph33w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ldla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7t2e")
+}],
+"loop": false,
+"name": &"default",
+"speed": 70.0
+}]
+
 [node name="enemy_warble" type="CharacterBody2D" groups=["Enemy", "enemy-of-level", "warble"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_qh6vf")
@@ -93,6 +158,15 @@ bus = &"ReverbBus"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
 position = Vector2(-6.5, -5)
 shape = SubResource("RectangleShape2D_0kxo8")
+
+[node name="damaged" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(0.611765, 0.678431, 0.960784, 1)
+position = Vector2(-4, -5)
+scale = Vector2(0.461051, 0.445313)
+sprite_frames = SubResource("SpriteFrames_vvpxi")
+frame = 7
+frame_progress = 1.0
 
 [connection signal="send_health" from="." to="e_warble/HP" method="_on_enemy_warble_send_health"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

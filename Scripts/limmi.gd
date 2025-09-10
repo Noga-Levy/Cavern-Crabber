@@ -33,6 +33,7 @@ func _physics_process(_delta: float) -> void:
 	
 	if inside_limmi.size() > 0 and Input.is_action_just_pressed("attack"):
 		health -= 5
+		damaged_animation()
 	
 	send_health.emit(health, total_health)
 	
@@ -45,7 +46,14 @@ func _physics_process(_delta: float) -> void:
 func _process(_delta: float) -> void:
 	if health <= 0:
 		self.queue_free()
-		
+
+
+func damaged_animation():
+	$damaged.show()
+	$damaged.play("default")
+	await get_tree().create_timer(0.5).timeout
+	$damaged.hide()
+
 
 func create_lava():
 	var lava_scene = preload("res://Scenes/lava.tscn")
@@ -69,7 +77,6 @@ func _on_collision_body_entered(body: Node2D) -> void:
 	
 	if body.is_in_group("damager"):
 		inside_limmi.append(body)
-
 
 func _on_collision_body_exited(body: Node2D) -> void:
 	if body.is_in_group("damager"):

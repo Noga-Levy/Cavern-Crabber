@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d03s2myh7tjf8"]
+[gd_scene load_steps=23 format=3 uid="uid://d03s2myh7tjf8"]
 
 [ext_resource type="Script" uid="uid://bmo7vfw061y5d" path="res://Scripts/enemy_bleeg.gd" id="1_g588y"]
 [ext_resource type="Texture2D" uid="uid://c42xblj57xn5b" path="res://Sprites/Bleeg/bleeg.png" id="1_oy3v1"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bngtomjoinuwp" path="res://Sprites/Bleeg/bleeg2.png" id="5_ug08o"]
 [ext_resource type="Texture2D" uid="uid://btt2njmtfrb2v" path="res://Sprites/Bleeg/rbleeg-attack.png" id="7_pfysm"]
 [ext_resource type="AudioStream" uid="uid://cvr7wnei0ph" path="res://Audio/bleeg-hiss.mp3" id="9_pfysm"]
+[ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="10_2n2be"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iax02"]
 animations = [{
@@ -57,6 +58,70 @@ size = Vector2(181, 122)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amkd7"]
 size = Vector2(189, 130)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_11gg7"]
+atlas = ExtResource("10_2n2be")
+region = Rect2(0, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpa8y"]
+atlas = ExtResource("10_2n2be")
+region = Rect2(276, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbwqj"]
+atlas = ExtResource("10_2n2be")
+region = Rect2(552, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwi16"]
+atlas = ExtResource("10_2n2be")
+region = Rect2(828, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sweqm"]
+atlas = ExtResource("10_2n2be")
+region = Rect2(1104, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph33w"]
+atlas = ExtResource("10_2n2be")
+region = Rect2(1380, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ldla"]
+atlas = ExtResource("10_2n2be")
+region = Rect2(1656, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7t2e"]
+atlas = ExtResource("10_2n2be")
+region = Rect2(1932, 0, 276, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ntc4x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11gg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpa8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbwqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwi16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sweqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph33w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ldla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7t2e")
+}],
+"loop": false,
+"name": &"default",
+"speed": 70.0
+}]
+
 [node name="bleeg" type="CharacterBody2D" groups=["Bleeg"]]
 z_index = 1
 script = ExtResource("1_g588y")
@@ -91,6 +156,12 @@ script = ExtResource("2_jvq0k")
 [node name="hiss" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_pfysm")
 bus = &"ReverbBus"
+
+[node name="damaged" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(0.6, 0.572549, 0.184314, 1)
+position = Vector2(8, 4)
+sprite_frames = SubResource("SpriteFrames_ntc4x")
 
 [connection signal="send_health" from="." to="HP" method="_on_bleeg_send_health"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

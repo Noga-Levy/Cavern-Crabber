@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://coeqwi0sejihi"]
+[gd_scene load_steps=50 format=3 uid="uid://coeqwi0sejihi"]
 
 [ext_resource type="Script" uid="uid://clxfhopiusl0b" path="res://Scripts/movement.gd" id="1_vgqql"]
 [ext_resource type="Texture2D" uid="uid://qujrfuj6wn1d" path="res://Sprites/Crab/attack/crab135-a.png" id="2_0gysh"]
@@ -35,6 +35,7 @@
 [ext_resource type="AudioStream" uid="uid://2e0w6ds3pd3i" path="res://Audio/crab-dodge/crabdodge2.mp3" id="30_36dho"]
 [ext_resource type="AudioStream" uid="uid://lmlwwurb41tn" path="res://Audio/crab-attack/crabattack4.mp3" id="30_qpa8y"]
 [ext_resource type="AudioStream" uid="uid://dop8w0yx37kvg" path="res://Audio/crab-dodge/crabdodge3.mp3" id="31_yh6i2"]
+[ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="36_8gxox"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3smsa"]
 animations = [{
@@ -208,6 +209,70 @@ stream_2/stream = ExtResource("31_yh6i2")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3wgy"]
 size = Vector2(184, 139)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_11gg7"]
+atlas = ExtResource("36_8gxox")
+region = Rect2(0, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpa8y"]
+atlas = ExtResource("36_8gxox")
+region = Rect2(276, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbwqj"]
+atlas = ExtResource("36_8gxox")
+region = Rect2(552, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwi16"]
+atlas = ExtResource("36_8gxox")
+region = Rect2(828, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sweqm"]
+atlas = ExtResource("36_8gxox")
+region = Rect2(1104, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph33w"]
+atlas = ExtResource("36_8gxox")
+region = Rect2(1380, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ldla"]
+atlas = ExtResource("36_8gxox")
+region = Rect2(1656, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7t2e"]
+atlas = ExtResource("36_8gxox")
+region = Rect2(1932, 0, 276, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nmr2m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11gg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpa8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbwqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwi16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sweqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph33w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ldla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7t2e")
+}],
+"loop": false,
+"name": &"default",
+"speed": 70.0
+}]
+
 [node name="Player" type="CharacterBody2D" groups=["Player", "damager"]]
 z_index = 5
 script = ExtResource("1_vgqql")
@@ -242,3 +307,10 @@ script = ExtResource("22_wpjfl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(120, 79.5)
 shape = SubResource("RectangleShape2D_x3wgy")
+
+[node name="damaged" type="AnimatedSprite2D" parent="."]
+visible = false
+modulate = Color(0, 1, 1, 1)
+position = Vector2(104, 76)
+sprite_frames = SubResource("SpriteFrames_nmr2m")
+frame = 1
