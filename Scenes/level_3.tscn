@@ -318,9 +318,9 @@ offset_top = -38.0
 offset_right = 61.0
 offset_bottom = 270.0
 bbcode_enabled = true
-text = "[font_size=30]Level 3 is still a work-in-progress.
+text = "[font_size=30]Limmis, coming in hot! Literally!
 
-More abilities, boxes, and general fun things will be added in the next demo[/font_size]"
+They create lava every 5 seconds--try not to become a crab roast![/font_size]"
 horizontal_alignment = 1
 
 [node name="Darkness" type="Sprite2D" parent="."]

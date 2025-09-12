@@ -1,0 +1,143 @@
+[gd_scene load_steps=8 format=3 uid="uid://0i87ef5aqras"]
+
+[ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="1_1tjbi"]
+[ext_resource type="Texture2D" uid="uid://c3ntl0bvrokn8" path="res://Sprites/Lore/meeting.png" id="1_oqjcs"]
+[ext_resource type="Script" uid="uid://c3q53tfgoaqt3" path="res://Scenes/lore.gd" id="1_pswjy"]
+[ext_resource type="Texture2D" uid="uid://bpl2tw8p5dqnw" path="res://Sprites/Lore/hydra.png" id="2_e7hpk"]
+[ext_resource type="Texture2D" uid="uid://cquoq81cyjj53" path="res://Sprites/Lore/spider.png" id="3_21vvj"]
+[ext_resource type="Texture2D" uid="uid://wo6mhnwqxkpp" path="res://Sprites/Lore/collapse/collapse.png" id="4_dml0v"]
+[ext_resource type="Texture2D" uid="uid://b3f4ytta3ym6u" path="res://Sprites/Lore/collapse/collapse2.png" id="5_1tjbi"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pswjy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.2, 1.2)
+
+[node name="Text1" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+position = Vector2(3.05176e-05, -0.499985)
+scale = Vector2(5.02083, 5.06482)
+texture = ExtResource("1_1tjbi")
+
+[node name="10-years-ago" type="RichTextLabel" parent="." groups=["frame"]]
+visible = false
+offset_left = -400.0
+offset_top = -147.0
+offset_right = -237.0
+offset_bottom = -107.0
+scale = Vector2(3.5, 3.5)
+text = "10 years ago..."
+
+[node name="you-found-me" type="RichTextLabel" parent="." groups=["frame"]]
+visible = false
+offset_left = -170.0
+offset_top = 17.0
+offset_right = -7.0
+offset_bottom = 57.0
+scale = Vector2(3.5, 3.5)
+text = "You found me."
+
+[node name="Meeting" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+texture = ExtResource("1_oqjcs")
+
+[node name="Text2" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+position = Vector2(3.05176e-05, -0.499985)
+scale = Vector2(5.02083, 5.06482)
+texture = ExtResource("1_1tjbi")
+
+[node name="you-took-me-in" type="RichTextLabel" parent="." groups=["frame"]]
+visible = false
+offset_left = -394.0
+offset_top = -218.0
+offset_right = -203.0
+offset_bottom = -178.0
+scale = Vector2(3.5, 3.5)
+text = "You took me in,"
+
+[node name="raised-me" type="RichTextLabel" parent="." groups=["frame"]]
+visible = false
+offset_left = -111.0
+offset_top = -93.0
+offset_right = 52.0
+offset_bottom = -53.0
+scale = Vector2(3.5, 3.5)
+text = "raised me,"
+
+[node name="and-gave-me-the-honor" type="RichTextLabel" parent="." groups=["frame"]]
+visible = false
+offset_left = -444.0
+offset_top = 30.0
+offset_right = -186.0
+offset_bottom = 85.0
+scale = Vector2(3.5, 3.5)
+text = "And gave me the honor of fighting beside you."
+horizontal_alignment = 1
+
+[node name="Hydra" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+scale = Vector2(1.001, 1.001)
+texture = ExtResource("2_e7hpk")
+
+[node name="Spider" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+texture = ExtResource("3_21vvj")
+
+[node name="Text3" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+position = Vector2(3.05176e-05, -0.499985)
+scale = Vector2(5.02083, 5.06482)
+texture = ExtResource("1_1tjbi")
+
+[node name="and-now" type="RichTextLabel" parent="." groups=["frame"]]
+visible = false
+offset_left = -451.0
+offset_top = -209.0
+offset_right = -193.0
+offset_bottom = -183.0
+scale = Vector2(3.5, 3.5)
+text = "And now"
+horizontal_alignment = 1
+
+[node name="you\'re-gone" type="RichTextLabel" parent="." groups=["frame"]]
+visible = false
+offset_left = -458.0
+offset_top = 78.0
+offset_right = -200.0
+offset_bottom = 104.0
+scale = Vector2(3.5, 3.5)
+text = "you're gone."
+horizontal_alignment = 1
+
+[node name="Collapse" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+texture = ExtResource("4_dml0v")
+
+[node name="Collapse2" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+texture = ExtResource("5_1tjbi")
+
+[node name="Text4" type="Sprite2D" parent="." groups=["frame"]]
+position = Vector2(3.05176e-05, -0.499985)
+scale = Vector2(5.02083, 5.06482)
+texture = ExtResource("1_1tjbi")
+
+[node name="they-said" type="RichTextLabel" parent="." groups=["frame"]]
+offset_left = -451.0
+offset_top = -209.0
+offset_right = -193.0
+offset_bottom = -152.0
+scale = Vector2(3.5, 3.5)
+text = "They said that you are in a better place now."
+horizontal_alignment = 1
+
+[node name="and-now2" type="RichTextLabel" parent="." groups=["frame"]]
+offset_left = -452.0
+offset_top = 63.0
+offset_right = -194.0
+offset_bottom = 114.0
+scale = Vector2(3.5, 3.5)
+text = "But anything is better than before"
+horizontal_alignment = 1
