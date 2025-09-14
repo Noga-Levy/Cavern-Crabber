@@ -2,6 +2,7 @@ extends Node2D
 
 var frames = []
 var next_frame = false
+var special_frames = []
 
 func _ready() -> void:
 	for i in get_tree().get_nodes_in_group("frame"):
@@ -9,6 +10,8 @@ func _ready() -> void:
 		var current_frame = get_node(str(i))
 		current_frame.hide()
 		print(i.name)
+	
+	special_frames = [$Text5, $Text6]
 
 
 func _process(_delta: float) -> void:
@@ -17,6 +20,9 @@ func _process(_delta: float) -> void:
 		while next_frame == false:
 			var frame_of_interest = get_node(j)
 			frame_of_interest.show()
-			await get_tree().create_timer(1).timeout
-			next_frame = true
+			if frame_of_interest in special_frames:
+				next_frame = true
+			else:
+				await get_tree().create_timer(1).timeout
+				next_frame = true
 			

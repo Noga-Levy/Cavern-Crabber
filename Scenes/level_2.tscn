@@ -95,13 +95,19 @@ position = Vector2(0, -2534)
 position = Vector2(302, -527)
 
 [node name="bleeg2" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(-278, -1414)
+position = Vector2(-309, -955)
 
 [node name="bleeg3" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(262, -2172)
+position = Vector2(-1264, -1485)
 
 [node name="bleeg4" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(-1354, -1486)
+position = Vector2(147, -1329)
+
+[node name="bleeg5" parent="." instance=ExtResource("7_vcilj")]
+position = Vector2(-276, -1860)
+
+[node name="bleeg6" parent="." instance=ExtResource("7_vcilj")]
+position = Vector2(269, -2217)
 
 [node name="Ground" type="Sprite2D" parent="."]
 modulate = Color(0.584314, 1, 1, 1)

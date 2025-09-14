@@ -24,5 +24,7 @@ func _process(delta: float) -> void:
 		burn_cd -= delta
 		if burn_cd <= 0.0:
 			print("Ouch!")
-			Global.crabHP -= 5
+			print(Global.crabHP)
+			Global.crabHP -= 1
+			print(Global.crabHP)
 			burn_cd = 2.0  # reset cooldown

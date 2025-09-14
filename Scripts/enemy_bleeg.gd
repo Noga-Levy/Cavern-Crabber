@@ -11,8 +11,8 @@ var dodge = false
 var inside_warble = []
 
 # Health
-var health = 13
-var total_health = 13
+var health = 5
+var total_health = health
 signal send_health(HP, total_HP)
 
 func _physics_process(_delta: float) -> void:
@@ -68,7 +68,7 @@ func attack():
 	await get_tree().create_timer(0.2).timeout
 	
 	if inside_warble.size() > 0 and not dodge:
-		Global.crabHP -= 4
+		Global.crabHP -= 3
 	
 	if xdir == -1:
 		$Bleeg.play("left")
