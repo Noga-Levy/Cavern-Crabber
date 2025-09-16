@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://0i87ef5aqras"]
+[gd_scene load_steps=15 format=3 uid="uid://0i87ef5aqras"]
 
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="1_1tjbi"]
 [ext_resource type="Texture2D" uid="uid://c3ntl0bvrokn8" path="res://Sprites/Lore/meeting.png" id="1_oqjcs"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d2sl5rsbasq82" path="res://Sprites/Lore/envelopes/envelope1.png" id="11_n8g73"]
 [ext_resource type="Texture2D" uid="uid://dr13d734jjbix" path="res://Sprites/Lore/envelopes/envelope2.png" id="12_pf05y"]
 [ext_resource type="Texture2D" uid="uid://dpuplfoowvk7" path="res://Sprites/Lore/envelopes/envelope3.png" id="13_ryk7t"]
+[ext_resource type="Texture2D" uid="uid://cy7sqrws6q3mg" path="res://Sprites/Lore/open-envelope.png" id="14_pf05y"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_pswjy")
@@ -250,3 +251,51 @@ offset_bottom = -23.0
 scale = Vector2(3.5, 3.5)
 text = "And I think I know just how to do it."
 horizontal_alignment = 1
+
+[node name="Open-envelope" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("14_pf05y")
+
+[node name="new-dungeon" type="RichTextLabel" parent="Open-envelope"]
+offset_left = -23.0
+offset_top = -225.0
+offset_right = 179.0
+offset_bottom = -185.0
+rotation = 0.0646929
+bbcode_enabled = true
+text = "[color=black]NEW DUNGEON[/color]"
+
+[node name="type" type="RichTextLabel" parent="Open-envelope"]
+offset_left = -74.0
+offset_top = -186.0
+offset_right = 128.0
+offset_bottom = -146.0
+rotation = 0.0646929
+bbcode_enabled = true
+text = "[color=blue]type: cavern[/color]"
+
+[node name="difficulty" type="RichTextLabel" parent="Open-envelope"]
+offset_left = -86.0
+offset_top = -152.0
+offset_right = 116.0
+offset_bottom = -112.0
+rotation = 0.0646929
+bbcode_enabled = true
+text = "[color=blue]Difficulty: fatalty[/color]"
+
+[node name="loot" type="RichTextLabel" parent="Open-envelope"]
+offset_left = -87.0
+offset_top = -119.0
+offset_right = 115.0
+offset_bottom = -79.0
+rotation = 0.0646929
+bbcode_enabled = true
+text = "[color=blue]Loot: Pearl of life.[/color]"
+
+[node name="good-luck" type="RichTextLabel" parent="Open-envelope"]
+offset_left = -65.0
+offset_top = -58.0
+offset_right = 137.0
+offset_bottom = -18.0
+rotation = 0.0646929
+bbcode_enabled = true
+text = "[color=black]Good luck, crab.[/color]"
