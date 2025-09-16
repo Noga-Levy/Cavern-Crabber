@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://0i87ef5aqras"]
+[gd_scene load_steps=14 format=3 uid="uid://0i87ef5aqras"]
 
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="1_1tjbi"]
 [ext_resource type="Texture2D" uid="uid://c3ntl0bvrokn8" path="res://Sprites/Lore/meeting.png" id="1_oqjcs"]
-[ext_resource type="Script" uid="uid://c3q53tfgoaqt3" path="res://Scenes/lore.gd" id="1_pswjy"]
+[ext_resource type="Script" uid="uid://c3q53tfgoaqt3" path="res://Scripts/lore.gd" id="1_pswjy"]
 [ext_resource type="Texture2D" uid="uid://bpl2tw8p5dqnw" path="res://Sprites/Lore/hydra.png" id="2_e7hpk"]
 [ext_resource type="Texture2D" uid="uid://cquoq81cyjj53" path="res://Sprites/Lore/spider.png" id="3_21vvj"]
 [ext_resource type="Texture2D" uid="uid://wo6mhnwqxkpp" path="res://Sprites/Lore/collapse/collapse.png" id="4_dml0v"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://do5urseg3croq" path="res://Sprites/Lore/hospital/hospital1.png" id="8_fw0cf"]
 [ext_resource type="Texture2D" uid="uid://coe4us1jkcrr7" path="res://Sprites/Lore/hospital/hospital2.png" id="9_8deln"]
 [ext_resource type="Texture2D" uid="uid://dmhfythrk3mjj" path="res://Sprites/Lore/hospital/hospital3.png" id="9_tg243"]
+[ext_resource type="Texture2D" uid="uid://d2sl5rsbasq82" path="res://Sprites/Lore/envelopes/envelope1.png" id="11_n8g73"]
+[ext_resource type="Texture2D" uid="uid://dr13d734jjbix" path="res://Sprites/Lore/envelopes/envelope2.png" id="12_pf05y"]
+[ext_resource type="Texture2D" uid="uid://dpuplfoowvk7" path="res://Sprites/Lore/envelopes/envelope3.png" id="13_ryk7t"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_pswjy")
@@ -223,4 +226,27 @@ offset_right = -194.0
 offset_bottom = 97.0
 scale = Vector2(3.5, 3.5)
 text = "You always saved me. Now, I will save you."
+horizontal_alignment = 1
+
+[node name="Envelope1" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("11_n8g73")
+
+[node name="Envelope2" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("12_pf05y")
+
+[node name="Envelope3" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("13_ryk7t")
+
+[node name="Text8" type="Sprite2D" parent="." groups=["frame"]]
+position = Vector2(3.05176e-05, -0.499985)
+scale = Vector2(5.02083, 5.06482)
+texture = ExtResource("1_1tjbi")
+
+[node name="and-I-think-I-know" type="RichTextLabel" parent="." groups=["frame"]]
+offset_left = -453.0
+offset_top = -80.0
+offset_right = -195.0
+offset_bottom = -23.0
+scale = Vector2(3.5, 3.5)
+text = "And I think I know just how to do it."
 horizontal_alignment = 1

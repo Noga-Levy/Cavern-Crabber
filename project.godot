@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Cavern Crabber"
-run/main_scene="uid://bhwq6yoi3an1"
+run/main_scene="uid://0i87ef5aqras"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

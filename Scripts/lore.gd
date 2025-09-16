@@ -12,9 +12,11 @@ func _ready() -> void:
 		print(i.name)
 	
 	special_frames = [$Text5, $Text6]
+	
+	frame_sequence()
 
 
-func _process(_delta: float) -> void:
+func frame_sequence():
 	for j in frames:
 		next_frame = false
 		while next_frame == false:
@@ -25,4 +27,5 @@ func _process(_delta: float) -> void:
 			else:
 				await get_tree().create_timer(1).timeout
 				next_frame = true
-			
+		
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
