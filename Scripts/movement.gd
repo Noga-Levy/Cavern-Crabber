@@ -34,6 +34,9 @@ func dodge():
 
 func _physics_process(_delta: float) -> void:
 	
+	SPEED = Global.crab_SPEED 
+	$"Player (Crab)".modulate = Global.crab_modulate
+	
 	if Global.crabHP < health:
 		health = Global.crabHP
 		
