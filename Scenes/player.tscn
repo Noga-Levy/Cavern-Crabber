@@ -292,7 +292,7 @@ bus = &"ReverbBus"
 
 [node name="bg-music" type="AudioStreamPlayer2D" parent="Player (Crab)"]
 stream = ExtResource("20_wpjfl")
-volume_db = -10.0
+volume_db = 3.0
 autoplay = true
 max_distance = 1000.0
 playback_type = 1

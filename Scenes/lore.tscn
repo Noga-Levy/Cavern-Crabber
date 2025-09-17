@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://0i87ef5aqras"]
+[gd_scene load_steps=18 format=3 uid="uid://0i87ef5aqras"]
 
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="1_1tjbi"]
 [ext_resource type="Texture2D" uid="uid://c3ntl0bvrokn8" path="res://Sprites/Lore/meeting.png" id="1_oqjcs"]
 [ext_resource type="Script" uid="uid://c3q53tfgoaqt3" path="res://Scripts/lore.gd" id="1_pswjy"]
+[ext_resource type="AudioStream" uid="uid://cmcwehmd2173u" path="res://Audio/placeholder-lore-music.mp3" id="2_166u0"]
 [ext_resource type="Texture2D" uid="uid://bpl2tw8p5dqnw" path="res://Sprites/Lore/hydra.png" id="2_e7hpk"]
 [ext_resource type="Texture2D" uid="uid://cquoq81cyjj53" path="res://Sprites/Lore/spider.png" id="3_21vvj"]
 [ext_resource type="Texture2D" uid="uid://wo6mhnwqxkpp" path="res://Sprites/Lore/collapse/collapse.png" id="4_dml0v"]
@@ -14,9 +15,15 @@
 [ext_resource type="Texture2D" uid="uid://dr13d734jjbix" path="res://Sprites/Lore/envelopes/envelope2.png" id="12_pf05y"]
 [ext_resource type="Texture2D" uid="uid://dpuplfoowvk7" path="res://Sprites/Lore/envelopes/envelope3.png" id="13_ryk7t"]
 [ext_resource type="Texture2D" uid="uid://cy7sqrws6q3mg" path="res://Sprites/Lore/open-envelope.png" id="14_pf05y"]
+[ext_resource type="Texture2D" uid="uid://kxaw0a2upjmr" path="res://Sprites/white.png" id="15_6od2w"]
+[ext_resource type="Texture2D" uid="uid://dt8qctfjajhib" path="res://Sprites/border.png" id="16_166u0"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_pswjy")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_166u0")
+autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.2, 1.2)
@@ -299,3 +306,23 @@ offset_bottom = -18.0
 rotation = 0.0646929
 bbcode_enabled = true
 text = "[color=black]Good luck, crab.[/color]"
+
+[node name="White" type="Sprite2D" parent="."]
+modulate = Color(0.396078, 1, 1, 1)
+position = Vector2(405, -232)
+texture = ExtResource("15_6od2w")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="White"]
+offset_left = -48.0
+offset_top = -22.0
+offset_right = 46.0
+offset_bottom = 22.0
+bbcode_enabled = true
+text = "[font_size=10][color=black]Press Space to skip[/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Border" type="Sprite2D" parent="."]
+position = Vector2(404, -233)
+scale = Vector2(0.412639, 0.41869)
+texture = ExtResource("16_166u0")

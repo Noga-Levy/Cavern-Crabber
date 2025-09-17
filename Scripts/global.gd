@@ -2,6 +2,7 @@ extends Node
 
 var music_pos = 0
 
+var crab_damage = 3
 var crab_pos = Vector2(0, 0)
 var crabHP = 10
 var crab_SPEED = 500

@@ -5,14 +5,15 @@ var bleeg_Vec = Vector2(0,0)
 var SPEED = 1000
 var xdir = -1
 var ydir = -1
-var dodge = false
 
 # Attack
 var inside_warble = []
+var dodge = false
 
 # Health
 var health = 5
 var total_health = health
+var damaged = Global.crab_damage
 signal send_health(HP, total_HP)
 
 func _physics_process(_delta: float) -> void:
@@ -28,7 +29,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	if inside_warble.size() > 0 and Input.is_action_just_pressed("attack"):
-		health -= 4
+		health -= damaged
 		damaged_animation()
 	
 	send_health.emit(health, total_health)
@@ -68,7 +69,7 @@ func attack():
 	await get_tree().create_timer(0.2).timeout
 	
 	if inside_warble.size() > 0 and not dodge:
-		Global.crabHP -= 3
+		Global.crabHP -= 4
 	
 	if xdir == -1:
 		$Bleeg.play("left")

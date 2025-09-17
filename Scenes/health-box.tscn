@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cpl56ifkrmb0g"]
+[gd_scene load_steps=9 format=3 uid="uid://cpl56ifkrmb0g"]
 
 [ext_resource type="Script" uid="uid://d4nxcsr1qedlg" path="res://Scripts/health-box.gd" id="1_geb8i"]
 [ext_resource type="Texture2D" uid="uid://btkayp8lkh4iw" path="res://Sprites/box/box-closed.png" id="2_nkxhm"]
 [ext_resource type="Texture2D" uid="uid://b4sw8tneq8c6i" path="res://Sprites/box/box-opened.png" id="3_ev4oa"]
 [ext_resource type="Texture2D" uid="uid://do2lwqkjkhnqj" path="res://Sprites/box/health-potion.png" id="3_nkxhm"]
 [ext_resource type="Texture2D" uid="uid://du0hi550n8f1x" path="res://Sprites/box/speed-potion.png" id="5_t6gil"]
+[ext_resource type="Texture2D" uid="uid://bwcfm631nbju8" path="res://Sprites/box/strength-potion.png" id="6_npwgt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ev4oa"]
 animations = [{
@@ -34,30 +35,36 @@ script = ExtResource("1_geb8i")
 [node name="Box" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_ev4oa")
-animation = &"closed"
+animation = &"opened"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Box"]
-offset_left = -88.0
+offset_left = -114.0
 offset_top = 62.0
-offset_right = 89.0
+offset_right = 117.0
 offset_bottom = 185.0
 text = "Press space to open"
 horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-1, -2.5)
+shape = SubResource("RectangleShape2D_ev4oa")
 
 [node name="Health-potion" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(-1, 7)
 texture = ExtResource("3_nkxhm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -2.5)
-shape = SubResource("RectangleShape2D_ev4oa")
-
 [node name="Speed-potion" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(2, -3)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_t6gil")
+
+[node name="Strength-potion" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -16)
+texture = ExtResource("6_npwgt")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -4,6 +4,8 @@ var box_closed = true
 var colliding_with_box = []
 var current_level
 
+# TODO: If you are speedy while you leave the level, you'll be extra speedy in the next. Fix it soon!
+
 func _ready() -> void:
 	current_level = Global.level
 	$Box.play("closed")

@@ -16,9 +16,12 @@ func _ready() -> void:
 	$HP.text = "[font_size=25][color=darkgreen]HP[/color][/font_size]\n[color=darkgreen]" + str(Global.level * 5) + " -> " + str(Global.level * 5 + 5) + "[/color]"
 	
 	$DMG.text = "[font_size=25][color=darkred]DMG[/color][/font_size]\n[color=darkred]" + str(Global.level + 1) + " -> " + str(Global.level + 2) + "[/color]"
+	Global.crab_damage = Global.level + 2
+	
 	
 	$SPEED.text = "[font_size=25][color=orange]SPEED[/color][/font_size]\n[color=orange]" + str(500 + (Global.level - 2) * 100) + " -> " + str(500 + (Global.level - 1) * 100) +"[/color]"
 	Global.crab_SPEED = 500 + (Global.level - 1) * 100
+	Global.crab_modulate = "ffffff"
 	
 	$Special_Abilities.text = "[font_size=25][color=blue]SPECIALS/NEW[/color][/font_size]\n[color=blue]" + Global.special_abilities + "[/color]"
 	

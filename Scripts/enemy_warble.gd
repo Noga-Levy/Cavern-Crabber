@@ -9,6 +9,7 @@ var xdir = 1
 var inside_warble = []
 var ypos
 var dodge = false
+var damaged = Global.crab_damage
 
 # Health
 var health = 6
@@ -33,7 +34,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	if inside_warble.size() > 0 and Input.is_action_just_pressed("attack"):
-		health -= 3
+		health -= damaged
 		damaged_animation()
 	
 	send_health.emit(health, total_health)

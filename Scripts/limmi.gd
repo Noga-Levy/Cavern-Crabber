@@ -8,6 +8,7 @@ var ydir = -1
 
 # Attack
 var inside_limmi = []
+var damaged = Global.crab_damage
 
 # Health
 var health = 25
@@ -32,7 +33,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	if inside_limmi.size() > 0 and Input.is_action_just_pressed("attack"):
-		health -= 5
+		health -= damaged
 		damaged_animation()
 	
 	send_health.emit(health, total_health)
@@ -48,6 +49,7 @@ func _process(_delta: float) -> void:
 		self.queue_free()
 
 
+# DAMAGE WHATNOT
 func damaged_animation():
 	$damaged.show()
 	$damaged.play("default")
