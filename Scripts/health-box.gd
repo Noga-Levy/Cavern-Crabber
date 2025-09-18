@@ -3,9 +3,13 @@ extends Node2D
 var box_closed = true
 var colliding_with_box = []
 var current_level
+
+# Potions
 var speed_modulate_timer = 0
 var damage_modulate_timer = 0
-
+# Immunity potion (with a lot of variables)
+var current_health = Global.crabHP
+var immunity_timer = 0
 
 func _ready() -> void:
 	current_level = Global.level
@@ -29,6 +33,7 @@ func protein_shake():
 	damage_modulate_timer += 5
 	Global.crab_damage = Global.crab_damage + 5
 
+
 func _process(delta: float) -> void:
 	if speed_modulate_timer > 0:
 		Global.crab_modulate = "33cc33"
@@ -36,6 +41,10 @@ func _process(delta: float) -> void:
 		if speed_modulate_timer <= 0:
 			Global.crab_SPEED = Global.crab_SPEED - 200
 			Global.crab_modulate = "ffffff"
+	
+	if immunity_timer > 0:
+		Global.crabHP = current_health
+		immunity_timer -= delta
 	
 	if damage_modulate_timer > 0:
 		Global.crab_modulate = "00ffff"
@@ -63,16 +72,16 @@ func _process(delta: float) -> void:
 		
 		elif random_integer == 2:
 			$"Speed-potion".show()
-			$Box/RichTextLabel.text = "You got a speed potion! +200 to speed for the next 10 seconds"
+			$Box/RichTextLabel.text = "You got a speed potion! +200 to speed for the next 10s"
 			print(Global.crab_SPEED)
 			speedy_gonzales()
 		
-		else:
+		elif random_integer == 3:
 			$"Strength-potion".show()
-			$Box/RichTextLabel.text = "You got a strength potion! +5 to DMG for the next 5 seconds"
+			$Box/RichTextLabel.text = "You got a strength potion! +5 to DMG for the next 5s"
 			print(Global.crab_damage)
 			protein_shake()
 			print(Global.crab_damage)
-		
+			
 		box_closed = false
 		
