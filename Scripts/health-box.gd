@@ -3,8 +3,9 @@ extends Node2D
 var box_closed = true
 var colliding_with_box = []
 var current_level
+var speed_modulate_timer = 0
+var damage_modulate_timer = 0
 
-# TODO: If you are speedy while you leave the level, you'll be extra speedy in the next. Fix it soon!
 
 func _ready() -> void:
 	current_level = Global.level
@@ -20,21 +21,30 @@ func _on_body_exited(body: Node2D) -> void:
 
 
 func speedy_gonzales():
-	Global.crab_modulate = "33cc33"
+	speed_modulate_timer += 10
 	Global.crab_SPEED = Global.crab_SPEED + 200
-	await get_tree().create_timer(10).timeout
-	Global.crab_SPEED = Global.crab_SPEED - 200
-	Global.crab_modulate = "ffffff"
 
 
 func protein_shake():
-	Global.crab_modulate = "00ffff"
+	damage_modulate_timer += 5
 	Global.crab_damage = Global.crab_damage + 5
-	await get_tree().create_timer(5).timeout
-	Global.crab_damage = Global.crab_damage - 5
-	Global.crab_modulate = "ffffff"
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	if speed_modulate_timer > 0:
+		Global.crab_modulate = "33cc33"
+		speed_modulate_timer -= delta
+		if speed_modulate_timer <= 0:
+			Global.crab_SPEED = Global.crab_SPEED - 200
+			Global.crab_modulate = "ffffff"
+	
+	if damage_modulate_timer > 0:
+		Global.crab_modulate = "00ffff"
+		damage_modulate_timer -= delta
+		if damage_modulate_timer <= 0:
+			Global.crab_damage = Global.crab_damage - 5
+			if not speed_modulate_timer > 0:  # To avoid the split second of regular color
+				Global.crab_modulate = "ffffff"
+	
 	if Input.is_key_pressed(KEY_SPACE) and box_closed and "Player" in colliding_with_box:
 		$Box.play("opened")
 		print("opened")
@@ -65,3 +75,4 @@ func _process(_delta: float) -> void:
 			print(Global.crab_damage)
 		
 		box_closed = false
+		
