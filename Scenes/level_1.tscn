@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dixapswls2xjs"]
+[gd_scene load_steps=11 format=3 uid="uid://dixapswls2xjs"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_8ffim"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_7p6j4"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_xrdnt"]
 [ext_resource type="FontFile" uid="uid://u14b3iosdcdh" path="res://Other/Silkscreen-Bold.ttf" id="6_lsmp6"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="8_xrdnt"]
-[ext_resource type="PackedScene" uid="uid://cpl56ifkrmb0g" path="res://Scenes/health-box.tscn" id="9_wrinw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ffim"]
 size = Vector2(1154, 125.5)
@@ -118,15 +117,3 @@ z_index = -1
 position = Vector2(23, -1096)
 scale = Vector2(13.7292, 42.6481)
 texture = ExtResource("8_xrdnt")
-
-[node name="HP-box" parent="." instance=ExtResource("9_wrinw")]
-position = Vector2(-283, -279)
-
-[node name="HP-box2" parent="." instance=ExtResource("9_wrinw")]
-position = Vector2(-58, -276)
-
-[node name="HP-box3" parent="." instance=ExtResource("9_wrinw")]
-position = Vector2(-283, -92)
-
-[node name="HP-box4" parent="." instance=ExtResource("9_wrinw")]
-position = Vector2(-47, -100)
