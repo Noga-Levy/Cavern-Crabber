@@ -21,6 +21,9 @@ var time = 0
 
 # PROCESSES
 func _physics_process(_delta: float) -> void:
+	
+	damaged = Global.crab_damage
+	
 	limmi_Vec = Vector2(xdir, ydir)
 	
 	# normalize diagonal movement, scale by speed

@@ -35,7 +35,7 @@ script = ExtResource("1_geb8i")
 [node name="Box" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_ev4oa")
-animation = &"opened"
+animation = &"closed"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Box"]
 offset_left = -114.0
@@ -46,7 +46,6 @@ text = "Press space to open"
 horizontal_alignment = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(-1, -2.5)
 shape = SubResource("RectangleShape2D_ev4oa")
 

@@ -22,6 +22,9 @@ func _ready() -> void:
 	
 
 func _physics_process(_delta: float) -> void:
+	
+	damaged = Global.crab_damage
+	
 	warble_Vec = Vector2(xdir, 0)
 	
 	# normalize diagonal movement, scale by speed

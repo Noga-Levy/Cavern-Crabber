@@ -17,6 +17,9 @@ var damaged = Global.crab_damage
 signal send_health(HP, total_HP)
 
 func _physics_process(_delta: float) -> void:
+	
+	damaged = Global.crab_damage
+	
 	bleeg_Vec = Vector2(xdir, ydir)
 	
 	# normalize diagonal movement, scale by speed

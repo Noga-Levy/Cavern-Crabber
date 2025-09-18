@@ -20,12 +20,19 @@ func _on_body_exited(body: Node2D) -> void:
 
 
 func speedy_gonzales():
-	Global.crab_modulate = "66ff99"
+	Global.crab_modulate = "33cc33"
 	Global.crab_SPEED = Global.crab_SPEED + 200
 	await get_tree().create_timer(10).timeout
 	Global.crab_SPEED = Global.crab_SPEED - 200
 	Global.crab_modulate = "ffffff"
 
+
+func protein_shake():
+	Global.crab_modulate = "00ffff"
+	Global.crab_damage = Global.crab_damage + 5
+	await get_tree().create_timer(5).timeout
+	Global.crab_damage = Global.crab_damage - 5
+	Global.crab_modulate = "ffffff"
 
 func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_SPACE) and box_closed and "Player" in colliding_with_box:
@@ -33,7 +40,7 @@ func _process(_delta: float) -> void:
 		print("opened")
 		
 		var rng = RandomNumberGenerator.new()
-		var random_integer = rng.randi_range(1, 2)
+		var random_integer = rng.randi_range(1, 3)
 		
 		if random_integer == 1:
 			$"Health-potion".show()
@@ -44,10 +51,17 @@ func _process(_delta: float) -> void:
 			else:
 				Global.crabHP = (Global.level - 1) * 5 + 5
 		
-		else:
+		elif random_integer == 2:
 			$"Speed-potion".show()
-			$Box/RichTextLabel.text = "You got a speed potion! Plus 200 to speed for 10 seconds"
+			$Box/RichTextLabel.text = "You got a speed potion! +200 to speed for the next 10 seconds"
 			print(Global.crab_SPEED)
 			speedy_gonzales()
+		
+		else:
+			$"Strength-potion".show()
+			$Box/RichTextLabel.text = "You got a strength potion! +5 to DMG for the next 5 seconds"
+			print(Global.crab_damage)
+			protein_shake()
+			print(Global.crab_damage)
 		
 		box_closed = false
