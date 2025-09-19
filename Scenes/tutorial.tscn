@@ -1,0 +1,203 @@
+[gd_scene load_steps=11 format=3 uid="uid://dqh7qn3fww5bm"]
+
+[ext_resource type="Script" uid="uid://bwi60g5tieqwh" path="res://Scripts/tutorial.gd" id="1_70gml"]
+[ext_resource type="Texture2D" uid="uid://15icy34yixbv" path="res://Sprites/tutorial/tutorial-frame1.png" id="1_i6t4g"]
+[ext_resource type="Texture2D" uid="uid://da6bb06s6ssne" path="res://Sprites/tutorial/bunny-speech-bubble.png" id="2_p8jf4"]
+[ext_resource type="Texture2D" uid="uid://b8oss66eehl53" path="res://Sprites/tutorial/unhappy-tutorial-bunny.png" id="3_p1f1o"]
+[ext_resource type="Texture2D" uid="uid://b8m3t4haaw0b0" path="res://Sprites/tutorial/shocked-mula-bunny.png" id="4_ys4pu"]
+[ext_resource type="Texture2D" uid="uid://c51nu7mx34v08" path="res://Sprites/tutorial/movement.png" id="5_h2ono"]
+[ext_resource type="Texture2D" uid="uid://c5gjmvdqchq0n" path="res://Sprites/tutorial/bunny-bubble-down.png" id="6_on4kn"]
+[ext_resource type="Texture2D" uid="uid://bowfo2l5afe8x" path="res://Sprites/tutorial/abilities-bunny.png" id="7_70gml"]
+[ext_resource type="Texture2D" uid="uid://b0yhn3y6fmglw" path="res://Sprites/tutorial/bunny-distaste-for-enemies.png" id="8_8va2t"]
+[ext_resource type="Texture2D" uid="uid://xtq5tnjiwdke" path="res://Sprites/tutorial/demonic-bunny.png" id="9_on4kn"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_70gml")
+
+[node name="Tutorial-frame1" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("1_i6t4g")
+
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="Tutorial-frame1"]
+position = Vector2(-7, 3)
+texture = ExtResource("2_p8jf4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Tutorial-frame1"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 101.0
+offset_top = -209.0
+offset_right = 448.0
+offset_bottom = -8.0
+bbcode_enabled = true
+text = "[font_size=24]Hello! Welcome to dungeon delvers inc.
+
+Which dungeon would you like to reserve today?
+[/font_size]"
+horizontal_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.2, 1.2)
+
+[node name="Tutorial-frame2" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("1_i6t4g")
+
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="Tutorial-frame2"]
+position = Vector2(-2, 3)
+texture = ExtResource("2_p8jf4")
+
+[node name="1" type="RichTextLabel" parent="Tutorial-frame2"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 125.0
+offset_top = -283.0
+offset_right = 432.0
+offset_bottom = -23.0
+bbcode_enabled = true
+text = "[font_size=100]...
+[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Unhappy-tutorial-bunny" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("3_p1f1o")
+
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="Unhappy-tutorial-bunny"]
+position = Vector2(-82, -80)
+rotation = 2.88746
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_p8jf4")
+
+[node name="1" type="RichTextLabel" parent="Unhappy-tutorial-bunny"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -469.0
+offset_top = 49.0
+offset_right = -162.0
+offset_bottom = 309.0
+rotation = -0.268781
+bbcode_enabled = true
+text = "[font_size=24]... You can't be serious!
+That dungeon is a suicide mission!
+[/font_size]"
+horizontal_alignment = 1
+
+[node name="Unhappy-tutorial-bunny2" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("3_p1f1o")
+
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="Unhappy-tutorial-bunny2"]
+position = Vector2(-2, 3)
+texture = ExtResource("2_p8jf4")
+
+[node name="1" type="RichTextLabel" parent="Unhappy-tutorial-bunny2"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 114.0
+offset_top = -230.0
+offset_right = 421.0
+offset_bottom = 30.0
+bbcode_enabled = true
+text = "[font_size=30] No, I am not letting you do that dun--
+[/font_size]"
+horizontal_alignment = 1
+
+[node name="Shocked-mula-bunny" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("4_ys4pu")
+
+[node name="Tutorial-frame3" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("1_i6t4g")
+
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="Tutorial-frame3"]
+position = Vector2(-56, -124)
+rotation = -3.14159
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("2_p8jf4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Tutorial-frame3"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -439.0
+offset_top = -106.0
+offset_right = -155.0
+offset_bottom = 96.0
+bbcode_enabled = true
+text = "[font_size=24] the dungeon of decay it is!
+
+Here's some basic information:"
+horizontal_alignment = 1
+
+[node name="Movement" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("5_h2ono")
+
+[node name="Bunny-bubble-down" type="Sprite2D" parent="Movement"]
+position = Vector2(28, -7)
+texture = ExtResource("6_on4kn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Movement"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -375.0
+offset_top = 135.0
+offset_right = 46.0
+offset_bottom = 205.0
+bbcode_enabled = true
+text = "[font_size=26]Use the arrow keys to move[/font_size]"
+horizontal_alignment = 1
+
+[node name="Abilities-bunny" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("7_70gml")
+
+[node name="Bunny-bubble-down" type="Sprite2D" parent="Abilities-bunny"]
+position = Vector2(28, -7)
+texture = ExtResource("6_on4kn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Abilities-bunny"]
+offset_left = -375.0
+offset_top = 135.0
+offset_right = 46.0
+offset_bottom = 205.0
+bbcode_enabled = true
+text = "[color=black][font_size=26]Press [color=red]A[/color] to attack,
+and [color=blue]D[/color] to dodge[/font_size][/color]"
+horizontal_alignment = 1
+
+[node name="Bunny-distaste-for-enemies" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("8_8va2t")
+
+[node name="Bunny-bubble-down" type="Sprite2D" parent="Bunny-distaste-for-enemies"]
+position = Vector2(18, 1)
+texture = ExtResource("6_on4kn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Bunny-distaste-for-enemies"]
+offset_left = -380.0
+offset_top = 128.0
+offset_right = 41.0
+offset_bottom = 237.0
+bbcode_enabled = true
+text = "[color=black][font_size=26]Avoid these guys like the plague. They suck. They are [color=red]enemies[/color].[/font_size][/color]"
+horizontal_alignment = 1
+
+[node name="Demonic-bunny" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("9_on4kn")
+
+[node name="Bunny-bubble-down" type="Sprite2D" parent="Demonic-bunny"]
+position = Vector2(18, 1)
+texture = ExtResource("6_on4kn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Demonic-bunny"]
+offset_left = -379.0
+offset_top = 137.0
+offset_right = 42.0
+offset_bottom = 246.0
+bbcode_enabled = true
+text = "[color=black][font_size=26]Destroy all the [color=red]enemies[/color] to proceed to the next level.[/font_size][/color]"
+horizontal_alignment = 1
+
+[node name="Abilities-bunny2" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("7_70gml")
+
+[node name="Bunny-bubble-down" type="Sprite2D" parent="Abilities-bunny2"]
+position = Vector2(28, -7)
+texture = ExtResource("6_on4kn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Abilities-bunny2"]
+offset_left = -369.0
+offset_top = 115.0
+offset_right = 52.0
+offset_bottom = 217.0
+bbcode_enabled = true
+text = "[color=black][font_size=26]To help you out, there'll be these boxes scattered around.[/font_size][/color]"
+horizontal_alignment = 1
