@@ -84,4 +84,5 @@ vertical_alignment = 1
 
 [node name="Elevator music by Cisco" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_xyluh")
+volume_db = 10.0
 autoplay = true

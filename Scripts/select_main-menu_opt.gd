@@ -13,23 +13,29 @@ func _on_credits_send_pos(pos: Variant) -> void:
 	credits_pos = pos
 
 
+
 func _ready() -> void:
 	position = start_pos
 
 
 func _process(_delta: float) -> void:
-	if position == start_pos and Input.is_key_pressed(KEY_DOWN):
-		position = credits_pos
+	if Input.is_action_just_released("arrow-down") and position.y < 160:
+		position = Vector2(position.x, position.y + 90)
 	
-	elif position == credits_pos and Input.is_key_pressed(KEY_UP):
-		position = start_pos
+	elif Input.is_action_just_released("arrow-up") and position.y > -20:
+		position = Vector2(position.x, position.y - 90)
 
 
 func _on_start_selected() -> void:
 	if Input.is_action_just_pressed("space"):
-		get_tree().change_scene_to_file("res://Scenes/level_1.tscn")
+		get_tree().change_scene_to_file("res://Scenes/lore.tscn")
 
 
 func _on_credits_selected() -> void:
 	if Input.is_action_just_pressed("space"):
 		get_tree().change_scene_to_file("res://Scenes/credits.tscn")
+
+
+func _on_tutorial_selected() -> void:
+	if Input.is_action_just_pressed("space"):
+		get_tree().change_scene_to_file("res://Scenes/tutorial.tscn")

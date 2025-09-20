@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dixapswls2xjs"]
+[gd_scene load_steps=10 format=3 uid="uid://dixapswls2xjs"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_8ffim"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_7p6j4"]
@@ -6,9 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dvd2gv1fmuyk" path="res://Scenes/enemy-warble.tscn" id="3_xfk5q"]
 [ext_resource type="Texture2D" uid="uid://ml8y1vr8k0jr" path="res://Sprites/Various Ground Sprites/ground.png" id="4_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_xrdnt"]
-[ext_resource type="FontFile" uid="uid://u14b3iosdcdh" path="res://Other/Silkscreen-Bold.ttf" id="6_lsmp6"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="8_xrdnt"]
-[ext_resource type="PackedScene" uid="uid://cpl56ifkrmb0g" path="res://Scenes/health-box.tscn" id="9_wrinw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ffim"]
 size = Vector2(1154, 125.5)
@@ -56,39 +54,6 @@ position = Vector2(0, -2534)
 
 [node name="info" parent="." instance=ExtResource("3_lsmp6")]
 
-[node name="Welcome" type="RichTextLabel" parent="."]
-z_as_relative = false
-offset_left = -454.0
-offset_top = -153.0
-offset_right = 46.0
-offset_bottom = -25.0
-theme_override_fonts/bold_font = ExtResource("6_lsmp6")
-bbcode_enabled = true
-text = "[font_size=30]Hello, Akamo the crab!
-Use the arrow keys to move
-[/font_size]"
-tab_size = 8
-horizontal_alignment = 1
-
-[node name="Dodge_Instructions" type="RichTextLabel" parent="."]
-offset_left = -122.0
-offset_top = -555.0
-offset_right = 386.0
-offset_bottom = -425.0
-bbcode_enabled = true
-text = "[font_size=30]Be careful! The yellow creatures (warbles) are stabby. Press d to dodge[/font_size]"
-horizontal_alignment = 1
-
-[node name="Attack_Instructions" type="RichTextLabel" parent="."]
-offset_left = -386.0
-offset_top = -783.0
-offset_right = 122.0
-offset_bottom = -681.0
-bbcode_enabled = true
-text = "[font_size=30]You want to attack too? Press A to deal damage[/font_size]"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="e_warble" parent="." instance=ExtResource("3_xfk5q")]
 position = Vector2(-241, -503)
 
@@ -118,9 +83,3 @@ z_index = -1
 position = Vector2(23, -1096)
 scale = Vector2(13.7292, 42.6481)
 texture = ExtResource("8_xrdnt")
-
-[node name="HP-box" parent="." instance=ExtResource("9_wrinw")]
-position = Vector2(-268, -265)
-
-[node name="HP-box2" parent="." instance=ExtResource("9_wrinw")]
-position = Vector2(-42, -265)

@@ -307,12 +307,12 @@ rotation = 0.0646929
 bbcode_enabled = true
 text = "[color=black]Good luck, crab.[/color]"
 
-[node name="White" type="Sprite2D" parent="."]
+[node name="Button-img" type="Sprite2D" parent="."]
 modulate = Color(0.396078, 1, 1, 1)
 position = Vector2(405, -232)
 texture = ExtResource("15_6od2w")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="White"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Button-img"]
 offset_left = -48.0
 offset_top = -22.0
 offset_right = 46.0

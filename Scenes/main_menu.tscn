@@ -33,7 +33,7 @@ text = "[font_size=50]cavern crabber[/font_size]"
 horizontal_alignment = 1
 
 [node name="Start" type="Area2D" parent="."]
-position = Vector2(0, -17)
+position = Vector2(0, -20)
 script = ExtResource("2_cp0ys")
 
 [node name="White" type="Sprite2D" parent="Start"]
@@ -55,7 +55,7 @@ text = "[color=black][font_size=30]START[/font_size][/color]"
 horizontal_alignment = 1
 
 [node name="Credits" type="Area2D" parent="."]
-position = Vector2(0, 105)
+position = Vector2(0, 70)
 script = ExtResource("4_trj04")
 
 [node name="White" type="Sprite2D" parent="Credits"]
@@ -75,8 +75,30 @@ bbcode_enabled = true
 text = "[color=black][font_size=30]Credits[/font_size][/color]"
 horizontal_alignment = 1
 
+[node name="Tutorial" type="Area2D" parent="."]
+position = Vector2(0, 160)
+script = ExtResource("4_trj04")
+
+[node name="White" type="Sprite2D" parent="Tutorial"]
+position = Vector2(-1, 0)
+scale = Vector2(3.92, 1.06)
+texture = ExtResource("3_yhxw7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial"]
+shape = SubResource("RectangleShape2D_fu7sn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Tutorial"]
+offset_left = -159.0
+offset_top = -21.0
+offset_right = 172.0
+offset_bottom = 19.0
+bbcode_enabled = true
+text = "[color=black][font_size=30]Tutorial
+[/font_size][/color]"
+horizontal_alignment = 1
+
 [node name="Border" type="Area2D" parent="." groups=["select-button"]]
-position = Vector2(3, -17)
+position = Vector2(3, -20)
 scale = Vector2(1e-05, 1e-05)
 script = ExtResource("5_16hvj")
 
@@ -111,3 +133,6 @@ script = ExtResource("8_yhxw7")
 [connection signal="area_exited" from="Credits" to="Credits" method="_on_area_exited"]
 [connection signal="selected" from="Credits" to="Border" method="_on_credits_selected"]
 [connection signal="send_pos" from="Credits" to="Border" method="_on_credits_send_pos"]
+[connection signal="area_entered" from="Tutorial" to="Tutorial" method="_on_area_entered"]
+[connection signal="area_exited" from="Tutorial" to="Tutorial" method="_on_area_exited"]
+[connection signal="selected" from="Tutorial" to="Border" method="_on_tutorial_selected"]

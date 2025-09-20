@@ -32,14 +32,16 @@ text = "[font_size=50]WHO DID WHAT[/font_size]"
 horizontal_alignment = 1
 
 [node name="Credits" type="RichTextLabel" parent="."]
-offset_left = 62.0
-offset_top = -163.0
-offset_right = 407.0
-offset_bottom = 164.0
+offset_left = 19.0
+offset_top = -171.0
+offset_right = 471.0
+offset_bottom = 214.0
 bbcode_enabled = true
 text = "[font_size=17]Code - Noga Levy
 
 Assets - Noga levy
+
+Font - Silkscreen, from Google fonts
 
 Audio
 Menu - Noga levy
@@ -47,9 +49,7 @@ Crab attack - Cisco
 Crab dodge - Cisco
 Scroll music - Cisco
 All enemy attacks - Cisco
-
-
-All other audio is from the  Pixabay selection
+All other audio is from the Pixabay selection
 [/font_size]"
 horizontal_alignment = 1
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ckcb6cv8wm00s" path="res://Scripts/enemies_left.gd" id="1_rft2l"]
 [ext_resource type="Script" uid="uid://y47ds36s7lf2" path="res://Scripts/crab_hp.gd" id="2_ocyjs"]
-[ext_resource type="Script" uid="uid://bg7jc4varn458" path="res://Scenes/tries_left_info.gd" id="3_v0cyl"]
+[ext_resource type="Script" uid="uid://bg7jc4varn458" path="res://Scripts/tries_left_info.gd" id="3_v0cyl"]
 
 [node name="info" type="Node2D"]
 z_index = 10
