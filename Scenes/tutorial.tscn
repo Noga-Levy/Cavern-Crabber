@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dqh7qn3fww5bm"]
+[gd_scene load_steps=11 format=3 uid="uid://dqh7qn3fww5bm"]
 
 [ext_resource type="Script" uid="uid://bwi60g5tieqwh" path="res://Scripts/tutorial.gd" id="1_70gml"]
 [ext_resource type="Texture2D" uid="uid://15icy34yixbv" path="res://Sprites/tutorial/tutorial-frame1.png" id="1_i6t4g"]
@@ -6,17 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://b8oss66eehl53" path="res://Sprites/tutorial/unhappy-tutorial-bunny.png" id="3_p1f1o"]
 [ext_resource type="Texture2D" uid="uid://dtwdp4eyutj5x" path="res://Sprites/tutorial/confused-tutorial-bunny.png" id="4_koko0"]
 [ext_resource type="Texture2D" uid="uid://b8m3t4haaw0b0" path="res://Sprites/tutorial/shocked-mula-bunny.png" id="4_ys4pu"]
-[ext_resource type="Texture2D" uid="uid://c51nu7mx34v08" path="res://Sprites/tutorial/movement.png" id="5_h2ono"]
 [ext_resource type="Texture2D" uid="uid://bg41laoxibvgr" path="res://Sprites/crab-talk.png" id="5_lsb8r"]
-[ext_resource type="Texture2D" uid="uid://c5gjmvdqchq0n" path="res://Sprites/tutorial/bunny-bubble-down.png" id="6_on4kn"]
-[ext_resource type="Texture2D" uid="uid://bowfo2l5afe8x" path="res://Sprites/tutorial/abilities-bunny.png" id="7_70gml"]
-[ext_resource type="Texture2D" uid="uid://b0yhn3y6fmglw" path="res://Sprites/tutorial/bunny-distaste-for-enemies.png" id="8_8va2t"]
-[ext_resource type="Texture2D" uid="uid://xtq5tnjiwdke" path="res://Sprites/tutorial/demonic-bunny.png" id="9_on4kn"]
-[ext_resource type="Texture2D" uid="uid://n71hilwfxiaf" path="res://Sprites/tutorial/bunnybox-with-tutorial-bunny.png" id="11_8va2t"]
-[ext_resource type="Texture2D" uid="uid://c5fa5ubb0he0p" path="res://Sprites/tutorial/box-smiley-bunny.png" id="12_8mnmb"]
+[ext_resource type="Texture2D" uid="uid://cju03ec6uo45k" path="res://Sprites/tutorial/horror-shock-bunny.png" id="7_ap3ea"]
+[ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="9_70gml"]
+[ext_resource type="Texture2D" uid="uid://dt8qctfjajhib" path="res://Sprites/border.png" id="10_8va2t"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_70gml")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.2, 1.2)
 
 [node name="hello-akamo" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("1_i6t4g")
@@ -37,9 +36,6 @@ text = "[font_size=24]Hello, Akamo! Welcome back to dungeon delvers inc.
 Which dungeon would you like to reserve today?
 [/font_size]"
 horizontal_alignment = 1
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.2, 1.2)
 
 [node name="you-look-confused" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("4_koko0")
@@ -77,28 +73,50 @@ I woke up with a purple bottle in my right claw, and two notes in my left. One s
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="what-did-the-bottle-say?" type="Sprite2D" parent="." groups=["frame"]]
+[node name="that-is-a-lot-of-info" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("3_p1f1o")
 
-[node name="Bunny-speech-bubble" type="Sprite2D" parent="what-did-the-bottle-say?"]
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="that-is-a-lot-of-info"]
 position = Vector2(-7, 3)
 texture = ExtResource("2_p8jf4")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="what-did-the-bottle-say?"]
+[node name="RichTextLabel" type="RichTextLabel" parent="that-is-a-lot-of-info"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 117.0
-offset_top = -231.0
-offset_right = 414.0
-offset_bottom = -1.0
+offset_left = 127.0
+offset_top = -240.0
+offset_right = 424.0
+offset_bottom = -10.0
 bbcode_enabled = true
-text = "[font_size=24]Oh.
-Oh dear.
-By any chance, was the bottle labeled 
-\"Wasu byita?\"
+text = "[font_size=24]... That ... that is information. Uhm.
+
+Let's start with, yes, your name is akamo.
 [/font_size]"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="by-any-chance" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("3_p1f1o")
+
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="by-any-chance"]
+position = Vector2(-46, -134)
+rotation = 3.14159
+scale = Vector2(0.905208, 0.846296)
+texture = ExtResource("2_p8jf4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="by-any-chance"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -461.0
+offset_top = -137.0
+offset_right = -141.0
+offset_bottom = 82.0
+bbcode_enabled = true
+text = "[font_size=26] By any chance, was the bottle labeled \"Wasu byita?\"
+[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="C-yes-it-did" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("5_lsb8r")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="C-yes-it-did"]
@@ -108,41 +126,93 @@ offset_top = 87.0
 offset_right = 406.0
 offset_bottom = 220.0
 bbcode_enabled = true
-text = "[font_size=25]Yes, something of the like. Why? Don't you want to know about the note...?[/font_size]"
+text = "[font_size=25]Yes, something of the like.[/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Tutorial-frame2" type="Sprite2D" parent="." groups=["frame"]]
+[node name="wasu-is-anemisa-potion" type="Sprite2D" parent="." groups=["frame"]]
 visible = false
-texture = ExtResource("1_i6t4g")
+texture = ExtResource("7_ap3ea")
 
-[node name="Bunny-speech-bubble" type="Sprite2D" parent="Tutorial-frame2"]
-position = Vector2(-2, 3)
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="wasu-is-anemisa-potion"]
+position = Vector2(-1, -1)
 texture = ExtResource("2_p8jf4")
 
-[node name="1" type="RichTextLabel" parent="Tutorial-frame2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="wasu-is-anemisa-potion"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 125.0
-offset_top = -283.0
-offset_right = 432.0
-offset_bottom = -23.0
+offset_left = 124.0
+offset_top = -243.0
+offset_right = 431.0
+offset_bottom = 9.0
 bbcode_enabled = true
-text = "[font_size=100]...
+text = "[font_size=25]Wasu... byita... is an anemsia potion.
+
+The most powerful one on the market.
 [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Unhappy-tutorial-bunny" type="Sprite2D" parent="." groups=["frame"]]
+[node name="C-that-doesn\'t-sound" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+texture = ExtResource("5_lsb8r")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="C-that-doesn\'t-sound"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.0
+offset_top = 87.0
+offset_right = 406.0
+offset_bottom = 220.0
+bbcode_enabled = true
+text = "[font_size=25]That doesn't sound good... But it does explain the first note. It told me to go here if I needed help.[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="help-with-what" type="Sprite2D" parent="." groups=["frame"]]
 visible = false
 texture = ExtResource("3_p1f1o")
 
-[node name="Bunny-speech-bubble" type="Sprite2D" parent="Unhappy-tutorial-bunny"]
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="help-with-what"]
+position = Vector2(0, -3)
+texture = ExtResource("2_p8jf4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="help-with-what"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 128.0
+offset_top = -258.0
+offset_right = 435.0
+offset_bottom = -6.0
+bbcode_enabled = true
+text = "[font_size=25]Help with what?!
+[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="C-that-doesn\'t-sound2" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+texture = ExtResource("5_lsb8r")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="C-that-doesn\'t-sound2"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.0
+offset_top = 87.0
+offset_right = 406.0
+offset_bottom = 220.0
+bbcode_enabled = true
+text = "[font_size=25]If I understood correctly, help with the second letter. It mentioned some cavern dungeon?[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="you-can\'t-be-serious" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+texture = ExtResource("3_p1f1o")
+
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="you-can\'t-be-serious"]
 position = Vector2(-54, -138)
 rotation = 3.14159
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("2_p8jf4")
 
-[node name="1" type="RichTextLabel" parent="Unhappy-tutorial-bunny"]
+[node name="1" type="RichTextLabel" parent="you-can\'t-be-serious"]
 modulate = Color(0, 0, 0, 1)
 offset_left = -458.0
 offset_top = -99.0
@@ -154,15 +224,15 @@ That dungeon is a death wish!
 [/font_size]"
 horizontal_alignment = 1
 
-[node name="Unhappy-tutorial-bunny2" type="Sprite2D" parent="." groups=["frame"]]
+[node name="no-I-am-not-letting-you" type="Sprite2D" parent="." groups=["frame"]]
 visible = false
 texture = ExtResource("3_p1f1o")
 
-[node name="Bunny-speech-bubble" type="Sprite2D" parent="Unhappy-tutorial-bunny2"]
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="no-I-am-not-letting-you"]
 position = Vector2(-2, 3)
 texture = ExtResource("2_p8jf4")
 
-[node name="1" type="RichTextLabel" parent="Unhappy-tutorial-bunny2"]
+[node name="1" type="RichTextLabel" parent="no-I-am-not-letting-you"]
 modulate = Color(0, 0, 0, 1)
 offset_left = 125.0
 offset_top = -224.0
@@ -175,150 +245,40 @@ I am not letting you do that dun--
 horizontal_alignment = 1
 
 [node name="Shocked-mula-bunny" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
 texture = ExtResource("4_ys4pu")
 
-[node name="Tutorial-frame3" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
+[node name="C-I-also-found-a-huge" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("5_lsb8r")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="C-I-also-found-a-huge"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.0
+offset_top = 87.0
+offset_right = 406.0
+offset_bottom = 220.0
+bbcode_enabled = true
+text = "[font_size=25]I also found a HUUUGE sack of gold coins with me.[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="dungeon-of-decay-it-is" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("1_i6t4g")
 
-[node name="Bunny-speech-bubble" type="Sprite2D" parent="Tutorial-frame3"]
-position = Vector2(-56, -124)
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="dungeon-of-decay-it-is"]
+position = Vector2(-71.9994, -161.499)
 rotation = -3.14159
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_p8jf4")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Tutorial-frame3"]
+[node name="RichTextLabel" type="RichTextLabel" parent="dungeon-of-decay-it-is"]
 modulate = Color(0, 0, 0, 1)
-offset_left = -439.0
-offset_top = -106.0
-offset_right = -155.0
-offset_bottom = 96.0
+offset_left = -454.999
+offset_top = -143.499
+offset_right = -170.999
+offset_bottom = 58.501
 bbcode_enabled = true
 text = "[font_size=24] the dungeon of decay it is!
-
-Here's some basic information:"
-horizontal_alignment = 1
-
-[node name="Movement" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
-texture = ExtResource("5_h2ono")
-
-[node name="Bunny-bubble-down" type="Sprite2D" parent="Movement"]
-position = Vector2(28, -7)
-texture = ExtResource("6_on4kn")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Movement"]
-modulate = Color(0, 0, 0, 1)
-offset_left = -375.0
-offset_top = 135.0
-offset_right = 46.0
-offset_bottom = 205.0
-bbcode_enabled = true
-text = "[font_size=26]Use the arrow keys to move[/font_size]"
-horizontal_alignment = 1
-
-[node name="Abilities-bunny" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
-texture = ExtResource("7_70gml")
-
-[node name="Bunny-bubble-down" type="Sprite2D" parent="Abilities-bunny"]
-position = Vector2(28, -7)
-texture = ExtResource("6_on4kn")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Abilities-bunny"]
-offset_left = -375.0
-offset_top = 135.0
-offset_right = 46.0
-offset_bottom = 205.0
-bbcode_enabled = true
-text = "[color=black][font_size=26]Press [color=red]A[/color] to attack,
-and [color=blue]D[/color] to dodge[/font_size][/color]"
-horizontal_alignment = 1
-
-[node name="Bunny-distaste-for-enemies" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
-texture = ExtResource("8_8va2t")
-
-[node name="Bunny-bubble-down" type="Sprite2D" parent="Bunny-distaste-for-enemies"]
-position = Vector2(18, 1)
-texture = ExtResource("6_on4kn")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Bunny-distaste-for-enemies"]
-offset_left = -380.0
-offset_top = 128.0
-offset_right = 41.0
-offset_bottom = 237.0
-bbcode_enabled = true
-text = "[color=black][font_size=26]Avoid these guys like the plague. They suck. They are [color=red]enemies[/color].[/font_size][/color]"
-horizontal_alignment = 1
-
-[node name="Demonic-bunny" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
-texture = ExtResource("9_on4kn")
-
-[node name="Bunny-bubble-down" type="Sprite2D" parent="Demonic-bunny"]
-position = Vector2(18, 1)
-texture = ExtResource("6_on4kn")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Demonic-bunny"]
-offset_left = -379.0
-offset_top = 137.0
-offset_right = 42.0
-offset_bottom = 246.0
-bbcode_enabled = true
-text = "[color=black][font_size=26]Destroy all the [color=red]enemies[/color] to proceed to the next level.[/font_size][/color]"
-horizontal_alignment = 1
-
-[node name="Bunnybox-with-tutorial-bunny" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
-texture = ExtResource("11_8va2t")
-
-[node name="Bunny-bubble-down" type="Sprite2D" parent="Bunnybox-with-tutorial-bunny"]
-position = Vector2(28, -7)
-texture = ExtResource("6_on4kn")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Bunnybox-with-tutorial-bunny"]
-offset_left = -369.0
-offset_top = 115.0
-offset_right = 52.0
-offset_bottom = 217.0
-bbcode_enabled = true
-text = "[color=black][font_size=26]To help you out, there'll be these boxes scattered around.[/font_size][/color]"
-horizontal_alignment = 1
-
-[node name="Box-smiley-bunny" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
-texture = ExtResource("12_8mnmb")
-
-[node name="Bunny-bubble-down" type="Sprite2D" parent="Box-smiley-bunny"]
-position = Vector2(28, -7)
-texture = ExtResource("6_on4kn")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Box-smiley-bunny"]
-offset_left = -369.0
-offset_top = 120.0
-offset_right = 52.0
-offset_bottom = 222.0
-bbcode_enabled = true
-text = "[color=black][font_size=25]They're filled with all sorts of goodies, so make sure open them![/font_size][/color]"
-horizontal_alignment = 1
-
-[node name="Tutorial-frame4" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
-texture = ExtResource("1_i6t4g")
-
-[node name="Bunny-speech-bubble" type="Sprite2D" parent="Tutorial-frame4"]
-position = Vector2(2, 3)
-texture = ExtResource("2_p8jf4")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Tutorial-frame4"]
-offset_left = 123.0
-offset_top = -239.0
-offset_right = 442.0
-offset_bottom = 7.0
-bbcode_enabled = true
-text = "[color=black][font_size=25]That's all my minimum-wage job pays me to say, so press space when you are ready to go back to the main menu.[/font_size][/color]"
+Do you remember the basics of dungeoneering?"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -329,3 +289,21 @@ offset_right = -257.0
 offset_bottom = -216.0
 text = "*press space to go
   to the next frame"
+
+[node name="C-yes-no" type="Sprite2D" parent="." groups=["frame"]]
+texture = ExtResource("5_lsb8r")
+
+[node name="Darkness" type="Sprite2D" parent="C-yes-no"]
+position = Vector2(220, 157)
+scale = Vector2(1.57292, 0.759259)
+texture = ExtResource("9_70gml")
+
+[node name="Darkness2" type="Sprite2D" parent="C-yes-no"]
+position = Vector2(-145, 157)
+scale = Vector2(1.57292, 0.759259)
+texture = ExtResource("9_70gml")
+
+[node name="Border" type="Sprite2D" parent="C-yes-no"]
+position = Vector2(-146, 158)
+scale = Vector2(1.248, 0.736)
+texture = ExtResource("10_8va2t")

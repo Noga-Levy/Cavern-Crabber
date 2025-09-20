@@ -19,7 +19,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_released("arrow-down") and position.y < 160:
+	if Input.is_action_just_released("arrow-down") and position.y < 70:
 		position = Vector2(position.x, position.y + 90)
 	
 	elif Input.is_action_just_released("arrow-up") and position.y > -20:
@@ -34,8 +34,3 @@ func _on_start_selected() -> void:
 func _on_credits_selected() -> void:
 	if Input.is_action_just_pressed("space"):
 		get_tree().change_scene_to_file("res://Scenes/credits.tscn")
-
-
-func _on_tutorial_selected() -> void:
-	if Input.is_action_just_pressed("space"):
-		get_tree().change_scene_to_file("res://Scenes/tutorial.tscn")
