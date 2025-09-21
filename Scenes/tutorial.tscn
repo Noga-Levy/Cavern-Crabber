@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dqh7qn3fww5bm"]
+[gd_scene load_steps=15 format=3 uid="uid://dqh7qn3fww5bm"]
 
 [ext_resource type="Script" uid="uid://bwi60g5tieqwh" path="res://Scripts/tutorial.gd" id="1_70gml"]
 [ext_resource type="Texture2D" uid="uid://15icy34yixbv" path="res://Sprites/tutorial/tutorial-frame1.png" id="1_i6t4g"]
@@ -10,6 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://cju03ec6uo45k" path="res://Sprites/tutorial/horror-shock-bunny.png" id="7_ap3ea"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="9_70gml"]
 [ext_resource type="Texture2D" uid="uid://dt8qctfjajhib" path="res://Sprites/border.png" id="10_8va2t"]
+[ext_resource type="Script" uid="uid://dk4nxha3m0d4l" path="res://Scripts/tutorial-button-border.gd" id="11_8va2t"]
+[ext_resource type="Script" uid="uid://ca5nefcw3bwld" path="res://Scripts/tutorial-button.gd" id="11_koko0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mnmb"]
+size = Vector2(198.993, 119.854)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_koko0"]
+size = Vector2(250.801, 125)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_70gml")
@@ -94,39 +102,39 @@ Let's start with, yes, your name is akamo.
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="by-any-chance" type="Sprite2D" parent="." groups=["frame"]]
+[node name="what-was-the-bottle" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("3_p1f1o")
 
-[node name="Bunny-speech-bubble" type="Sprite2D" parent="by-any-chance"]
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="what-was-the-bottle"]
 position = Vector2(-46, -134)
 rotation = 3.14159
 scale = Vector2(0.905208, 0.846296)
 texture = ExtResource("2_p8jf4")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="by-any-chance"]
+[node name="RichTextLabel" type="RichTextLabel" parent="what-was-the-bottle"]
 modulate = Color(0, 0, 0, 1)
 offset_left = -461.0
 offset_top = -137.0
 offset_right = -141.0
 offset_bottom = 82.0
 bbcode_enabled = true
-text = "[font_size=26] By any chance, was the bottle labeled \"Wasu byita?\"
+text = "[font_size=30]What was the bottle labeled as?
 [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="C-yes-it-did" type="Sprite2D" parent="." groups=["frame"]]
+[node name="C-uhh-I-think-it-was" type="Sprite2D" parent="." groups=["frame"]]
 visible = false
 texture = ExtResource("5_lsb8r")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="C-yes-it-did"]
+[node name="RichTextLabel" type="RichTextLabel" parent="C-uhh-I-think-it-was"]
 modulate = Color(0, 0, 0, 1)
 offset_left = -328.0
 offset_top = 87.0
 offset_right = 406.0
 offset_bottom = 220.0
 bbcode_enabled = true
-text = "[font_size=25]Yes, something of the like.[/font_size]"
+text = "[font_size=25]Uhh... I think it was \"wasu byita\" or something similar[/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -163,42 +171,40 @@ offset_top = 87.0
 offset_right = 406.0
 offset_bottom = 220.0
 bbcode_enabled = true
-text = "[font_size=25]That doesn't sound good... But it does explain the first note. It told me to go here if I needed help.[/font_size]"
+text = "[font_size=25]That doesn't sound good... But it does explain the first note. It told me to go here if I was confused.[/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="help-with-what" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
+[node name="what-did-the-second" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("3_p1f1o")
 
-[node name="Bunny-speech-bubble" type="Sprite2D" parent="help-with-what"]
+[node name="Bunny-speech-bubble" type="Sprite2D" parent="what-did-the-second"]
 position = Vector2(0, -3)
 texture = ExtResource("2_p8jf4")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="help-with-what"]
+[node name="RichTextLabel" type="RichTextLabel" parent="what-did-the-second"]
 modulate = Color(0, 0, 0, 1)
 offset_left = 128.0
 offset_top = -258.0
 offset_right = 435.0
 offset_bottom = -6.0
 bbcode_enabled = true
-text = "[font_size=25]Help with what?!
+text = "[font_size=30]And what did the second note say?
 [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="C-that-doesn\'t-sound2" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
+[node name="C-it-was-rather-vague" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("5_lsb8r")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="C-that-doesn\'t-sound2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="C-it-was-rather-vague"]
 modulate = Color(0, 0, 0, 1)
 offset_left = -328.0
 offset_top = 87.0
 offset_right = 406.0
 offset_bottom = 220.0
 bbcode_enabled = true
-text = "[font_size=25]If I understood correctly, help with the second letter. It mentioned some cavern dungeon?[/font_size]"
+text = "[font_size=25]It was rather vague, but I think it wanted me to go to a cavern dungeon, whatever that is[/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -245,9 +251,11 @@ I am not letting you do that dun--
 horizontal_alignment = 1
 
 [node name="Shocked-mula-bunny" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("4_ys4pu")
 
 [node name="C-I-also-found-a-huge" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("5_lsb8r")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="C-I-also-found-a-huge"]
@@ -262,6 +270,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="dungeon-of-decay-it-is" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("1_i6t4g")
 
 [node name="Bunny-speech-bubble" type="Sprite2D" parent="dungeon-of-decay-it-is"]
@@ -285,25 +294,79 @@ horizontal_alignment = 1
 modulate = Color(0, 0, 0, 1)
 offset_left = -470.0
 offset_top = -259.0
-offset_right = -257.0
-offset_bottom = -216.0
-text = "*press space to go
-  to the next frame"
+offset_right = -196.0
+offset_bottom = -211.0
+text = "*press the down arrow to go to the next frame"
 
 [node name="C-yes-no" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("5_lsb8r")
 
-[node name="Darkness" type="Sprite2D" parent="C-yes-no"]
-position = Vector2(220, 157)
+[node name="nope" type="Area2D" parent="C-yes-no"]
+position = Vector2(220, 179)
 scale = Vector2(1.57292, 0.759259)
+script = ExtResource("11_koko0")
+
+[node name="no" type="Sprite2D" parent="C-yes-no/nope"]
 texture = ExtResource("9_70gml")
 
-[node name="Darkness2" type="Sprite2D" parent="C-yes-no"]
-position = Vector2(-145, 157)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="C-yes-no/nope"]
+position = Vector2(-0.317879, 0.658432)
+shape = SubResource("RectangleShape2D_8mnmb")
+
+[node name="no-text" type="RichTextLabel" parent="C-yes-no"]
+offset_left = 70.0
+offset_top = 139.0
+offset_right = 371.0
+offset_bottom = 221.0
+bbcode_enabled = true
+text = "[font_size=30]No[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="yep" type="Area2D" parent="C-yes-no"]
+position = Vector2(-145, 179)
 scale = Vector2(1.57292, 0.759259)
+script = ExtResource("11_koko0")
+
+[node name="yes" type="Sprite2D" parent="C-yes-no/yep"]
 texture = ExtResource("9_70gml")
 
-[node name="Border" type="Sprite2D" parent="C-yes-no"]
-position = Vector2(-146, 158)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="C-yes-no/yep"]
+position = Vector2(-0.317879, 0.658432)
+shape = SubResource("RectangleShape2D_8mnmb")
+
+[node name="yes-text" type="RichTextLabel" parent="C-yes-no"]
+offset_left = -296.0
+offset_top = 138.0
+offset_right = 5.0
+offset_bottom = 220.0
+bbcode_enabled = true
+text = "[font_size=30]Yes[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="border" type="Area2D" parent="C-yes-no" groups=["select-button"]]
+position = Vector2(-145, 180)
 scale = Vector2(1.248, 0.736)
+script = ExtResource("11_8va2t")
+
+[node name="Border" type="Sprite2D" parent="C-yes-no/border"]
 texture = ExtResource("10_8va2t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="C-yes-no/border"]
+position = Vector2(0.400627, -1.35869)
+shape = SubResource("RectangleShape2D_koko0")
+
+[node name="instructions" type="RichTextLabel" parent="C-yes-no"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.0
+offset_top = 87.0
+offset_right = 406.0
+offset_bottom = 220.0
+bbcode_enabled = true
+text = "[font_size=14]*change the selected option with the left and right arrow keys.*
+*Press space to confirm your choice*[/font_size]"
+horizontal_alignment = 1
+
+[connection signal="selected" from="C-yes-no/nope" to="C-yes-no/border" method="_on_nope_selected"]
+[connection signal="selected" from="C-yes-no/yep" to="C-yes-no/border" method="_on_yep_selected"]

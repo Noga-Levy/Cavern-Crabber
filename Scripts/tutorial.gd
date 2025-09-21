@@ -4,8 +4,8 @@ var frames = []
 var next_frame = false
 var special_frames = []
 var last_frame
-var is_space_pressed = Input.is_action_just_pressed("space")
-signal space_pressed()
+var is_down_pressed = Input.is_action_just_pressed("arrow-down")
+signal down_pressed()
 
 
 func _ready() -> void:
@@ -24,11 +24,11 @@ func frame_sequence():
 	for j in frames:
 		var frame_of_interest = get_node(j)
 		frame_of_interest.show()
-		await space_pressed
+		await down_pressed
 		
-	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	# get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("space"):
-		emit_signal("space_pressed", is_space_pressed)
+	if Input.is_action_just_pressed("arrow-down"):
+		emit_signal("down_pressed", is_down_pressed)
 	

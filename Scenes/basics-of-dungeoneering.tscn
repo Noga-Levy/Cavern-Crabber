@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bbjfortxdhsei"]
+[gd_scene load_steps=11 format=3 uid="uid://bbjfortxdhsei"]
 
 [ext_resource type="Texture2D" uid="uid://c51nu7mx34v08" path="res://Sprites/tutorial/movement.png" id="1_6nssc"]
+[ext_resource type="Script" uid="uid://bwi60g5tieqwh" path="res://Scripts/tutorial.gd" id="1_pwwt5"]
 [ext_resource type="Texture2D" uid="uid://c5gjmvdqchq0n" path="res://Sprites/tutorial/bunny-bubble-down.png" id="2_pwwt5"]
 [ext_resource type="Texture2D" uid="uid://bowfo2l5afe8x" path="res://Sprites/tutorial/abilities-bunny.png" id="3_vjea3"]
 [ext_resource type="Texture2D" uid="uid://b0yhn3y6fmglw" path="res://Sprites/tutorial/bunny-distaste-for-enemies.png" id="4_op0nh"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://da6bb06s6ssne" path="res://Sprites/tutorial/bunny-speech-bubble.png" id="9_3gr5r"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_pwwt5")
 
 [node name="Movement" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("1_6nssc")
@@ -133,12 +135,12 @@ text = "[color=black][font_size=25]That's all my minimum-wage job pays me to say
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 258.0
-offset_top = 222.0
+offset_left = 262.0
+offset_top = 198.0
 offset_right = 471.0
 offset_bottom = 265.0
-text = "*press space to go
-  to the next frame"
+text = "*press the down arrow to go to the next frame"
+horizontal_alignment = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.2, 1.2)
