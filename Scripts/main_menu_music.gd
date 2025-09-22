@@ -1,4 +1,4 @@
-extends AudioStreamPlayer2D
+extends AudioStreamPlayer
 
 func _ready() -> void:
 	self.play(Global.music_pos)

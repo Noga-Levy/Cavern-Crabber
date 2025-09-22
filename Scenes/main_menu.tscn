@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://chv0a35hdchux" path="res://Scripts/credits_button.gd" id="4_trj04"]
 [ext_resource type="Script" uid="uid://bhmuoc2eo705n" path="res://Scripts/select_main-menu_opt.gd" id="5_16hvj"]
 [ext_resource type="Texture2D" uid="uid://dt8qctfjajhib" path="res://Sprites/border.png" id="6_vr1f0"]
-[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Audio/main_menu.mp3" id="7_cp0ys"]
+[ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Audio/bg-music/main_menu.mp3" id="7_cp0ys"]
 [ext_resource type="Script" uid="uid://sv3du61ahf51" path="res://Scripts/main_menu_music.gd" id="8_yhxw7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fu7sn"]
@@ -99,7 +99,7 @@ text = "Use the arrow keys to change the selected button.
 use space to press the button."
 horizontal_alignment = 1
 
-[node name="BG-music" type="AudioStreamPlayer2D" parent="."]
+[node name="BG-music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_cp0ys")
 script = ExtResource("8_yhxw7")
 

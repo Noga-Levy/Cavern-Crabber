@@ -26,7 +26,8 @@ func frame_sequence():
 		frame_of_interest.show()
 		await down_pressed
 		
-	# get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	if get_tree().current_scene.name == "basics-of-dungeoneering":
+		get_tree().change_scene_to_file("res://Scenes/level_1.tscn")
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("arrow-down"):

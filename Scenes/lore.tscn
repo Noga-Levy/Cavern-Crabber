@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="1_1tjbi"]
 [ext_resource type="Texture2D" uid="uid://c3ntl0bvrokn8" path="res://Sprites/Lore/meeting.png" id="1_oqjcs"]
 [ext_resource type="Script" uid="uid://c3q53tfgoaqt3" path="res://Scripts/lore.gd" id="1_pswjy"]
-[ext_resource type="AudioStream" uid="uid://cmcwehmd2173u" path="res://Audio/placeholder-lore-music.mp3" id="2_166u0"]
+[ext_resource type="AudioStream" uid="uid://cmcwehmd2173u" path="res://Audio/bg-music/placeholder-lore-music.mp3" id="2_166u0"]
 [ext_resource type="Texture2D" uid="uid://bpl2tw8p5dqnw" path="res://Sprites/Lore/hydra.png" id="2_e7hpk"]
 [ext_resource type="Texture2D" uid="uid://cquoq81cyjj53" path="res://Sprites/Lore/spider.png" id="3_21vvj"]
 [ext_resource type="Texture2D" uid="uid://wo6mhnwqxkpp" path="res://Sprites/Lore/collapse/collapse.png" id="4_dml0v"]

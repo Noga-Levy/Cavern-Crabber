@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://d367ymwip8ihd" path="res://Sprites/Crab/attack/crab_right-a.png" id="8_wohnl"]
 [ext_resource type="Texture2D" uid="uid://budeeqh53r52n" path="res://Sprites/Crab/attack/crab_up-a.png" id="9_36dho"]
 [ext_resource type="Script" uid="uid://d1bxfsbabn0y3" path="res://Scripts/crab_sounds.gd" id="18_olqyp"]
-[ext_resource type="AudioStream" uid="uid://b10ja8ygulg25" path="res://Audio/bg_music2.mp3" id="20_wpjfl"]
+[ext_resource type="AudioStream" uid="uid://b10ja8ygulg25" path="res://Audio/bg-music/kim-lightyear-legends.mp3" id="20_wpjfl"]
 [ext_resource type="Script" uid="uid://vq00viwcm3ow" path="res://Scripts/whoosh.gd" id="22_wpjfl"]
 [ext_resource type="AudioStream" uid="uid://b4qk8r0oiterx" path="res://Audio/crab-attack/crabattack1.mp3" id="27_nv4vc"]
 [ext_resource type="AudioStream" uid="uid://duer5ngj6wayp" path="res://Audio/crab-attack/crabattack2.mp3" id="28_8gxox"]
@@ -290,11 +290,10 @@ stream = SubResource("AudioStreamRandomizer_sbwqj")
 volume_db = -2.0
 bus = &"ReverbBus"
 
-[node name="bg-music" type="AudioStreamPlayer2D" parent="Player (Crab)"]
+[node name="bg-music" type="AudioStreamPlayer" parent="Player (Crab)"]
 stream = ExtResource("20_wpjfl")
-volume_db = 3.0
+volume_db = -5.0
 autoplay = true
-max_distance = 1000.0
 playback_type = 1
 parameters/looping = true
 

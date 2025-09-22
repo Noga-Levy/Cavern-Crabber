@@ -22,6 +22,7 @@ func _process(_delta: float) -> void:
 func _on_start_selected() -> void:
 	if Input.is_action_just_pressed("space"):
 		get_tree().change_scene_to_file("res://Scenes/tutorial.tscn")
+		Global.music_pos = 0
 
 
 func _on_credits_selected() -> void:

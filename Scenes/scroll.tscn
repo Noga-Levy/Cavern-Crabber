@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://f7acchj3erl4" path="res://Scripts/scroll.gd" id="1_wx0dm"]
 [ext_resource type="Texture2D" uid="uid://dksn1mghfr0wj" path="res://Sprites/scroll.png" id="2_pd2jm"]
 [ext_resource type="Texture2D" uid="uid://cwkfbwt82p3r6" path="res://Sprites/Various Ground Sprites/ground-in-between-levels.png" id="2_xyluh"]
-[ext_resource type="AudioStream" uid="uid://b3tf6ibqgne0d" path="res://Audio/the crablevator by @Cisco.mp3" id="4_xyluh"]
+[ext_resource type="AudioStream" uid="uid://b3tf6ibqgne0d" path="res://Audio/bg-music/the crablevator by @Cisco.mp3" id="4_xyluh"]
 
 [node name="Scroll" type="Node2D"]
 script = ExtResource("1_wx0dm")

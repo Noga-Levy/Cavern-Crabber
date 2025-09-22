@@ -10,5 +10,3 @@ var crab_modulate = "ffffff"
 
 var level = 1
 var special_abilities = "N/A"
-
-var tries_left = 2

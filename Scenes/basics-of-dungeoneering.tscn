@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbjfortxdhsei"]
+[gd_scene load_steps=13 format=3 uid="uid://bbjfortxdhsei"]
 
 [ext_resource type="Texture2D" uid="uid://c51nu7mx34v08" path="res://Sprites/tutorial/movement.png" id="1_6nssc"]
 [ext_resource type="Script" uid="uid://bwi60g5tieqwh" path="res://Scripts/tutorial.gd" id="1_pwwt5"]
@@ -10,8 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://c5fa5ubb0he0p" path="res://Sprites/tutorial/box-smiley-bunny.png" id="7_60hnm"]
 [ext_resource type="Texture2D" uid="uid://15icy34yixbv" path="res://Sprites/tutorial/tutorial-frame1.png" id="8_vux01"]
 [ext_resource type="Texture2D" uid="uid://da6bb06s6ssne" path="res://Sprites/tutorial/bunny-speech-bubble.png" id="9_3gr5r"]
+[ext_resource type="AudioStream" uid="uid://4jxyo4d6qmve" path="res://Audio/bg-music/kim-lightyear-angel-eyes-chiptune-edit.mp3" id="11_op0nh"]
+[ext_resource type="Script" uid="uid://sv3du61ahf51" path="res://Scripts/main_menu_music.gd" id="12_q1jr0"]
 
-[node name="Node2D" type="Node2D"]
+[node name="basics-of-dungeoneering" type="Node2D"]
 script = ExtResource("1_pwwt5")
 
 [node name="Movement" type="Sprite2D" parent="." groups=["frame"]]
@@ -131,7 +133,7 @@ offset_top = -239.0
 offset_right = 442.0
 offset_bottom = 7.0
 bbcode_enabled = true
-text = "[color=black][font_size=25]That's all my minimum-wage job pays me to say, so press space when you are ready to go back to the main menu.[/font_size][/color]"
+text = "[color=black][font_size=25]That's all my minimum-wage job pays me to say, so press the down arrow when you are ready to start the dungeon![/font_size][/color]"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -144,3 +146,7 @@ horizontal_alignment = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.2, 1.2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_op0nh")
+script = ExtResource("12_q1jr0")

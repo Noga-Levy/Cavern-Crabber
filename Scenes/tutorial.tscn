@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dqh7qn3fww5bm"]
+[gd_scene load_steps=17 format=3 uid="uid://dqh7qn3fww5bm"]
 
 [ext_resource type="Script" uid="uid://bwi60g5tieqwh" path="res://Scripts/tutorial.gd" id="1_70gml"]
 [ext_resource type="Texture2D" uid="uid://15icy34yixbv" path="res://Sprites/tutorial/tutorial-frame1.png" id="1_i6t4g"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dt8qctfjajhib" path="res://Sprites/border.png" id="10_8va2t"]
 [ext_resource type="Script" uid="uid://dk4nxha3m0d4l" path="res://Scripts/tutorial-button-border.gd" id="11_8va2t"]
 [ext_resource type="Script" uid="uid://ca5nefcw3bwld" path="res://Scripts/tutorial-button.gd" id="11_koko0"]
+[ext_resource type="AudioStream" uid="uid://4jxyo4d6qmve" path="res://Audio/bg-music/kim-lightyear-angel-eyes-chiptune-edit.mp3" id="13_koko0"]
+[ext_resource type="Script" uid="uid://sv3du61ahf51" path="res://Scripts/main_menu_music.gd" id="14_lsb8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mnmb"]
 size = Vector2(198.993, 119.854)
@@ -64,6 +66,7 @@ You look a bit confused.
 [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="C-who-is-akamo" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("5_lsb8r")
@@ -290,14 +293,6 @@ text = "[font_size=24] the dungeon of decay it is!
 Do you remember the basics of dungeoneering?"
 horizontal_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-modulate = Color(0, 0, 0, 1)
-offset_left = -470.0
-offset_top = -259.0
-offset_right = -196.0
-offset_bottom = -211.0
-text = "*press the down arrow to go to the next frame"
-
 [node name="C-yes-no" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("5_lsb8r")
 
@@ -319,7 +314,7 @@ offset_top = 139.0
 offset_right = 371.0
 offset_bottom = 221.0
 bbcode_enabled = true
-text = "[font_size=30]No[/font_size]"
+text = "[font_size=25]No, can I have a quick tutorial?[/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -341,7 +336,7 @@ offset_top = 138.0
 offset_right = 5.0
 offset_bottom = 220.0
 bbcode_enabled = true
-text = "[font_size=30]Yes[/font_size]"
+text = "[font_size=25]Yep! Send me to the dungeon! [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -367,6 +362,18 @@ bbcode_enabled = true
 text = "[font_size=14]*change the selected option with the left and right arrow keys.*
 *Press space to confirm your choice*[/font_size]"
 horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -470.0
+offset_top = -259.0
+offset_right = -196.0
+offset_bottom = -211.0
+text = "*press the down arrow to go to the next frame"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_koko0")
+script = ExtResource("14_lsb8r")
 
 [connection signal="selected" from="C-yes-no/nope" to="C-yes-no/border" method="_on_nope_selected"]
 [connection signal="selected" from="C-yes-no/yep" to="C-yes-no/border" method="_on_yep_selected"]

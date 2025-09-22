@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3tf6ibqgne0d"
+path="res://.godot/imported/the crablevator by @Cisco.mp3-581c7edd394c0ce2b8fc743396ba2436.mp3str"
+
+[deps]
+
+source_file="res://Audio/bg-music/the crablevator by @Cisco.mp3"
+dest_files=["res://.godot/imported/the crablevator by @Cisco.mp3-581c7edd394c0ce2b8fc743396ba2436.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
