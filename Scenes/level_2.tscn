@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://dapf0o6nua77s"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_055b2"]
-[ext_resource type="Texture2D" uid="uid://ml8y1vr8k0jr" path="res://Sprites/Various Ground Sprites/ground.png" id="2_2mgoq"]
+[ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="3_42uki"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_uhnj4"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_42uki"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="5_t7v2y"]
@@ -12,25 +12,25 @@
 [ext_resource type="PackedScene" uid="uid://cpl56ifkrmb0g" path="res://Scenes/health-box.tscn" id="11_t7v2y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc4ci"]
-size = Vector2(1154, 125.5)
+size = Vector2(1315, 125.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42uki"]
-size = Vector2(1480.25, 221.563)
+size = Vector2(1342, 221.563)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7v2y"]
-size = Vector2(1483, 234.75)
+size = Vector2(1350.5, 234.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ait6c"]
-size = Vector2(127.421, 3073.94)
+size = Vector2(127.421, 2965.36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcilj"]
-size = Vector2(127.998, 2011.8)
+size = Vector2(127.998, 1902.21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bl0du"]
 size = Vector2(242.121, 3179.89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18xhp"]
-size = Vector2(133.5, 2937)
+size = Vector2(133.5, 2913)
 
 [node name="Level_2" type="Node2D"]
 
@@ -38,26 +38,46 @@ size = Vector2(133.5, 2937)
 z_index = 2
 position = Vector2(150, -93)
 
+[node name="EndGroundBlock2" type="Sprite2D" parent="."]
+modulate = Color(0.584314, 1, 1, 1)
+position = Vector2(87.0001, -2219)
+scale = Vector2(1.13704, 1)
+texture = ExtResource("8_42uki")
+
+[node name="EndGroundBlock2" type="Sprite2D" parent="EndGroundBlock2"]
+position = Vector2(0.00012207, 1846)
+rotation = -3.14159
+texture = ExtResource("8_42uki")
+
+[node name="GroundBlock" type="Sprite2D" parent="EndGroundBlock2"]
+position = Vector2(-0.156258, 1274)
+texture = ExtResource("3_42uki")
+
+[node name="EndGroundBlock" type="Sprite2D" parent="EndGroundBlock2"]
+position = Vector2(-1180.9, 735.002)
+rotation = -1.5708
+texture = ExtResource("8_42uki")
+
 [node name="b-border" type="StaticBody2D" parent="." groups=["b-border", "border"]]
 modulate = Color(0.584314, 1, 1, 1)
 position = Vector2(-1, 379)
 
 [node name="Bottom" type="CollisionShape2D" parent="b-border" groups=["b-border", "border"]]
-position = Vector2(1, -110.25)
+position = Vector2(93, -131)
 shape = SubResource("RectangleShape2D_jc4ci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="b-border" groups=["b-border"]]
-position = Vector2(-1324, -1322.22)
+position = Vector2(-1252, -1311.22)
 shape = SubResource("RectangleShape2D_42uki")
 
 [node name="t-border" type="StaticBody2D" parent="." groups=["border", "t-border"]]
 
 [node name="Top" type="CollisionShape2D" parent="t-border" groups=["border", "t-border"]]
-position = Vector2(2, -2793)
+position = Vector2(82.5, -2793)
 shape = SubResource("RectangleShape2D_jc4ci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="t-border" groups=["t-border"]]
-position = Vector2(-1319, -2049.38)
+position = Vector2(-1251.25, -2038.38)
 shape = SubResource("RectangleShape2D_t7v2y")
 
 [node name="l-border" type="StaticBody2D" parent="." groups=["border", "l-border"]]
@@ -65,24 +85,25 @@ position = Vector2(-1944, 1074)
 scale = Vector2(1.02441, 0.419511)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="l-border" groups=["l-border"]]
-position = Vector2(1393, -3547.52)
+position = Vector2(1393, -3601.81)
 shape = SubResource("RectangleShape2D_ait6c")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="l-border" groups=["l-border"]]
-position = Vector2(1399.83, -8171.39)
+position = Vector2(1399.83, -8116.6)
 shape = SubResource("RectangleShape2D_vcilj")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="l-border" groups=["l-border"]]
-position = Vector2(-232.344, -6130.95)
+position = Vector2(-101.532, -6104.73)
 shape = SubResource("RectangleShape2D_bl0du")
 
 [node name="r-border" type="StaticBody2D" parent="." groups=["border", "r-border"]]
 
 [node name="Right" type="CollisionShape2D" parent="r-border" groups=["border", "r-border"]]
-position = Vector2(516, -1263)
+position = Vector2(673, -1273.5)
 shape = SubResource("RectangleShape2D_18xhp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(76, -11)
 script = ExtResource("3_uhnj4")
 
 [node name="stairs" parent="." instance=ExtResource("4_42uki")]
@@ -95,7 +116,7 @@ position = Vector2(0, -2534)
 position = Vector2(302, -527)
 
 [node name="bleeg2" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(-309, -955)
+position = Vector2(-119, -958)
 
 [node name="bleeg3" parent="." instance=ExtResource("7_vcilj")]
 position = Vector2(-1264, -1485)
@@ -104,32 +125,19 @@ position = Vector2(-1264, -1485)
 position = Vector2(147, -1329)
 
 [node name="bleeg5" parent="." instance=ExtResource("7_vcilj")]
-position = Vector2(-276, -1860)
+position = Vector2(-123, -1880)
 
 [node name="bleeg6" parent="." instance=ExtResource("7_vcilj")]
 position = Vector2(269, -2217)
-
-[node name="Ground" type="Sprite2D" parent="."]
-modulate = Color(0.584314, 1, 1, 1)
-show_behind_parent = true
-position = Vector2(2, -1342)
-scale = Vector2(0.85, 0.85)
-texture = ExtResource("2_2mgoq")
-
-[node name="EndGroundBlock" type="Sprite2D" parent="Ground"]
-position = Vector2(-1637.33, -180)
-rotation = 4.71239
-scale = Vector2(1.17647, 1.33769)
-texture = ExtResource("8_42uki")
 
 [node name="Gas" parent="." instance=ExtResource("7_055b2")]
 position = Vector2(-111, -538)
 
 [node name="Gas2" parent="." instance=ExtResource("7_055b2")]
-position = Vector2(133, -950)
+position = Vector2(323, -953)
 
 [node name="Gas3" parent="." instance=ExtResource("7_055b2")]
-position = Vector2(170, -1851)
+position = Vector2(323, -1871)
 
 [node name="Gas4" parent="." instance=ExtResource("7_055b2")]
 position = Vector2(-145, -2216)
