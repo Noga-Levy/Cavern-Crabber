@@ -21,9 +21,24 @@ func _ready() -> void:
 
 
 func frame_sequence():
+	
 	for j in frames:
 		var frame_of_interest = get_node(j)
+		
+		var text_node_path = "{}/RichTextLabel".format([frame_of_interest.name], "{}")
+		var frame_text = get_node(text_node_path)
+		var original_text = frame_text.text.substr(14, frame_text.text.length() - 12 - 14)
+		var original_text_with_bbcode = frame_text.text
+		frame_text.text = frame_text.text.substr(0, 14) + frame_text.text.substr(frame_text.text.length() - 12, frame_text.text.length())
+		
 		frame_of_interest.show()
+		
+		for letter in original_text:
+			print(letter)
+			frame_text.text = frame_text.text.substr(0, frame_text.text.length() - 12) + letter + frame_text.text.substr(frame_text.text.length() - 12, frame_text.text.length())
+			await get_tree().create_timer(0.05).timeout
+				
+			
 		await down_pressed
 		
 	if get_tree().current_scene.name == "basics-of-dungeoneering":

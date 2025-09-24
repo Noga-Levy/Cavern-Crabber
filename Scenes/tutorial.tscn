@@ -221,7 +221,7 @@ rotation = 3.14159
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("2_p8jf4")
 
-[node name="1" type="RichTextLabel" parent="you-can\'t-be-serious"]
+[node name="RichTextLabel" type="RichTextLabel" parent="you-can\'t-be-serious"]
 modulate = Color(0, 0, 0, 1)
 offset_left = -458.0
 offset_top = -99.0
@@ -234,21 +234,20 @@ That dungeon is a death wish!
 horizontal_alignment = 1
 
 [node name="no-I-am-not-letting-you" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
 texture = ExtResource("3_p1f1o")
 
 [node name="Bunny-speech-bubble" type="Sprite2D" parent="no-I-am-not-letting-you"]
 position = Vector2(-2, 3)
 texture = ExtResource("2_p8jf4")
 
-[node name="1" type="RichTextLabel" parent="no-I-am-not-letting-you"]
+[node name="RichTextLabel" type="RichTextLabel" parent="no-I-am-not-letting-you"]
 modulate = Color(0, 0, 0, 1)
 offset_left = 125.0
 offset_top = -224.0
 offset_right = 432.0
 offset_bottom = -17.0
 bbcode_enabled = true
-text = "[font_size=30] [font_size=50]No,[/font_size]
+text = "[font_size=30] NO!
 I am not letting you do that dun--
 [/font_size]"
 horizontal_alignment = 1
