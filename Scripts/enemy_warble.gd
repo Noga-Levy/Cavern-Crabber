@@ -45,6 +45,7 @@ func _physics_process(_delta: float) -> void:
 
 func _process(_delta: float) -> void:
 	if health <= 0:
+		open_death_anim()
 		self.queue_free()
 	
 	if Input.is_action_pressed("dodge"):
@@ -83,6 +84,16 @@ func attack():
 		$e_warble.play("left")
 	else:
 		$e_warble.play("right")
+
+
+func open_death_anim():
+	var death_scene = preload("res://Scenes/death_animation.tscn")
+	var death_instance = death_scene.instantiate()
+	
+	get_tree().root.get_node("Level_1").add_child(death_instance)
+	
+	death_instance.position = position
+	death_instance.modulate = "9cadf5"
 
 
 func _on_collision_body_entered(body: Node2D) -> void:

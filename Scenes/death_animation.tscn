@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://dc5xc0hu8bjgg"]
+
+[ext_resource type="Texture2D" uid="uid://ddemosmjb7ny6" path="res://Sprites/death-particle-effects.png" id="1_12bpq"]
+[ext_resource type="Script" uid="uid://8dgxe4kliolc" path="res://Scenes/death_animation.gd" id="1_ngsh7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngsh7"]
+atlas = ExtResource("1_12bpq")
+region = Rect2(0, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygfai"]
+atlas = ExtResource("1_12bpq")
+region = Rect2(276, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3on0"]
+atlas = ExtResource("1_12bpq")
+region = Rect2(552, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxfex"]
+atlas = ExtResource("1_12bpq")
+region = Rect2(828, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fwgi"]
+atlas = ExtResource("1_12bpq")
+region = Rect2(1104, 0, 276, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nm3uy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngsh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygfai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3on0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxfex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fwgi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ngsh7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-7, 11)
+sprite_frames = SubResource("SpriteFrames_nm3uy")
+
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="_on_animation_looped"]

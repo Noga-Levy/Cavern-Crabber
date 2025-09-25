@@ -15,16 +15,16 @@
 size = Vector2(1315, 125.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42uki"]
-size = Vector2(1342, 221.563)
+size = Vector2(1540.99, 221.563)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7v2y"]
-size = Vector2(1350.5, 234.75)
+size = Vector2(1561.49, 234.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ait6c"]
-size = Vector2(127.421, 2965.36)
+size = Vector2(127.421, 2400.42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcilj"]
-size = Vector2(127.998, 1902.21)
+size = Vector2(127.998, 1361.11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bl0du"]
 size = Vector2(242.121, 3179.89)
@@ -67,7 +67,7 @@ position = Vector2(93, -131)
 shape = SubResource("RectangleShape2D_jc4ci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="b-border" groups=["b-border"]]
-position = Vector2(-1252, -1311.22)
+position = Vector2(-1125.49, -1312.84)
 shape = SubResource("RectangleShape2D_42uki")
 
 [node name="t-border" type="StaticBody2D" parent="." groups=["border", "t-border"]]
@@ -77,7 +77,7 @@ position = Vector2(82.5, -2793)
 shape = SubResource("RectangleShape2D_jc4ci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="t-border" groups=["t-border"]]
-position = Vector2(-1251.25, -2038.38)
+position = Vector2(-1118.74, -2040)
 shape = SubResource("RectangleShape2D_t7v2y")
 
 [node name="l-border" type="StaticBody2D" parent="." groups=["border", "l-border"]]
@@ -85,15 +85,15 @@ position = Vector2(-1944, 1074)
 scale = Vector2(1.02441, 0.419511)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="l-border" groups=["l-border"]]
-position = Vector2(1393, -3601.81)
+position = Vector2(1393, -3319.34)
 shape = SubResource("RectangleShape2D_ait6c")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="l-border" groups=["l-border"]]
-position = Vector2(1399.83, -8116.6)
+position = Vector2(1399.83, -8387.15)
 shape = SubResource("RectangleShape2D_vcilj")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="l-border" groups=["l-border"]]
-position = Vector2(-101.532, -6104.73)
+position = Vector2(-75.1652, -6108.59)
 shape = SubResource("RectangleShape2D_bl0du")
 
 [node name="r-border" type="StaticBody2D" parent="." groups=["border", "r-border"]]
@@ -143,6 +143,7 @@ position = Vector2(323, -1871)
 position = Vector2(-145, -2216)
 
 [node name="Darkness" type="Sprite2D" parent="."]
+visible = false
 z_index = -1
 position = Vector2(-988.498, -1243.5)
 scale = Vector2(24.2656, 39.9167)
