@@ -103,7 +103,6 @@ text = "[color=black][font_size=26]To help you out, there'll be these boxes scat
 horizontal_alignment = 1
 
 [node name="Box-smiley-bunny" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
 texture = ExtResource("7_60hnm")
 
 [node name="Bunny-bubble-down" type="Sprite2D" parent="Box-smiley-bunny"]
@@ -112,9 +111,9 @@ texture = ExtResource("2_pwwt5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Box-smiley-bunny"]
 offset_left = -369.0
-offset_top = 120.0
+offset_top = 116.0
 offset_right = 52.0
-offset_bottom = 222.0
+offset_bottom = 229.0
 bbcode_enabled = true
 text = "[color=black][font_size=25]They're filled with all sorts of goodies, so make sure open them![/font_size][/color]"
 horizontal_alignment = 1

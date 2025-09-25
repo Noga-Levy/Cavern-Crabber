@@ -54,7 +54,7 @@ position = Vector2(-0.156258, 1274)
 texture = ExtResource("3_42uki")
 
 [node name="EndGroundBlock" type="Sprite2D" parent="EndGroundBlock2"]
-position = Vector2(-1180.9, 735.002)
+position = Vector2(-1175.9, 735.002)
 rotation = -1.5708
 texture = ExtResource("8_42uki")
 

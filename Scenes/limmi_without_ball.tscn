@@ -1,21 +1,22 @@
-[gd_scene load_steps=20 format=3 uid="uid://dlrki3pi8omm8"]
+[gd_scene load_steps=21 format=3 uid="uid://u1piki8metm7"]
 
-[ext_resource type="Script" uid="uid://hu24uos3n5ny" path="res://Scripts/limmi.gd" id="1_6u7vc"]
-[ext_resource type="Texture2D" uid="uid://da3yu671cxye1" path="res://Sprites/limmi/lim-l.png" id="2_sjf0y"]
-[ext_resource type="Texture2D" uid="uid://b31uy1kuu8pqj" path="res://Sprites/limmi/lim-l2.png" id="3_vrb08"]
-[ext_resource type="Texture2D" uid="uid://u7qm1a7nk43i" path="res://Sprites/limmi/lim-r.png" id="4_d3u7k"]
-[ext_resource type="Texture2D" uid="uid://docs0lro6embx" path="res://Sprites/limmi/lim-r2.png" id="5_5ndyx"]
-[ext_resource type="Script" uid="uid://4mgbf2u1mhep" path="res://Scripts/limmi-HP.gd" id="6_dukjf"]
-[ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="8_sjf0y"]
+[ext_resource type="Script" uid="uid://dup3br6bcwsec" path="res://Scripts/limmi_without_ball.gd" id="1_6uwm4"]
+[ext_resource type="Texture2D" uid="uid://1kts7j71b3p2" path="res://Sprites/limmi/limmi-without-ball/left1.png" id="1_60so6"]
+[ext_resource type="Script" uid="uid://4mgbf2u1mhep" path="res://Scripts/limmi-HP.gd" id="2_0skjm"]
+[ext_resource type="Texture2D" uid="uid://bcpgaadrjg65b" path="res://Sprites/limmi/limmi-without-ball/left2.png" id="3_jofg7"]
+[ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="3_qneam"]
+[ext_resource type="Texture2D" uid="uid://blgffaegqmady" path="res://Sprites/limmi/limmi-without-ball/right1.png" id="4_kq2es"]
+[ext_resource type="Texture2D" uid="uid://dvlaim68xjjo2" path="res://Sprites/limmi/limmi-without-ball/right2.png" id="5_13cjd"]
+[ext_resource type="AudioStream" uid="uid://b75h12dj7lowv" path="res://Audio/limmi-attack/bite-potato-chips-83946 (mp3cut.net).mp3" id="8_jofg7"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_pi1cc"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jer1i"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_sjf0y")
+"texture": ExtResource("1_60so6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_vrb08")
+"texture": ExtResource("3_jofg7")
 }],
 "loop": true,
 "name": &"left",
@@ -23,55 +24,55 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_d3u7k")
+"texture": ExtResource("4_kq2es")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_5ndyx")
+"texture": ExtResource("5_13cjd")
 }],
 "loop": true,
 "name": &"right",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvq0k"]
-size = Vector2(115, 138)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0skjm"]
+size = Vector2(60, 54.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u7vc"]
-size = Vector2(124, 146)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60so6"]
+size = Vector2(66, 60)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11gg7"]
-atlas = ExtResource("8_sjf0y")
+atlas = ExtResource("3_qneam")
 region = Rect2(0, 0, 276, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qpa8y"]
-atlas = ExtResource("8_sjf0y")
+atlas = ExtResource("3_qneam")
 region = Rect2(276, 0, 276, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sbwqj"]
-atlas = ExtResource("8_sjf0y")
+atlas = ExtResource("3_qneam")
 region = Rect2(552, 0, 276, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xwi16"]
-atlas = ExtResource("8_sjf0y")
+atlas = ExtResource("3_qneam")
 region = Rect2(828, 0, 276, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sweqm"]
-atlas = ExtResource("8_sjf0y")
+atlas = ExtResource("3_qneam")
 region = Rect2(1104, 0, 276, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ph33w"]
-atlas = ExtResource("8_sjf0y")
+atlas = ExtResource("3_qneam")
 region = Rect2(1380, 0, 276, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ldla"]
-atlas = ExtResource("8_sjf0y")
+atlas = ExtResource("3_qneam")
 region = Rect2(1656, 0, 276, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r7t2e"]
-atlas = ExtResource("8_sjf0y")
+atlas = ExtResource("3_qneam")
 region = Rect2(1932, 0, 276, 192)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vrb08"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_lylfo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -103,24 +104,22 @@ animations = [{
 "speed": 70.0
 }]
 
-[node name="limmi" type="CharacterBody2D" groups=["Enemy", "enemy-of-level", "limmi"]]
-z_index = 1
-script = ExtResource("1_6u7vc")
+[node name="limmi_without_ball" type="CharacterBody2D" groups=["Enemy", "enemy-of-level", "limmi"]]
+script = ExtResource("1_6uwm4")
 
 [node name="limmi" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_pi1cc")
+sprite_frames = SubResource("SpriteFrames_jer1i")
 animation = &"right"
 
 [node name="limmi_body" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(2.5, 21)
-shape = SubResource("RectangleShape2D_jvq0k")
+position = Vector2(-6, -20.75)
+shape = SubResource("RectangleShape2D_0skjm")
 
 [node name="Collision" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
-position = Vector2(2, 22)
-shape = SubResource("RectangleShape2D_6u7vc")
+position = Vector2(-6, -21)
+shape = SubResource("RectangleShape2D_60so6")
 
 [node name="HP" type="RichTextLabel" parent="."]
 z_index = 2
@@ -131,17 +130,21 @@ offset_bottom = -19.0
 theme_override_colors/default_color = Color(0.999331, 0.336299, 0.271501, 1)
 bbcode_enabled = true
 horizontal_alignment = 1
-script = ExtResource("6_dukjf")
+script = ExtResource("2_0skjm")
 metadata/_edit_use_anchors_ = true
 
 [node name="damaged" type="AnimatedSprite2D" parent="."]
 visible = false
 modulate = Color(0, 0.6, 0.411765, 1)
-position = Vector2(-4, 48)
+position = Vector2(-10, -18)
 scale = Vector2(0.547101, 0.546875)
-sprite_frames = SubResource("SpriteFrames_vrb08")
+sprite_frames = SubResource("SpriteFrames_lylfo")
 frame = 7
 frame_progress = 1.0
+
+[node name="chomp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_jofg7")
+volume_db = 15.0
 
 [connection signal="send_health" from="." to="HP" method="_on_limmi_send_health"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

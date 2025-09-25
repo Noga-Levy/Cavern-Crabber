@@ -92,7 +92,7 @@ position = Vector2(441, -1386)
 texture = ExtResource("2_s8nj6")
 
 [node name="Alleyway2" type="Sprite2D" parent="Ground"]
-position = Vector2(-1710, 233)
+position = Vector2(-1690, 233)
 
 [node name="EndGroundBlock3" type="Sprite2D" parent="Ground/Alleyway2"]
 position = Vector2(-407, -2291.66)
@@ -106,7 +106,7 @@ rotation = -1.5708
 texture = ExtResource("2_s8nj6")
 
 [node name="Alleyway3" type="Sprite2D" parent="Ground"]
-position = Vector2(-1250, 1313)
+position = Vector2(-1258, 1313)
 
 [node name="GroundBlock3" type="Sprite2D" parent="Ground/Alleyway3"]
 position = Vector2(-376, -1926)
@@ -124,7 +124,7 @@ scale = Vector2(0.998228, 1)
 texture = ExtResource("1_76ybr")
 
 [node name="Alleyway4" type="Sprite2D" parent="Ground"]
-position = Vector2(-1759, 236)
+position = Vector2(-1718, 236)
 
 [node name="EndGroundBlock3" type="Sprite2D" parent="Ground/Alleyway4"]
 position = Vector2(-2135, -592)

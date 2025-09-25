@@ -253,8 +253,13 @@ I am not letting you do that dun--
 horizontal_alignment = 1
 
 [node name="Shocked-mula-bunny" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
 texture = ExtResource("4_ys4pu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Shocked-mula-bunny"]
+offset_left = 440.0
+offset_top = -269.0
+offset_right = 480.0
+offset_bottom = -229.0
 
 [node name="C-I-also-found-a-huge" type="Sprite2D" parent="." groups=["frame"]]
 visible = false
@@ -289,7 +294,7 @@ offset_right = -170.999
 offset_bottom = 58.501
 bbcode_enabled = true
 text = "[font_size=24] the dungeon of decay it is!
-Do you remember the basics of dungeoneering?"
+Do you remember the basics of dungeoneering?[/font_size]"
 horizontal_alignment = 1
 
 [node name="C-yes-no" type="Sprite2D" parent="." groups=["frame"]]
@@ -361,6 +366,12 @@ bbcode_enabled = true
 text = "[font_size=14]*change the selected option with the left and right arrow keys.*
 *Press space to confirm your choice*[/font_size]"
 horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="C-yes-no"]
+offset_left = 439.0
+offset_top = -268.0
+offset_right = 479.0
+offset_bottom = -228.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 modulate = Color(0, 0, 0, 1)
