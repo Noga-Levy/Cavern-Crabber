@@ -42,6 +42,7 @@ func _physics_process(_delta: float) -> void:
 
 func _process(_delta: float) -> void:
 	if health <= 0:
+		open_death_anim()
 		self.queue_free()
 	
 	if Input.is_action_pressed("dodge"):
@@ -81,6 +82,17 @@ func attack():
 		$limmi.play("left")
 	else:
 		$limmi.play("right")
+
+
+func open_death_anim():
+	var death_scene = preload("res://Scenes/death_animation.tscn")
+	var death_instance = death_scene.instantiate()
+	
+	get_tree().root.get_node("level3").add_child(death_instance)
+	
+	death_instance.position = position
+	death_instance.modulate = "009969"
+
 
 
 # COLLISION

@@ -71,11 +71,15 @@ func create_lava():
 
 
 func create_new_limmi():
-	var limmi_scene = preload("res://Scenes/limmi_without_ball.tscn")
+	var limmi_scene = preload("res://Scenes/ball_without_limmi.tscn")
 	var limmi_instance = limmi_scene.instantiate()
 	
 	get_tree().root.get_node("level3").add_child(limmi_instance)
 	limmi_instance.position = position
+	if $limmi.animation == "left":
+		limmi_instance.get_node("Ball").play("left")
+	else:
+		limmi_instance.get_node("Ball").play("right")
 
 
 # COLLISION

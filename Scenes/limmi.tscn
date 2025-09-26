@@ -137,7 +137,7 @@ metadata/_edit_use_anchors_ = true
 [node name="damaged" type="AnimatedSprite2D" parent="."]
 visible = false
 modulate = Color(0, 0.6, 0.411765, 1)
-position = Vector2(-4, 48)
+position = Vector2(-4, -16)
 scale = Vector2(0.547101, 0.546875)
 sprite_frames = SubResource("SpriteFrames_vrb08")
 frame = 7
