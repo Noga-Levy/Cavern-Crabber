@@ -143,7 +143,6 @@ position = Vector2(323, -1871)
 position = Vector2(-145, -2216)
 
 [node name="Darkness" type="Sprite2D" parent="."]
-visible = false
 z_index = -1
 position = Vector2(-988.498, -1243.5)
 scale = Vector2(24.2656, 39.9167)

@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://daajofqldh2oo"]
 
-[ext_resource type="Texture2D" uid="uid://b0lfs7g63q33u" path="res://Sprites/limmi/ball-without-limmi/just-the-ball-r.png" id="1_1lun5"]
-[ext_resource type="Texture2D" uid="uid://c7fq0dfddbn6p" path="res://Sprites/limmi/ball-without-limmi/just-the-ball-l.png" id="1_b5kmy"]
+[ext_resource type="Texture2D" uid="uid://c7fq0dfddbn6p" path="res://Sprites/limmi/ball-without-limmi/just-the-ball-l.png" id="1_n0xqu"]
+[ext_resource type="Texture2D" uid="uid://b0lfs7g63q33u" path="res://Sprites/limmi/ball-without-limmi/just-the-ball-r.png" id="2_nwnre"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fvh7b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_b5kmy")
+"texture": ExtResource("1_n0xqu")
 }],
 "loop": true,
 "name": &"left",
@@ -15,7 +15,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_1lun5")
+"texture": ExtResource("2_nwnre")
 }],
 "loop": true,
 "name": &"right",

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dc5xc0hu8bjgg"]
 
 [ext_resource type="Texture2D" uid="uid://ddemosmjb7ny6" path="res://Sprites/death-particle-effects.png" id="1_12bpq"]
-[ext_resource type="Script" uid="uid://8dgxe4kliolc" path="res://Scenes/death_animation.gd" id="1_ngsh7"]
+[ext_resource type="Script" uid="uid://8dgxe4kliolc" path="res://Scripts/death_animation.gd" id="1_ngsh7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ngsh7"]
 atlas = ExtResource("1_12bpq")

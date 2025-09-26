@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="2_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="3_vwg62"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="4_s8nj6"]
-[ext_resource type="PackedScene" uid="uid://dlrki3pi8omm8" path="res://Scenes/limmi.tscn" id="5_vwg62"]
+[ext_resource type="PackedScene" uid="uid://dlrki3pi8omm8" path="res://Scenes/limmis/limmi.tscn" id="5_vwg62"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="6_qf6rc"]
 [ext_resource type="PackedScene" uid="uid://cpl56ifkrmb0g" path="res://Scenes/health-box.tscn" id="7_53xsp"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="8_5e78q"]
@@ -83,7 +83,7 @@ position = Vector2(440, -2419)
 texture = ExtResource("1_76ybr")
 
 [node name="EndGroundBlock2" type="Sprite2D" parent="Ground/Alleyway1"]
-position = Vector2(445, -223)
+position = Vector2(445, -224)
 rotation = 3.14159
 texture = ExtResource("1_76ybr")
 

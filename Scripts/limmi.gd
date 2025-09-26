@@ -50,6 +50,7 @@ func _physics_process(_delta: float) -> void:
 func _process(_delta: float) -> void:
 	if health <= 0:
 		create_new_limmi()
+		open_death_anim()
 		self.queue_free()
 
 
@@ -71,7 +72,7 @@ func create_lava():
 
 
 func create_new_limmi():
-	var limmi_scene = preload("res://Scenes/ball_without_limmi.tscn")
+	var limmi_scene = preload("res://Scenes/limmis/ball_without_limmi.tscn")
 	var limmi_instance = limmi_scene.instantiate()
 	
 	get_tree().root.get_node("level3").add_child(limmi_instance)
@@ -80,6 +81,16 @@ func create_new_limmi():
 		limmi_instance.get_node("Ball").play("left")
 	else:
 		limmi_instance.get_node("Ball").play("right")
+
+
+func open_death_anim():
+	var death_scene = preload("res://Scenes/death_animation.tscn")
+	var death_instance = death_scene.instantiate()
+	
+	get_tree().root.get_node("level3").add_child(death_instance)
+	
+	death_instance.position = Vector2(position.x, position.y - 50)
+	death_instance.modulate = "fda9a6"
 
 
 # COLLISION
