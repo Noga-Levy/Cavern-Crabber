@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://d0y4ns64s8ssl"]
+[gd_scene load_steps=31 format=3 uid="uid://d0y4ns64s8ssl"]
 
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="1_76ybr"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="2_s8nj6"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="4_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://dlrki3pi8omm8" path="res://Scenes/limmis/limmi.tscn" id="5_vwg62"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="6_qf6rc"]
+[ext_resource type="PackedScene" uid="uid://tig42hgfx32c" path="res://Scenes/limmis/big_limmi.tscn" id="7_5rvg2"]
 [ext_resource type="PackedScene" uid="uid://cpl56ifkrmb0g" path="res://Scenes/health-box.tscn" id="7_53xsp"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="8_5e78q"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="9_l4wr6"]
@@ -109,7 +110,7 @@ texture = ExtResource("2_s8nj6")
 position = Vector2(-1258, 1313)
 
 [node name="GroundBlock3" type="Sprite2D" parent="Ground/Alleyway3"]
-position = Vector2(-376, -1926)
+position = Vector2(-376, -1931)
 rotation = -3.14159
 texture = ExtResource("2_s8nj6")
 
@@ -118,7 +119,7 @@ position = Vector2(-384, -360)
 texture = ExtResource("2_s8nj6")
 
 [node name="EndGroundBlock" type="Sprite2D" parent="Ground/Alleyway3"]
-position = Vector2(-377, 417)
+position = Vector2(-377, 410)
 rotation = -3.14159
 scale = Vector2(0.998228, 1)
 texture = ExtResource("1_76ybr")
@@ -267,8 +268,8 @@ position = Vector2(-253, -1768)
 [node name="limmi4" parent="." instance=ExtResource("5_vwg62")]
 position = Vector2(149, -2460)
 
-[node name="limmi5" parent="." instance=ExtResource("5_vwg62")]
-position = Vector2(-1142, -2161)
+[node name="limmi5" parent="." instance=ExtResource("7_5rvg2")]
+position = Vector2(-1078, -2109)
 
 [node name="limmi6" parent="." instance=ExtResource("5_vwg62")]
 position = Vector2(-1877, -1959)
@@ -282,8 +283,8 @@ position = Vector2(-1744, -355)
 [node name="limmi9" parent="." instance=ExtResource("5_vwg62")]
 position = Vector2(-1569, 435)
 
-[node name="limmi10" parent="." instance=ExtResource("5_vwg62")]
-position = Vector2(-1501, 1464)
+[node name="limmi10" parent="." instance=ExtResource("7_5rvg2")]
+position = Vector2(-1628, 1721)
 
 [node name="limmi11" parent="." instance=ExtResource("5_vwg62")]
 position = Vector2(-600, 1248)
@@ -294,8 +295,8 @@ position = Vector2(209, 1570)
 [node name="limmi13" parent="." instance=ExtResource("5_vwg62")]
 position = Vector2(-2539, -406)
 
-[node name="limmi14" parent="." instance=ExtResource("5_vwg62")]
-position = Vector2(-3380, -236)
+[node name="limmi14" parent="." instance=ExtResource("7_5rvg2")]
+position = Vector2(-3344, -323)
 
 [node name="limmi15" parent="." instance=ExtResource("5_vwg62")]
 position = Vector2(-4078, -466)

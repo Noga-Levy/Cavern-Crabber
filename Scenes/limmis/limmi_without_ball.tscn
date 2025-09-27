@@ -105,6 +105,7 @@ animations = [{
 }]
 
 [node name="limmi_without_ball" type="CharacterBody2D" groups=["Enemy", "enemy-of-level", "limmi"]]
+z_index = 1
 script = ExtResource("1_qppbo")
 
 [node name="limmi" type="AnimatedSprite2D" parent="."]

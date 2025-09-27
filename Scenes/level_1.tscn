@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dixapswls2xjs"]
+[gd_scene load_steps=14 format=3 uid="uid://dixapswls2xjs"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_8ffim"]
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="2_xrdnt"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://dvd2gv1fmuyk" path="res://Scenes/enemy-warble.tscn" id="3_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_xrdnt"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="8_xrdnt"]
+[ext_resource type="Texture2D" uid="uid://dsh2nw57mi48g" path="res://Sprites/mushroom/mush1.png" id="9_af3po"]
+[ext_resource type="Texture2D" uid="uid://71a0d0h8ajl7" path="res://Sprites/mushroom/mush2.png" id="10_uy8f0"]
+[ext_resource type="Texture2D" uid="uid://r07hyiau087n" path="res://Sprites/mushroom/mush3.png" id="11_6r07y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ffim"]
 size = Vector2(1154, 125.5)
@@ -91,3 +94,30 @@ z_index = -1
 position = Vector2(23, -1096)
 scale = Vector2(13.7292, 42.6481)
 texture = ExtResource("8_xrdnt")
+
+[node name="Mush1" type="Sprite2D" parent="."]
+position = Vector2(383, -1421)
+scale = Vector2(2, 2)
+texture = ExtResource("9_af3po")
+
+[node name="Mush2" type="Sprite2D" parent="."]
+position = Vector2(406, -1406)
+scale = Vector2(2, 2)
+texture = ExtResource("10_uy8f0")
+
+[node name="Mush3" type="Sprite2D" parent="."]
+position = Vector2(375, -1392)
+texture = ExtResource("9_af3po")
+
+[node name="Mush4" type="Sprite2D" parent="."]
+position = Vector2(-336, -1848)
+scale = Vector2(2, 2)
+texture = ExtResource("11_6r07y")
+
+[node name="Mush5" type="Sprite2D" parent="."]
+position = Vector2(-352, -1826)
+texture = ExtResource("11_6r07y")
+
+[node name="Mush6" type="Sprite2D" parent="."]
+position = Vector2(-335, -1824)
+texture = ExtResource("10_uy8f0")

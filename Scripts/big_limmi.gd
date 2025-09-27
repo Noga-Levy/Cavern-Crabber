@@ -11,8 +11,8 @@ var inside_limmi = []
 var damaged = Global.crab_damage
 
 # Health
-var health = 17
-var total_health = 17
+var health = 25
+var total_health = 25
 signal send_health(HP, total_HP)
 
 # Lava
@@ -50,7 +50,6 @@ func _physics_process(_delta: float) -> void:
 func _process(_delta: float) -> void:
 	if health <= 0:
 		create_new_limmi()
-		open_death_anim()
 		self.queue_free()
 
 
@@ -69,28 +68,22 @@ func create_lava():
 	get_tree().root.get_node("level3").add_child(lava_instance)
 	
 	lava_instance.position = position
+	lava_instance.scale = Vector2(1.5, 1.5)
 
 
 func create_new_limmi():
-	var limmi_scene = preload("res://Scenes/limmis/ball_without_limmi.tscn")
+	var limmi_scene = preload("res://Scenes/limmis/limmi_without_ball.tscn")
 	var limmi_instance = limmi_scene.instantiate()
 	
 	get_tree().root.get_node("level3").add_child(limmi_instance)
 	limmi_instance.position = position
 	if $limmi.animation == "left":
-		limmi_instance.get_node("Ball").play("left")
+		limmi_instance.get_node("limmi").play("left")
 	else:
-		limmi_instance.get_node("Ball").play("right")
-
-
-func open_death_anim():
-	var death_scene = preload("res://Scenes/death_animation.tscn")
-	var death_instance = death_scene.instantiate()
+		limmi_instance.get_node("limmi").play("right")
 	
-	get_tree().root.get_node("level3").add_child(death_instance)
-	
-	death_instance.position = Vector2(position.x, position.y - 50)
-	death_instance.modulate = "fda9a6"
+	limmi_instance.modulate = "f200ea"
+	limmi_instance.scale = Vector2(1.5, 1.5)
 
 
 # COLLISION

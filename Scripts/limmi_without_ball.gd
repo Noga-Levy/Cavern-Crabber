@@ -12,8 +12,8 @@ var damaged = Global.crab_damage
 var dodge = false
 
 # Health
-var health = 7
-var total_health = 7
+var health = 15
+var total_health = 15
 signal send_health(HP, total_HP)
 
 
