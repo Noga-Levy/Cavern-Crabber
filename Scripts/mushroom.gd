@@ -29,10 +29,12 @@ func _process(delta: float) -> void:
 		print("entering")
 		emit_signal("pause")
 		$"Crab-talk".show()
+		$"bg-music".play()
 		get_out = false
 	
 	elif get_out == false and Input.is_action_just_released("space"):
 		print("leaving")
 		emit_signal("unpause")
 		$"Crab-talk".hide()
+		$"bg-music".stop()
 		get_out = true

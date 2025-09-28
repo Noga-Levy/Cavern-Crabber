@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dixapswls2xjs"]
+[gd_scene load_steps=17 format=3 uid="uid://dixapswls2xjs"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_8ffim"]
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_chwpn"]
@@ -8,8 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="3_wrinw"]
 [ext_resource type="PackedScene" uid="uid://dvd2gv1fmuyk" path="res://Scenes/enemy-warble.tscn" id="3_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_xrdnt"]
+[ext_resource type="Texture2D" uid="uid://d25vp6neyknmk" path="res://Sprites/Various Ground Sprites/moss.png" id="5_af3po"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="8_xrdnt"]
 [ext_resource type="PackedScene" uid="uid://bktdu01od64rs" path="res://Scenes/mushroom.tscn" id="9_wrinw"]
+[ext_resource type="Texture2D" uid="uid://bdbv5uvi3lmfx" path="res://Sprites/Various Ground Sprites/rock/rock.png" id="12_uy8f0"]
+[ext_resource type="Texture2D" uid="uid://oep464huek6q" path="res://Sprites/Various Ground Sprites/rock/rock2.png" id="13_6r07y"]
+[ext_resource type="Texture2D" uid="uid://bhssnacoev44c" path="res://Sprites/Various Ground Sprites/rock/rock3.png" id="14_6ioyp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ffim"]
 size = Vector2(1154, 125.5)
@@ -57,6 +61,20 @@ shape = SubResource("RectangleShape2D_7p6j4")
 position = Vector2(517, -1609)
 shape = SubResource("RectangleShape2D_7p6j4")
 
+[node name="Moss" type="Sprite2D" parent="."]
+modulate = Color(0.682353, 0.682353, 0.682353, 1)
+position = Vector2(310, -1402)
+rotation = 0.105427
+scale = Vector2(5, 5)
+texture = ExtResource("5_af3po")
+
+[node name="Moss2" type="Sprite2D" parent="."]
+modulate = Color(0.682353, 0.682353, 0.682353, 1)
+position = Vector2(310, -1361)
+rotation = 0.105427
+scale = Vector2(5, 5)
+texture = ExtResource("5_af3po")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_7p6j4")
 
@@ -66,27 +84,35 @@ position = Vector2(0, -2534)
 [node name="info" parent="." instance=ExtResource("3_lsmp6")]
 
 [node name="e_warble" parent="." instance=ExtResource("3_xfk5q")]
+z_index = 1
 position = Vector2(-241, -503)
 
 [node name="e_warble2" parent="." instance=ExtResource("3_xfk5q")]
+z_index = 1
 position = Vector2(251, -707)
 
 [node name="e_warble3" parent="." instance=ExtResource("3_xfk5q")]
+z_index = 1
 position = Vector2(-243, -924)
 
 [node name="e_warble4" parent="." instance=ExtResource("3_xfk5q")]
+z_index = 1
 position = Vector2(220, -1170)
 
 [node name="e_warble5" parent="." instance=ExtResource("3_xfk5q")]
+z_index = 1
 position = Vector2(-100, -1305)
 
 [node name="e_warble6" parent="." instance=ExtResource("3_xfk5q")]
+z_index = 1
 position = Vector2(0, -1660)
 
 [node name="e_warble7" parent="." instance=ExtResource("3_xfk5q")]
+z_index = 1
 position = Vector2(5, -1940)
 
 [node name="e_warble8" parent="." instance=ExtResource("3_xfk5q")]
+z_index = 1
 position = Vector2(-3, -2177)
 
 [node name="Darkness" type="Sprite2D" parent="."]
@@ -96,7 +122,49 @@ scale = Vector2(13.7292, 42.6481)
 texture = ExtResource("8_xrdnt")
 
 [node name="mush" parent="." instance=ExtResource("9_wrinw")]
-position = Vector2(373, -1456)
+position = Vector2(312, -1477)
+
+[node name="Rock" type="Sprite2D" parent="."]
+position = Vector2(282, -1391)
+texture = ExtResource("12_uy8f0")
+
+[node name="Rock3" type="Sprite2D" parent="Rock"]
+position = Vector2(-44.5, 28)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_uy8f0")
+
+[node name="Rock2" type="Sprite2D" parent="Rock"]
+position = Vector2(-10.5, 45)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_uy8f0")
+
+[node name="Rock2" type="Sprite2D" parent="."]
+position = Vector2(329, -1377)
+texture = ExtResource("13_6r07y")
+
+[node name="Rock3" type="Sprite2D" parent="."]
+position = Vector2(-322, 6)
+texture = ExtResource("14_6ioyp")
+
+[node name="Rock4" type="Sprite2D" parent="Rock3"]
+position = Vector2(0, 20)
+texture = ExtResource("13_6r07y")
+
+[node name="Moss3" type="Sprite2D" parent="."]
+modulate = Color(0.682353, 0.682353, 0.682353, 1)
+position = Vector2(324, -461)
+scale = Vector2(5, 5)
+texture = ExtResource("5_af3po")
+
+[node name="Rock7" type="Sprite2D" parent="Moss3"]
+position = Vector2(4, -4)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_uy8f0")
+
+[node name="Rock5" type="Sprite2D" parent="Moss3"]
+position = Vector2(1.8, -8)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_6r07y")
 
 [connection signal="pause" from="mush" to="." method="_on_mush_pause"]
 [connection signal="unpause" from="mush" to="." method="_on_mush_unpause"]
