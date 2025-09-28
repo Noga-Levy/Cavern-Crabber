@@ -114,7 +114,6 @@ texture = ExtResource("8_xrdnt")
 
 [node name="mush" parent="." instance=ExtResource("9_wrinw")]
 position = Vector2(370, -1382)
-scale = Vector2(0.565, 0.565)
 
 [node name="Moss2-removebg-preview3" type="Sprite2D" parent="."]
 position = Vector2(-330, 15)

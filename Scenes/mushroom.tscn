@@ -27,19 +27,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aktc8"]
-size = Vector2(86, 119)
+size = Vector2(108, 84)
 
 [node name="Mushroom" type="Area2D"]
 process_mode = 3
 script = ExtResource("1_e0au5")
 
 [node name="Mushroom" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_c6w58")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 15.5)
+position = Vector2(-3, 0)
 shape = SubResource("RectangleShape2D_aktc8")
 
 [node name="Crab-talk" type="Sprite2D" parent="."]
@@ -54,7 +53,7 @@ offset_top = 110.0
 offset_right = 400.0
 offset_bottom = 213.0
 bbcode_enabled = true
-text = "[color=black][font_size=25]Huh, I feel like I've seen you somewhere before...
+text = "[color=black][font_size=25]Huh, why does this mushroom have a face? And why does it feel so... familiar?
 (press space to continue)
 [/font_size][/color]"
 horizontal_alignment = 1
