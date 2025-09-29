@@ -90,7 +90,7 @@ func open_death_anim():
 	get_tree().root.get_node("level3").add_child(death_instance)
 	
 	death_instance.position = Vector2(position.x, position.y - 50)
-	death_instance.modulate = "fda9a6"
+	death_instance.modulate = "fa6761"
 
 
 # COLLISION

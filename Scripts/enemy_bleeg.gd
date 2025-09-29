@@ -88,7 +88,7 @@ func open_death_anim():
 	get_tree().root.get_node("Level_2").add_child(death_instance)
 	
 	death_instance.position = position
-	death_instance.modulate = "99922f"
+	death_instance.modulate = "2f3699"
 
 
 func _on_collision_body_entered(body: Node2D) -> void:
