@@ -74,9 +74,9 @@ texture = ExtResource("5_lsb8r")
 [node name="RichTextLabel" type="RichTextLabel" parent="C-who-is-akamo"]
 modulate = Color(0, 0, 0, 1)
 offset_left = -328.0
-offset_top = 87.0
+offset_top = 78.0
 offset_right = 406.0
-offset_bottom = 220.0
+offset_bottom = 232.0
 bbcode_enabled = true
 text = "[font_size=20]I'll be honest, I am extremely. Do I know you? Is my name akamo?
 I woke up with a purple bottle in my right claw, and two notes in my left. One said to come here. Do you have any idea what happened?
@@ -85,6 +85,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="that-is-a-lot-of-info" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("3_p1f1o")
 
 [node name="Bunny-speech-bubble" type="Sprite2D" parent="that-is-a-lot-of-info"]
@@ -106,6 +107,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="what-was-the-bottle" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("3_p1f1o")
 
 [node name="Bunny-speech-bubble" type="Sprite2D" parent="what-was-the-bottle"]
@@ -179,6 +181,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="what-did-the-second" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("3_p1f1o")
 
 [node name="Bunny-speech-bubble" type="Sprite2D" parent="what-did-the-second"]
@@ -198,6 +201,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="C-it-was-rather-vague" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("5_lsb8r")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="C-it-was-rather-vague"]
@@ -234,6 +238,7 @@ That dungeon is a death wish!
 horizontal_alignment = 1
 
 [node name="no-I-am-not-letting-you" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("3_p1f1o")
 
 [node name="Bunny-speech-bubble" type="Sprite2D" parent="no-I-am-not-letting-you"]
@@ -253,6 +258,7 @@ I am not letting you do that dun--
 horizontal_alignment = 1
 
 [node name="Shocked-mula-bunny" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("4_ys4pu")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Shocked-mula-bunny"]
@@ -298,6 +304,7 @@ Do you remember the basics of dungeoneering?[/font_size]"
 horizontal_alignment = 1
 
 [node name="C-yes-no" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("5_lsb8r")
 
 [node name="nope" type="Area2D" parent="C-yes-no"]

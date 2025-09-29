@@ -88,7 +88,6 @@ text = "[color=black][font_size=26]Destroy all the [color=red]enemies[/color] to
 horizontal_alignment = 1
 
 [node name="Bunnybox-with-tutorial-bunny" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
 texture = ExtResource("6_0wety")
 
 [node name="Bunny-bubble-down" type="Sprite2D" parent="Bunnybox-with-tutorial-bunny"]
@@ -96,13 +95,14 @@ position = Vector2(28, -7)
 texture = ExtResource("2_pwwt5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Bunnybox-with-tutorial-bunny"]
-offset_left = -369.0
-offset_top = 115.0
-offset_right = 52.0
-offset_bottom = 217.0
+offset_left = -367.0
+offset_top = 93.0
+offset_right = 54.0
+offset_bottom = 233.0
 bbcode_enabled = true
 text = "[color=black][font_size=26]To help you out, there'll be these boxes scattered around.[/font_size][/color]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Box-smiley-bunny" type="Sprite2D" parent="." groups=["frame"]]
 visible = false
@@ -161,10 +161,10 @@ text = "[color=black][font_size=25]That's all my minimum-wage job pays me to say
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 262.0
-offset_top = 198.0
-offset_right = 471.0
-offset_bottom = 265.0
+offset_left = 264.0
+offset_top = 191.0
+offset_right = 473.0
+offset_bottom = 272.0
 text = "*press the down arrow to go to the next frame"
 horizontal_alignment = 2
 

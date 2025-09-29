@@ -37,9 +37,11 @@ offset_top = -171.0
 offset_right = 471.0
 offset_bottom = 214.0
 bbcode_enabled = true
-text = "[font_size=17]Code - Noga Levy
+text = "[font_size=15]Code - Noga Levy
 
-Assets - Noga levy
+Assets
+Moss - Minecraft
+All others are by Noga levy
 
 Font - Silkscreen, from Google fonts
 
@@ -48,7 +50,7 @@ Menu - Noga levy
 Crab attack - Cisco
 Crab dodge - Cisco
 Scroll music - Cisco
-All enemy attacks - Cisco
+All enemy attacks (except for the limmis) - Cisco
 All other audio is from the Pixabay selection
 [/font_size]"
 horizontal_alignment = 1
