@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://dapf0o6nua77s"]
+[gd_scene load_steps=24 format=3 uid="uid://dapf0o6nua77s"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_055b2"]
+[ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_hj5x7"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="3_42uki"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_uhnj4"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_42uki"]
@@ -14,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://oep464huek6q" path="res://Sprites/Various Ground Sprites/rock/rock2.png" id="12_q0ycs"]
 [ext_resource type="Texture2D" uid="uid://bdbv5uvi3lmfx" path="res://Sprites/Various Ground Sprites/rock/rock.png" id="13_hj5x7"]
 [ext_resource type="Texture2D" uid="uid://bhssnacoev44c" path="res://Sprites/Various Ground Sprites/rock/rock3.png" id="14_yvrk7"]
+[ext_resource type="PackedScene" uid="uid://b5k1r1tfsa2ok" path="res://Scenes/half_eaten_mush.tscn" id="15_q0ycs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc4ci"]
 size = Vector2(1315, 125.5)
@@ -37,8 +39,10 @@ size = Vector2(242.121, 3179.89)
 size = Vector2(133.5, 2913)
 
 [node name="Level_2" type="Node2D"]
+script = ExtResource("1_hj5x7")
 
 [node name="Player" parent="." instance=ExtResource("1_055b2")]
+process_mode = 1
 z_index = 2
 position = Vector2(150, -93)
 
@@ -235,3 +239,9 @@ position = Vector2(-60, 23)
 rotation = 3.14159
 scale = Vector2(1, 1)
 texture = ExtResource("14_yvrk7")
+
+[node name="Half-eaten-mush" parent="." instance=ExtResource("15_q0ycs")]
+position = Vector2(-1569, -1234)
+
+[connection signal="pause" from="Half-eaten-mush" to="." method="_on_mush_pause"]
+[connection signal="unpause" from="Half-eaten-mush" to="." method="_on_mush_unpause"]

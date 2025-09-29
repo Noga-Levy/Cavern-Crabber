@@ -11,7 +11,7 @@ func _ready() -> void:
 	$"Ground-in-between-levels".modulate = level_colors[Global.level]
 	
 	$Level_complete.text = level_done
-	info = [$HP, $DMG, $SPEED, $Special_Abilities, $Next_Enemy]
+	info = [$HP, $DMG, $SPEED, $New_Memory, $Next_Enemy]
 	
 	$HP.text = "[font_size=25][color=darkgreen]HP[/color][/font_size]\n[color=darkgreen]" + str(Global.level * 5) + " -> " + str(Global.level * 5 + 5) + "[/color]"
 	
@@ -23,10 +23,14 @@ func _ready() -> void:
 	Global.crab_SPEED = 500 + (Global.level - 1) * 100
 	Global.crab_modulate = "ffffff"
 	
-	$Special_Abilities.text = "[font_size=25][color=blue]SPECIALS/NEW[/color][/font_size]\n[color=blue]" + Global.special_abilities + "[/color]"
+	if Global.level == 3:
+		$New_Memory.text = "[font_size=25][color=blue]No New   Memories[/color][/font_size]"
+	else:
+		$New_Memory.text = "[font_size=25][color=blue]New memory unlocked[/color][/font_size]"
 	
 	var enemies = ["Warbles", "Bleegs", "Limmis"]
 	$Next_Enemy.text = "[font_size=25][color=black]NEXT UP: " + enemies[Global.level - 1] + "[/color][/font_size]\n[color=black]Press any key to continue[/color]"
+	
 	
 	for i in info:
 		i.hide()
@@ -54,9 +58,8 @@ func _process(_delta: float) -> void:
 	
 
 func _input(event):
-	if event is InputEventKey:
-		if event.pressed:
-			if Global.level == 2:
-				get_tree().change_scene_to_file("res://Scenes/level_2.tscn")
-			else:
-				get_tree().change_scene_to_file("res://Scenes/level_3.tscn")
+	if Input.is_action_just_released("space"):
+		if Global.level == 3:
+			get_tree().change_scene_to_file("res://Scenes/level_3.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/memories.tscn")

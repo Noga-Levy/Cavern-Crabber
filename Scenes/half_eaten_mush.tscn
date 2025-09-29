@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://b5k1r1tfsa2ok"]
+
+[ext_resource type="Script" uid="uid://cl26vvx7pgubm" path="res://Scripts/mushroom.gd" id="1_xdrb0"]
+[ext_resource type="Texture2D" uid="uid://b83jsr0nmsdkk" path="res://Sprites/mushroom/half-eaten.png" id="2_lo823"]
+[ext_resource type="Texture2D" uid="uid://bcwnji3fq5n47" path="res://Sprites/mushroom/half-eaten2.png" id="3_8tlyl"]
+[ext_resource type="Texture2D" uid="uid://bg41laoxibvgr" path="res://Sprites/crab-talk.png" id="4_jr8xq"]
+[ext_resource type="Script" uid="uid://3v65osl7s7o8" path="res://Scripts/crab-talk-camera-fit.gd" id="5_u31df"]
+[ext_resource type="AudioStream" uid="uid://dng33xel8v5xl" path="res://Audio/bg-music/kim-lightyear-lullaby.mp3" id="6_a8l18"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_usus0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lo823")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8tlyl")
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aktc8"]
+size = Vector2(108, 84)
+
+[node name="Half-eaten-mush" type="Area2D"]
+process_mode = 3
+script = ExtResource("1_xdrb0")
+
+[node name="Mushroom" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_usus0")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 0)
+scale = Vector2(0.6, 0.6)
+shape = SubResource("RectangleShape2D_aktc8")
+
+[node name="Crab-talk" type="Sprite2D" parent="."]
+visible = false
+z_index = 6
+texture = ExtResource("4_jr8xq")
+script = ExtResource("5_u31df")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Crab-talk"]
+offset_left = -287.0
+offset_top = 110.0
+offset_right = 400.0
+offset_bottom = 213.0
+bbcode_enabled = true
+text = "[color=black][font_size=25]Something ate the mushroom? I thought it'd be poisonous...
+(press space to continue)
+[/font_size][/color]"
+horizontal_alignment = 1
+
+[node name="bg-music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_a8l18")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
