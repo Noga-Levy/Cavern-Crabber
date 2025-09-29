@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dixapswls2xjs"]
+[gd_scene load_steps=16 format=3 uid="uid://dixapswls2xjs"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_8ffim"]
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_chwpn"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dxsn0hl7nccx1" path="res://Sprites/Various Ground Sprites/moss2-removebg-preview.png" id="5_6ioyp"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="8_xrdnt"]
 [ext_resource type="PackedScene" uid="uid://bktdu01od64rs" path="res://Scenes/mushroom.tscn" id="9_wrinw"]
-[ext_resource type="Texture2D" uid="uid://bdbv5uvi3lmfx" path="res://Sprites/Various Ground Sprites/rock/rock.png" id="12_uy8f0"]
 [ext_resource type="Texture2D" uid="uid://oep464huek6q" path="res://Sprites/Various Ground Sprites/rock/rock2.png" id="13_6r07y"]
 [ext_resource type="Texture2D" uid="uid://bhssnacoev44c" path="res://Sprites/Various Ground Sprites/rock/rock3.png" id="14_6ioyp"]
 
@@ -150,11 +149,6 @@ texture = ExtResource("13_6r07y")
 [node name="Rock4" type="Sprite2D" parent="Rock5"]
 position = Vector2(66, 24)
 texture = ExtResource("14_6ioyp")
-
-[node name="Rock5" type="Sprite2D" parent="Rock5"]
-position = Vector2(-18, 35)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("12_uy8f0")
 
 [connection signal="pause" from="mush" to="." method="_on_mush_pause"]
 [connection signal="unpause" from="mush" to="." method="_on_mush_unpause"]

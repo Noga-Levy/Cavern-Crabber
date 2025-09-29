@@ -16,6 +16,7 @@ scale = Vector2(6, 6)
 texture = ExtResource("2_tnoe6")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory1/Darkness"]
+texture_filter = 1
 offset_left = -96.0
 offset_top = -20.0
 offset_right = 96.0
