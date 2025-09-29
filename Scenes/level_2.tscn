@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dapf0o6nua77s"]
+[gd_scene load_steps=22 format=3 uid="uid://dapf0o6nua77s"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_055b2"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="3_42uki"]
@@ -9,7 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://d03s2myh7tjf8" path="res://Scenes/bleeg.tscn" id="7_vcilj"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="8_2mgoq"]
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="8_42uki"]
+[ext_resource type="Texture2D" uid="uid://dxsn0hl7nccx1" path="res://Sprites/Various Ground Sprites/moss2-removebg-preview.png" id="11_bl0du"]
 [ext_resource type="PackedScene" uid="uid://cpl56ifkrmb0g" path="res://Scenes/health-box.tscn" id="11_t7v2y"]
+[ext_resource type="Texture2D" uid="uid://oep464huek6q" path="res://Sprites/Various Ground Sprites/rock/rock2.png" id="12_q0ycs"]
+[ext_resource type="Texture2D" uid="uid://bdbv5uvi3lmfx" path="res://Sprites/Various Ground Sprites/rock/rock.png" id="13_hj5x7"]
+[ext_resource type="Texture2D" uid="uid://bhssnacoev44c" path="res://Sprites/Various Ground Sprites/rock/rock3.png" id="14_yvrk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc4ci"]
 size = Vector2(1315, 125.5)
@@ -160,3 +164,74 @@ horizontal_alignment = 1
 
 [node name="HP-box" parent="." instance=ExtResource("11_t7v2y")]
 position = Vector2(-1656, -1519)
+
+[node name="Moss2-removebg-preview6" type="Sprite2D" parent="."]
+modulate = Color(0.691357, 0.691357, 0.691357, 1)
+position = Vector2(-268, -154)
+texture = ExtResource("11_bl0du")
+
+[node name="Moss2-removebg-preview5" type="Sprite2D" parent="."]
+modulate = Color(0.691357, 0.691357, 0.691357, 1)
+position = Vector2(-197, -54)
+texture = ExtResource("11_bl0du")
+
+[node name="Moss2-removebg-preview3" type="Sprite2D" parent="."]
+modulate = Color(0.691357, 0.691357, 0.691357, 1)
+position = Vector2(-269, 12)
+texture = ExtResource("11_bl0du")
+
+[node name="Rock2" type="Sprite2D" parent="."]
+modulate = Color(0.650128, 0.650128, 0.650128, 1)
+position = Vector2(-282, 24)
+texture = ExtResource("12_q0ycs")
+
+[node name="Rock" type="Sprite2D" parent="."]
+modulate = Color(0.54902, 0.54902, 0.54902, 1)
+position = Vector2(466, -1221)
+texture = ExtResource("13_hj5x7")
+
+[node name="Rock3" type="Sprite2D" parent="Rock"]
+position = Vector2(7, 29)
+texture = ExtResource("14_yvrk7")
+
+[node name="Moss2-removebg-preview2" type="Sprite2D" parent="."]
+position = Vector2(-242, 73)
+texture = ExtResource("11_bl0du")
+offset = Vector2(-1341, -1311)
+
+[node name="Moss2-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(-1696, -1185)
+texture = ExtResource("11_bl0du")
+
+[node name="Rock5" type="Sprite2D" parent="."]
+position = Vector2(-1672, -1215)
+texture = ExtResource("14_yvrk7")
+
+[node name="Rock4" type="Sprite2D" parent="."]
+position = Vector2(-1633, -1141)
+texture = ExtResource("13_hj5x7")
+
+[node name="Rock3" type="Sprite2D" parent="Rock4"]
+modulate = Color(0.568973, 0.568973, 0.568973, 1)
+position = Vector2(51, -22)
+texture = ExtResource("12_q0ycs")
+
+[node name="Moss2-removebg-preview4" type="Sprite2D" parent="."]
+modulate = Color(0.666569, 0.666569, 0.666569, 1)
+position = Vector2(433, -2559)
+texture = ExtResource("11_bl0du")
+
+[node name="Moss2-removebg-preview5" type="Sprite2D" parent="Moss2-removebg-preview4"]
+position = Vector2(-53, 76)
+texture = ExtResource("11_bl0du")
+
+[node name="Rock3" type="Sprite2D" parent="Moss2-removebg-preview4"]
+position = Vector2(-74, -18)
+rotation = -0.244346
+texture = ExtResource("12_q0ycs")
+
+[node name="Rock4" type="Sprite2D" parent="Moss2-removebg-preview4"]
+position = Vector2(-60, 23)
+rotation = 3.14159
+scale = Vector2(1, 1)
+texture = ExtResource("14_yvrk7")

@@ -19,10 +19,13 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	colliding_with_box.append(body.name)
+	if box_closed and body.is_in_group("Player"):
+		$Box.play("highlighted")
 
 func _on_body_exited(body: Node2D) -> void:
 	colliding_with_box.erase(body.name)
-
+	if box_closed:
+		$Box.play("closed")
 
 func speedy_gonzales():
 	speed_modulate_timer += 10

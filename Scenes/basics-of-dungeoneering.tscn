@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bbjfortxdhsei"]
+[gd_scene load_steps=14 format=3 uid="uid://bbjfortxdhsei"]
 
 [ext_resource type="Texture2D" uid="uid://c51nu7mx34v08" path="res://Sprites/tutorial/movement.png" id="1_6nssc"]
 [ext_resource type="Script" uid="uid://bwi60g5tieqwh" path="res://Scripts/tutorial.gd" id="1_pwwt5"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c5fa5ubb0he0p" path="res://Sprites/tutorial/box-smiley-bunny.png" id="7_60hnm"]
 [ext_resource type="Texture2D" uid="uid://15icy34yixbv" path="res://Sprites/tutorial/tutorial-frame1.png" id="8_vux01"]
 [ext_resource type="Texture2D" uid="uid://da6bb06s6ssne" path="res://Sprites/tutorial/bunny-speech-bubble.png" id="9_3gr5r"]
+[ext_resource type="Texture2D" uid="uid://doc1tnjdfddkx" path="res://Sprites/box/highlighted-bunny-box.png" id="9_q1jr0"]
 [ext_resource type="AudioStream" uid="uid://4jxyo4d6qmve" path="res://Audio/bg-music/kim-lightyear-angel-eyes-chiptune-edit.mp3" id="11_op0nh"]
 [ext_resource type="Script" uid="uid://sv3du61ahf51" path="res://Scripts/main_menu_music.gd" id="12_q1jr0"]
 
@@ -25,6 +26,7 @@ texture = ExtResource("2_pwwt5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Movement"]
 modulate = Color(0, 0, 0, 1)
+texture_filter = 2
 offset_left = -375.0
 offset_top = 135.0
 offset_right = 46.0
@@ -103,6 +105,7 @@ text = "[color=black][font_size=26]To help you out, there'll be these boxes scat
 horizontal_alignment = 1
 
 [node name="Box-smiley-bunny" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("7_60hnm")
 
 [node name="Bunny-bubble-down" type="Sprite2D" parent="Box-smiley-bunny"]
@@ -116,6 +119,28 @@ offset_right = 52.0
 offset_bottom = 229.0
 bbcode_enabled = true
 text = "[color=black][font_size=25]They're filled with all sorts of goodies, so make sure open them![/font_size][/color]"
+horizontal_alignment = 1
+
+[node name="Bunnybox-with-tutorial-bunny2" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
+texture = ExtResource("6_0wety")
+
+[node name="Highlighted-bunny-box" type="Sprite2D" parent="Bunnybox-with-tutorial-bunny2"]
+position = Vector2(202, -125)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("9_q1jr0")
+
+[node name="Bunny-bubble-down" type="Sprite2D" parent="Bunnybox-with-tutorial-bunny2"]
+position = Vector2(28, -7)
+texture = ExtResource("2_pwwt5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Bunnybox-with-tutorial-bunny2"]
+offset_left = -369.0
+offset_top = 106.0
+offset_right = 52.0
+offset_bottom = 237.0
+bbcode_enabled = true
+text = "[color=black][font_size=23]When an item is highlighted, that means you can interact with it using space[/font_size][/color]"
 horizontal_alignment = 1
 
 [node name="Tutorial-frame4" type="Sprite2D" parent="." groups=["frame"]]

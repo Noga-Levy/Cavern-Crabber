@@ -112,13 +112,11 @@ sprite_frames = SubResource("SpriteFrames_pi1cc")
 animation = &"right"
 
 [node name="limmi_body" type="CollisionShape2D" parent="."]
-visible = false
 z_index = 1
 position = Vector2(2.5, 21)
 shape = SubResource("RectangleShape2D_jvq0k")
 
 [node name="Collision" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
 position = Vector2(2, 22)

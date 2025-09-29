@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cpl56ifkrmb0g"]
+[gd_scene load_steps=10 format=3 uid="uid://cpl56ifkrmb0g"]
 
 [ext_resource type="Script" uid="uid://d4nxcsr1qedlg" path="res://Scripts/health-box.gd" id="1_geb8i"]
 [ext_resource type="Texture2D" uid="uid://btkayp8lkh4iw" path="res://Sprites/box/box-closed.png" id="2_nkxhm"]
+[ext_resource type="Texture2D" uid="uid://doc1tnjdfddkx" path="res://Sprites/box/highlighted-bunny-box.png" id="3_486hf"]
 [ext_resource type="Texture2D" uid="uid://b4sw8tneq8c6i" path="res://Sprites/box/box-opened.png" id="3_ev4oa"]
 [ext_resource type="Texture2D" uid="uid://do2lwqkjkhnqj" path="res://Sprites/box/health-potion.png" id="3_nkxhm"]
 [ext_resource type="Texture2D" uid="uid://du0hi550n8f1x" path="res://Sprites/box/speed-potion.png" id="5_t6gil"]
@@ -15,6 +16,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_486hf")
+}],
+"loop": true,
+"name": &"highlighted",
 "speed": 5.0
 }, {
 "frames": [{
@@ -36,13 +45,13 @@ script = ExtResource("1_geb8i")
 position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_ev4oa")
 animation = &"closed"
+autoplay = "closed"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Box"]
 offset_left = -114.0
 offset_top = 62.0
 offset_right = 117.0
 offset_bottom = 185.0
-text = "Press space to open"
 horizontal_alignment = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

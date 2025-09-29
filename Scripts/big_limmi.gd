@@ -55,10 +55,10 @@ func _process(_delta: float) -> void:
 
 # DAMAGE WHATNOT
 func damaged_animation():
-	$damaged.show()
-	$damaged.play("default")
+	$limmi/damaged.show()
+	$limmi/damaged.play("default")
 	await get_tree().create_timer(0.5).timeout
-	$damaged.hide()
+	$limmi/damaged.hide()
 	
 
 func create_lava():

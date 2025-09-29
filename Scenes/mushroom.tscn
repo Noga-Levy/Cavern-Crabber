@@ -34,11 +34,13 @@ process_mode = 3
 script = ExtResource("1_e0au5")
 
 [node name="Mushroom" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_c6w58")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, 0)
+scale = Vector2(0.6, 0.6)
 shape = SubResource("RectangleShape2D_aktc8")
 
 [node name="Crab-talk" type="Sprite2D" parent="."]

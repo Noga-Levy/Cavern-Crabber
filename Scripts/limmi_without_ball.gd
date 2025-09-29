@@ -17,6 +17,11 @@ var total_health = 15
 signal send_health(HP, total_HP)
 
 
+func _ready() -> void:
+	print($limmi.modulate)
+	print($damaged.modulate)
+
+
 # PROCESSES
 func _physics_process(_delta: float) -> void:
 	
@@ -91,7 +96,7 @@ func open_death_anim():
 	get_tree().root.get_node("level3").add_child(death_instance)
 	
 	death_instance.position = position
-	death_instance.modulate = "009969"
+	death_instance.modulate = "000060"
 
 
 

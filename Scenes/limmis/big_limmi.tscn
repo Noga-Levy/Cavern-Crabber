@@ -33,12 +33,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvq0k"]
-size = Vector2(114, 138)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u7vc"]
-size = Vector2(126, 150)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_11gg7"]
 atlas = ExtResource("7_td4dg")
 region = Rect2(0, 0, 276, 192)
@@ -103,6 +97,12 @@ animations = [{
 "speed": 70.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvq0k"]
+size = Vector2(114, 138)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u7vc"]
+size = Vector2(126, 150)
+
 [node name="limmi" type="CharacterBody2D" groups=["Enemy", "enemy-of-level", "limmi"]]
 z_index = 1
 script = ExtResource("1_j5d1w")
@@ -113,6 +113,13 @@ scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_pi1cc")
 animation = &"right"
 
+[node name="damaged" type="AnimatedSprite2D" parent="limmi"]
+visible = false
+modulate = Color(0, 0.6, 0.411765, 1)
+position = Vector2(-0.666667, 45.3333)
+scale = Vector2(0.666667, 0.666667)
+sprite_frames = SubResource("SpriteFrames_vrb08")
+
 [node name="limmi_body" type="CollisionShape2D" parent="."]
 z_index = 1
 position = Vector2(4.5, 31.5)
@@ -120,6 +127,7 @@ scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_jvq0k")
 
 [node name="Collision" type="Area2D" parent="."]
+visible = false
 scale = Vector2(1.5, 1.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
@@ -137,14 +145,6 @@ bbcode_enabled = true
 horizontal_alignment = 1
 script = ExtResource("6_els07")
 metadata/_edit_use_anchors_ = true
-
-[node name="damaged" type="AnimatedSprite2D" parent="."]
-visible = false
-modulate = Color(0, 0.6, 0.411765, 1)
-position = Vector2(-1, 68)
-sprite_frames = SubResource("SpriteFrames_vrb08")
-frame = 7
-frame_progress = 1.0
 
 [connection signal="send_health" from="." to="HP" method="_on_limmi_send_health"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]

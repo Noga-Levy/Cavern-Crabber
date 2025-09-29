@@ -66,6 +66,12 @@ position = Vector2(349, -1348)
 scale = Vector2(0.76, 0.76)
 texture = ExtResource("5_6ioyp")
 
+[node name="Moss2-removebg-preview2" type="Sprite2D" parent="Moss2-removebg-preview"]
+position = Vector2(71.0526, 36.842)
+scale = Vector2(1.056, 1.056)
+texture = ExtResource("5_6ioyp")
+offset = Vector2(-101, -85)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_7p6j4")
 
@@ -113,7 +119,7 @@ scale = Vector2(13.7292, 42.6481)
 texture = ExtResource("8_xrdnt")
 
 [node name="mush" parent="." instance=ExtResource("9_wrinw")]
-position = Vector2(370, -1382)
+position = Vector2(354, -1349)
 
 [node name="Moss2-removebg-preview3" type="Sprite2D" parent="."]
 position = Vector2(-330, 15)
@@ -125,7 +131,7 @@ position = Vector2(51, 30)
 texture = ExtResource("5_6ioyp")
 
 [node name="Moss2-removebg-preview4" type="Sprite2D" parent="Moss2-removebg-preview3"]
-position = Vector2(136, -7)
+position = Vector2(109.859, -42.2535)
 texture = ExtResource("5_6ioyp")
 
 [node name="Rock3" type="Sprite2D" parent="."]
