@@ -57,7 +57,7 @@ func _process(_delta: float) -> void:
 		show_all_info()
 	
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_released("space"):
 		if Global.level == 3:
 			get_tree().change_scene_to_file("res://Scenes/level_3.tscn")
