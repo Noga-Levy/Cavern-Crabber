@@ -118,7 +118,7 @@ rotation = -3.14159
 texture = ExtResource("2_s8nj6")
 
 [node name="GroundBlock4" type="Sprite2D" parent="Ground/Alleyway3"]
-position = Vector2(-384, -360)
+position = Vector2(-376, -363)
 texture = ExtResource("2_s8nj6")
 
 [node name="EndGroundBlock" type="Sprite2D" parent="Ground/Alleyway3"]
@@ -334,7 +334,7 @@ scale = Vector2(37.8594, 66.6204)
 texture = ExtResource("9_l4wr6")
 
 [node name="Rock3" type="Sprite2D" parent="."]
-modulate = Color(0.969196, 0.635879, 0, 1)
+modulate = Color(1, 0.470588, 0.376471, 1)
 position = Vector2(-297, -2750)
 texture = ExtResource("12_fxnjf")
 

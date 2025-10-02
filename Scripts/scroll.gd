@@ -7,6 +7,8 @@ var all_info_shown = false
 var info
 
 func _ready() -> void:
+	Global.level += 1
+	
 	var level_colors = {1 : "ffffff", 2 : "95ffff", 3: "fda9a6"}
 	$"Ground-in-between-levels".modulate = level_colors[Global.level]
 	

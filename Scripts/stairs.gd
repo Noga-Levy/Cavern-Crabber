@@ -2,6 +2,7 @@ extends Node2D
 
 var enemies
 var current_level = Global.level
+var change_level = current_level
 var proceed_to_next_level = true
 
 func _ready() -> void:
@@ -14,14 +15,14 @@ func _process(_delta: float) -> void:
 		$BrownStairs.show()
 		$LockedStairs.hide()
 		
-		if Global.level == 4:
+		if change_level == 4:
 			$warning.hide()
 			$msg_from_dev.show()
 		else:
-			$warning.text = "LEVEL UP! DMG + 1, HP + 5, SPEED + 100"
+			$warning.text = "Next level unlocked"
 		
 			if proceed_to_next_level:
-				Global.level += 1
+				change_level += 1
 				proceed_to_next_level = false
 		
 	else:
@@ -31,12 +32,12 @@ func _process(_delta: float) -> void:
 		
 
 func switch_levels():
-	if Global.level < 4:
+	if change_level < 4:
 		get_tree().change_scene_to_file("res://Scenes/scroll.tscn")
 
 
 func _on_body_entered(_body: Node2D) -> void:
 	print("body entered")
-	if Global.level > current_level:
+	if change_level > current_level:
 		
 		call_deferred("switch_levels")

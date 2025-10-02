@@ -1,6 +1,11 @@
 extends Node2D
 
+var levels
+
+
 func _ready() -> void:
+	levels = {1 : "res://Scenes/level_1.tscn", 2 : "res://Scenes/level_2.tscn", 3 : "res://Scenes/level_3.tscn"}
+	
 	var length = $AudioStreamPlayer2D.stream.get_length()
 	
 	$AudioStreamPlayer2D.play()
@@ -12,7 +17,9 @@ func _ready() -> void:
 # Whole sequence boils down to "detect an input --> is the input a key pressed --> ok, restart"
 func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_SPACE):
-		Global.crabHP = 10
-		Global.level = 1
+		Global.crabHP = Global.level * 5 + 5
+		Global.crab_damage = Global.level + 2
+		Global.crab_SPEED = 500 + (Global.level - 1) * 100
+		Global.crab_modulate = "ffffff"
 		Global.crab_pos = Vector2(0, 0)
-		get_tree().change_scene_to_file("res://Scenes/level_1.tscn")
+		get_tree().change_scene_to_file(levels[Global.level])

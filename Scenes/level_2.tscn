@@ -237,7 +237,6 @@ texture = ExtResource("12_q0ycs")
 [node name="Rock4" type="Sprite2D" parent="Moss2-removebg-preview4"]
 position = Vector2(-60, 23)
 rotation = 3.14159
-scale = Vector2(1, 1)
 texture = ExtResource("14_yvrk7")
 
 [node name="Half-eaten-mush" parent="." instance=ExtResource("15_q0ycs")]
