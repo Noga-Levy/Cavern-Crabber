@@ -7,3 +7,4 @@ func _on_mush_pause() -> void:
 
 func _on_mush_unpause() -> void:
 	get_tree().paused = false
+	$Camera2D.make_current()

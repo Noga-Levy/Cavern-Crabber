@@ -24,12 +24,18 @@ func _process(_delta: float) -> void:
 		print("entering")
 		emit_signal("pause")
 		$"Crab-talk".show()
+		$"Mushroom-zoomed-in".show()
 		$"bg-music".play()
+		
+		$Camera2D.make_current()
+		
 		get_out = false
 	
 	elif get_out == false and Input.is_action_just_released("space"):
 		print("leaving")
 		emit_signal("unpause")
 		$"Crab-talk".hide()
+		$"Mushroom-zoomed-in".hide()
 		$"bg-music".stop()
+		
 		get_out = true

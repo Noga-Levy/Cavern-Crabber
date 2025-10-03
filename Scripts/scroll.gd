@@ -25,13 +25,13 @@ func _ready() -> void:
 	Global.crab_SPEED = 500 + (Global.level - 1) * 100
 	Global.crab_modulate = "ffffff"
 	
-	if Global.level == 3:
+	if Global.level == 4:
 		$New_Memory.text = "[font_size=25][color=blue]No New   Memories[/color][/font_size]"
 	else:
 		$New_Memory.text = "[font_size=25][color=blue]New memory unlocked[/color][/font_size]"
 	
 	var enemies = ["Warbles", "Bleegs", "Limmis"]
-	$Next_Enemy.text = "[font_size=25][color=black]NEXT UP: " + enemies[Global.level - 1] + "[/color][/font_size]\n[color=black]Press any key to continue[/color]"
+	$Next_Enemy.text = "[font_size=25][color=black]NEXT UP: " + enemies[Global.level - 1] + "[/color][/font_size]\n[color=black]Press space to continue[/color]"
 	
 	
 	for i in info:
@@ -61,7 +61,7 @@ func _process(_delta: float) -> void:
 
 func _input(_event):
 	if Input.is_action_just_released("space"):
-		if Global.level == 3:
+		if Global.level == 4:
 			get_tree().change_scene_to_file("res://Scenes/level_3.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Scenes/memories.tscn")

@@ -3,7 +3,6 @@ extends Node2D
 var frames = []
 var next_frame = false
 var special_frames = []
-var last_frame
 signal down_pressed()
 
 var memories = []
@@ -18,7 +17,7 @@ func _ready() -> void:
 		memories.append(i)
 		print("Hidden: ", i)
 	
-	memories_to_levels = {2 : memories[0], 3 : memories[0]}
+	memories_to_levels = {2 : memories[0], 3 : memories[1]}
 	
 	memory_of_interest = memories_to_levels[Global.level]
 	
@@ -27,8 +26,6 @@ func _ready() -> void:
 			frames.append(j)
 			j.hide()
 			print(j.name)
-	
-	last_frame = frames[-1]
 	
 	frame_sequence()
 
@@ -44,7 +41,9 @@ func frame_sequence():
 		
 	if Global.level == 2:
 		get_tree().change_scene_to_file("res://Scenes/level_2.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Scenes/level_3.tscn")
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("arrow-down"):
+	if Input.is_action_just_released("arrow-down"):
 		emit_signal("down_pressed")
