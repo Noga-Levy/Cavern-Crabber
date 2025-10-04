@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=8 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="2_tnoe6"]
-[ext_resource type="Texture2D" uid="uid://p51om7ladkg3" path="res://Sprites/memories/mystery-person-talking.png" id="3_tnoe6"]
+[ext_resource type="Texture2D" uid="uid://p51om7ladkg3" path="res://Sprites/memories/talking/mystery-person-talking.png" id="3_tnoe6"]
 [ext_resource type="Texture2D" uid="uid://3tmregrvp70c" path="res://Sprites/memories/memory 2.png" id="5_6ackd"]
 [ext_resource type="AudioStream" uid="uid://dng33xel8v5xl" path="res://Audio/bg-music/kim-lightyear-lullaby.mp3" id="5_qw6w8"]
+[ext_resource type="Texture2D" uid="uid://bg3gab8qk2og2" path="res://Sprites/memories/talking/mystery-person-speech-bubble.png" id="6_l0bc8"]
 
 [node name="Memories" type="Node2D"]
 script = ExtResource("1_oqlbk")
@@ -62,6 +63,21 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Memory3" type="Sprite2D" parent="Memory2" groups=["frame"]]
 texture = ExtResource("5_6ackd")
+
+[node name="Mystery-person-speech-bubble" type="Sprite2D" parent="Memory2" groups=["frame"]]
+texture = ExtResource("6_l0bc8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory2/Mystery-person-speech-bubble"]
+offset_left = -339.0
+offset_top = -243.0
+offset_right = 362.0
+offset_bottom = -111.0
+bbcode_enabled = true
+text = "[font_size=20][color=black]Isn't this nice? No hydras, no killer spiders...
+
+Just you, me, and some mushrooms.[/color][/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.2, 1.2)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p51om7ladkg3"
-path="res://.godot/imported/mystery-person-talking.png-627a3afe34a6b051377684036c17e0bc.ctex"
+path="res://.godot/imported/mystery-person-talking.png-7bbdd23c3ead3147a32fbe9f4d8c7041.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/memories/mystery-person-talking.png"
-dest_files=["res://.godot/imported/mystery-person-talking.png-627a3afe34a6b051377684036c17e0bc.ctex"]
+source_file="res://Sprites/memories/talking/mystery-person-talking.png"
+dest_files=["res://.godot/imported/mystery-person-talking.png-7bbdd23c3ead3147a32fbe9f4d8c7041.ctex"]
 
 [params]
 
