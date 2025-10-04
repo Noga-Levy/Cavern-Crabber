@@ -23,8 +23,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b5kmy"]
-radius = 58.0
-height = 122.0
+radius = 50.0
+height = 100.0
 
 [node name="Node2D" type="CharacterBody2D"]
 
@@ -33,5 +33,5 @@ sprite_frames = SubResource("SpriteFrames_fvh7b")
 animation = &"right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 39)
+position = Vector2(4, 39)
 shape = SubResource("CapsuleShape2D_b5kmy")

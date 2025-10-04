@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dqh7qn3fww5bm"]
+[gd_scene load_steps=19 format=3 uid="uid://dqh7qn3fww5bm"]
 
 [ext_resource type="Script" uid="uid://bwi60g5tieqwh" path="res://Scripts/tutorial.gd" id="1_70gml"]
 [ext_resource type="Texture2D" uid="uid://15icy34yixbv" path="res://Sprites/tutorial/tutorial-frame1.png" id="1_i6t4g"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" uid="uid://dk4nxha3m0d4l" path="res://Scripts/tutorial-button-border.gd" id="11_8va2t"]
 [ext_resource type="Script" uid="uid://ca5nefcw3bwld" path="res://Scripts/tutorial-button.gd" id="11_koko0"]
 [ext_resource type="AudioStream" uid="uid://4jxyo4d6qmve" path="res://Audio/bg-music/kim-lightyear-angel-eyes-chiptune-edit.mp3" id="13_koko0"]
+[ext_resource type="AudioStream" uid="uid://bc67phyy1y0ie" path="res://Audio/buttons/beep.mp3" id="13_t6ver"]
+[ext_resource type="AudioStream" uid="uid://dr0osrqwxfxci" path="res://Audio/buttons/select.mp3" id="14_2nb4t"]
 [ext_resource type="Script" uid="uid://sv3du61ahf51" path="res://Scripts/main_menu_music.gd" id="14_lsb8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mnmb"]
@@ -362,6 +364,12 @@ texture = ExtResource("10_8va2t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="C-yes-no/border"]
 position = Vector2(0.400627, -1.35869)
 shape = SubResource("RectangleShape2D_koko0")
+
+[node name="Change-button" type="AudioStreamPlayer" parent="C-yes-no/border"]
+stream = ExtResource("13_t6ver")
+
+[node name="Select-button" type="AudioStreamPlayer" parent="C-yes-no/border"]
+stream = ExtResource("14_2nb4t")
 
 [node name="instructions" type="RichTextLabel" parent="C-yes-no"]
 modulate = Color(0, 0, 0, 1)

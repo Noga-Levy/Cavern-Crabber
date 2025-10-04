@@ -23,7 +23,6 @@ func frame_sequence():
 	
 	for j in frames:
 		var frame_of_interest = get_node(j)
-		
 		frame_of_interest.show()
 			
 		await down_pressed

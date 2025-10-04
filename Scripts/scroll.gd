@@ -26,7 +26,7 @@ func _ready() -> void:
 	Global.crab_modulate = "ffffff"
 	
 	if Global.level == 4:
-		$New_Memory.text = "[font_size=25][color=blue]No New   Memories[/color][/font_size]"
+		$New_Memory.text = "[font_size=25][color=blue]No New Memories[/color][/font_size]"
 	else:
 		$New_Memory.text = "[font_size=25][color=blue]New memory unlocked[/color][/font_size]"
 	
