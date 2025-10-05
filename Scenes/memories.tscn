@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=15 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bg41laoxibvgr" path="res://Sprites/crab-talk.png" id="5_erske"]
 [ext_resource type="AudioStream" uid="uid://dng33xel8v5xl" path="res://Audio/bg-music/kim-lightyear-lullaby.mp3" id="5_qw6w8"]
 [ext_resource type="Texture2D" uid="uid://bg3gab8qk2og2" path="res://Sprites/memories/talking/mystery-person-speech-bubble.png" id="6_l0bc8"]
+[ext_resource type="Texture2D" uid="uid://c3la4ewl0fh1d" path="res://Sprites/cloudy-memory.png" id="9_erske"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kyw7w"]
 animations = [{
@@ -89,6 +90,9 @@ metadata/_edit_use_anchors_ = true
 [node name="memory-img" type="Sprite2D" parent="Memory1" groups=["frame"]]
 texture = ExtResource("1_iemk0")
 
+[node name="Cloudy-memory" type="Sprite2D" parent="Memory1/memory-img"]
+texture = ExtResource("9_erske")
+
 [node name="Mystery-person-talking" type="Sprite2D" parent="Memory1" groups=["frame"]]
 position = Vector2(15, 72)
 scale = Vector2(0.8, 0.8)
@@ -105,6 +109,7 @@ Whattaya say, my little Akamo?[/font_size][/color]"
 horizontal_alignment = 1
 
 [node name="Mushroom-zoomed-in2" type="Sprite2D" parent="Memory1" groups=["frame"]]
+visible = false
 texture = ExtResource("4_kyw7w")
 
 [node name="Crab-talk" type="Sprite2D" parent="Memory1/Mushroom-zoomed-in2"]
@@ -119,7 +124,7 @@ offset_right = 400.0
 offset_bottom = 213.0
 bbcode_enabled = true
 text = "[color=black][font_size=25]that was... that was somebody important... wasn't it?
-I just can't make out the details...
+I just can't make out the details
 [/font_size][/color]"
 horizontal_alignment = 1
 
