@@ -1,17 +1,76 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=14 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
+[ext_resource type="Texture2D" uid="uid://dodagnsy74w4l" path="res://Sprites/mushroom/mushroom.png" id="2_0l0kx"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="2_tnoe6"]
+[ext_resource type="Texture2D" uid="uid://b1nnrx1tijxiq" path="res://Sprites/mushroom/highlighted-mushroom.png" id="3_t1num"]
 [ext_resource type="Texture2D" uid="uid://p51om7ladkg3" path="res://Sprites/memories/talking/mystery-person-talking.png" id="3_tnoe6"]
+[ext_resource type="Texture2D" uid="uid://bdojpsnqnic1k" path="res://Sprites/mushroom/mushroom-zoomed-in.png" id="4_kyw7w"]
 [ext_resource type="Texture2D" uid="uid://3tmregrvp70c" path="res://Sprites/memories/memory 2.png" id="5_6ackd"]
+[ext_resource type="Texture2D" uid="uid://bg41laoxibvgr" path="res://Sprites/crab-talk.png" id="5_erske"]
 [ext_resource type="AudioStream" uid="uid://dng33xel8v5xl" path="res://Audio/bg-music/kim-lightyear-lullaby.mp3" id="5_qw6w8"]
 [ext_resource type="Texture2D" uid="uid://bg3gab8qk2og2" path="res://Sprites/memories/talking/mystery-person-speech-bubble.png" id="6_l0bc8"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_kyw7w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0l0kx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_t1num")
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kyw7w"]
+size = Vector2(108, 84)
+
 [node name="Memories" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_oqlbk")
 
+[node name="Mushroom" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_kyw7w")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, 0)
+scale = Vector2(0.6, 0.6)
+shape = SubResource("RectangleShape2D_kyw7w")
+
 [node name="Memory1" type="Node2D" parent="." groups=["memory"]]
+z_index = 4
+
+[node name="Mushroom-zoomed-in" type="Sprite2D" parent="Memory1" groups=["frame"]]
+texture = ExtResource("4_kyw7w")
+
+[node name="Crab-talk" type="Sprite2D" parent="Memory1" groups=["frame"]]
+position = Vector2(-9, 54)
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("5_erske")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory1/Crab-talk"]
+offset_left = -287.0
+offset_top = 110.0
+offset_right = 400.0
+offset_bottom = 213.0
+bbcode_enabled = true
+text = "[color=black][font_size=25]Huh, why does this mushroom have a face? And why does it feel so famili--
+(press down arrow to continue)
+[/font_size][/color]"
+horizontal_alignment = 1
 
 [node name="Darkness" type="Sprite2D" parent="Memory1" groups=["frame"]]
 scale = Vector2(5, 5)
@@ -45,9 +104,30 @@ text = "[color=black][font_size=30]OO, take a look at this quest--it's got a hug
 Whattaya say, my little Akamo?[/font_size][/color]"
 horizontal_alignment = 1
 
+[node name="Mushroom-zoomed-in2" type="Sprite2D" parent="Memory1" groups=["frame"]]
+texture = ExtResource("4_kyw7w")
+
+[node name="Crab-talk" type="Sprite2D" parent="Memory1/Mushroom-zoomed-in2"]
+position = Vector2(-9, 54)
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("5_erske")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory1/Mushroom-zoomed-in2/Crab-talk"]
+offset_left = -287.0
+offset_top = 110.0
+offset_right = 400.0
+offset_bottom = 213.0
+bbcode_enabled = true
+text = "[color=black][font_size=25]that was... that was somebody important... wasn't it?
+I just can't make out the details...
+[/font_size][/color]"
+horizontal_alignment = 1
+
 [node name="Memory2" type="Node2D" parent="." groups=["memory"]]
+z_index = 4
 
 [node name="Darkness" type="Sprite2D" parent="Memory2" groups=["frame"]]
+visible = false
 scale = Vector2(5, 5)
 texture = ExtResource("2_tnoe6")
 
@@ -62,9 +142,11 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Memory3" type="Sprite2D" parent="Memory2" groups=["frame"]]
+visible = false
 texture = ExtResource("5_6ackd")
 
 [node name="Mystery-person-speech-bubble" type="Sprite2D" parent="Memory2" groups=["frame"]]
+visible = false
 texture = ExtResource("6_l0bc8")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory2/Mystery-person-speech-bubble"]
@@ -83,6 +165,7 @@ vertical_alignment = 1
 zoom = Vector2(1.2, 1.2)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 4
 offset_left = -478.0
 offset_top = -274.0
 offset_right = -227.0
@@ -94,3 +177,6 @@ to continue"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_qw6w8")
 autoplay = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]

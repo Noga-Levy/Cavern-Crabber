@@ -39,10 +39,10 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="DMG" type="RichTextLabel" parent="."]
-offset_left = -97.0
-offset_top = -70.0
-offset_right = 98.0
-offset_bottom = -10.0
+offset_left = -96.0
+offset_top = -29.0
+offset_right = 99.0
+offset_bottom = 31.0
 bbcode_enabled = true
 text = "[font_size=25][color=darkred]DMG[/color][/font_size]
 [color=darkred]3 -> 4[/color]"
@@ -50,24 +50,15 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="SPEED" type="RichTextLabel" parent="."]
-offset_left = -97.0
-offset_top = -5.0
-offset_right = 98.0
-offset_bottom = 55.0
+offset_left = -96.0
+offset_top = 64.0
+offset_right = 99.0
+offset_bottom = 124.0
 bbcode_enabled = true
 text = "[font_size=25][color=orange]SPEED[/color][/font_size]
 [color=orange]500 -> 600[/color]"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="New_Memory" type="RichTextLabel" parent="."]
-offset_left = -141.0
-offset_top = 62.0
-offset_right = 127.0
-offset_bottom = 141.0
-bbcode_enabled = true
-text = "[font_size=25][color=blue]New memory unlocked[/color][/font_size]"
-horizontal_alignment = 1
 
 [node name="Next_Enemy" type="RichTextLabel" parent="."]
 offset_left = -140.0
