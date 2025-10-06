@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://3f8h3b32728d"]
+[gd_scene load_steps=10 format=3 uid="uid://3f8h3b32728d"]
 
 [ext_resource type="Texture2D" uid="uid://cvjgiqs8gwerj" path="res://Sprites/main-menu.png" id="1_r18jl"]
 [ext_resource type="Texture2D" uid="uid://kxaw0a2upjmr" path="res://Sprites/white.png" id="2_gryuy"]
 [ext_resource type="Script" uid="uid://dg48j47wny5hf" path="res://Scripts/return-to-menu.gd" id="3_1bamb"]
 [ext_resource type="Texture2D" uid="uid://dt8qctfjajhib" path="res://Sprites/border.png" id="3_ccovl"]
+[ext_resource type="AudioStream" uid="uid://dr0osrqwxfxci" path="res://Audio/buttons/select.mp3" id="5_7emq5"]
 [ext_resource type="AudioStream" uid="uid://chy7jmjtrmx3g" path="res://Audio/bg-music/main_menu.mp3" id="5_uah1q"]
 [ext_resource type="Script" uid="uid://sv3du61ahf51" path="res://Scripts/main_menu_music.gd" id="6_uah1q"]
 
@@ -91,6 +92,9 @@ texture = ExtResource("3_ccovl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border"]
 position = Vector2(-250000, 200001)
 shape = SubResource("RectangleShape2D_1bamb")
+
+[node name="Select-button" type="AudioStreamPlayer" parent="Border"]
+stream = ExtResource("5_7emq5")
 
 [node name="The-people" type="RichTextLabel" parent="."]
 offset_left = -471.0
