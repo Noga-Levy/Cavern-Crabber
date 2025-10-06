@@ -8,14 +8,25 @@ signal down_pressed()
 signal pause()
 signal unpause()
 var touching_player
+var cutscene_in_progress = false
 
 var memories = []
 var memories_to_levels
 var memory_of_interest
 
+var mushroom
 
 
 func _ready() -> void:
+	if Global.level == 1:
+		mushroom = get_node("Mushroom")
+		$Mushroom.show()
+		$"Half-eaten-mushroom".hide()
+	else:
+		mushroom = get_node("Half-eaten-mushroom")
+		$Mushroom.hide()
+		$"Half-eaten-mushroom".show()
+	
 	$RichTextLabel.hide()
 	$AudioStreamPlayer.stop()
 	
@@ -36,6 +47,7 @@ func _ready() -> void:
 
 
 func frame_sequence():
+	cutscene_in_progress = true
 	emit_signal("pause")
 	
 	$Camera2D.make_current()
@@ -58,17 +70,18 @@ func frame_sequence():
 		k.hide()
 	
 	emit_signal("unpause")
+	cutscene_in_progress = false
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		$Mushroom.play("highlight")
+		mushroom.play("highlight")
 		touching_player = true
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		$Mushroom.play("default")
+		mushroom.play("default")
 		touching_player = false
 
 
@@ -78,5 +91,5 @@ func _process(_delta: float) -> void:
 		print("down is pressed")
 
 func _input(_event: InputEvent) -> void:
-	if touching_player and Input.is_action_just_released("space"):
+	if touching_player and Input.is_action_just_released("space") and not cutscene_in_progress:
 		frame_sequence()

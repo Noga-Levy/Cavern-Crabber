@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://oep464huek6q" path="res://Sprites/Various Ground Sprites/rock/rock2.png" id="12_q0ycs"]
 [ext_resource type="Texture2D" uid="uid://bdbv5uvi3lmfx" path="res://Sprites/Various Ground Sprites/rock/rock.png" id="13_hj5x7"]
 [ext_resource type="Texture2D" uid="uid://bhssnacoev44c" path="res://Sprites/Various Ground Sprites/rock/rock3.png" id="14_yvrk7"]
-[ext_resource type="PackedScene" uid="uid://b5k1r1tfsa2ok" path="res://Scenes/half_eaten_mush.tscn" id="15_q0ycs"]
+[ext_resource type="PackedScene" uid="uid://b0blo6tjknk8r" path="res://Scenes/memories.tscn" id="16_hj5x7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc4ci"]
 size = Vector2(1315, 125.5)
@@ -239,8 +239,8 @@ position = Vector2(-60, 23)
 rotation = 3.14159
 texture = ExtResource("14_yvrk7")
 
-[node name="Half-eaten-mush" parent="." instance=ExtResource("15_q0ycs")]
-position = Vector2(-1569, -1234)
+[node name="Memories" parent="." instance=ExtResource("16_hj5x7")]
+position = Vector2(-1579, -1227)
 
-[connection signal="pause" from="Half-eaten-mush" to="." method="_on_mush_pause"]
-[connection signal="unpause" from="Half-eaten-mush" to="." method="_on_mush_unpause"]
+[connection signal="pause" from="Memories" to="." method="_on_mush_pause"]
+[connection signal="unpause" from="Memories" to="." method="_on_mush_unpause"]

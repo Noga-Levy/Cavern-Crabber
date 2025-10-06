@@ -45,12 +45,10 @@ shape = SubResource("RectangleShape2D_aktc8")
 
 [node name="Mushroom-zoomed-in" type="Sprite2D" parent="."]
 visible = false
-z_index = 6
 texture = ExtResource("4_lo823")
 
 [node name="Crab-talk" type="Sprite2D" parent="."]
 visible = false
-z_index = 6
 texture = ExtResource("4_jr8xq")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Crab-talk"]
