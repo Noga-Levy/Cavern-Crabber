@@ -16,13 +16,13 @@ func _ready() -> void:
 	$Level_complete.text = level_done
 	info = [$HP, $DMG, $SPEED, $Next_Enemy]
 	
-	$HP.text = "[font_size=25][color=darkgreen]HP[/color][/font_size]\n[color=darkgreen]" + str(Global.level * 5) + " -> " + str(Global.level * 5 + 5) + "[/color]"
+	$HP.text = "[font_size=40][color=darkgreen]HP[/color][/font_size]\n[color=darkgreen][font_size=20]" + str(Global.level * 5) + " -> " + str(Global.level * 5 + 5) + "[/font_size][/color]"
 	
-	$DMG.text = "[font_size=25][color=darkred]DMG[/color][/font_size]\n[color=darkred]" + str(Global.level + 1) + " -> " + str(Global.level + 2) + "[/color]"
+	$DMG.text = "[font_size=40][color=darkred]DMG[/color][/font_size]\n[color=darkred][font_size=20]" + str(Global.level + 1) + " -> " + str(Global.level + 2) + "[/font_size][/color]"
 	Global.crab_damage = Global.level + 2
 	
 	
-	$SPEED.text = "[font_size=25][color=orange]SPEED[/color][/font_size]\n[color=orange]" + str(500 + (Global.level - 2) * 100) + " -> " + str(500 + (Global.level - 1) * 100) +"[/color]"
+	$SPEED.text = "[font_size=40][color=orange]SPEED[/color][/font_size]\n[color=orange][font_size=20]" + str(500 + (Global.level - 2) * 100) + " -> " + str(500 + (Global.level - 1) * 100) + "[/font_size][/color]"
 	Global.crab_SPEED = 500 + (Global.level - 1) * 100
 	Global.crab_modulate = "ffffff"
 	

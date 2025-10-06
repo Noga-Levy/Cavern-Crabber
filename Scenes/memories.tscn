@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=20 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bg3gab8qk2og2" path="res://Sprites/memories/talking/mystery-person-speech-bubble.png" id="6_l0bc8"]
 [ext_resource type="Texture2D" uid="uid://c3la4ewl0fh1d" path="res://Sprites/cloudy-memory.png" id="9_erske"]
 [ext_resource type="Texture2D" uid="uid://dupnhw7fvxch2" path="res://Sprites/mushroom/mushroom-half-eaten-zoom.png" id="12_wr7uy"]
+[ext_resource type="Texture2D" uid="uid://c752r1im8y5ix" path="res://Sprites/memories/gas-for-memory-2.png" id="15_u2rq7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u2rq7"]
 animations = [{
@@ -161,7 +162,6 @@ I just can't make out the details
 horizontal_alignment = 1
 
 [node name="Memory2" type="Node2D" parent="." groups=["memory"]]
-visible = false
 z_index = 4
 
 [node name="Mushroom-half-eaten-zoom" type="Sprite2D" parent="Memory2" groups=["frame"]]
@@ -204,7 +204,6 @@ z_index = 1
 texture = ExtResource("9_erske")
 
 [node name="Mystery-person-speech-bubble" type="Sprite2D" parent="Memory2" groups=["frame"]]
-visible = false
 texture = ExtResource("6_l0bc8")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory2/Mystery-person-speech-bubble"]
@@ -220,8 +219,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Mushroom-half-eated-zoom2" type="Sprite2D" parent="Memory2" groups=["frame"]]
-visible = false
-z_index = 2
+z_index = 3
 texture = ExtResource("12_wr7uy")
 
 [node name="Crab-talk2" type="Sprite2D" parent="Memory2/Mushroom-half-eated-zoom2"]
@@ -240,8 +238,7 @@ text = "[color=black][font_size=25]I can't remember her exact features, but she 
 horizontal_alignment = 1
 
 [node name="Crab-talk3" type="Sprite2D" parent="Memory2" groups=["frame"]]
-visible = false
-z_index = 2
+z_index = 3
 position = Vector2(0, 69)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("5_erske")
@@ -253,6 +250,37 @@ offset_right = 400.0
 offset_bottom = 213.0
 bbcode_enabled = true
 text = "[color=black][font_size=25]Almost... motherly.
+[/font_size][/color]"
+horizontal_alignment = 1
+
+[node name="Memory3" type="Sprite2D" parent="Memory2" groups=["frame"]]
+z_index = 3
+texture = ExtResource("5_6ackd")
+
+[node name="Gas-for-memory-2" type="Sprite2D" parent="Memory2/Memory3"]
+modulate = Color(1, 1, 1, 0.643137)
+texture = ExtResource("15_u2rq7")
+
+[node name="Cloudy-memory" type="Sprite2D" parent="Memory2/Memory3"]
+texture = ExtResource("9_erske")
+
+[node name="Mushroom-half-eaten-zoom2" type="Sprite2D" parent="Memory2" groups=["frame"]]
+z_index = 3
+texture = ExtResource("12_wr7uy")
+
+[node name="Crab-talk4" type="Sprite2D" parent="Memory2/Mushroom-half-eaten-zoom2" groups=["frame"]]
+z_index = 2
+position = Vector2(0, 69)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_erske")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory2/Mushroom-half-eaten-zoom2/Crab-talk4"]
+offset_left = -287.0
+offset_top = 110.0
+offset_right = 400.0
+offset_bottom = 213.0
+bbcode_enabled = true
+text = "[color=black][font_size=25]... And the bleegs attacked us. Of course they did.
 [/font_size][/color]"
 horizontal_alignment = 1
 
