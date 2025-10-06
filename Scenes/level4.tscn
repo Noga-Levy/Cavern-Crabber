@@ -1,9 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://bxgem3burr3xv"]
+[gd_scene load_steps=23 format=3 uid="uid://bxgem3burr3xv"]
 
 [ext_resource type="Texture2D" uid="uid://b1to6cn5x35v7" path="res://Sprites/Various Ground Sprites/end_ground_square.png" id="1_7yhn4"]
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="2_125c2"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="3_125c2"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="4_2k2h5"]
+[ext_resource type="PackedScene" uid="uid://cg2e4mvmgbmjr" path="res://Scenes/bullet.tscn" id="5_x5oe7"]
+[ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="6_46vi4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2k2h5"]
 size = Vector2(236, 1749)
@@ -53,11 +55,11 @@ size = Vector2(233, 543)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhya1"]
 size = Vector2(246, 1406)
 
-[node name="Node2D" type="Node2D"]
+[node name="Level_4" type="Node2D"]
 
 [node name="EndGroundSquare2" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 0.313726, 1)
-position = Vector2(31, 752)
+position = Vector2(1580, 26)
 rotation = 3.14159
 texture = ExtResource("1_7yhn4")
 
@@ -67,7 +69,7 @@ rotation = 1.5708
 texture = ExtResource("2_125c2")
 
 [node name="EndGroundBlock2" type="Sprite2D" parent="EndGroundSquare2"]
-position = Vector2(-1528, 9.00012)
+position = Vector2(-1524, 9)
 rotation = 4.71239
 texture = ExtResource("2_125c2")
 
@@ -81,83 +83,94 @@ position = Vector2(497.25, -1523.08)
 texture = ExtResource("2_125c2")
 offset = Vector2(-849.25, -295.918)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1741, 703)
-script = ExtResource("4_2k2h5")
+[node name="right" type="StaticBody2D" parent="EndGroundSquare2"]
+position = Vector2(173.999, 290)
+rotation = -3.14159
 
-[node name="Player" parent="." instance=ExtResource("3_125c2")]
-z_index = 2
-position = Vector2(-1861, 623)
-
-[node name="right" type="StaticBody2D" parent="."]
-position = Vector2(-143, 462)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="right" groups=["border", "r-border"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndGroundSquare2/right" groups=["border", "r-border"]]
 position = Vector2(1079, 1823.5)
 shape = SubResource("RectangleShape2D_2k2h5")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="right" groups=["border", "r-border"]]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EndGroundSquare2/right" groups=["border", "r-border"]]
 position = Vector2(1093, -749)
 shape = SubResource("RectangleShape2D_x5oe7")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="right" groups=["border", "r-border"]]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EndGroundSquare2/right" groups=["border", "r-border"]]
 position = Vector2(383, -1615)
 shape = SubResource("RectangleShape2D_46vi4")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="right" groups=["border", "r-border"]]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EndGroundSquare2/right" groups=["border", "r-border"]]
 position = Vector2(2375.5, 272.5)
 shape = SubResource("RectangleShape2D_ohik4")
 
-[node name="top" type="StaticBody2D" parent="."]
+[node name="top" type="StaticBody2D" parent="EndGroundSquare2"]
+position = Vector2(30.9981, 752)
+rotation = -3.14159
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="top" groups=["border", "t-border"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndGroundSquare2/top" groups=["border", "t-border"]]
 position = Vector2(-319.25, -1789.5)
 shape = SubResource("RectangleShape2D_adi6q")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="top" groups=["border", "t-border"]]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EndGroundSquare2/top" groups=["border", "t-border"]]
 position = Vector2(484, -515.5)
 shape = SubResource("RectangleShape2D_7u67b")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="top" groups=["border", "t-border"]]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EndGroundSquare2/top" groups=["border", "t-border"]]
 position = Vector2(1420.25, 183)
 shape = SubResource("RectangleShape2D_21ycj")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="top" groups=["border", "t-border"]]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EndGroundSquare2/top" groups=["border", "t-border"]]
 position = Vector2(-1398.5, 159)
 shape = SubResource("RectangleShape2D_egqhl")
 
-[node name="bottom" type="StaticBody2D" parent="."]
+[node name="bottom" type="StaticBody2D" parent="EndGroundSquare2"]
+position = Vector2(30.9981, 752)
+rotation = -3.14159
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom" groups=["b-border", "border"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndGroundSquare2/bottom" groups=["b-border", "border"]]
 position = Vector2(1416.5, 1306.75)
 shape = SubResource("RectangleShape2D_e7bnd")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="bottom" groups=["b-border", "border"]]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EndGroundSquare2/bottom" groups=["b-border", "border"]]
 position = Vector2(-1400.75, 1282.5)
 shape = SubResource("RectangleShape2D_a6t2m")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="bottom" groups=["b-border", "border"]]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EndGroundSquare2/bottom" groups=["b-border", "border"]]
 position = Vector2(-643, 2033)
 shape = SubResource("RectangleShape2D_mg2ol")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="bottom" groups=["b-border", "border"]]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EndGroundSquare2/bottom" groups=["b-border", "border"]]
 position = Vector2(382.5, 3276.5)
 shape = SubResource("RectangleShape2D_gewku")
 
-[node name="left" type="StaticBody2D" parent="."]
+[node name="left" type="StaticBody2D" parent="EndGroundSquare2"]
+position = Vector2(30.9981, 752)
+rotation = -3.14159
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="left" groups=["border", "l-border"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndGroundSquare2/left" groups=["border", "l-border"]]
 position = Vector2(-871.5, -819.25)
 shape = SubResource("RectangleShape2D_lhhwt")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="left" groups=["border", "l-border"]]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EndGroundSquare2/left" groups=["border", "l-border"]]
 position = Vector2(-2209.25, 723)
 shape = SubResource("RectangleShape2D_ooiku")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="left" groups=["border", "l-border"]]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="EndGroundSquare2/left" groups=["border", "l-border"]]
 position = Vector2(-871.5, 1657.5)
 shape = SubResource("RectangleShape2D_nesy5")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="left" groups=["border", "l-border"]]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="EndGroundSquare2/left" groups=["border", "l-border"]]
 position = Vector2(-159, 2462)
 shape = SubResource("RectangleShape2D_xhya1")
+
+[node name="Player" parent="." instance=ExtResource("3_125c2")]
+z_index = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(76, -11)
+script = ExtResource("4_2k2h5")
+
+[node name="info" parent="." instance=ExtResource("6_46vi4")]
+
+[node name="Bullet" parent="." instance=ExtResource("5_x5oe7")]
+position = Vector2(1549, -3)

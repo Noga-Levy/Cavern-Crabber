@@ -162,6 +162,7 @@ I just can't make out the details
 horizontal_alignment = 1
 
 [node name="Memory2" type="Node2D" parent="." groups=["memory"]]
+visible = false
 z_index = 4
 
 [node name="Mushroom-half-eaten-zoom" type="Sprite2D" parent="Memory2" groups=["frame"]]
