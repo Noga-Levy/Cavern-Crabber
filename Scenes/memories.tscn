@@ -162,7 +162,6 @@ I just can't make out the details
 horizontal_alignment = 1
 
 [node name="Memory2" type="Node2D" parent="." groups=["memory"]]
-visible = false
 z_index = 4
 
 [node name="Mushroom-half-eaten-zoom" type="Sprite2D" parent="Memory2" groups=["frame"]]
@@ -220,6 +219,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Mushroom-half-eated-zoom2" type="Sprite2D" parent="Memory2" groups=["frame"]]
+visible = false
 z_index = 3
 texture = ExtResource("12_wr7uy")
 
@@ -239,6 +239,7 @@ text = "[color=black][font_size=25]I can't remember her exact features, but she 
 horizontal_alignment = 1
 
 [node name="Crab-talk3" type="Sprite2D" parent="Memory2" groups=["frame"]]
+visible = false
 z_index = 3
 position = Vector2(0, 69)
 scale = Vector2(0.8, 0.8)
@@ -255,6 +256,7 @@ text = "[color=black][font_size=25]Almost... motherly.
 horizontal_alignment = 1
 
 [node name="Memory3" type="Sprite2D" parent="Memory2" groups=["frame"]]
+visible = false
 z_index = 3
 texture = ExtResource("5_6ackd")
 
@@ -266,6 +268,7 @@ texture = ExtResource("15_u2rq7")
 texture = ExtResource("9_erske")
 
 [node name="Mushroom-half-eaten-zoom2" type="Sprite2D" parent="Memory2" groups=["frame"]]
+visible = false
 z_index = 3
 texture = ExtResource("12_wr7uy")
 
@@ -289,8 +292,7 @@ horizontal_alignment = 1
 zoom = Vector2(1.2, 1.2)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-visible = false
-z_index = 4
+z_index = 7
 offset_left = -478.0
 offset_top = -274.0
 offset_right = -227.0

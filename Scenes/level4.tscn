@@ -1,11 +1,16 @@
-[gd_scene load_steps=23 format=3 uid="uid://bxgem3burr3xv"]
+[gd_scene load_steps=28 format=3 uid="uid://bxgem3burr3xv"]
 
 [ext_resource type="Texture2D" uid="uid://b1to6cn5x35v7" path="res://Sprites/Various Ground Sprites/end_ground_square.png" id="1_7yhn4"]
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="2_125c2"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="3_125c2"]
+[ext_resource type="Texture2D" uid="uid://bhssnacoev44c" path="res://Sprites/Various Ground Sprites/rock/rock3.png" id="3_adi6q"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="4_2k2h5"]
+[ext_resource type="Texture2D" uid="uid://bdbv5uvi3lmfx" path="res://Sprites/Various Ground Sprites/rock/rock.png" id="4_7u67b"]
+[ext_resource type="Texture2D" uid="uid://oep464huek6q" path="res://Sprites/Various Ground Sprites/rock/rock2.png" id="5_7u67b"]
 [ext_resource type="PackedScene" uid="uid://cg2e4mvmgbmjr" path="res://Scenes/bullet.tscn" id="5_x5oe7"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="6_46vi4"]
+[ext_resource type="Texture2D" uid="uid://dxsn0hl7nccx1" path="res://Sprites/Various Ground Sprites/moss2-removebg-preview.png" id="10_21ycj"]
+[ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="11_egqhl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2k2h5"]
 size = Vector2(236, 1749)
@@ -14,7 +19,7 @@ size = Vector2(236, 1749)
 size = Vector2(213, 674)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46vi4"]
-size = Vector2(226, 1086)
+size = Vector2(226, 1439)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohik4"]
 size = Vector2(285, 1359)
@@ -23,7 +28,7 @@ size = Vector2(285, 1359)
 size = Vector2(1353.5, 187)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7u67b"]
-size = Vector2(720, 191)
+size = Vector2(491, 191)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21ycj"]
 size = Vector2(1337.5, 262)
@@ -96,7 +101,7 @@ position = Vector2(1093, -749)
 shape = SubResource("RectangleShape2D_x5oe7")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="EndGroundSquare2/right" groups=["border", "r-border"]]
-position = Vector2(383, -1615)
+position = Vector2(383, -1438.5)
 shape = SubResource("RectangleShape2D_46vi4")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="EndGroundSquare2/right" groups=["border", "r-border"]]
@@ -112,7 +117,7 @@ position = Vector2(-319.25, -1789.5)
 shape = SubResource("RectangleShape2D_adi6q")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="EndGroundSquare2/top" groups=["border", "t-border"]]
-position = Vector2(484, -515.5)
+position = Vector2(598.5, -515.5)
 shape = SubResource("RectangleShape2D_7u67b")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="EndGroundSquare2/top" groups=["border", "t-border"]]
@@ -163,6 +168,47 @@ shape = SubResource("RectangleShape2D_nesy5")
 position = Vector2(-159, 2462)
 shape = SubResource("RectangleShape2D_xhya1")
 
+[node name="Rock3" type="Sprite2D" parent="EndGroundSquare2"]
+position = Vector2(1873, -260.995)
+rotation = -3.14159
+texture = ExtResource("3_adi6q")
+
+[node name="Rock" type="Sprite2D" parent="EndGroundSquare2/Rock3"]
+position = Vector2(-42, 21)
+texture = ExtResource("4_7u67b")
+
+[node name="Rock" type="Sprite2D" parent="EndGroundSquare2"]
+position = Vector2(-673.998, -692.002)
+rotation = -3.14159
+texture = ExtResource("4_7u67b")
+
+[node name="Rock2" type="Sprite2D" parent="EndGroundSquare2/Rock"]
+position = Vector2(16, 31)
+texture = ExtResource("5_7u67b")
+
+[node name="Rock4" type="Sprite2D" parent="EndGroundSquare2"]
+position = Vector2(102.995, 2165)
+texture = ExtResource("3_adi6q")
+
+[node name="Rock2" type="Sprite2D" parent="EndGroundSquare2/Rock4"]
+position = Vector2(40.0001, -15)
+rotation = -3.14159
+texture = ExtResource("5_7u67b")
+
+[node name="Moss2-removebg-preview" type="Sprite2D" parent="EndGroundSquare2"]
+position = Vector2(-1885, -302.005)
+rotation = -3.14159
+texture = ExtResource("10_21ycj")
+
+[node name="Moss2-removebg-preview2" type="Sprite2D" parent="EndGroundSquare2/Moss2-removebg-preview"]
+position = Vector2(-91, -89)
+texture = ExtResource("10_21ycj")
+
+[node name="Rock3" type="Sprite2D" parent="EndGroundSquare2/Moss2-removebg-preview"]
+position = Vector2(-96, 28)
+rotation = -3.14159
+texture = ExtResource("3_adi6q")
+
 [node name="Player" parent="." instance=ExtResource("3_125c2")]
 z_index = 2
 
@@ -174,3 +220,9 @@ script = ExtResource("4_2k2h5")
 
 [node name="Bullet" parent="." instance=ExtResource("5_x5oe7")]
 position = Vector2(1549, -3)
+
+[node name="Darkness" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1615, 111)
+scale = Vector2(33.9792, 60.4074)
+texture = ExtResource("11_egqhl")

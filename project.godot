@@ -13,6 +13,8 @@ config_version=5
 config/name="Cavern Crabber"
 run/main_scene="uid://bhwq6yoi3an1"
 config/features=PackedStringArray("4.4", "Forward Plus")
+boot_splash/bg_color=Color(0.273841, 0.0304301, 0.0806756, 1)
+boot_splash/image="uid://otyk0db3ppfm"
 config/icon="res://icon.svg"
 
 [autoload]
