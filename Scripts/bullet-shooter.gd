@@ -15,6 +15,8 @@ func create_bullet(degrees_of_rotation):
 	
 	bullet_instance.rotation = degrees_of_rotation
 	bullet_instance.position = self.position
+	print(bullet_instance.position)
+	print(self.position)
 
 
 func shoot_bullet():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bxgem3burr3xv"]
+[gd_scene load_steps=34 format=3 uid="uid://bxgem3burr3xv"]
 
 [ext_resource type="Texture2D" uid="uid://b1to6cn5x35v7" path="res://Sprites/Various Ground Sprites/end_ground_square.png" id="1_di0d6"]
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="2_54c2w"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="9_fmsuk"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="11_a51ki"]
 [ext_resource type="PackedScene" uid="uid://c1qxvtnn4wrfe" path="res://Scenes/bullet-shooter.tscn" id="11_di0d6"]
+[ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="13_3v663"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2k2h5"]
 size = Vector2(236, 1749)
@@ -25,6 +26,15 @@ size = Vector2(226, 1439)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohik4"]
 size = Vector2(285, 1359)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3v663"]
+size = Vector2(1327, 269.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8kbg"]
+size = Vector2(190, 769.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxyip"]
+size = Vector2(216, 965.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_adi6q"]
 size = Vector2(1353.5, 187)
 
@@ -35,13 +45,16 @@ size = Vector2(491, 191)
 size = Vector2(1337.5, 262)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_egqhl"]
-size = Vector2(1369, 208)
+size = Vector2(5979, 194)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8ytw"]
+size = Vector2(1325, 179)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e7bnd"]
 size = Vector2(1349, 207.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a6t2m"]
-size = Vector2(1366.5, 205)
+size = Vector2(5781.5, 205)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mg2ol"]
 size = Vector2(716, 206)
@@ -53,7 +66,7 @@ size = Vector2(1337, 227)
 size = Vector2(257, 1748.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ooiku"]
-size = Vector2(254.5, 1334)
+size = Vector2(254.5, 2791)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nesy5"]
 size = Vector2(233, 543)
@@ -64,7 +77,7 @@ size = Vector2(246, 1406)
 [node name="level4" type="Node2D"]
 
 [node name="Boss-battle" type="Node2D" parent="."]
-position = Vector2(5235, 0)
+position = Vector2(5752, -20)
 
 [node name="Boss-envir" type="Sprite2D" parent="Boss-battle"]
 modulate = Color(1, 1, 0.313726, 1)
@@ -92,6 +105,36 @@ position = Vector2(497.25, -1523.08)
 texture = ExtResource("2_54c2w")
 offset = Vector2(-849.25, -295.918)
 
+[node name="Entry" type="Sprite2D" parent="Boss-battle/Boss-envir"]
+modulate = Color(1, 1, 0.313726, 1)
+position = Vector2(7149, 154.018)
+rotation = -3.14159
+texture = ExtResource("13_3v663")
+
+[node name="EndGroundBlock" type="Sprite2D" parent="Boss-battle/Boss-envir/Entry"]
+position = Vector2(0, 734)
+rotation = -3.14159
+texture = ExtResource("2_54c2w")
+
+[node name="EndGroundBlock2" type="Sprite2D" parent="Boss-battle/Boss-envir/Entry"]
+position = Vector2(0, -889)
+texture = ExtResource("2_54c2w")
+
+[node name="GroundBlock2" type="Sprite2D" parent="Boss-battle/Boss-envir/Entry"]
+position = Vector2(1449, 141)
+rotation = -1.5708
+texture = ExtResource("13_3v663")
+
+[node name="GroundBlock3" type="Sprite2D" parent="Boss-battle/Boss-envir/Entry"]
+position = Vector2(2924, 134)
+rotation = 1.5708
+texture = ExtResource("13_3v663")
+
+[node name="GroundBlock4" type="Sprite2D" parent="Boss-battle/Boss-envir/Entry"]
+position = Vector2(4323, 134)
+rotation = 1.5708
+texture = ExtResource("13_3v663")
+
 [node name="right" type="StaticBody2D" parent="Boss-battle/Boss-envir"]
 position = Vector2(173.999, 290)
 rotation = -3.14159
@@ -112,6 +155,18 @@ shape = SubResource("RectangleShape2D_46vi4")
 position = Vector2(2375.5, 272.5)
 shape = SubResource("RectangleShape2D_ohik4")
 
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Boss-battle/Boss-envir/right" groups=["b-border", "border"]]
+position = Vector2(-6970.5, 1562.87)
+shape = SubResource("RectangleShape2D_3v663")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Boss-battle/Boss-envir/right" groups=["b-border", "border"]]
+position = Vector2(-6451, 1037.87)
+shape = SubResource("RectangleShape2D_w8kbg")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Boss-battle/Boss-envir/right" groups=["border", "r-border"]]
+position = Vector2(-6427, -880.251)
+shape = SubResource("RectangleShape2D_gxyip")
+
 [node name="top" type="StaticBody2D" parent="Boss-battle/Boss-envir"]
 position = Vector2(30.9981, 752)
 rotation = -3.14159
@@ -129,8 +184,12 @@ position = Vector2(1420.25, 183)
 shape = SubResource("RectangleShape2D_21ycj")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Boss-battle/Boss-envir/top" groups=["border", "t-border"]]
-position = Vector2(-1398.5, 159)
+position = Vector2(-3703.5, 166)
 shape = SubResource("RectangleShape2D_egqhl")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Boss-battle/Boss-envir/top" groups=["border", "t-border"]]
+position = Vector2(-7126.5, -990.5)
+shape = SubResource("RectangleShape2D_b8ytw")
 
 [node name="bottom" type="StaticBody2D" parent="Boss-battle/Boss-envir"]
 position = Vector2(30.9981, 752)
@@ -141,7 +200,7 @@ position = Vector2(1416.5, 1306.75)
 shape = SubResource("RectangleShape2D_e7bnd")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Boss-battle/Boss-envir/bottom" groups=["b-border", "border"]]
-position = Vector2(-1400.75, 1282.5)
+position = Vector2(-3608.25, 1282.5)
 shape = SubResource("RectangleShape2D_a6t2m")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Boss-battle/Boss-envir/bottom" groups=["b-border", "border"]]
@@ -161,7 +220,7 @@ position = Vector2(-871.5, -819.25)
 shape = SubResource("RectangleShape2D_lhhwt")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Boss-battle/Boss-envir/left" groups=["border", "l-border"]]
-position = Vector2(-2209.25, 723)
+position = Vector2(-7648, 494.5)
 shape = SubResource("RectangleShape2D_ooiku")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Boss-battle/Boss-envir/left" groups=["border", "l-border"]]
@@ -222,8 +281,8 @@ position = Vector2(-2402, -1908)
 [node name="HP-box3" parent="Boss-battle/HP-box" instance=ExtResource("7_54c2w")]
 position = Vector2(-1236, 2413)
 
-[node name="Node2D" parent="Boss-battle" instance=ExtResource("11_di0d6")]
-position = Vector2(1565, 0)
+[node name="Node2D" parent="." instance=ExtResource("11_di0d6")]
+position = Vector2(7427, -20)
 
 [node name="Player" parent="." instance=ExtResource("7_mbnb1")]
 z_index = 2
