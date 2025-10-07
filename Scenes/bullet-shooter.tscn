@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1qxvtnn4wrfe"]
+
+[ext_resource type="Texture2D" uid="uid://bpcd8fdqms0bh" path="res://Sprites/under_sprite.png" id="1_6v4pg"]
+[ext_resource type="Script" uid="uid://b2lxklwrnc5cf" path="res://Scripts/bullet-shooter.gd" id="2_pny1k"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("2_pny1k")
+
+[node name="UnderSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_6v4pg")

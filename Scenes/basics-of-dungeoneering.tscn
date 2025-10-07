@@ -151,14 +151,15 @@ scale = Vector2(1, 1.14444)
 texture = ExtResource("2_pwwt5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Bunny-distaste-for-mushrooms"]
-offset_left = -390.0
-offset_top = 93.0
-offset_right = 37.0
-offset_bottom = 242.0
+offset_left = -394.0
+offset_top = 72.0
+offset_right = 33.0
+offset_bottom = 262.0
 bbcode_enabled = true
 text = "[color=black][font_size=22]Now,
  there are also these mushrooms. We don't know what they do, but I'd keep an eye on them.[/font_size][/color]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Tutorial-frame4" type="Sprite2D" parent="." groups=["frame"]]
 visible = false
