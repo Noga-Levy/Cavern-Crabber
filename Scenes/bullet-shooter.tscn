@@ -1,10 +1,148 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1qxvtnn4wrfe"]
+[gd_scene load_steps=20 format=3 uid="uid://c1qxvtnn4wrfe"]
 
-[ext_resource type="Texture2D" uid="uid://bpcd8fdqms0bh" path="res://Sprites/under_sprite.png" id="1_6v4pg"]
+[ext_resource type="Texture2D" uid="uid://ckvko83layebu" path="res://Sprites/Relu/relu-45.png" id="2_k7lau"]
 [ext_resource type="Script" uid="uid://b2lxklwrnc5cf" path="res://Scripts/bullet-shooter.gd" id="2_pny1k"]
+[ext_resource type="Texture2D" uid="uid://ck736visewhxx" path="res://Sprites/Relu/relu-90.png" id="3_wrvp3"]
+[ext_resource type="Texture2D" uid="uid://c1fpghmldqk2o" path="res://Sprites/Relu/relu-135.png" id="4_u8h85"]
+[ext_resource type="Texture2D" uid="uid://cunlg7kjk78ml" path="res://Sprites/Relu/relu-180.png" id="5_sn8p5"]
+[ext_resource type="Texture2D" uid="uid://daewg8h1f40pe" path="res://Sprites/Relu/relu-225.png" id="6_urdw5"]
+[ext_resource type="Texture2D" uid="uid://b0w21ag6a2of2" path="res://Sprites/Relu/relu-270.png" id="7_71ve5"]
+[ext_resource type="Texture2D" uid="uid://ds1kttgxbyml1" path="res://Sprites/Relu/relu-315.png" id="8_5bcdx"]
+[ext_resource type="Texture2D" uid="uid://3hpj2hyau1a1" path="res://Sprites/Relu/relu-360.png" id="9_qyt82"]
+[ext_resource type="Texture2D" uid="uid://bkdgasdv28msu" path="res://Sprites/Relu/pixilart-sprite.png" id="10_wrvp3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8h85"]
+atlas = ExtResource("10_wrvp3")
+region = Rect2(0, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn8p5"]
+atlas = ExtResource("10_wrvp3")
+region = Rect2(276, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urdw5"]
+atlas = ExtResource("10_wrvp3")
+region = Rect2(552, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71ve5"]
+atlas = ExtResource("10_wrvp3")
+region = Rect2(828, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bcdx"]
+atlas = ExtResource("10_wrvp3")
+region = Rect2(1104, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyt82"]
+atlas = ExtResource("10_wrvp3")
+region = Rect2(1380, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnmtk"]
+atlas = ExtResource("10_wrvp3")
+region = Rect2(1656, 0, 276, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh4fd"]
+atlas = ExtResource("10_wrvp3")
+region = Rect2(1932, 0, 276, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnmtk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_u8h85")
+}],
+"loop": true,
+"name": &"135",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_sn8p5")
+}],
+"loop": true,
+"name": &"180",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_urdw5")
+}],
+"loop": true,
+"name": &"225",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_71ve5")
+}],
+"loop": true,
+"name": &"270",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5bcdx")
+}],
+"loop": true,
+"name": &"315",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_qyt82")
+}],
+"loop": true,
+"name": &"360",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k7lau")
+}],
+"loop": true,
+"name": &"45",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wrvp3")
+}],
+"loop": true,
+"name": &"90",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8h85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sn8p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urdw5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71ve5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bcdx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyt82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnmtk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sh4fd")
+}],
+"loop": true,
+"name": &"all-frames",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("2_pny1k")
 
-[node name="UnderSprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_6v4pg")
+[node name="relu" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qnmtk")
+animation = &"all-frames"
+autoplay = "90"

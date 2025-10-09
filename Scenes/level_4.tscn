@@ -121,17 +121,17 @@ position = Vector2(0, -889)
 texture = ExtResource("2_54c2w")
 
 [node name="GroundBlock2" type="Sprite2D" parent="Boss-battle/Boss-envir/Entry"]
-position = Vector2(1449, 141)
+position = Vector2(1438, 141)
 rotation = -1.5708
 texture = ExtResource("13_3v663")
 
 [node name="GroundBlock3" type="Sprite2D" parent="Boss-battle/Boss-envir/Entry"]
-position = Vector2(2924, 134)
+position = Vector2(2913, 134)
 rotation = 1.5708
 texture = ExtResource("13_3v663")
 
 [node name="GroundBlock4" type="Sprite2D" parent="Boss-battle/Boss-envir/Entry"]
-position = Vector2(4323, 134)
+position = Vector2(4312, 134)
 rotation = 1.5708
 texture = ExtResource("13_3v663")
 
@@ -295,7 +295,7 @@ script = ExtResource("8_cxe20")
 
 [node name="Darkness" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(1615, 111)
-scale = Vector2(33.9792, 60.4074)
+position = Vector2(4654.5, 111)
+scale = Vector2(65.6406, 60.4074)
 texture = ExtResource("11_a51ki")
 metadata/_edit_lock_ = true

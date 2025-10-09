@@ -15,8 +15,6 @@ func create_bullet(degrees_of_rotation):
 	
 	bullet_instance.rotation = degrees_of_rotation
 	bullet_instance.position = self.position
-	print(bullet_instance.position)
-	print(self.position)
 
 
 func shoot_bullet():
@@ -24,10 +22,14 @@ func shoot_bullet():
 		if interval_between_shots > 0.03:
 			interval_between_shots *= 0.5
 			print(interval_between_shots)
+			$relu.sprite_frames.set_animation_speed("all-frames", 1/interval_between_shots)
 			
-		for i in range(0, 360, 20):
+		for i in range(0, 360, 45):
+			$relu.play("all-frames")
 			create_bullet(i)
 			await get_tree().create_timer(interval_between_shots).timeout
+		
+		$relu.stop()
 
 func _process(delta: float) -> void:
 	if shoot_cd > 0:
