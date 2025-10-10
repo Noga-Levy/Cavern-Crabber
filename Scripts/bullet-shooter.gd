@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 
 
 var shoot = true
@@ -7,6 +7,11 @@ var health = 10
 
 var shoot_cd = 2
 
+var angles = ["45", "90", "135", "180", "225", "270", "315", "360"]
+
+func _ready() -> void:
+	Global.crab_SPEED = 2000
+
 func create_bullet(degrees_of_rotation):
 	var bullet = preload("res://Scenes/bullet.tscn")
 	var bullet_instance = bullet.instantiate()
@@ -14,6 +19,7 @@ func create_bullet(degrees_of_rotation):
 	get_tree().root.get_node("level4").add_child(bullet_instance)
 	
 	bullet_instance.rotation = degrees_of_rotation
+	
 	bullet_instance.position = self.position
 
 
@@ -23,7 +29,7 @@ func shoot_bullet():
 			interval_between_shots *= 0.5
 			print(interval_between_shots)
 			
-	var angles = ["45", "90", "135", "180", "225", "270", "315", "360"]
+	
 	for a in angles:
 		create_bullet(deg_to_rad(int(a)))
 		$relu.play(a)

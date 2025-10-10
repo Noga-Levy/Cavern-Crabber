@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1qxvtnn4wrfe"]
+[gd_scene load_steps=12 format=3 uid="uid://c1qxvtnn4wrfe"]
 
 [ext_resource type="Texture2D" uid="uid://ckvko83layebu" path="res://Sprites/Relu/315relu.png" id="2_k7lau"]
 [ext_resource type="Script" uid="uid://b2lxklwrnc5cf" path="res://Scripts/bullet-shooter.gd" id="2_pny1k"]
@@ -77,9 +77,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="relu" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_11kh1"]
+radius = 56.0
+height = 182.0
+
+[node name="relu" type="CharacterBody2D"]
 script = ExtResource("2_pny1k")
 
 [node name="relu" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qnmtk")
 animation = &"360"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_11kh1")
