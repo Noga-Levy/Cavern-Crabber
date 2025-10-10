@@ -81,7 +81,7 @@ animations = [{
 radius = 56.0
 height = 182.0
 
-[node name="relu" type="CharacterBody2D"]
+[node name="relu" type="CharacterBody2D" groups=["relu"]]
 script = ExtResource("2_pny1k")
 
 [node name="relu" type="AnimatedSprite2D" parent="."]

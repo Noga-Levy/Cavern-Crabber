@@ -9,8 +9,6 @@ var shoot_cd = 2
 
 var angles = ["45", "90", "135", "180", "225", "270", "315", "360"]
 
-func _ready() -> void:
-	Global.crab_SPEED = 2000
 
 func create_bullet(degrees_of_rotation):
 	var bullet = preload("res://Scenes/bullet.tscn")

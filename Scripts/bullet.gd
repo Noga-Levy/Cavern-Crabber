@@ -15,7 +15,9 @@ func _physics_process(_delta):
 
 # Function to make the bullet deal damage and then disappear
 func _on_collision_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
-		Global.crabHP -= 3
-	
-	self.queue_free()
+	if not body.is_in_group("relu"):
+		
+		if body.is_in_group("Player"):
+			Global.crabHP -= 3
+			
+		self.queue_free()
