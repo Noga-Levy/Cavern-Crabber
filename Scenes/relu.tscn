@@ -78,15 +78,26 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_11kh1"]
-radius = 56.0
-height = 182.0
+radius = 65.0
+height = 210.0
 
 [node name="relu" type="CharacterBody2D" groups=["relu"]]
 script = ExtResource("2_pny1k")
 
-[node name="relu" type="AnimatedSprite2D" parent="."]
+[node name="relu-sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qnmtk")
 animation = &"360"
+
+[node name="HP" type="RichTextLabel" parent="relu-sprite"]
+z_index = 2
+offset_left = -106.0
+offset_top = -166.0
+offset_right = 114.0
+offset_bottom = -75.0
+theme_override_colors/default_color = Color(0.999331, 0.336299, 0.271501, 1)
+bbcode_enabled = true
+text = "[font_size=30]HP: Infinite[/font_size]"
+horizontal_alignment = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4, 5)

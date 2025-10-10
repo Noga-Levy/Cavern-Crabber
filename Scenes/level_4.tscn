@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bxgem3burr3xv"]
+[gd_scene load_steps=35 format=3 uid="uid://bxgem3burr3xv"]
 
 [ext_resource type="Texture2D" uid="uid://b1to6cn5x35v7" path="res://Sprites/Various Ground Sprites/end_ground_square.png" id="1_di0d6"]
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="2_54c2w"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="11_a51ki"]
 [ext_resource type="PackedScene" uid="uid://c1qxvtnn4wrfe" path="res://Scenes/relu.tscn" id="11_di0d6"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="13_3v663"]
+[ext_resource type="Texture2D" uid="uid://c6e3bobxua4iw" path="res://Sprites/Various Ground Sprites/turn-around.png" id="14_w8kbg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2k2h5"]
 size = Vector2(236, 1749)
@@ -300,3 +301,8 @@ position = Vector2(4654.5, 111)
 scale = Vector2(65.6406, 60.4074)
 texture = ExtResource("11_a51ki")
 metadata/_edit_lock_ = true
+
+[node name="Turn-around" type="Sprite2D" parent="."]
+position = Vector2(1908, -127)
+scale = Vector2(3.435, 3.435)
+texture = ExtResource("14_w8kbg")

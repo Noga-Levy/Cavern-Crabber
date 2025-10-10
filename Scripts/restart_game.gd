@@ -4,7 +4,7 @@ var levels
 
 
 func _ready() -> void:
-	levels = {1 : "res://Scenes/level_1.tscn", 2 : "res://Scenes/level_2.tscn", 3 : "res://Scenes/level_3.tscn"}
+	levels = {1 : "res://Scenes/level_1.tscn", 2 : "res://Scenes/level_2.tscn", 3 : "res://Scenes/level_3.tscn", 4 : "res://Scenes/level_4.tscn"}
 	
 	var length = $AudioStreamPlayer2D.stream.get_length()
 	
