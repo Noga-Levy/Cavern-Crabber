@@ -1,0 +1,85 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1qxvtnn4wrfe"]
+
+[ext_resource type="Texture2D" uid="uid://ckvko83layebu" path="res://Sprites/Relu/315relu.png" id="2_k7lau"]
+[ext_resource type="Script" uid="uid://b2lxklwrnc5cf" path="res://Scripts/bullet-shooter.gd" id="2_pny1k"]
+[ext_resource type="Texture2D" uid="uid://ck736visewhxx" path="res://Sprites/Relu/360relu.png" id="3_wrvp3"]
+[ext_resource type="Texture2D" uid="uid://c1fpghmldqk2o" path="res://Sprites/Relu/45relu.png" id="4_u8h85"]
+[ext_resource type="Texture2D" uid="uid://cunlg7kjk78ml" path="res://Sprites/Relu/90relu.png" id="5_sn8p5"]
+[ext_resource type="Texture2D" uid="uid://daewg8h1f40pe" path="res://Sprites/Relu/135relu.png" id="6_urdw5"]
+[ext_resource type="Texture2D" uid="uid://b0w21ag6a2of2" path="res://Sprites/Relu/180relu.png" id="7_71ve5"]
+[ext_resource type="Texture2D" uid="uid://ds1kttgxbyml1" path="res://Sprites/Relu/225relu.png" id="8_5bcdx"]
+[ext_resource type="Texture2D" uid="uid://3hpj2hyau1a1" path="res://Sprites/Relu/270relu.png" id="9_qyt82"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qnmtk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_urdw5")
+}],
+"loop": true,
+"name": &"135",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_71ve5")
+}],
+"loop": true,
+"name": &"180",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_5bcdx")
+}],
+"loop": true,
+"name": &"225",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_qyt82")
+}],
+"loop": true,
+"name": &"270",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k7lau")
+}],
+"loop": true,
+"name": &"315",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wrvp3")
+}],
+"loop": true,
+"name": &"360",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_u8h85")
+}],
+"loop": true,
+"name": &"45",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_sn8p5")
+}],
+"loop": true,
+"name": &"90",
+"speed": 5.0
+}]
+
+[node name="relu" type="Node2D"]
+script = ExtResource("2_pny1k")
+
+[node name="relu" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qnmtk")
+animation = &"360"

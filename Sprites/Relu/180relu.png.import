@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0w21ag6a2of2"
-path="res://.godot/imported/relu-270.png-3288efaa4145b37964effe274419bd7b.ctex"
+path="res://.godot/imported/180relu.png-5e0beedd33ec26256443c0e1c7c9c4e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Relu/relu-270.png"
-dest_files=["res://.godot/imported/relu-270.png-3288efaa4145b37964effe274419bd7b.ctex"]
+source_file="res://Sprites/Relu/180relu.png"
+dest_files=["res://.godot/imported/180relu.png-5e0beedd33ec26256443c0e1c7c9c4e6.ctex"]
 
 [params]
 

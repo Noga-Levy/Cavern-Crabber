@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3hpj2hyau1a1"
-path="res://.godot/imported/relu-360.png-0e67f763360f1efc0ceadc7f6a0dd925.ctex"
+uid="uid://ds1kttgxbyml1"
+path="res://.godot/imported/225relu.png-47eeb47c851e2c3218893af8766ec361.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Relu/relu-360.png"
-dest_files=["res://.godot/imported/relu-360.png-0e67f763360f1efc0ceadc7f6a0dd925.ctex"]
+source_file="res://Sprites/Relu/225relu.png"
+dest_files=["res://.godot/imported/225relu.png-47eeb47c851e2c3218893af8766ec361.ctex"]
 
 [params]
 

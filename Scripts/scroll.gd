@@ -10,7 +10,7 @@ var info
 func _ready() -> void:
 	Global.level += 1
 	
-	var level_colors = {1 : "ffffff", 2 : "95ffff", 3: "fda9a6"}
+	var level_colors = {1 : "ffffff", 2 : "95ffff", 3 : "fda9a6", 4 : "ffff50"}
 	$"Ground-in-between-levels".modulate = level_colors[Global.level]
 	
 	$Level_complete.text = level_done
@@ -26,7 +26,7 @@ func _ready() -> void:
 	Global.crab_SPEED = 500 + (Global.level - 1) * 100
 	Global.crab_modulate = "ffffff"
 	
-	var enemies = ["Warbles", "Bleegs", "Limmis"]
+	var enemies = ["Warbles", "Bleegs", "Limmis", "Relu"]
 	$Next_Enemy.text = "[font_size=25][color=black]NEXT UP: " + enemies[Global.level - 1] + "[/color][/font_size]\n[color=black]Press space to continue[/color]"
 	
 	
@@ -57,7 +57,9 @@ func _process(_delta: float) -> void:
 
 func _input(_event):
 	if Input.is_action_just_released("space"):
-		if Global.level == 3:
+		if Global.level == 4:
+			get_tree().change_scene_to_file("res://Scenes/level_4.tscn")
+		elif Global.level == 3:
 			get_tree().change_scene_to_file("res://Scenes/level_3.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Scenes/level_2.tscn")

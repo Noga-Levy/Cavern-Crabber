@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck736visewhxx"
-path="res://.godot/imported/relu-90.png-26cc3812a2019046b420907032019046.ctex"
+uid="uid://ckvko83layebu"
+path="res://.godot/imported/315relu.png-d9fdb77523b9db518379e5af8f973843.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Relu/relu-90.png"
-dest_files=["res://.godot/imported/relu-90.png-26cc3812a2019046b420907032019046.ctex"]
+source_file="res://Sprites/Relu/315relu.png"
+dest_files=["res://.godot/imported/315relu.png-d9fdb77523b9db518379e5af8f973843.ctex"]
 
 [params]
 

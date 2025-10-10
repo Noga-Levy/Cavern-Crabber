@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="8_cxe20"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="9_fmsuk"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="11_a51ki"]
-[ext_resource type="PackedScene" uid="uid://c1qxvtnn4wrfe" path="res://Scenes/bullet-shooter.tscn" id="11_di0d6"]
+[ext_resource type="PackedScene" uid="uid://c1qxvtnn4wrfe" path="res://Scenes/relu.tscn" id="11_di0d6"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="13_3v663"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2k2h5"]
@@ -77,7 +77,7 @@ size = Vector2(246, 1406)
 [node name="level4" type="Node2D"]
 
 [node name="Boss-battle" type="Node2D" parent="."]
-position = Vector2(5752, -20)
+position = Vector2(5535, 53)
 
 [node name="Boss-envir" type="Sprite2D" parent="Boss-battle"]
 modulate = Color(1, 1, 0.313726, 1)
@@ -281,8 +281,9 @@ position = Vector2(-2402, -1908)
 [node name="HP-box3" parent="Boss-battle/HP-box" instance=ExtResource("7_54c2w")]
 position = Vector2(-1236, 2413)
 
-[node name="Node2D" parent="." instance=ExtResource("11_di0d6")]
-position = Vector2(7427, -20)
+[node name="relu" parent="." instance=ExtResource("11_di0d6")]
+z_index = 1
+position = Vector2(7210, 53)
 
 [node name="Player" parent="." instance=ExtResource("7_mbnb1")]
 z_index = 2

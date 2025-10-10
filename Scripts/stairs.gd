@@ -4,6 +4,8 @@ var enemies
 var current_level = Global.level
 var change_level = current_level
 var proceed_to_next_level = true
+var unreachable_level = 5
+
 
 func _ready() -> void:
 	enemies = get_tree().get_nodes_in_group("Enemy").size()
@@ -15,7 +17,7 @@ func _process(_delta: float) -> void:
 		$BrownStairs.show()
 		$LockedStairs.hide()
 		
-		if change_level == 4:
+		if change_level == unreachable_level:
 			$warning.hide()
 			$msg_from_dev.show()
 		else:
@@ -32,7 +34,7 @@ func _process(_delta: float) -> void:
 		
 
 func switch_levels():
-	if change_level < 4:
+	if change_level < unreachable_level:
 		get_tree().change_scene_to_file("res://Scenes/scroll.tscn")
 
 

@@ -22,14 +22,13 @@ func shoot_bullet():
 		if interval_between_shots > 0.03:
 			interval_between_shots *= 0.5
 			print(interval_between_shots)
-			$relu.sprite_frames.set_animation_speed("all-frames", 1/interval_between_shots)
 			
-		for i in range(0, 360, 45):
-			$relu.play("all-frames")
-			create_bullet(i)
-			await get_tree().create_timer(interval_between_shots).timeout
-		
-		$relu.stop()
+	var angles = ["45", "90", "135", "180", "225", "270", "315", "360"]
+	for a in angles:
+		create_bullet(deg_to_rad(int(a)))
+		$relu.play(a)
+		print(a)
+		await get_tree().create_timer(interval_between_shots).timeout
 
 func _process(delta: float) -> void:
 	if shoot_cd > 0:
