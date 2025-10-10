@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bxgem3burr3xv"]
+[gd_scene load_steps=38 format=3 uid="uid://bxgem3burr3xv"]
 
 [ext_resource type="Texture2D" uid="uid://b1to6cn5x35v7" path="res://Sprites/Various Ground Sprites/end_ground_square.png" id="1_di0d6"]
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="2_54c2w"]
@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://c1qxvtnn4wrfe" path="res://Scenes/relu.tscn" id="11_di0d6"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="13_3v663"]
 [ext_resource type="Texture2D" uid="uid://nayg3f4ieyux" path="res://Sprites/Various Ground Sprites/turn-around.png" id="14_w8kbg"]
+[ext_resource type="Texture2D" uid="uid://cwau5pbvqxjyw" path="res://Sprites/Various Ground Sprites/Litter-from-prev-questers/pixil-frame-0.png" id="15_mbnb1"]
+[ext_resource type="Texture2D" uid="uid://5fykdpoj7ock" path="res://Sprites/Various Ground Sprites/Litter-from-prev-questers/pixil-frame-2.png" id="16_cxe20"]
+[ext_resource type="Texture2D" uid="uid://33mfhgjdgwno" path="res://Sprites/Various Ground Sprites/Litter-from-prev-questers/pixil-frame-1.png" id="17_fmsuk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2k2h5"]
 size = Vector2(236, 1749)
@@ -305,3 +308,16 @@ metadata/_edit_lock_ = true
 [node name="Turn-around" type="Sprite2D" parent="."]
 position = Vector2(1876, -168)
 texture = ExtResource("14_w8kbg")
+
+[node name="bone" type="Sprite2D" parent="."]
+position = Vector2(3064, 369)
+texture = ExtResource("15_mbnb1")
+
+[node name="spear" type="Sprite2D" parent="."]
+position = Vector2(4534, -80)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("16_cxe20")
+
+[node name="ribs" type="Sprite2D" parent="."]
+position = Vector2(5431, 209)
+texture = ExtResource("17_fmsuk")
