@@ -10,7 +10,6 @@ var move = false
 
 var shoot = true
 var interval_between_shots = 2
-var health = 10
 
 var shoot_cd = 2
 
@@ -30,11 +29,10 @@ func create_bullet(degrees_of_rotation):
 
 func shoot_bullet():
 	move = false
-	if health > 0:
-		if interval_between_shots > 0.03:
-			interval_between_shots *= 0.5
-			print(interval_between_shots)
-			
+	if interval_between_shots > 0.03:
+		interval_between_shots *= 0.5
+		print(interval_between_shots)
+		
 	
 	for a in angles:
 		create_bullet(deg_to_rad(int(a)))
@@ -50,9 +48,6 @@ func _process(delta: float) -> void:
 		if shoot_cd <= 0:
 			shoot_bullet()
 			shoot_cd = interval_between_shots * 18
-	
-	if health <= 0:
-		self.queue_free()
 
 
 func get_direction_name(direction: Vector2) -> String:

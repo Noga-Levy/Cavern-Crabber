@@ -21,3 +21,9 @@ offset_right = -347.0
 offset_bottom = -248.0
 text = "ENEMIES LEFT: TBD"
 script = ExtResource("1_rft2l")
+
+[node name="Timer" type="Timer" parent="Enemies_Left"]
+wait_time = 40.0
+one_shot = true
+
+[connection signal="timeout" from="Enemies_Left/Timer" to="Enemies_Left" method="_on_timer_timeout"]

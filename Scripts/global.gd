@@ -10,3 +10,5 @@ var crab_modulate = "ffffff"
 
 var level = 1
 var special_abilities = "N/A"
+
+var is_timer_zero = false

@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbs3mno2qru2f"]
+
+[ext_resource type="Script" uid="uid://b0o8i226v776b" path="res://Scripts/stairs_for_level_4.gd" id="1_6yxgm"]
+[ext_resource type="Texture2D" uid="uid://bb8gvgmnnrkwb" path="res://Sprites/Various Ground Sprites/brown_stairs.png" id="2_u4knr"]
+[ext_resource type="Texture2D" uid="uid://7yf0oessfdyd" path="res://Sprites/Various Ground Sprites/locked_stairs.png" id="3_gfo6u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tl8cb"]
+size = Vector2(200, 200)
+
+[node name="stairs-for-level-4" type="Area2D"]
+modulate = Color(1, 1, 0.313726, 1)
+script = ExtResource("1_6yxgm")
+
+[node name="BrownStairs" type="Sprite2D" parent="."]
+position = Vector2(2, -1)
+texture = ExtResource("2_u4knr")
+
+[node name="LockedStairs" type="Sprite2D" parent="."]
+position = Vector2(2, -1)
+texture = ExtResource("3_gfo6u")
+
+[node name="warning" type="RichTextLabel" parent="."]
+offset_left = -152.0
+offset_top = 111.0
+offset_right = 152.0
+offset_bottom = 163.0
+text = "The timer must run out before you can leave."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1)
+shape = SubResource("RectangleShape2D_tl8cb")
+
+[node name="msg_from_dev" type="RichTextLabel" parent="."]
+visible = false
+offset_left = -141.0
+offset_top = 110.0
+offset_right = 141.0
+offset_bottom = 218.0
+text = "Level 5 is still in the works.
+Thanks for playing so far!"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
