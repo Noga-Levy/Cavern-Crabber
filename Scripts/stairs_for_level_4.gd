@@ -25,5 +25,5 @@ func switch_levels():
 func _on_body_entered(_body: Node2D) -> void:
 	print("body entered")
 	
-	if Global.is_timer_zero:  # if timer == 0
+	if Global.is_timer_zero and 1 == 2:  # if timer == 0
 		call_deferred("switch_levels")
