@@ -164,6 +164,7 @@ I just can't make out the details
 horizontal_alignment = 1
 
 [node name="Memory2" type="Node2D" parent="." groups=["memory"]]
+visible = false
 z_index = 4
 
 [node name="Mushroom-half-eaten-zoom" type="Sprite2D" parent="Memory2" groups=["frame"]]
@@ -293,6 +294,7 @@ text = "[color=black][font_size=25]... And the bleegs attacked us. Of course the
 horizontal_alignment = 1
 
 [node name="Memory3" type="Node2D" parent="." groups=["memory"]]
+visible = false
 z_index = 6
 
 [node name="Mushroom-zoomed-in" type="Sprite2D" parent="Memory3" groups=["frame"]]
