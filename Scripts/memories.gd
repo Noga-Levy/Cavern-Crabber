@@ -18,14 +18,14 @@ var mushroom
 
 
 func _ready() -> void:
-	if Global.level == 1:
-		mushroom = get_node("Mushroom")
-		$Mushroom.show()
-		$"Half-eaten-mushroom".hide()
-	else:
+	if Global.level == 2:
 		mushroom = get_node("Half-eaten-mushroom")
 		$Mushroom.hide()
 		$"Half-eaten-mushroom".show()
+	else:
+		mushroom = get_node("Mushroom")
+		$Mushroom.show()
+		$"Half-eaten-mushroom".hide()
 	
 	$RichTextLabel.hide()
 	$AudioStreamPlayer.stop()
@@ -35,7 +35,7 @@ func _ready() -> void:
 		memories.append(i)
 		print("Hidden: ", i)
 	
-	memories_to_levels = {1 : memories[0], 2 : memories[1]}
+	memories_to_levels = {1 : memories[0], 2 : memories[1], 3 : memories[2]}
 	
 	memory_of_interest = memories_to_levels[Global.level]
 	

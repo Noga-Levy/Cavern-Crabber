@@ -1,6 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://d0y4ns64s8ssl"]
+[gd_scene load_steps=36 format=3 uid="uid://d0y4ns64s8ssl"]
 
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="1_76ybr"]
+[ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_xjeco"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="2_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="3_vwg62"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="4_s8nj6"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://oep464huek6q" path="res://Sprites/Various Ground Sprites/rock/rock2.png" id="11_n4vm5"]
 [ext_resource type="Texture2D" uid="uid://bhssnacoev44c" path="res://Sprites/Various Ground Sprites/rock/rock3.png" id="12_fxnjf"]
 [ext_resource type="Texture2D" uid="uid://bdbv5uvi3lmfx" path="res://Sprites/Various Ground Sprites/rock/rock.png" id="13_xjeco"]
+[ext_resource type="PackedScene" uid="uid://b0blo6tjknk8r" path="res://Scenes/memories.tscn" id="14_fxnjf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s8nj6"]
 size = Vector2(1325.27, 593.548)
@@ -75,6 +77,7 @@ size = Vector2(205, 1352.5)
 size = Vector2(238, 2419.5)
 
 [node name="level3" type="Node2D"]
+script = ExtResource("1_xjeco")
 
 [node name="Ground" type="Sprite2D" parent="."]
 modulate = Color(0.990585, 0.663749, 0.652062, 1)
@@ -369,3 +372,9 @@ texture = ExtResource("13_xjeco")
 [node name="Rock3" type="Sprite2D" parent="Rock4"]
 position = Vector2(-2173, -915)
 texture = ExtResource("12_fxnjf")
+
+[node name="Memories" parent="." instance=ExtResource("14_fxnjf")]
+position = Vector2(-3763, -643)
+
+[connection signal="pause" from="Memories" to="." method="_on_mush_pause"]
+[connection signal="unpause" from="Memories" to="." method="_on_mush_unpause"]
