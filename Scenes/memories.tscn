@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c3la4ewl0fh1d" path="res://Sprites/cloudy-memory.png" id="9_erske"]
 [ext_resource type="Texture2D" uid="uid://dupnhw7fvxch2" path="res://Sprites/mushroom/mushroom-half-eaten-zoom.png" id="12_wr7uy"]
 [ext_resource type="Texture2D" uid="uid://c752r1im8y5ix" path="res://Sprites/memories/gas-for-memory-2.png" id="15_u2rq7"]
-[ext_resource type="Texture2D" uid="uid://do5urseg3croq" path="res://Sprites/Lore/hospital/hospital1.png" id="16_nsmcx"]
+[ext_resource type="Texture2D" uid="uid://b4we8v5f72f47" path="res://Sprites/memories/frame1-memory3.png" id="16_nsmcx"]
 [ext_resource type="Texture2D" uid="uid://coe4us1jkcrr7" path="res://Sprites/Lore/hospital/hospital2.png" id="17_xgqd1"]
 [ext_resource type="Texture2D" uid="uid://dmhfythrk3mjj" path="res://Sprites/Lore/hospital/hospital3.png" id="18_7a467"]
 
@@ -329,8 +329,7 @@ text = "Memory 3"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Hospital1" type="Sprite2D" parent="Memory3" groups=["frame"]]
-visible = false
+[node name="Frame1-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
 texture = ExtResource("16_nsmcx")
 
 [node name="Hospital2" type="Sprite2D" parent="Memory3" groups=["frame"]]
@@ -342,6 +341,7 @@ visible = false
 texture = ExtResource("18_7a467")
 
 [node name="Mushroom-zoomed-in2" type="Sprite2D" parent="Memory3" groups=["frame"]]
+visible = false
 texture = ExtResource("4_kyw7w")
 
 [node name="Crab-talk" type="Sprite2D" parent="Memory3/Mushroom-zoomed-in2"]
