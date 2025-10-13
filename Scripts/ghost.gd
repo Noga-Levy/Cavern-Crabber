@@ -16,9 +16,6 @@ var total_health = health
 var damaged = Global.crab_damage
 signal send_health(HP, total_HP)
 
-func _ready() -> void:
-	$Ghost.play()
-
 func _physics_process(_delta: float) -> void:
 	
 	damaged = Global.crab_damage
@@ -66,8 +63,6 @@ func start_dodge():
 func attack():
 	await get_tree().create_timer(0.3).timeout
 	
-	# $hiss.play()
-	
 	if xdir == -1:
 		$Ghost.play("left-attack")
 	else:
@@ -97,12 +92,11 @@ func open_death_anim():
 func _on_collision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("border") or body.is_in_group("Ghost"):
 		xdir *= -1
-		print(xdir)
 		ydir = randi_range(-1, 1)
 		$GhostBody.scale.x *= -1
 		$Collisions.scale.x *= -1
 		
-		if $GhostBody.scale.x < 0:
+		if xdir < 0:
 			$Ghost.play("left")
 		else:
 			$Ghost.play("right")
@@ -110,6 +104,7 @@ func _on_collision_body_entered(body: Node2D) -> void:
 	if body.is_in_group("damager"):
 		inside_ghost.append(body)
 		attack()
+
 
 func _on_collision_body_exited(body: Node2D) -> void:
 	if body.is_in_group("damager"):

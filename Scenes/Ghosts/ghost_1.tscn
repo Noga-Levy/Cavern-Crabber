@@ -1,11 +1,13 @@
-[gd_scene load_steps=18 format=3 uid="uid://bgir4tl1ece3a"]
+[gd_scene load_steps=23 format=3 uid="uid://bgir4tl1ece3a"]
 
 [ext_resource type="Script" uid="uid://b7fqux7rnhg2q" path="res://Scripts/ghost.gd" id="1_2svcc"]
 [ext_resource type="Texture2D" uid="uid://6kbbh0irpbwh" path="res://Sprites/Ghosts/Ghost1/ghost1-left.png" id="2_tbuvs"]
 [ext_resource type="Texture2D" uid="uid://wk11iluoolmp" path="res://Sprites/Ghosts/Ghost1/ghost1-left2.png" id="3_bcxan"]
 [ext_resource type="Texture2D" uid="uid://be6bu8c4nxtb6" path="res://Sprites/Ghosts/Ghost1/ghost1-attackL.png" id="4_tiwfr"]
+[ext_resource type="Texture2D" uid="uid://bsx2yrexun4bx" path="res://Sprites/Ghosts/Ghost1/ghost1-right.png" id="5_tiwfr"]
 [ext_resource type="Texture2D" uid="uid://cp4tfvy37log2" path="res://Sprites/Ghosts/Ghost1/ghost1-attackR.png" id="5_y6f2o"]
 [ext_resource type="Script" uid="uid://cckcaruqxv1bi" path="res://Scripts/bleegHP.gd" id="6_oqdv7"]
+[ext_resource type="Texture2D" uid="uid://byirhhk0upcs0" path="res://Sprites/Ghosts/Ghost1/ghost1-right2.png" id="6_y6f2o"]
 [ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="7_tbuvs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tmcv5"]
@@ -29,7 +31,13 @@ animations = [{
 "name": &"left-attack",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_tiwfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_y6f2o")
+}],
 "loop": true,
 "name": &"right",
 "speed": 5.0
@@ -42,6 +50,15 @@ animations = [{
 "name": &"right-attack",
 "speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tiwfr"]
+size = Vector2(35.3333, 114.667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6f2o"]
+size = Vector2(40.0549, 62.0027)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqdv7"]
+size = Vector2(75.3333, 45.3333)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11gg7"]
 atlas = ExtResource("7_tbuvs")
@@ -107,7 +124,7 @@ animations = [{
 "speed": 70.0
 }]
 
-[node name="ghost1" type="CharacterBody2D"]
+[node name="ghost1" type="CharacterBody2D" groups=["Ghost"]]
 script = ExtResource("1_2svcc")
 
 [node name="Ghost" type="AnimatedSprite2D" parent="."]
@@ -115,23 +132,29 @@ scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_tmcv5")
 animation = &"left"
 
-[node name="GhostBody" type="CollisionPolygon2D" parent="."]
+[node name="GhostBody" type="CollisionShape2D" parent="."]
+position = Vector2(11.5, -26)
 scale = Vector2(1.5, 1.5)
-polygon = PackedVector2Array(-10, -12, -10, 21, 8, 38, 28, 35, 16, 11, 16, -34, 46, -50, 45, -64, 4, -77, -30, -56, -30, -43, -10, -28)
+shape = SubResource("RectangleShape2D_tiwfr")
 
 [node name="Collisions" type="Area2D" parent="."]
 scale = Vector2(1.5, 1.5)
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Collisions"]
-position = Vector2(0.666667, 8.66667)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(7, 7.66666)
 scale = Vector2(1.215, 1.215)
-polygon = PackedVector2Array(-15, -27, -15, 21, -4.93827, 33.4705, 34.5679, 34.5679, 21, 10, 21, -30, 50, -48, 50, -65, 5, -81, -34, -58, -34, -41)
+shape = SubResource("RectangleShape2D_y6f2o")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(7.66667, -52.6667)
+shape = SubResource("RectangleShape2D_oqdv7")
 
 [node name="HP" type="RichTextLabel" parent="."]
 offset_left = -72.0
 offset_top = -174.0
 offset_right = 72.0
 offset_bottom = -134.0
+theme_override_colors/default_color = Color(1, 0.337255, 0.270588, 1)
 bbcode_enabled = true
 script = ExtResource("6_oqdv7")
 
