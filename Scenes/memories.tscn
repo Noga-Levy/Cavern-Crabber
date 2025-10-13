@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=26 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
@@ -13,12 +13,15 @@
 [ext_resource type="Texture2D" uid="uid://bg41laoxibvgr" path="res://Sprites/crab-talk.png" id="5_erske"]
 [ext_resource type="AudioStream" uid="uid://dng33xel8v5xl" path="res://Audio/bg-music/kim-lightyear-lullaby.mp3" id="5_qw6w8"]
 [ext_resource type="Texture2D" uid="uid://bg3gab8qk2og2" path="res://Sprites/memories/talking/mystery-person-speech-bubble.png" id="6_l0bc8"]
-[ext_resource type="Texture2D" uid="uid://c3la4ewl0fh1d" path="res://Sprites/cloudy-memory.png" id="9_erske"]
+[ext_resource type="Texture2D" uid="uid://c3la4ewl0fh1d" path="res://Sprites/memories/cloudy-memory.png" id="9_erske"]
 [ext_resource type="Texture2D" uid="uid://dupnhw7fvxch2" path="res://Sprites/mushroom/mushroom-half-eaten-zoom.png" id="12_wr7uy"]
 [ext_resource type="Texture2D" uid="uid://c752r1im8y5ix" path="res://Sprites/memories/gas-for-memory-2.png" id="15_u2rq7"]
-[ext_resource type="Texture2D" uid="uid://b4we8v5f72f47" path="res://Sprites/memories/frame1-memory3.png" id="16_nsmcx"]
-[ext_resource type="Texture2D" uid="uid://b4kdw1xv11kgt" path="res://Sprites/memories/frame2-memory3.png" id="17_nsmcx"]
-[ext_resource type="Texture2D" uid="uid://dmhfythrk3mjj" path="res://Sprites/Lore/hospital/hospital3.png" id="18_7a467"]
+[ext_resource type="Texture2D" uid="uid://b4we8v5f72f47" path="res://Sprites/memories/memory3/frame1-memory3.png" id="16_nsmcx"]
+[ext_resource type="Texture2D" uid="uid://b4kdw1xv11kgt" path="res://Sprites/memories/memory3/frame2-memory3.png" id="17_nsmcx"]
+[ext_resource type="Texture2D" uid="uid://bimjuhnxlvb0q" path="res://Sprites/memories/memory3/small-crab-speech-bubble.png" id="18_xgqd1"]
+[ext_resource type="Texture2D" uid="uid://chfrxhtbsfngh" path="res://Sprites/memories/memory3/frame3-memory3.png" id="19_xgqd1"]
+[ext_resource type="Texture2D" uid="uid://bdnp5wno27c3a" path="res://Sprites/memories/memory3/frame3.2-memory3.png" id="20_7a467"]
+[ext_resource type="Texture2D" uid="uid://buw5i1uj6alqk" path="res://Sprites/memories/memory3/frame4-memory3.png" id="21_texm6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u2rq7"]
 animations = [{
@@ -294,6 +297,7 @@ text = "[color=black][font_size=25]... And the bleegs attacked us. Of course the
 horizontal_alignment = 1
 
 [node name="Memory3" type="Node2D" parent="." groups=["memory"]]
+visible = false
 z_index = 6
 
 [node name="Mushroom-zoomed-in" type="Sprite2D" parent="Memory3" groups=["frame"]]
@@ -331,6 +335,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Frame1-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
 texture = ExtResource("16_nsmcx")
 
+[node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame1-memory3"]
+texture = ExtResource("9_erske")
+
 [node name="Frame2-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
 texture = ExtResource("17_nsmcx")
 
@@ -344,12 +351,91 @@ text = "[color=black][font_size=35]... Mr. Akamo?[/font_size][/color]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Hospital3" type="Sprite2D" parent="Memory3" groups=["frame"]]
-visible = false
-texture = ExtResource("18_7a467")
+[node name="Small-crab-speech-bubble" type="Sprite2D" parent="Memory3/Frame2-memory3"]
+position = Vector2(8, 15)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("18_xgqd1")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Memory3/Frame2-memory3"]
+offset_left = -141.0
+offset_top = -87.0
+offset_right = -13.0
+offset_bottom = -32.0
+bbcode_enabled = true
+text = "[color=black]What's the news?[/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame2-memory3"]
+texture = ExtResource("9_erske")
+
+[node name="Frame2,2-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
+texture = ExtResource("17_nsmcx")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame2,2-memory3"]
+offset_left = 71.0
+offset_top = -198.0
+offset_right = 395.0
+offset_bottom = -11.0
+bbcode_enabled = true
+text = "[font_size=20][color=black]unfortunately,
+ due to the toxic nature of the gas, we couldn't save her.
+
+I'm so sorry for your loss
+[/color][/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame2,2-memory3"]
+texture = ExtResource("9_erske")
+
+[node name="Frame3-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
+texture = ExtResource("19_xgqd1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame3-memory3"]
+offset_left = -203.0
+offset_top = -87.0
+offset_right = -3.99998
+offset_bottom = -30.0
+rotation = -0.250753
+bbcode_enabled = true
+text = "[color=black]You said you could save her![/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame3-memory3"]
+texture = ExtResource("9_erske")
+
+[node name="Frame3_2-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
+texture = ExtResource("20_7a467")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame3_2-memory3"]
+offset_left = 71.0
+offset_top = -198.0
+offset_right = 395.0
+offset_bottom = -11.0
+bbcode_enabled = true
+text = "[font_size=20][color=black]There were some complications. Again, I am so sorr--
+[/color][/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Memory3/Frame3_2-memory3"]
+offset_left = -187.0
+offset_top = -152.0
+offset_right = 12.0
+offset_bottom = -45.0
+bbcode_enabled = true
+text = "[font_size=20][color=darkred]You told me
+she would 
+live[/color][/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame3_2-memory3"]
+texture = ExtResource("9_erske")
 
 [node name="Mushroom-zoomed-in2" type="Sprite2D" parent="Memory3" groups=["frame"]]
-visible = false
 texture = ExtResource("4_kyw7w")
 
 [node name="Crab-talk" type="Sprite2D" parent="Memory3/Mushroom-zoomed-in2"]
@@ -368,6 +454,12 @@ text = "[color=black][font_size=25]--restore... my... memory.
 I... I think I know where this is going.
 [/font_size][/color]"
 horizontal_alignment = 1
+
+[node name="Frame4-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
+texture = ExtResource("21_texm6")
+
+[node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame4-memory3"]
+texture = ExtResource("9_erske")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false

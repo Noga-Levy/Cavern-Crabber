@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3la4ewl0fh1d"
-path="res://.godot/imported/cloudy-memory.png-cabcba932bae945293404bc4effee7ee.ctex"
+uid="uid://b4kdw1xv11kgt"
+path="res://.godot/imported/frame2-memory3.png-2d3790b62a05418fb77a0ee54cd60bb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/cloudy-memory.png"
-dest_files=["res://.godot/imported/cloudy-memory.png-cabcba932bae945293404bc4effee7ee.ctex"]
+source_file="res://Sprites/memories/memory3/frame2-memory3.png"
+dest_files=["res://.godot/imported/frame2-memory3.png-2d3790b62a05418fb77a0ee54cd60bb5.ctex"]
 
 [params]
 
