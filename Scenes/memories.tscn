@@ -406,10 +406,10 @@ vertical_alignment = 1
 [node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame3-memory3"]
 texture = ExtResource("9_erske")
 
-[node name="Frame3_2-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
+[node name="Frame3,2-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
 texture = ExtResource("20_7a467")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame3_2-memory3"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame3,2-memory3"]
 offset_left = 71.0
 offset_top = -198.0
 offset_right = 395.0
@@ -420,7 +420,7 @@ text = "[font_size=20][color=black]There were some complications. Again, I am so
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Memory3/Frame3_2-memory3"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Memory3/Frame3,2-memory3"]
 offset_left = -187.0
 offset_top = -152.0
 offset_right = 12.0
@@ -432,7 +432,7 @@ live[/color][/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame3_2-memory3"]
+[node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame3,2-memory3"]
 texture = ExtResource("9_erske")
 
 [node name="Mushroom-zoomed-in2" type="Sprite2D" parent="Memory3" groups=["frame"]]

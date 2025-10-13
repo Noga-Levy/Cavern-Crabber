@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bxgem3burr3xv"]
+[gd_scene load_steps=40 format=3 uid="uid://bxgem3burr3xv"]
 
 [ext_resource type="Texture2D" uid="uid://b1to6cn5x35v7" path="res://Sprites/Various Ground Sprites/end_ground_square.png" id="1_di0d6"]
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="2_54c2w"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://5fykdpoj7ock" path="res://Sprites/Various Ground Sprites/Litter-from-prev-questers/pixil-frame-2.png" id="16_cxe20"]
 [ext_resource type="Texture2D" uid="uid://33mfhgjdgwno" path="res://Sprites/Various Ground Sprites/Litter-from-prev-questers/pixil-frame-1.png" id="17_fmsuk"]
 [ext_resource type="PackedScene" uid="uid://bbs3mno2qru2f" path="res://Scenes/stairs_for_level_4.tscn" id="18_cxe20"]
+[ext_resource type="PackedScene" uid="uid://bgir4tl1ece3a" path="res://Scenes/Ghosts/ghost_1.tscn" id="19_fmsuk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2k2h5"]
 size = Vector2(236, 1749)
@@ -140,7 +141,7 @@ position = Vector2(4312, 134)
 rotation = 1.5708
 texture = ExtResource("13_3v663")
 
-[node name="right" type="StaticBody2D" parent="Boss-battle/Boss-envir"]
+[node name="right" type="StaticBody2D" parent="Boss-battle/Boss-envir" groups=["border", "r-border"]]
 position = Vector2(173.999, 290)
 rotation = -3.14159
 
@@ -172,7 +173,7 @@ shape = SubResource("RectangleShape2D_w8kbg")
 position = Vector2(-6427, -880.251)
 shape = SubResource("RectangleShape2D_gxyip")
 
-[node name="top" type="StaticBody2D" parent="Boss-battle/Boss-envir"]
+[node name="top" type="StaticBody2D" parent="Boss-battle/Boss-envir" groups=["border", "t-border"]]
 position = Vector2(30.9981, 752)
 rotation = -3.14159
 
@@ -196,7 +197,7 @@ shape = SubResource("RectangleShape2D_egqhl")
 position = Vector2(-7126.5, -990.5)
 shape = SubResource("RectangleShape2D_b8ytw")
 
-[node name="bottom" type="StaticBody2D" parent="Boss-battle/Boss-envir"]
+[node name="bottom" type="StaticBody2D" parent="Boss-battle/Boss-envir" groups=["b-border", "border"]]
 position = Vector2(30.9981, 752)
 rotation = -3.14159
 
@@ -216,7 +217,7 @@ shape = SubResource("RectangleShape2D_mg2ol")
 position = Vector2(382.5, 3276.5)
 shape = SubResource("RectangleShape2D_gewku")
 
-[node name="left" type="StaticBody2D" parent="Boss-battle/Boss-envir"]
+[node name="left" type="StaticBody2D" parent="Boss-battle/Boss-envir" groups=["border", "l-border"]]
 position = Vector2(30.9981, 752)
 rotation = -3.14159
 
@@ -338,3 +339,6 @@ vertical_alignment = 1
 
 [node name="stairs-for-level-4" parent="." instance=ExtResource("18_cxe20")]
 position = Vector2(6936, -2060)
+
+[node name="ghost1" parent="." instance=ExtResource("19_fmsuk")]
+position = Vector2(398, -85)

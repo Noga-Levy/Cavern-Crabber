@@ -137,7 +137,7 @@ script = ExtResource("1_g588y")
 [node name="Bleeg" type="AnimatedSprite2D" parent="." groups=["Enemy", "enemy-of-level"]]
 position = Vector2(8, -1)
 sprite_frames = SubResource("SpriteFrames_iax02")
-animation = &"left-attack"
+animation = &"left"
 
 [node name="Bleeg_body" type="CollisionShape2D" parent="."]
 z_index = 1
