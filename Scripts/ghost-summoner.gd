@@ -1,7 +1,8 @@
 extends Node2D
 
 
-var ghost_cd_starting_num = 5
+var cd_amount_opts = [3, 4, 5]
+var ghost_cd_starting_num = cd_amount_opts[randi() % cd_amount_opts.size()]
 var ghost_cd = ghost_cd_starting_num
 
 

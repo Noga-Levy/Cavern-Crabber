@@ -55,7 +55,7 @@ animations = [{
 size = Vector2(70.5, 110)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cq705"]
-size = Vector2(90, 129)
+size = Vector2(97, 136)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11gg7"]
 atlas = ExtResource("9_ttgpu")
@@ -135,7 +135,7 @@ shape = SubResource("RectangleShape2D_c6der")
 [node name="Collisions" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(-5, -4.5)
+position = Vector2(-5.5, -4)
 shape = SubResource("RectangleShape2D_cq705")
 
 [node name="HP" type="RichTextLabel" parent="."]

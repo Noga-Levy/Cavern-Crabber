@@ -2,10 +2,11 @@ extends CharacterBody2D
 
 
 # Movement
+var dir_opts = [1, -1]
 var ghost_Vec = Vector2(0,0)
 var SPEED = 1000
-var xdir = -1
-var ydir = -1
+var xdir = dir_opts[randi() % dir_opts.size()]
+var ydir = dir_opts[randi() % dir_opts.size()]
 
 
 # Attack
@@ -20,6 +21,12 @@ var health = health_opts[randi() % health_opts.size()]
 var total_health = health
 var damaged = Global.crab_damage
 signal send_health(HP, total_HP)
+
+func _ready() -> void:
+	if xdir == -1:
+		$Ghost.play("left")
+	else:
+		$Ghost.play("right")
 
 func _physics_process(_delta: float) -> void:
 	

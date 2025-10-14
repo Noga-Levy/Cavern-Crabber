@@ -21,7 +21,7 @@
 size = Vector2(1315, 125.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42uki"]
-size = Vector2(1540.99, 221.563)
+size = Vector2(1567.98, 221.563)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7v2y"]
 size = Vector2(1561.49, 234.75)
@@ -75,7 +75,7 @@ position = Vector2(93, -131)
 shape = SubResource("RectangleShape2D_jc4ci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="b-border" groups=["b-border"]]
-position = Vector2(-1125.49, -1312.84)
+position = Vector2(-1111.99, -1312.84)
 shape = SubResource("RectangleShape2D_42uki")
 
 [node name="t-border" type="StaticBody2D" parent="." groups=["border", "t-border"]]
@@ -155,6 +155,7 @@ z_index = -1
 position = Vector2(-988.498, -1243.5)
 scale = Vector2(24.2656, 39.9167)
 texture = ExtResource("8_2mgoq")
+metadata/_edit_lock_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 27.0

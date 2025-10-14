@@ -331,7 +331,7 @@ offset_right = 1056.0
 offset_bottom = 363.0
 bbcode_enabled = true
 text = "[font_size=30]Avoid the blue projectiles, they deal damage.
-The stairs will open up after the timer runs out.
+The stairs will unlock after the timer runs out.
 
 Level 4 is a work-in-progress. Please be kind in the reviews."
 horizontal_alignment = 1
@@ -340,5 +340,12 @@ vertical_alignment = 1
 [node name="stairs-for-level-4" parent="." instance=ExtResource("18_cxe20")]
 position = Vector2(6936, -2060)
 
-[node name="Node2D" parent="." instance=ExtResource("21_a51ki")]
+[node name="Summoner" parent="." instance=ExtResource("21_a51ki")]
 position = Vector2(-5, -1228)
+
+[node name="Summoner2" parent="." instance=ExtResource("21_a51ki")]
+position = Vector2(7432, 2246)
+
+[node name="Summoner3" parent="." instance=ExtResource("21_a51ki")]
+position = Vector2(8975, 85)
+rotation = 1.5708
