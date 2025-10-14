@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bymsbqa5c0u2n"]
+
+[ext_resource type="Script" uid="uid://bga0tynnmkpfw" path="res://Scripts/ghost-summoner.gd" id="1_0m6ei"]
+[ext_resource type="Texture2D" uid="uid://bpcd8fdqms0bh" path="res://Sprites/under_sprite.png" id="2_rjg68"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0m6ei")
+
+[node name="UnderSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_rjg68")

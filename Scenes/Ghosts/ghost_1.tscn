@@ -149,7 +149,7 @@ shape = SubResource("RectangleShape2D_y6f2o")
 position = Vector2(7.66667, -52.6667)
 shape = SubResource("RectangleShape2D_oqdv7")
 
-[node name="HP" type="RichTextLabel" parent="."]
+[node name="HP" type="RichTextLabel" parent="." groups=["Ghost"]]
 offset_left = -116.0
 offset_top = -174.0
 offset_right = 116.0

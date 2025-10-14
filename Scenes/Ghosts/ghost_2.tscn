@@ -121,7 +121,7 @@ animations = [{
 "speed": 70.0
 }]
 
-[node name="ghost2" type="CharacterBody2D"]
+[node name="ghost2" type="CharacterBody2D" groups=["Ghost"]]
 script = ExtResource("1_251y2")
 
 [node name="Ghost" type="AnimatedSprite2D" parent="."]
