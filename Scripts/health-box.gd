@@ -68,10 +68,7 @@ func _process(delta: float) -> void:
 			$"Health-potion".show()
 		
 			$Box/RichTextLabel.text = "You got a health potion! All HP has been restored"
-			if Global.level == current_level:
-				Global.crabHP = Global.level * 5 + 5
-			else:
-				Global.crabHP = (Global.level - 1) * 5 + 5
+			Global.crabHP = Global.level * 5 + 5
 		
 		elif random_integer == 2:
 			$"Speed-potion".show()

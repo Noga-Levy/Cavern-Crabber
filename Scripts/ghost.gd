@@ -1,17 +1,22 @@
 extends CharacterBody2D
 
+
 # Movement
 var ghost_Vec = Vector2(0,0)
 var SPEED = 1000
 var xdir = -1
 var ydir = -1
 
+
 # Attack
 var inside_ghost = []
 var dodge = false
 
+
 # Health
-var health = 5
+var health_opts = [5, 10, 15]
+var health = health_opts[randi() % health_opts.size()]
+
 var total_health = health
 var damaged = Global.crab_damage
 signal send_health(HP, total_HP)
