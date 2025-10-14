@@ -374,7 +374,7 @@ position = Vector2(-2173, -915)
 texture = ExtResource("12_fxnjf")
 
 [node name="Memories" parent="." instance=ExtResource("14_fxnjf")]
-position = Vector2(-3763, -643)
+position = Vector2(-2435, -1738)
 
 [connection signal="pause" from="Memories" to="." method="_on_mush_pause"]
 [connection signal="unpause" from="Memories" to="." method="_on_mush_unpause"]

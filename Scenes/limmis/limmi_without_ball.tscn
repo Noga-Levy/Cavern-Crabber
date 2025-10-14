@@ -120,6 +120,7 @@ shape = SubResource("RectangleShape2D_0skjm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
 position = Vector2(-6, -21)
+scale = Vector2(1.22, 1.22)
 shape = SubResource("RectangleShape2D_60so6")
 
 [node name="HP" type="RichTextLabel" parent="."]

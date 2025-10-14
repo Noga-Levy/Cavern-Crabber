@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=27 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c3la4ewl0fh1d" path="res://Sprites/memories/cloudy-memory.png" id="9_erske"]
 [ext_resource type="Texture2D" uid="uid://dupnhw7fvxch2" path="res://Sprites/mushroom/mushroom-half-eaten-zoom.png" id="12_wr7uy"]
 [ext_resource type="Texture2D" uid="uid://c752r1im8y5ix" path="res://Sprites/memories/gas-for-memory-2.png" id="15_u2rq7"]
+[ext_resource type="Texture2D" uid="uid://cmaej8yrym7nw" path="res://Sprites/mushroom/memory3-zoomed-in-mushroom.png" id="16_ag1u2"]
 [ext_resource type="Texture2D" uid="uid://b4we8v5f72f47" path="res://Sprites/memories/memory3/frame1-memory3.png" id="16_nsmcx"]
 [ext_resource type="Texture2D" uid="uid://b4kdw1xv11kgt" path="res://Sprites/memories/memory3/frame2-memory3.png" id="17_nsmcx"]
 [ext_resource type="Texture2D" uid="uid://bimjuhnxlvb0q" path="res://Sprites/memories/memory3/small-crab-speech-bubble.png" id="18_xgqd1"]
@@ -301,7 +302,7 @@ visible = false
 z_index = 6
 
 [node name="Mushroom-zoomed-in" type="Sprite2D" parent="Memory3" groups=["frame"]]
-texture = ExtResource("4_kyw7w")
+texture = ExtResource("16_ag1u2")
 
 [node name="Crab-talk" type="Sprite2D" parent="Memory3" groups=["frame"]]
 position = Vector2(-9, 54)
@@ -333,12 +334,14 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Frame1-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
+visible = false
 texture = ExtResource("16_nsmcx")
 
 [node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame1-memory3"]
 texture = ExtResource("9_erske")
 
 [node name="Frame2-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
+visible = false
 texture = ExtResource("17_nsmcx")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame2-memory3"]
@@ -370,6 +373,7 @@ vertical_alignment = 1
 texture = ExtResource("9_erske")
 
 [node name="Frame2,2-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
+visible = false
 texture = ExtResource("17_nsmcx")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame2,2-memory3"]
@@ -390,6 +394,7 @@ vertical_alignment = 1
 texture = ExtResource("9_erske")
 
 [node name="Frame3-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
+visible = false
 texture = ExtResource("19_xgqd1")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame3-memory3"]
@@ -407,6 +412,7 @@ vertical_alignment = 1
 texture = ExtResource("9_erske")
 
 [node name="Frame3,2-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
+visible = false
 texture = ExtResource("20_7a467")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame3,2-memory3"]
@@ -436,7 +442,7 @@ vertical_alignment = 1
 texture = ExtResource("9_erske")
 
 [node name="Mushroom-zoomed-in2" type="Sprite2D" parent="Memory3" groups=["frame"]]
-texture = ExtResource("4_kyw7w")
+texture = ExtResource("16_ag1u2")
 
 [node name="Crab-talk" type="Sprite2D" parent="Memory3/Mushroom-zoomed-in2"]
 position = Vector2(-9, 54)
@@ -456,6 +462,7 @@ I... I think I know where this is going.
 horizontal_alignment = 1
 
 [node name="Frame4-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
+visible = false
 texture = ExtResource("21_texm6")
 
 [node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame4-memory3"]
