@@ -345,7 +345,3 @@ position = Vector2(-5, -1228)
 
 [node name="Summoner2" parent="." instance=ExtResource("21_a51ki")]
 position = Vector2(7432, 2246)
-
-[node name="Summoner3" parent="." instance=ExtResource("21_a51ki")]
-position = Vector2(8975, 85)
-rotation = 1.5708

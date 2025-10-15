@@ -1,10 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://bymsbqa5c0u2n"]
+[gd_scene load_steps=7 format=3 uid="uid://bymsbqa5c0u2n"]
 
 [ext_resource type="Script" uid="uid://bga0tynnmkpfw" path="res://Scripts/ghost-summoner.gd" id="1_0m6ei"]
-[ext_resource type="Texture2D" uid="uid://bpcd8fdqms0bh" path="res://Sprites/under_sprite.png" id="2_rjg68"]
+[ext_resource type="Texture2D" uid="uid://c2gpv1525m00d" path="res://Sprites/Ghosts/Portal/portal-active1.png" id="2_sgs5f"]
+[ext_resource type="Texture2D" uid="uid://copsbwxkn5gu5" path="res://Sprites/Ghosts/Portal/portal-active2.png" id="3_6yko4"]
+[ext_resource type="Texture2D" uid="uid://dac3hvl3qk3ty" path="res://Sprites/Ghosts/Portal/port-active3.png" id="4_doeqh"]
+[ext_resource type="Texture2D" uid="uid://8jyt2q2v2gw6" path="res://Sprites/Ghosts/Portal/portal-unactive.png" id="5_eo1te"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gvw32"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sgs5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6yko4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_doeqh")
+}],
+"loop": false,
+"name": &"activating",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_eo1te")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Summoner" type="Node2D"]
 script = ExtResource("1_0m6ei")
 
-[node name="UnderSprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_rjg68")
+[node name="Portal" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gvw32")
+animation = &"activating"
