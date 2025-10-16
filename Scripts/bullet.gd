@@ -19,5 +19,9 @@ func _on_collision_body_entered(body: Node2D) -> void:
 		
 		if body.is_in_group("Player"):
 			Global.crabHP -= 3
-			
+		
+		if body.is_in_group("Ghost"):
+			body.health -= 3
+			body.damaged_animation()
+		
 		self.queue_free()

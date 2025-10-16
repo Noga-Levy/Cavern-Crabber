@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bykylkbxpmww1"]
+[gd_scene load_steps=23 format=3 uid="uid://bykylkbxpmww1"]
 
 [ext_resource type="Script" uid="uid://b7fqux7rnhg2q" path="res://Scripts/ghost.gd" id="1_y6jq6"]
 [ext_resource type="Texture2D" uid="uid://clcuy3tgicbk4" path="res://Sprites/Ghosts/ghost-left.png" id="2_m4yw0"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b6sjtbwl5l8p" path="res://Sprites/Ghosts/ghost-attackR.png" id="7_hif3r"]
 [ext_resource type="Script" uid="uid://cckcaruqxv1bi" path="res://Scripts/bleegHP.gd" id="8_lwt6e"]
 [ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="9_ttgpu"]
+[ext_resource type="AudioStream" uid="uid://cjn7p17sybp72" path="res://Audio/ghost-attack.mp3" id="10_m4yw0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_67fwd"]
 animations = [{
@@ -121,7 +122,7 @@ animations = [{
 "speed": 70.0
 }]
 
-[node name="evil-spirit" type="CharacterBody2D"]
+[node name="evil-spirit" type="CharacterBody2D" groups=["Ghost"]]
 script = ExtResource("1_y6jq6")
 
 [node name="Ghost" type="AnimatedSprite2D" parent="."]
@@ -153,6 +154,11 @@ visible = false
 modulate = Color(1, 0.696028, 0.69657, 1)
 position = Vector2(8, 4)
 sprite_frames = SubResource("SpriteFrames_wlgmy")
+
+[node name="Stab" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_m4yw0")
+volume_db = 10.0
+bus = &"ReverbBus"
 
 [connection signal="send_health" from="." to="HP" method="_on_bleeg_send_health"]
 [connection signal="body_entered" from="Collisions" to="." method="_on_collision_body_entered"]

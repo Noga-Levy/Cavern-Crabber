@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dapf0o6nua77s"]
+[gd_scene load_steps=25 format=3 uid="uid://dapf0o6nua77s"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_055b2"]
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_hj5x7"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_uhnj4"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_42uki"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="5_t7v2y"]
+[ext_resource type="Texture2D" uid="uid://vjfyimy2b7er" path="res://Sprites/arrow.png" id="6_yvrk7"]
 [ext_resource type="PackedScene" uid="uid://d0piftk2uvxvt" path="res://Scenes/gas.tscn" id="7_055b2"]
 [ext_resource type="PackedScene" uid="uid://d03s2myh7tjf8" path="res://Scenes/bleeg.tscn" id="7_vcilj"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="8_2mgoq"]
@@ -113,6 +114,12 @@ shape = SubResource("RectangleShape2D_18xhp")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(76, -11)
 script = ExtResource("3_uhnj4")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+modulate = Color(0.351547, 0.43716, 0.272636, 1)
+position = Vector2(-326, -1567.5)
+scale = Vector2(3.22, 2.81)
+texture = ExtResource("6_yvrk7")
 
 [node name="stairs" parent="." instance=ExtResource("4_42uki")]
 modulate = Color(0.584314, 1, 1, 1)

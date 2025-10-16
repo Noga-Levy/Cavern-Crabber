@@ -80,6 +80,8 @@ func attack():
 	else:
 		$Ghost.play("right-attack")
 	
+	$Stab.play()
+	
 	await get_tree().create_timer(0.2).timeout
 	
 	if inside_ghost.size() > 0 and not dodge:
