@@ -117,7 +117,7 @@ script = ExtResource("3_uhnj4")
 
 [node name="Arrow" type="Sprite2D" parent="."]
 modulate = Color(0.351547, 0.43716, 0.272636, 1)
-position = Vector2(-326, -1567.5)
+position = Vector2(-326, -1429)
 scale = Vector2(3.22, 2.81)
 texture = ExtResource("6_yvrk7")
 
