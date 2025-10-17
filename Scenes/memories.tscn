@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=30 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://buw5i1uj6alqk" path="res://Sprites/memories/memory3/frame4-memory3.png" id="21_texm6"]
 [ext_resource type="Texture2D" uid="uid://dra2pcgocqkm1" path="res://Sprites/memories/memory3-zoomed-in-mushroom.png" id="23_t6xpb"]
 [ext_resource type="Texture2D" uid="uid://34o13ee3cula" path="res://Sprites/memories/memory4/bar-frame1.png" id="24_xrg0v"]
+[ext_resource type="Texture2D" uid="uid://ctoqg0af5aye7" path="res://Sprites/memories/memory4/bar-frame2.png" id="25_xrg0v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u2rq7"]
 animations = [{
@@ -477,6 +478,9 @@ texture = ExtResource("23_t6xpb")
 
 [node name="Bar-frame1" type="Sprite2D" parent="Memory4" groups=["frame"]]
 texture = ExtResource("24_xrg0v")
+
+[node name="Bar-frame2" type="Sprite2D" parent="Memory4" groups=["frame"]]
+texture = ExtResource("25_xrg0v")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
