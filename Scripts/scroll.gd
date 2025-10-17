@@ -65,8 +65,6 @@ func _process(_delta: float) -> void:
 
 func begin_blink():
 	for i in range(blink_increments):
-		print(i)
-		print($Darkness.modulate)
 		$Darkness.modulate[3] += darkness_increase_amt
 		await get_tree().create_timer(darkness_increase_amt).timeout
 
@@ -79,11 +77,6 @@ func _input(_event):
 		
 		await get_tree().create_timer(2).timeout
 		
-		Global.music_pos = $"Elevator music by Cisco".position
+		Global.music_pos = $"Elevator music by Cisco".get_playback_position()
 		
-		if Global.level == 4:
-			get_tree().change_scene_to_file("res://Scenes/level_4.tscn")
-		elif Global.level == 3:
-			get_tree().change_scene_to_file("res://Scenes/level_3.tscn")
-		else:
-			get_tree().change_scene_to_file("res://Scenes/level_2.tscn")
+		get_tree().change_scene_to_file("res://Scenes/scroll_enemy_info.tscn")

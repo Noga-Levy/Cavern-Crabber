@@ -30,40 +30,33 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Name" type="RichTextLabel" parent="."]
-offset_left = -117.0
-offset_top = -136.0
-offset_right = 116.0
-offset_bottom = -90.0
+offset_left = -116.0
+offset_top = -142.0
+offset_right = 117.0
+offset_bottom = -71.0
 bbcode_enabled = true
-text = "[font_size=23][color=darkblue]Name: Warble[/color][/font_size]"
+text = "[font_size=23][color=darkblue]Name
+ Warble[/color][/font_size]"
 horizontal_alignment = 1
 
 [node name="DMG" type="RichTextLabel" parent="."]
 offset_left = -116.0
-offset_top = -79.0
+offset_top = -64.0
 offset_right = 117.0
-offset_bottom = -33.0
+offset_bottom = -1.0
 bbcode_enabled = true
-text = "[font_size=23][color=red]Dmg: 2[/color][/font_size]"
+text = "[font_size=23][color=red]Dmg
+2[/color][/font_size]"
 horizontal_alignment = 1
 
 [node name="DMG_Method" type="RichTextLabel" parent="."]
 offset_left = -117.0
-offset_top = -5.0
+offset_top = 15.0
 offset_right = 116.0
-offset_bottom = 143.0
+offset_bottom = 230.0
 bbcode_enabled = true
 text = "[font_size=20][color=darkred]Dmg method:
-tail springs out, cutting nearby non-warbles[/color][/font_size]"
-horizontal_alignment = 1
-
-[node name="HP" type="RichTextLabel" parent="."]
-offset_left = -117.0
-offset_top = 137.0
-offset_right = 116.0
-offset_bottom = 172.0
-bbcode_enabled = true
-text = "[font_size=23][color=darkgreen]HP: 6[/color][/font_size]"
+Their tail springs out, cutting all nearby creatures[/color][/font_size]"
 horizontal_alignment = 1
 
 [node name="Darkness" type="Sprite2D" parent="."]
