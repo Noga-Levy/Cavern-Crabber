@@ -51,13 +51,32 @@ func _physics_process(_delta: float) -> void:
 	
 	crab_vector = Vector2.ZERO
 	
-	var left = Input.is_key_pressed(KEY_LEFT)
-	var right = Input.is_key_pressed(KEY_RIGHT)
-	var up = Input.is_key_pressed(KEY_UP)
-	var down = Input.is_key_pressed(KEY_DOWN)
+	var left = Input.is_action_pressed("arrow-left")
+	var right = Input.is_action_pressed("arrow-right")
+	var up = Input.is_action_pressed("arrow-up")
+	var down = Input.is_action_pressed("arrow-down")
 	var direction_array = [left, right, up, down]
 	
-	if direction_array.count(true) >= 2:
+	if direction_array.count(true) == 4:
+		pass
+		
+	elif direction_array.count(true) == 3:
+		if left and right:
+			if up:
+				crab_vector.y -= change_amt
+				$"Player (Crab)".play("walking_forwards")
+			else:
+				crab_vector.y += change_amt
+				$"Player (Crab)".play("walking_down")
+		else:
+			if left:
+				crab_vector.x -= change_amt
+				$"Player (Crab)".play("walking_left")
+			else:
+				crab_vector.x += change_amt
+				$"Player (Crab)".play("walking_right")
+	
+	elif direction_array.count(true) == 2:
 		if left and down:
 			$"Player (Crab)".play("walking_45")
 			crab_vector.x -= change_amt

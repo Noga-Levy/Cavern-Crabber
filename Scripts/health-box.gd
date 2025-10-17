@@ -57,7 +57,7 @@ func _process(delta: float) -> void:
 			if not speed_modulate_timer > 0:  # To avoid the split second of regular color
 				Global.crab_modulate = "ffffff"
 	
-	if Input.is_key_pressed(KEY_SPACE) and box_closed and "Player" in colliding_with_box:
+	if Input.is_action_pressed("space") and box_closed and "Player" in colliding_with_box:
 		$Box.play("opened")
 		print("opened")
 		

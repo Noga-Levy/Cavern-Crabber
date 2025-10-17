@@ -16,7 +16,7 @@ func _ready() -> void:
 
 # Whole sequence boils down to "detect an input --> is the input a key pressed --> ok, restart"
 func _process(_delta: float) -> void:
-	if Input.is_key_pressed(KEY_SPACE):
+	if Input.is_action_pressed("space"):
 		Global.crabHP = Global.level * 5 + 5
 		Global.crab_damage = Global.level + 2
 		Global.crab_SPEED = 500 + (Global.level - 1) * 100
