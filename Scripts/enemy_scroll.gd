@@ -19,22 +19,27 @@ func _ready() -> void:
 	end_blink()
 	
 	var level_colors = {1 : "ffffff", 2 : "95ffff", 3 : "fda9a6", 4 : "ffff50"}
-	$"Ground-in-between-levels".modulate = level_colors[Global.level - 1]
+	$"Ground-in-between-levels".modulate = level_colors[Global.level]
 	
 	$Enemy_info.text = enemy_info
-	info = [$Name, $DMG, $DMG_Method]
+	info = [$DMG, $DMG_Method]
 	
-	var enemies_names = {1: "Warbles", 2 : "Bleegs", 3 : "Limmis", 4 : "The Relu"}
-	$Name.text = "[font_size=23][color=darkblue]Name\n" + enemies_names[Global.level - 1] + "[/color][/font_size]"
+	if Global.level == 2:
+		info.insert(0, $Enemy_Img/level2)
+	elif Global.level == 3:
+		info.insert(0, $Enemy_Img/level3)
+	else:
+		info.insert(0, $Enemy_Img/level4)
+	
 	
 	var damage_amts = {1 : "2", 2 : "4", 3 : "1", 4 : "Relus 3, Sost 4"}
-	$DMG.text = "[font_size=23][color=red]DMG\n" + damage_amts[Global.level - 1] + "[/color][/font_size]"
+	$DMG.text = "[font_size=23][color=red]DMG: " + damage_amts[Global.level] + "[/color][/font_size]"
 	
 	var dmg_method = {1 : "Their tail springs out, cutting all nearby creatures",
 	2 : "They produce the level's gas, choking nearby creatures",
-	3 : "They summon lava that burns those in contact. The bigger ones bite once they lose their ball",
+	3 : "They summon lava that burns those in contact. The bigger ones bite once they lose their ball (5 DMG)",
 	4 : "The relu shoots bullets.\nThe sosts stab with their spears"}
-	$DMG_Method.text = "[font_size=20][color=darkred]DMG method\n" + dmg_method[Global.level - 1] + "[/color][/font_size]"
+	$DMG_Method.text = "[font_size=20][color=darkred]DMG method:\n" + dmg_method[Global.level] + "[/color][/font_size]" + "\n\n[color=black]Press space to continue[/color]"
 	
 	
 	for i in info:
@@ -49,7 +54,6 @@ func stream_level_done():
 		previous_text += i
 
 func show_all_info():
-	info = [$Name, $DMG, $DMG_Method]
 	for i in info:
 		if is_inside_tree():
 			await get_tree().create_timer(0.5).timeout

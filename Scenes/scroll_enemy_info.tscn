@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://fvhhjkl8kl1b"]
+[gd_scene load_steps=10 format=3 uid="uid://fvhhjkl8kl1b"]
 
 [ext_resource type="Texture2D" uid="uid://cwkfbwt82p3r6" path="res://Sprites/Various Ground Sprites/ground-in-between-levels.png" id="1_jg8b8"]
 [ext_resource type="Script" uid="uid://dfdept84bs1l7" path="res://Scripts/enemy_scroll.gd" id="1_wweiw"]
 [ext_resource type="Texture2D" uid="uid://dksn1mghfr0wj" path="res://Sprites/scroll.png" id="2_qnfrc"]
 [ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="3_wweiw"]
+[ext_resource type="Texture2D" uid="uid://c42xblj57xn5b" path="res://Sprites/Bleeg/bleeg.png" id="4_iwct3"]
 [ext_resource type="AudioStream" uid="uid://b3tf6ibqgne0d" path="res://Audio/bg-music/the crablevator by @Cisco.mp3" id="4_qnfrc"]
+[ext_resource type="Texture2D" uid="uid://da3yu671cxye1" path="res://Sprites/limmi/lim-l.png" id="5_nq8kp"]
+[ext_resource type="Texture2D" uid="uid://ck736visewhxx" path="res://Sprites/Relu/360relu.png" id="6_jr8ch"]
+[ext_resource type="Texture2D" uid="uid://b6sjtbwl5l8p" path="res://Sprites/Ghosts/ghost-attackR.png" id="7_8pujc"]
 
 [node name="Scroll_Enemy_Info" type="Node2D"]
 script = ExtResource("1_wweiw")
@@ -19,6 +23,31 @@ texture = ExtResource("2_qnfrc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="Enemy_Img" type="Node2D" parent="."]
+
+[node name="level2" type="Sprite2D" parent="Enemy_Img"]
+visible = false
+position = Vector2(0, -117)
+scale = Vector2(0.71, 0.71)
+texture = ExtResource("4_iwct3")
+
+[node name="level3" type="Sprite2D" parent="Enemy_Img"]
+visible = false
+position = Vector2(3, -132)
+scale = Vector2(0.655, 0.655)
+texture = ExtResource("5_nq8kp")
+
+[node name="level4" type="Sprite2D" parent="Enemy_Img"]
+visible = false
+position = Vector2(-53, -114)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("6_jr8ch")
+
+[node name="Ghost-attackR" type="Sprite2D" parent="Enemy_Img/level4"]
+position = Vector2(200, 1.72415)
+scale = Vector2(1.30172, 1.30172)
+texture = ExtResource("7_8pujc")
+
 [node name="Enemy_info" type="RichTextLabel" parent="."]
 offset_left = -103.0
 offset_top = -212.0
@@ -29,40 +58,33 @@ text = "[font_size=30][color=black]Enemy info[/color][/font_size]"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Name" type="RichTextLabel" parent="."]
-offset_left = -116.0
-offset_top = -142.0
-offset_right = 117.0
-offset_bottom = -71.0
-bbcode_enabled = true
-text = "[font_size=23][color=darkblue]Name
- Warble[/color][/font_size]"
-horizontal_alignment = 1
-
 [node name="DMG" type="RichTextLabel" parent="."]
 offset_left = -116.0
-offset_top = -64.0
+offset_top = -72.0
 offset_right = 117.0
-offset_bottom = -1.0
+offset_bottom = -9.0
 bbcode_enabled = true
-text = "[font_size=23][color=red]Dmg
-2[/color][/font_size]"
+text = "[font_size=23][color=red]Dmg: 2[/color][/font_size]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DMG_Method" type="RichTextLabel" parent="."]
-offset_left = -117.0
-offset_top = 15.0
-offset_right = 116.0
-offset_bottom = 230.0
+offset_left = -141.0
+offset_top = -5.0
+offset_right = 127.0
+offset_bottom = 267.0
 bbcode_enabled = true
 text = "[font_size=20][color=darkred]Dmg method:
-Their tail springs out, cutting all nearby creatures[/color][/font_size]"
+They summon lava that burns those in contact. The bigger ones bite once they lose their ball (5 DMG)[/color][/font_size]
+
+[color=black]Press space to continue[/color]"
 horizontal_alignment = 1
 
 [node name="Darkness" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 scale = Vector2(10, 10)
 texture = ExtResource("3_wweiw")
+metadata/_edit_lock_ = true
 
 [node name="Elevator music by Cisco" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_qnfrc")
