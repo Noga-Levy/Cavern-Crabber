@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://be2x2eabfcj57"]
+[gd_scene load_steps=6 format=3 uid="uid://be2x2eabfcj57"]
 
 [ext_resource type="Script" uid="uid://f7acchj3erl4" path="res://Scripts/scroll.gd" id="1_wx0dm"]
 [ext_resource type="Texture2D" uid="uid://dksn1mghfr0wj" path="res://Sprites/scroll.png" id="2_pd2jm"]
 [ext_resource type="Texture2D" uid="uid://cwkfbwt82p3r6" path="res://Sprites/Various Ground Sprites/ground-in-between-levels.png" id="2_xyluh"]
 [ext_resource type="AudioStream" uid="uid://b3tf6ibqgne0d" path="res://Audio/bg-music/the crablevator by @Cisco.mp3" id="4_xyluh"]
+[ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="5_jx8js"]
 
 [node name="Scroll" type="Node2D"]
 script = ExtResource("1_wx0dm")
@@ -26,6 +27,7 @@ offset_bottom = -127.0
 bbcode_enabled = true
 text = "[font_size=30][color=black]Level complete[/color][/font_size]"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="HP" type="RichTextLabel" parent="."]
 offset_left = -97.0
@@ -36,6 +38,7 @@ bbcode_enabled = true
 text = "[font_size=40][color=darkgreen]HP[/color][/font_size]
 [color=darkgreen][font_size=20]10 -> 15[/font_size][/color]"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="DMG" type="RichTextLabel" parent="."]
 offset_left = -97.0
@@ -46,6 +49,7 @@ bbcode_enabled = true
 text = "[font_size=40][color=darkred]DMG[/color][/font_size]
 [color=darkred][font_size=20]3 -> 4[/font_size][/color]"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="SPEED" type="RichTextLabel" parent="."]
 offset_left = -98.0
@@ -56,6 +60,7 @@ bbcode_enabled = true
 text = "[font_size=40][color=orange]SPEED[/color][/font_size]
 [color=orange][font_size=20]500 -> 600[/font_size][/color]"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Next_Enemy" type="RichTextLabel" parent="."]
 offset_left = -140.0
@@ -68,8 +73,15 @@ text = "[font_size=25][color=black]NEXT: WARBLES[/color][/font_size]
 [color=black]Press space to continue[/color]"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Elevator music by Cisco" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_xyluh")
 volume_db = 10.0
 autoplay = true
+
+[node name="Darkness" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(4, 0)
+scale = Vector2(10, 10)
+texture = ExtResource("5_jx8js")

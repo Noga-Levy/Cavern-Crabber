@@ -11,15 +11,24 @@ var blink_increments = 101
 
 
 func _ready() -> void:
-	Global.level += 1
+	
+	$Darkness.modulate[3] = 1
+	
+	$"Elevator music by Cisco".play(Global.music_pos)
+	
+	end_blink()
+	await get_tree().create_timer(2).timeout
+	
+	
 	
 	var level_colors = {1 : "ffffff", 2 : "95ffff", 3 : "fda9a6", 4 : "ffff50"}
-	$"Ground-in-between-levels".modulate = level_colors[Global.level]
+	$"Ground-in-between-levels".modulate = level_colors[Global.level - 1]
 	
-	$Level_complete.text = level_done
-	info = [$HP, $DMG, $SPEED, $Next_Enemy]
+	$Enemy_info.text = level_done
+	info = [$Name, $DMG, $DMG_Method, $HP]
 	
-	$HP.text = "[font_size=40][color=darkgreen]HP[/color][/font_size]\n[color=darkgreen][font_size=20]" + str(Global.level * 5) + " -> " + str(Global.level * 5 + 5) + "[/font_size][/color]"
+	var enemies_names = {1: "Warbles", 2 : "Bleegs", 3 : "Limmis", 4 : "The Relu"}
+	$Name.text = "[font_size=23][color=darkblue]Name: " + enemies_names[Global.level - 1] + "[/font_size][/color]"
 	
 	$DMG.text = "[font_size=40][color=darkred]DMG[/color][/font_size]\n[color=darkred][font_size=20]" + str(Global.level + 1) + " -> " + str(Global.level + 2) + "[/font_size][/color]"
 	Global.crab_damage = Global.level + 2
@@ -63,23 +72,17 @@ func _process(_delta: float) -> void:
 		all_info_shown = true
 
 
-func begin_blink():
+func end_blink():
 	for i in range(blink_increments):
 		print(i)
 		print($Darkness.modulate)
-		$Darkness.modulate[3] += darkness_increase_amt
+		$Darkness.modulate[3] -= darkness_increase_amt
 		await get_tree().create_timer(darkness_increase_amt).timeout
 
 
 
 func _input(_event):
 	if Input.is_action_just_released("space"):
-		
-		begin_blink()
-		
-		await get_tree().create_timer(2).timeout
-		
-		Global.music_pos = $"Elevator music by Cisco".position
 		
 		if Global.level == 4:
 			get_tree().change_scene_to_file("res://Scenes/level_4.tscn")

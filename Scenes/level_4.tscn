@@ -1,5 +1,6 @@
-[gd_scene load_steps=40 format=3 uid="uid://bxgem3burr3xv"]
+[gd_scene load_steps=42 format=3 uid="uid://bxgem3burr3xv"]
 
+[ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_a51ki"]
 [ext_resource type="Texture2D" uid="uid://b1to6cn5x35v7" path="res://Sprites/Various Ground Sprites/end_ground_square.png" id="1_di0d6"]
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="2_54c2w"]
 [ext_resource type="Texture2D" uid="uid://bhssnacoev44c" path="res://Sprites/Various Ground Sprites/rock/rock3.png" id="3_3v663"]
@@ -14,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://c1qxvtnn4wrfe" path="res://Scenes/relu.tscn" id="11_di0d6"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="13_3v663"]
 [ext_resource type="Texture2D" uid="uid://nayg3f4ieyux" path="res://Sprites/Various Ground Sprites/turn-around.png" id="14_w8kbg"]
+[ext_resource type="PackedScene" uid="uid://b0blo6tjknk8r" path="res://Scenes/memories.tscn" id="15_3oae0"]
 [ext_resource type="Texture2D" uid="uid://cwau5pbvqxjyw" path="res://Sprites/Various Ground Sprites/Litter-from-prev-questers/pixil-frame-0.png" id="15_mbnb1"]
 [ext_resource type="Texture2D" uid="uid://5fykdpoj7ock" path="res://Sprites/Various Ground Sprites/Litter-from-prev-questers/pixil-frame-2.png" id="16_cxe20"]
 [ext_resource type="Texture2D" uid="uid://33mfhgjdgwno" path="res://Sprites/Various Ground Sprites/Litter-from-prev-questers/pixil-frame-1.png" id="17_fmsuk"]
@@ -81,6 +83,7 @@ size = Vector2(233, 543)
 size = Vector2(246, 1406)
 
 [node name="level4" type="Node2D"]
+script = ExtResource("1_a51ki")
 
 [node name="Boss-battle" type="Node2D" parent="."]
 position = Vector2(5535, 53)
@@ -311,6 +314,13 @@ metadata/_edit_lock_ = true
 position = Vector2(1876, -168)
 texture = ExtResource("14_w8kbg")
 
+[node name="Moss" type="Sprite2D" parent="."]
+position = Vector2(2994, 349)
+texture = ExtResource("6_b8ytw")
+
+[node name="Memories" parent="." instance=ExtResource("15_3oae0")]
+position = Vector2(2970, 374)
+
 [node name="bone" type="Sprite2D" parent="."]
 position = Vector2(3064, 369)
 texture = ExtResource("15_mbnb1")
@@ -345,3 +355,6 @@ position = Vector2(-5, -1228)
 
 [node name="Summoner2" parent="." instance=ExtResource("21_a51ki")]
 position = Vector2(7432, 2246)
+
+[connection signal="pause" from="Memories" to="." method="_on_mush_pause"]
+[connection signal="unpause" from="Memories" to="." method="_on_mush_unpause"]

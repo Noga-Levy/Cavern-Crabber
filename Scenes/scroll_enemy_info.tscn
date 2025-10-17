@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://fvhhjkl8kl1b"]
+
+[ext_resource type="Texture2D" uid="uid://cwkfbwt82p3r6" path="res://Sprites/Various Ground Sprites/ground-in-between-levels.png" id="1_jg8b8"]
+[ext_resource type="Script" uid="uid://dfdept84bs1l7" path="res://Scripts/enemy_scroll.gd" id="1_wweiw"]
+[ext_resource type="Texture2D" uid="uid://dksn1mghfr0wj" path="res://Sprites/scroll.png" id="2_qnfrc"]
+[ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="3_wweiw"]
+[ext_resource type="AudioStream" uid="uid://b3tf6ibqgne0d" path="res://Audio/bg-music/the crablevator by @Cisco.mp3" id="4_qnfrc"]
+
+[node name="Scroll_Enemy_Info" type="Node2D"]
+script = ExtResource("1_wweiw")
+
+[node name="Ground-in-between-levels" type="Sprite2D" parent="."]
+position = Vector2(29, 40)
+scale = Vector2(7.16406, 7.35648)
+texture = ExtResource("1_jg8b8")
+
+[node name="Scroll_Img" type="Sprite2D" parent="."]
+texture = ExtResource("2_qnfrc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Enemy_info" type="RichTextLabel" parent="."]
+offset_left = -103.0
+offset_top = -212.0
+offset_right = 108.0
+offset_bottom = -111.0
+bbcode_enabled = true
+text = "[font_size=30][color=black]Enemy info[/color][/font_size]"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="."]
+offset_left = -117.0
+offset_top = -136.0
+offset_right = 116.0
+offset_bottom = -90.0
+bbcode_enabled = true
+text = "[font_size=23][color=darkblue]Name: Warble[/color][/font_size]"
+horizontal_alignment = 1
+
+[node name="DMG" type="RichTextLabel" parent="."]
+offset_left = -116.0
+offset_top = -79.0
+offset_right = 117.0
+offset_bottom = -33.0
+bbcode_enabled = true
+text = "[font_size=23][color=red]Dmg: 2[/color][/font_size]"
+horizontal_alignment = 1
+
+[node name="DMG_Method" type="RichTextLabel" parent="."]
+offset_left = -117.0
+offset_top = -5.0
+offset_right = 116.0
+offset_bottom = 143.0
+bbcode_enabled = true
+text = "[font_size=20][color=darkred]Dmg method:
+tail springs out, cutting nearby non-warbles[/color][/font_size]"
+horizontal_alignment = 1
+
+[node name="HP" type="RichTextLabel" parent="."]
+offset_left = -117.0
+offset_top = 137.0
+offset_right = 116.0
+offset_bottom = 172.0
+bbcode_enabled = true
+text = "[font_size=23][color=darkgreen]HP: 6[/color][/font_size]"
+horizontal_alignment = 1
+
+[node name="Darkness" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(10, 10)
+texture = ExtResource("3_wweiw")
+
+[node name="Elevator music by Cisco" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_qnfrc")
+volume_db = 10.0
+autoplay = true

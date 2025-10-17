@@ -473,6 +473,8 @@ texture = ExtResource("21_texm6")
 texture = ExtResource("9_erske")
 
 [node name="Memory4" type="Node2D" parent="." groups=["memory"]]
+visible = false
+z_index = 6
 
 [node name="Memory3-zoomed-in-mushroom" type="Sprite2D" parent="Memory4" groups=["frame"]]
 texture = ExtResource("23_t6xpb")
