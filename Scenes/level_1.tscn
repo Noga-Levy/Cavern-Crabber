@@ -123,7 +123,7 @@ scale = Vector2(0.71, 0.71)
 texture = ExtResource("5_6ioyp")
 
 [node name="Moss2-removebg-preview2" type="Sprite2D" parent="Moss2-removebg-preview3"]
-position = Vector2(51, 30)
+position = Vector2(49.5916, 30)
 texture = ExtResource("5_6ioyp")
 
 [node name="Moss2-removebg-preview4" type="Sprite2D" parent="Moss2-removebg-preview3"]

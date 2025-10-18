@@ -38,7 +38,7 @@ func _ready() -> void:
 	var dmg_method = {1 : "Their tail springs out, cutting all nearby creatures",
 	2 : "They produce the level's gas, choking nearby creatures",
 	3 : "They summon lava that burns those in contact. The bigger ones bite once they lose their ball (5 DMG)",
-	4 : "The relu shoots bullets.\nThe sosts stab with their spears"}
+	4 : "The relu shoots blue projectiles.\nThe sosts stab with their spears after exiting the portal"}
 	$DMG_Method.text = "[font_size=20][color=darkred]DMG method:\n" + dmg_method[Global.level] + "[/color][/font_size]" + "\n\n[color=black]Press space to continue[/color]"
 	
 	

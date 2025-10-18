@@ -164,16 +164,6 @@ scale = Vector2(24.2656, 39.9167)
 texture = ExtResource("8_2mgoq")
 metadata/_edit_lock_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 27.0
-offset_top = -304.0
-offset_right = 426.0
-offset_bottom = -173.0
-bbcode_enabled = true
-text = "[font_size=30]Caution!
-The gas is extremely toxic[/font_size]"
-horizontal_alignment = 1
-
 [node name="HP-box" parent="." instance=ExtResource("11_t7v2y")]
 position = Vector2(-1656, -1519)
 

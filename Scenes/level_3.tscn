@@ -319,17 +319,6 @@ position = Vector2(-2355, -2065)
 [node name="stairs" parent="." instance=ExtResource("8_5e78q")]
 position = Vector2(21, -2739)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -433.0
-offset_top = -38.0
-offset_right = 61.0
-offset_bottom = 270.0
-bbcode_enabled = true
-text = "[font_size=30]Limmis, coming in hot! Literally!
-
-They create lava every 5 seconds--try not to become a crab roast![/font_size]"
-horizontal_alignment = 1
-
 [node name="Darkness" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(-1500.5, -262.5)
