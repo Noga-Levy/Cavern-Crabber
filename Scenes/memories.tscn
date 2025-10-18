@@ -377,14 +377,13 @@ vertical_alignment = 1
 texture = ExtResource("9_erske")
 
 [node name="Frame2,2-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
-visible = false
 texture = ExtResource("17_nsmcx")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame2,2-memory3"]
 offset_left = 71.0
-offset_top = -198.0
+offset_top = -218.0
 offset_right = 395.0
-offset_bottom = -11.0
+offset_bottom = 13.0
 bbcode_enabled = true
 text = "[font_size=20][color=black]unfortunately,
  due to the toxic nature of the gas, we couldn't save her.
@@ -446,6 +445,7 @@ vertical_alignment = 1
 texture = ExtResource("9_erske")
 
 [node name="Mushroom-zoomed-in2" type="Sprite2D" parent="Memory3" groups=["frame"]]
+visible = false
 texture = ExtResource("16_ag1u2")
 
 [node name="Crab-talk" type="Sprite2D" parent="Memory3/Mushroom-zoomed-in2"]

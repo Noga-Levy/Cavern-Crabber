@@ -29,10 +29,16 @@ func _ready() -> void:
 		$Ghost.play("right")
 
 func _physics_process(_delta: float) -> void:
+	var relu = get_parent().get_node("relu")
+	var relu_direction = (relu.position - global_position).normalized()
+	
+	var crab_direction = (Global.crab_pos - global_position).normalized()
+	
+	ghost_Vec = Vector2((relu_direction.x + crab_direction.x)/3, (relu_direction.y + crab_direction.y)/3)
 	
 	damaged = Global.crab_damage
 	
-	ghost_Vec = Vector2(xdir, ydir)
+	# ghost_Vec = Vector2(xdir, ydir)
 	
 	# normalize diagonal movement, scale by speed
 	if ghost_Vec != Vector2.ZERO:
