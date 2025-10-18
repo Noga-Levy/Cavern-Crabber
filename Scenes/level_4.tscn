@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bxgem3burr3xv"]
+[gd_scene load_steps=42 format=3 uid="uid://bxgem3burr3xv"]
 
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_a51ki"]
 [ext_resource type="Texture2D" uid="uid://b1to6cn5x35v7" path="res://Sprites/Various Ground Sprites/end_ground_square.png" id="1_di0d6"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://5fykdpoj7ock" path="res://Sprites/Various Ground Sprites/Litter-from-prev-questers/pixil-frame-2.png" id="16_cxe20"]
 [ext_resource type="Texture2D" uid="uid://33mfhgjdgwno" path="res://Sprites/Various Ground Sprites/Litter-from-prev-questers/pixil-frame-1.png" id="17_fmsuk"]
 [ext_resource type="PackedScene" uid="uid://bbs3mno2qru2f" path="res://Scenes/stairs_for_level_4.tscn" id="18_cxe20"]
+[ext_resource type="PackedScene" uid="uid://b0blo6tjknk8r" path="res://Scenes/memories.tscn" id="21_6xecf"]
 [ext_resource type="PackedScene" uid="uid://bymsbqa5c0u2n" path="res://Scenes/Ghosts/ghost_summoner.tscn" id="21_a51ki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2k2h5"]
@@ -349,3 +350,9 @@ position = Vector2(-5, -1228)
 
 [node name="Summoner2" parent="." instance=ExtResource("21_a51ki")]
 position = Vector2(7432, 2246)
+
+[node name="mush" parent="." instance=ExtResource("21_6xecf")]
+position = Vector2(2972, 374)
+
+[connection signal="pause" from="mush" to="." method="_on_mush_pause"]
+[connection signal="unpause" from="mush" to="." method="_on_mush_unpause"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=32 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://34o13ee3cula" path="res://Sprites/memories/memory4/bar-frame1.png" id="24_xrg0v"]
 [ext_resource type="Texture2D" uid="uid://ctoqg0af5aye7" path="res://Sprites/memories/memory4/bar-frame2.png" id="25_xrg0v"]
 [ext_resource type="Texture2D" uid="uid://cuuq6b8bs50r6" path="res://Sprites/memories/memory4/bar-frame3.png" id="26_kr7f5"]
+[ext_resource type="Texture2D" uid="uid://c8iwoqnlgxs4m" path="res://Sprites/memories/memory4/bar-frame4.png" id="27_6l8ta"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u2rq7"]
 animations = [{
@@ -495,10 +496,27 @@ offset_right = 16.0
 offset_bottom = -15.0
 theme_override_constants/line_separation = 10
 bbcode_enabled = true
-text = "[i][color=black][font_size=20]The lady and the crab
-Fought great wars
-From the hydra in sea
-to the dragon's hoard[/font_size][/color][/i]"
+text = "[i][color=black][font_size=20]There was once was a lady
+who went to the sea.
+She a found crab,
+who was oh-so zesty[/font_size][/color][/i]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bar-frame4" type="Sprite2D" parent="Memory4" groups=["frame"]]
+texture = ExtResource("27_6l8ta")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame4"]
+offset_left = -330.0
+offset_top = 70.0
+offset_right = 49.0
+offset_bottom = 260.0
+theme_override_constants/line_separation = 10
+bbcode_enabled = true
+text = "[i][color=black][font_size=20] Paired together
+There was no-one better.
+No monster they could not
+sla-aa-a-ay[/font_size][/color][/i]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
