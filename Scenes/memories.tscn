@@ -474,7 +474,6 @@ texture = ExtResource("21_texm6")
 texture = ExtResource("9_erske")
 
 [node name="Memory4" type="Node2D" parent="." groups=["memory"]]
-visible = false
 z_index = 6
 
 [node name="Memory3-zoomed-in-mushroom" type="Sprite2D" parent="Memory4" groups=["frame"]]
@@ -496,7 +495,7 @@ offset_right = 16.0
 offset_bottom = -15.0
 theme_override_constants/line_separation = 10
 bbcode_enabled = true
-text = "[i][color=black][font_size=20]There was once was a lady
+text = "[i][color=black][font_size=17]There was once was a lady
 who went to the sea.
 She a found crab,
 who was oh-so zesty[/font_size][/color][/i]"
@@ -504,6 +503,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bar-frame4" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 texture = ExtResource("27_6l8ta")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame4"]

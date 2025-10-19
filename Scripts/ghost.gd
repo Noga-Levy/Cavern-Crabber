@@ -3,10 +3,11 @@ extends CharacterBody2D
 
 # Movement
 var dir_opts = [1, -1]
-var ghost_Vec = Vector2(0,0)
 var SPEED = 1000
 var xdir = dir_opts[randi() % dir_opts.size()]
 var ydir = dir_opts[randi() % dir_opts.size()]
+var ghost_Vec = Vector2(xdir,ydir)
+var run_away = false
 
 
 # Attack
@@ -29,14 +30,15 @@ func _ready() -> void:
 		$Ghost.play("right")
 
 func _physics_process(_delta: float) -> void:
-	var relu = get_parent().get_node("relu")
-	var relu_direction = (relu.position - global_position).normalized()
+	
+	damaged = Global.crab_damage
 	
 	var crab_direction = (Global.crab_pos - global_position).normalized()
 	
-	ghost_Vec = Vector2((relu_direction.x + crab_direction.x)/3, (relu_direction.y + crab_direction.y)/3)
-	
-	damaged = Global.crab_damage
+	if run_away:
+		ghost_Vec = Vector2(crab_direction.x * (-1), crab_direction.y * (-1))
+	else:
+		ghost_Vec = crab_direction
 	
 	# ghost_Vec = Vector2(xdir, ydir)
 	
@@ -129,3 +131,13 @@ func _on_collision_body_entered(body: Node2D) -> void:
 func _on_collision_body_exited(body: Node2D) -> void:
 	if body.is_in_group("damager"):
 		inside_ghost.erase(body)
+
+
+func _on_comfortzone_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		run_away = true
+
+
+func _on_comfortzone_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		run_away = false

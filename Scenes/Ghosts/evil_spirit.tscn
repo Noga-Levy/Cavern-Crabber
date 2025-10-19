@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bykylkbxpmww1"]
+[gd_scene load_steps=24 format=3 uid="uid://bykylkbxpmww1"]
 
 [ext_resource type="Script" uid="uid://b7fqux7rnhg2q" path="res://Scripts/ghost.gd" id="1_y6jq6"]
 [ext_resource type="Texture2D" uid="uid://clcuy3tgicbk4" path="res://Sprites/Ghosts/ghost-left.png" id="2_m4yw0"]
@@ -122,6 +122,9 @@ animations = [{
 "speed": 70.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_m4yw0"]
+radius = 403.609
+
 [node name="evil-spirit" type="CharacterBody2D" groups=["Ghost"]]
 script = ExtResource("1_y6jq6")
 
@@ -160,6 +163,13 @@ stream = ExtResource("10_m4yw0")
 volume_db = 10.0
 bus = &"ReverbBus"
 
+[node name="Comfort-zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Comfort-zone"]
+shape = SubResource("CircleShape2D_m4yw0")
+
 [connection signal="send_health" from="." to="HP" method="_on_bleeg_send_health"]
 [connection signal="body_entered" from="Collisions" to="." method="_on_collision_body_entered"]
 [connection signal="body_exited" from="Collisions" to="." method="_on_collision_body_exited"]
+[connection signal="body_entered" from="Comfort-zone" to="." method="_on_comfortzone_body_entered"]
+[connection signal="body_exited" from="Comfort-zone" to="." method="_on_comfortzone_body_exited"]

@@ -65,8 +65,9 @@ func _process(_delta: float) -> void:
 
 func begin_blink():
 	for i in range(blink_increments):
-		$Darkness.modulate[3] += darkness_increase_amt
-		await get_tree().create_timer(darkness_increase_amt).timeout
+		if is_inside_tree():
+			$Darkness.modulate[3] += darkness_increase_amt
+			await get_tree().create_timer(darkness_increase_amt).timeout
 
 
 
