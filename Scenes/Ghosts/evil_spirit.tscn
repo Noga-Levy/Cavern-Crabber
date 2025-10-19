@@ -123,7 +123,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m4yw0"]
-radius = 403.609
+radius = 252.008
 
 [node name="evil-spirit" type="CharacterBody2D" groups=["Ghost"]]
 script = ExtResource("1_y6jq6")
@@ -172,4 +172,3 @@ shape = SubResource("CircleShape2D_m4yw0")
 [connection signal="body_entered" from="Collisions" to="." method="_on_collision_body_entered"]
 [connection signal="body_exited" from="Collisions" to="." method="_on_collision_body_exited"]
 [connection signal="body_entered" from="Comfort-zone" to="." method="_on_comfortzone_body_entered"]
-[connection signal="body_exited" from="Comfort-zone" to="." method="_on_comfortzone_body_exited"]

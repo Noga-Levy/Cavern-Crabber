@@ -474,18 +474,37 @@ texture = ExtResource("21_texm6")
 texture = ExtResource("9_erske")
 
 [node name="Memory4" type="Node2D" parent="." groups=["memory"]]
+visible = false
 z_index = 6
 
 [node name="Memory3-zoomed-in-mushroom" type="Sprite2D" parent="Memory4" groups=["frame"]]
 texture = ExtResource("23_t6xpb")
 
+[node name="Crab-talk" type="Sprite2D" parent="Memory4" groups=["frame"]]
+position = Vector2(-9, 54)
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("5_erske")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Crab-talk"]
+offset_left = -307.0
+offset_top = 94.0
+offset_right = 446.0
+offset_bottom = 218.0
+bbcode_enabled = true
+text = "[color=black][font_size=27]Oh no, another mushroom... do I even want to remember what happened? Can I just walk awa--
+[/font_size][/color]"
+horizontal_alignment = 1
+
 [node name="Bar-frame1" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 texture = ExtResource("24_xrg0v")
 
 [node name="Bar-frame2" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 texture = ExtResource("25_xrg0v")
 
 [node name="Bar-frame3" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 texture = ExtResource("26_kr7f5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame3"]

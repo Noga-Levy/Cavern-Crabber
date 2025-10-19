@@ -23,12 +23,6 @@ var total_health = health
 var damaged = Global.crab_damage
 signal send_health(HP, total_HP)
 
-func _ready() -> void:
-	if xdir == -1:
-		$Ghost.play("left")
-	else:
-		$Ghost.play("right")
-
 func _physics_process(_delta: float) -> void:
 	
 	damaged = Global.crab_damage
@@ -54,6 +48,11 @@ func _physics_process(_delta: float) -> void:
 		damaged_animation()
 	
 	send_health.emit(health, total_health)
+	
+	if ghost_Vec.x < 0:
+		$Ghost.play("left")
+	else:
+		$Ghost.play("right")
 
 
 func _process(_delta: float) -> void:
