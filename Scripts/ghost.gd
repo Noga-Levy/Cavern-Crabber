@@ -7,7 +7,7 @@ var SPEED = 1000
 var xdir = dir_opts[randi() % dir_opts.size()]
 var ydir = dir_opts[randi() % dir_opts.size()]
 var ghost_Vec = Vector2(xdir,ydir)
-var run_away = false
+var crab_nearby = false
 
 
 # Attack
@@ -35,12 +35,10 @@ func _physics_process(_delta: float) -> void:
 	
 	var crab_direction = (Global.crab_pos - global_position).normalized()
 	
-	if run_away:
-		ghost_Vec = Vector2(crab_direction.x * (-1), crab_direction.y * (-1))
-	else:
+	if crab_nearby:
 		ghost_Vec = crab_direction
-	
-	# ghost_Vec = Vector2(xdir, ydir)
+	else:
+		ghost_Vec = Vector2(xdir, ydir)
 	
 	# normalize diagonal movement, scale by speed
 	if ghost_Vec != Vector2.ZERO:
@@ -135,9 +133,9 @@ func _on_collision_body_exited(body: Node2D) -> void:
 
 func _on_comfortzone_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		run_away = true
+		crab_nearby = true
 
 
 func _on_comfortzone_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		run_away = false
+		crab_nearby = false
