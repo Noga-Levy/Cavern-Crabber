@@ -73,6 +73,43 @@ func frame_sequence():
 	cutscene_in_progress = false
 
 
+func memory4_sequence():
+	cutscene_in_progress = true
+	emit_signal("pause")
+	
+	$Camera2D.make_current()
+	
+	$RichTextLabel.text = "This memory will auto-play"
+	$RichTextLabel.show()
+	$AudioStreamPlayer.play()
+	
+	memory_of_interest.show()
+	
+	var counter = 1
+	
+	for k in frames:
+		k.show()
+		print(k)
+		
+		if counter <= 2:
+			await get_tree().create_timer(1.8).timeout
+		elif counter <= 4:
+			await get_tree().create_timer(0.7).timeout
+		else:
+			await get_tree().create_timer(7).timeout
+		
+		counter += 1
+	
+	$RichTextLabel.hide()
+	$AudioStreamPlayer.stop()
+	
+	for k in frames:
+		k.hide()
+	
+	emit_signal("unpause")
+	cutscene_in_progress = false
+
+
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		mushroom.play("highlight")
@@ -92,4 +129,7 @@ func _process(_delta: float) -> void:
 
 func _input(_event: InputEvent) -> void:
 	if touching_player and Input.is_action_just_released("space") and not cutscene_in_progress:
-		frame_sequence()
+		if memory_of_interest != memories[3]:
+			frame_sequence()
+		else:
+			memory4_sequence()

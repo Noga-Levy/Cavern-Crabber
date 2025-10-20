@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=35 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://cuuq6b8bs50r6" path="res://Sprites/memories/memory4/bar-frame3.png" id="26_kr7f5"]
 [ext_resource type="Texture2D" uid="uid://c8iwoqnlgxs4m" path="res://Sprites/memories/memory4/bar-frame4.png" id="27_6l8ta"]
 [ext_resource type="Texture2D" uid="uid://c4x4bpv46pxd3" path="res://Sprites/memories/memory4/bar-frame5.png" id="28_c8qi3"]
+[ext_resource type="Texture2D" uid="uid://de6tuy4325i8i" path="res://Sprites/memories/memory4/bar-frame6.png" id="29_2e1hw"]
+[ext_resource type="Texture2D" uid="uid://j2j5wq8hao1e" path="res://Sprites/memories/memory4/bar-frame7.png" id="30_nsfae"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u2rq7"]
 animations = [{
@@ -481,12 +483,12 @@ z_index = 6
 [node name="Memory3-zoomed-in-mushroom" type="Sprite2D" parent="Memory4" groups=["frame"]]
 texture = ExtResource("23_t6xpb")
 
-[node name="Crab-talk" type="Sprite2D" parent="Memory4" groups=["frame"]]
+[node name="Crab-talk" type="Sprite2D" parent="Memory4/Memory3-zoomed-in-mushroom"]
 position = Vector2(-9, 54)
 scale = Vector2(0.765, 0.765)
 texture = ExtResource("5_erske")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Crab-talk"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Memory3-zoomed-in-mushroom/Crab-talk"]
 offset_left = -307.0
 offset_top = 94.0
 offset_right = 446.0
@@ -495,6 +497,7 @@ bbcode_enabled = true
 text = "[color=black][font_size=27]*Sigh*... do I even want to remember what happened? Can I just walk awa--
 [/font_size][/color]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Darkness" type="Sprite2D" parent="Memory4" groups=["frame"]]
 visible = false
@@ -519,6 +522,7 @@ visible = false
 texture = ExtResource("25_xrg0v")
 
 [node name="Bar-frame3" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 texture = ExtResource("26_kr7f5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame3"]
@@ -536,6 +540,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bar-frame4" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 texture = ExtResource("27_6l8ta")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame4"]
@@ -553,6 +558,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bar-frame5" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 texture = ExtResource("28_c8qi3")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame5"]
@@ -570,22 +576,56 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bar-frame6" type="Sprite2D" parent="Memory4" groups=["frame"]]
-texture = ExtResource("28_c8qi3")
+visible = false
+texture = ExtResource("29_2e1hw")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame6"]
-offset_left = -259.0
-offset_top = -42.0
-offset_right = 120.0
-offset_bottom = 148.0
-theme_override_constants/line_separation = 10
+offset_left = -248.0
+offset_top = -123.0
+offset_right = 131.0
+offset_bottom = 102.0
+theme_override_constants/line_separation = 20
 bbcode_enabled = true
 text = "[i][color=black][font_size=20]For, when they arrived
 it was all too late.
 and that was when the crab
-lost his way.
-[/font_size][/color][/i]"
+lost his way.[/font_size][/color][/i]"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Bar-frame7" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
+texture = ExtResource("30_nsfae")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame7"]
+offset_left = -248.0
+offset_top = -123.0
+offset_right = 131.0
+offset_bottom = 102.0
+theme_override_constants/line_separation = 20
+bbcode_enabled = true
+text = "[i][color=black][font_size=20]Villages burned down
+houses fell
+all in the search of
+an immortal spell[/font_size][/color][/i]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Darkness2" type="Sprite2D" parent="Memory4" groups=["frame"]]
+scale = Vector2(5, 5)
+texture = ExtResource("2_tnoe6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Darkness2"]
+anchors_preset = -1
+anchor_bottom = 0.314815
+offset_left = -96.0
+offset_top = -20.0
+offset_right = 96.0
+offset_bottom = 20.0
+text = "UNFINISHED
+More coming soon!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
