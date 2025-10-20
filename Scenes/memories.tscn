@@ -502,7 +502,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Darkness" type="Sprite2D" parent="Memory4" groups=["frame"]]
-visible = false
 scale = Vector2(5, 5)
 texture = ExtResource("2_tnoe6")
 
@@ -516,7 +515,6 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Bar-frame1" type="Sprite2D" parent="Memory4" groups=["frame"]]
-visible = false
 texture = ExtResource("24_xrg0v")
 
 [node name="Bar-frame2" type="Sprite2D" parent="Memory4" groups=["frame"]]
@@ -596,6 +594,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bar-frame7" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 texture = ExtResource("30_nsfae")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame7"]
@@ -613,6 +612,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bar-frame8" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 texture = ExtResource("31_ebiy6")
 
 [node name="Bunny-bubble-down" type="Sprite2D" parent="Memory4/Bar-frame8"]
@@ -632,6 +632,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bar-frame9" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 texture = ExtResource("31_ebiy6")
 
 [node name="Bunny-bubble-down" type="Sprite2D" parent="Memory4/Bar-frame9"]
@@ -652,6 +653,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bar-frame10" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 texture = ExtResource("31_ebiy6")
 
 [node name="Bunny-bubble-down" type="Sprite2D" parent="Memory4/Bar-frame10"]
@@ -672,22 +674,8 @@ text = "[font_size=25][color=red]I'm the good guy![/color]
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Darkness2" type="Sprite2D" parent="Memory4" groups=["frame"]]
-visible = false
-scale = Vector2(5, 5)
-texture = ExtResource("2_tnoe6")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Darkness2"]
-anchors_preset = -1
-anchor_bottom = 0.314815
-offset_left = -96.0
-offset_top = -20.0
-offset_right = 96.0
-offset_bottom = 20.0
-text = "UNFINISHED
-More coming soon!"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
+[node name="Cloudy-memory" type="Sprite2D" parent="Memory4"]
+texture = ExtResource("9_erske")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false

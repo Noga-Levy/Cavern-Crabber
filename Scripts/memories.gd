@@ -79,6 +79,7 @@ func memory4_sequence():
 	
 	$Camera2D.make_current()
 	
+	$"Memory4/Cloudy-memory".hide()
 	$RichTextLabel.text = "This memory will auto-play"
 	$RichTextLabel.show()
 	$AudioStreamPlayer.play()
@@ -93,8 +94,11 @@ func memory4_sequence():
 		
 		if counter <= 2:
 			await get_tree().create_timer(1.8).timeout
-		elif counter <= 4:
+		elif counter == 3:
 			await get_tree().create_timer(0.7).timeout
+		elif counter == 4:
+			await get_tree().create_timer(0.7).timeout
+			$"Memory4/Cloudy-memory".show()
 		else:
 			await get_tree().create_timer(7).timeout
 		
@@ -105,6 +109,8 @@ func memory4_sequence():
 	
 	for k in frames:
 		k.hide()
+	
+	$"Memory4/Cloudy-memory".hide()
 	
 	emit_signal("unpause")
 	cutscene_in_progress = false
@@ -123,7 +129,7 @@ func _on_body_exited(body: Node2D) -> void:
 
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_released("arrow-down") and touching_player and not cutscene_in_progress and Global.level != 4:
+	if Input.is_action_just_released("arrow-down") and touching_player and cutscene_in_progress and Global.level != 4:
 		emit_signal("down_pressed")
 		print("down is pressed")
 
