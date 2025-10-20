@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=37 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
@@ -31,6 +31,8 @@
 [ext_resource type="Texture2D" uid="uid://c4x4bpv46pxd3" path="res://Sprites/memories/memory4/bar-frame5.png" id="28_c8qi3"]
 [ext_resource type="Texture2D" uid="uid://de6tuy4325i8i" path="res://Sprites/memories/memory4/bar-frame6.png" id="29_2e1hw"]
 [ext_resource type="Texture2D" uid="uid://j2j5wq8hao1e" path="res://Sprites/memories/memory4/bar-frame7.png" id="30_nsfae"]
+[ext_resource type="Texture2D" uid="uid://cervjjmsloy4l" path="res://Sprites/memories/memory4/bar-frame8.png" id="31_ebiy6"]
+[ext_resource type="Texture2D" uid="uid://c5gjmvdqchq0n" path="res://Sprites/tutorial/bunny-bubble-down.png" id="32_6by2m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u2rq7"]
 animations = [{
@@ -594,7 +596,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Bar-frame7" type="Sprite2D" parent="Memory4" groups=["frame"]]
-visible = false
 texture = ExtResource("30_nsfae")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame7"]
@@ -611,7 +612,27 @@ an immortal spell[/font_size][/color][/i]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Bar-frame8" type="Sprite2D" parent="Memory4" groups=["frame"]]
+texture = ExtResource("31_ebiy6")
+
+[node name="Bunny-bubble-down" type="Sprite2D" parent="Memory4/Bar-frame8"]
+position = Vector2(100, 187)
+rotation = 3.14159
+scale = Vector2(-1.255, 1.255)
+texture = ExtResource("32_6by2m")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame8"]
+offset_left = -397.0
+offset_top = -128.0
+offset_right = 103.0
+offset_bottom = 64.0
+bbcode_enabled = true
+text = "[font_size=25][color=red]No, no, that's all wrong! those villages were keeping me from bringing her back, and--and--[/color][/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Darkness2" type="Sprite2D" parent="Memory4" groups=["frame"]]
+visible = false
 scale = Vector2(5, 5)
 texture = ExtResource("2_tnoe6")
 
