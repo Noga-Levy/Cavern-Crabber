@@ -123,7 +123,7 @@ func _on_body_exited(body: Node2D) -> void:
 
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_released("arrow-down") and touching_player:
+	if Input.is_action_just_released("arrow-down") and touching_player and not cutscene_in_progress and Global.level != 4:
 		emit_signal("down_pressed")
 		print("down is pressed")
 

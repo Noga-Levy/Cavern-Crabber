@@ -627,7 +627,48 @@ offset_top = -128.0
 offset_right = 103.0
 offset_bottom = 64.0
 bbcode_enabled = true
-text = "[font_size=25][color=red]No, no, that's all wrong! those villages were keeping me from bringing her back, and--and--[/color][/font_size]"
+text = "[font_size=25][color=red]No, no, that's all wrong! those villagers were keeping me from bringing her back![/color][/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bar-frame9" type="Sprite2D" parent="Memory4" groups=["frame"]]
+texture = ExtResource("31_ebiy6")
+
+[node name="Bunny-bubble-down" type="Sprite2D" parent="Memory4/Bar-frame9"]
+position = Vector2(100, 187)
+rotation = 3.14159
+scale = Vector2(-1.255, 1.255)
+texture = ExtResource("32_6by2m")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame9"]
+offset_left = -389.0
+offset_top = -119.0
+offset_right = 111.0
+offset_bottom = 73.0
+bbcode_enabled = true
+text = "[font_size=25][color=red]I'm the hero! I'm the crab that lost his leg to defend a helpless child![/color]
+[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bar-frame10" type="Sprite2D" parent="Memory4" groups=["frame"]]
+texture = ExtResource("31_ebiy6")
+
+[node name="Bunny-bubble-down" type="Sprite2D" parent="Memory4/Bar-frame10"]
+position = Vector2(100, 187)
+rotation = 3.14159
+scale = Vector2(-1.255, 1.255)
+texture = ExtResource("32_6by2m")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Bar-frame10"]
+offset_left = -389.0
+offset_top = -119.0
+offset_right = 111.0
+offset_bottom = 73.0
+bbcode_enabled = true
+text = "[font_size=25][color=red]I'm the good guy![/color]
+[color=black]... right?[/color]
+[/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 

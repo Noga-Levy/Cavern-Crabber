@@ -82,6 +82,7 @@ radius = 65.0
 height = 210.0
 
 [node name="relu" type="CharacterBody2D" groups=["relu"]]
+process_mode = 1
 script = ExtResource("2_pny1k")
 
 [node name="relu-sprite" type="AnimatedSprite2D" parent="."]
