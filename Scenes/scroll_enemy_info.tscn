@@ -70,9 +70,9 @@ vertical_alignment = 1
 
 [node name="DMG_Method" type="RichTextLabel" parent="."]
 offset_left = -141.0
-offset_top = -5.0
+offset_top = -11.0
 offset_right = 127.0
-offset_bottom = 267.0
+offset_bottom = 261.0
 bbcode_enabled = true
 text = "[font_size=20][color=darkred]Dmg method:
 They summon lava that burns those in contact. The bigger ones bite once they lose their ball (5 DMG)[/color][/font_size]

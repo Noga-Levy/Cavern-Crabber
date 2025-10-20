@@ -17,6 +17,7 @@ signal send_health(HP, total_HP)
 
 # Lava
 var time = 0
+var max_time = 4
 
 
 # PROCESSES
@@ -42,7 +43,7 @@ func _physics_process(_delta: float) -> void:
 	send_health.emit(health, total_health)
 	
 	time += _delta
-	if time > 4:
+	if time >= max_time:
 		create_lava()
 		time = 0
 
