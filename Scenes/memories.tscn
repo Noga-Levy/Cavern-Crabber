@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://chfrxhtbsfngh" path="res://Sprites/memories/memory3/frame3-memory3.png" id="19_xgqd1"]
 [ext_resource type="Texture2D" uid="uid://bdnp5wno27c3a" path="res://Sprites/memories/memory3/frame3.2-memory3.png" id="20_7a467"]
 [ext_resource type="Texture2D" uid="uid://buw5i1uj6alqk" path="res://Sprites/memories/memory3/frame4-memory3.png" id="21_texm6"]
-[ext_resource type="Texture2D" uid="uid://dra2pcgocqkm1" path="res://Sprites/memories/memory3-zoomed-in-mushroom.png" id="23_t6xpb"]
+[ext_resource type="Texture2D" uid="uid://caoh6qjl1v83q" path="res://Sprites/memories/memory4/zoomed-in-mush.png" id="23_nsfae"]
 [ext_resource type="Texture2D" uid="uid://34o13ee3cula" path="res://Sprites/memories/memory4/bar-frame1.png" id="24_xrg0v"]
 [ext_resource type="Texture2D" uid="uid://ctoqg0af5aye7" path="res://Sprites/memories/memory4/bar-frame2.png" id="25_xrg0v"]
 [ext_resource type="Texture2D" uid="uid://cuuq6b8bs50r6" path="res://Sprites/memories/memory4/bar-frame3.png" id="26_kr7f5"]
@@ -480,15 +480,15 @@ texture = ExtResource("9_erske")
 visible = false
 z_index = 6
 
-[node name="Memory3-zoomed-in-mushroom" type="Sprite2D" parent="Memory4" groups=["frame"]]
-texture = ExtResource("23_t6xpb")
+[node name="zoomed-in-mushroom" type="Sprite2D" parent="Memory4" groups=["frame"]]
+texture = ExtResource("23_nsfae")
 
-[node name="Crab-talk" type="Sprite2D" parent="Memory4/Memory3-zoomed-in-mushroom"]
+[node name="Crab-talk" type="Sprite2D" parent="Memory4/zoomed-in-mushroom"]
 position = Vector2(-9, 54)
 scale = Vector2(0.765, 0.765)
 texture = ExtResource("5_erske")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/Memory3-zoomed-in-mushroom/Crab-talk"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory4/zoomed-in-mushroom/Crab-talk"]
 offset_left = -307.0
 offset_top = 94.0
 offset_right = 446.0
