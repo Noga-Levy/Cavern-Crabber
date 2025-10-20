@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dixapswls2xjs"]
+[gd_scene load_steps=15 format=3 uid="uid://dixapswls2xjs"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_8ffim"]
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_chwpn"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://dvd2gv1fmuyk" path="res://Scenes/enemy-warble.tscn" id="3_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_xrdnt"]
 [ext_resource type="Texture2D" uid="uid://dxsn0hl7nccx1" path="res://Sprites/Various Ground Sprites/moss.png" id="5_6ioyp"]
-[ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="8_xrdnt"]
 [ext_resource type="PackedScene" uid="uid://b0blo6tjknk8r" path="res://Scenes/memories.tscn" id="13_6ioyp"]
 [ext_resource type="Texture2D" uid="uid://oep464huek6q" path="res://Sprites/Various Ground Sprites/rock/rock2.png" id="13_6r07y"]
 [ext_resource type="Texture2D" uid="uid://bhssnacoev44c" path="res://Sprites/Various Ground Sprites/rock/rock3.png" id="14_6ioyp"]
@@ -110,12 +109,6 @@ position = Vector2(5, -1940)
 [node name="e_warble8" parent="." instance=ExtResource("3_xfk5q")]
 z_index = 1
 position = Vector2(-3, -2177)
-
-[node name="Darkness" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(23, -1096)
-scale = Vector2(13.7292, 42.6481)
-texture = ExtResource("8_xrdnt")
 
 [node name="Moss2-removebg-preview3" type="Sprite2D" parent="."]
 position = Vector2(-330, 15)

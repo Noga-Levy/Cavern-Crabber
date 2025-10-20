@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bxgem3burr3xv"]
+[gd_scene load_steps=41 format=3 uid="uid://bxgem3burr3xv"]
 
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_a51ki"]
 [ext_resource type="Texture2D" uid="uid://b1to6cn5x35v7" path="res://Sprites/Various Ground Sprites/end_ground_square.png" id="1_di0d6"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="7_mbnb1"]
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="8_cxe20"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="9_fmsuk"]
-[ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="11_a51ki"]
 [ext_resource type="PackedScene" uid="uid://c1qxvtnn4wrfe" path="res://Scenes/relu.tscn" id="11_di0d6"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="13_3v663"]
 [ext_resource type="Texture2D" uid="uid://nayg3f4ieyux" path="res://Sprites/Various Ground Sprites/turn-around.png" id="14_w8kbg"]
@@ -307,13 +306,6 @@ position = Vector2(76, -11)
 script = ExtResource("8_cxe20")
 
 [node name="info" parent="." instance=ExtResource("9_fmsuk")]
-
-[node name="Darkness" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(4654.5, 111)
-scale = Vector2(65.6406, 60.4074)
-texture = ExtResource("11_a51ki")
-metadata/_edit_lock_ = true
 
 [node name="Turn-around" type="Sprite2D" parent="."]
 position = Vector2(1876, -168)

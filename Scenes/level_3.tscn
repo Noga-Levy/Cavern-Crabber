@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://d0y4ns64s8ssl"]
+[gd_scene load_steps=35 format=3 uid="uid://d0y4ns64s8ssl"]
 
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="1_76ybr"]
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_xjeco"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://tig42hgfx32c" path="res://Scenes/limmis/big_limmi.tscn" id="7_5rvg2"]
 [ext_resource type="PackedScene" uid="uid://cpl56ifkrmb0g" path="res://Scenes/health-box.tscn" id="7_53xsp"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="8_5e78q"]
-[ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="9_l4wr6"]
 [ext_resource type="Texture2D" uid="uid://oep464huek6q" path="res://Sprites/Various Ground Sprites/rock/rock2.png" id="11_n4vm5"]
 [ext_resource type="Texture2D" uid="uid://bhssnacoev44c" path="res://Sprites/Various Ground Sprites/rock/rock3.png" id="12_fxnjf"]
 [ext_resource type="Texture2D" uid="uid://bdbv5uvi3lmfx" path="res://Sprites/Various Ground Sprites/rock/rock.png" id="13_xjeco"]
@@ -318,13 +317,6 @@ position = Vector2(-2355, -2065)
 
 [node name="stairs" parent="." instance=ExtResource("8_5e78q")]
 position = Vector2(21, -2739)
-
-[node name="Darkness" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(-1500.5, -262.5)
-scale = Vector2(37.8594, 66.6204)
-texture = ExtResource("9_l4wr6")
-metadata/_edit_lock_ = true
 
 [node name="Rock3" type="Sprite2D" parent="."]
 modulate = Color(1, 0.470588, 0.376471, 1)

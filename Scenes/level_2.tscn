@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dapf0o6nua77s"]
+[gd_scene load_steps=24 format=3 uid="uid://dapf0o6nua77s"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_055b2"]
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_hj5x7"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://vjfyimy2b7er" path="res://Sprites/arrow.png" id="6_yvrk7"]
 [ext_resource type="PackedScene" uid="uid://d0piftk2uvxvt" path="res://Scenes/gas.tscn" id="7_055b2"]
 [ext_resource type="PackedScene" uid="uid://d03s2myh7tjf8" path="res://Scenes/bleeg.tscn" id="7_vcilj"]
-[ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="8_2mgoq"]
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="8_42uki"]
 [ext_resource type="Texture2D" uid="uid://dxsn0hl7nccx1" path="res://Sprites/Various Ground Sprites/moss.png" id="11_bl0du"]
 [ext_resource type="PackedScene" uid="uid://cpl56ifkrmb0g" path="res://Scenes/health-box.tscn" id="11_t7v2y"]
@@ -156,13 +155,6 @@ position = Vector2(323, -1871)
 
 [node name="Gas4" parent="." instance=ExtResource("7_055b2")]
 position = Vector2(-145, -2216)
-
-[node name="Darkness" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(-988.498, -1243.5)
-scale = Vector2(24.2656, 39.9167)
-texture = ExtResource("8_2mgoq")
-metadata/_edit_lock_ = true
 
 [node name="HP-box" parent="." instance=ExtResource("11_t7v2y")]
 position = Vector2(-1656, -1519)
