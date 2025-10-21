@@ -158,6 +158,9 @@ position = Vector2(-1330, -600)
 rotation = -1.5708
 texture = ExtResource("2_s8nj6")
 
+[node name="stairs" parent="Ground" instance=ExtResource("8_5e78q")]
+position = Vector2(21, -2739)
+
 [node name="Player" parent="." instance=ExtResource("3_vwg62")]
 position = Vector2(60, 59)
 
@@ -314,9 +317,6 @@ position = Vector2(991, 1209)
 
 [node name="HP-box3" parent="." instance=ExtResource("7_53xsp")]
 position = Vector2(-2355, -2065)
-
-[node name="stairs" parent="." instance=ExtResource("8_5e78q")]
-position = Vector2(21, -2739)
 
 [node name="Rock3" type="Sprite2D" parent="."]
 modulate = Color(1, 0.470588, 0.376471, 1)

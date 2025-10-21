@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://df2e3nhs4i4iy"]
+
+[ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_hvaeu"]
+[ext_resource type="Texture2D" uid="uid://0aodv4fg338n" path="res://Sprites/cloudy-undersprite.png" id="2_ihmlp"]
+[ext_resource type="Texture2D" uid="uid://kxaw0a2upjmr" path="res://Sprites/white.png" id="3_ihmlp"]
+[ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="4_ip5ew"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip5ew"]
+size = Vector2(100, 1460)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hproo"]
+size = Vector2(717, 100)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_hvaeu")]
+
+[node name="Cloudy-undersprite" type="Sprite2D" parent="Player"]
+show_behind_parent = true
+position = Vector2(128, 78)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_ihmlp")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-14, -28)
+
+[node name="White" type="Sprite2D" parent="Node2D"]
+position = Vector2(509, -368)
+scale = Vector2(1, 29.2)
+texture = ExtResource("3_ihmlp")
+
+[node name="White2" type="Sprite2D" parent="Node2D"]
+position = Vector2(-308, -368)
+scale = Vector2(1, 29.2)
+texture = ExtResource("3_ihmlp")
+
+[node name="White3" type="Sprite2D" parent="Node2D"]
+position = Vector2(100.79, 312)
+rotation = 1.5708
+scale = Vector2(1, 18.331)
+texture = ExtResource("3_ihmlp")
+
+[node name="Collisions" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Collisions"]
+position = Vector2(-308, -368)
+shape = SubResource("RectangleShape2D_ip5ew")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Collisions"]
+position = Vector2(509, -368)
+shape = SubResource("RectangleShape2D_ip5ew")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Collisions"]
+position = Vector2(100.5, 312)
+shape = SubResource("RectangleShape2D_hproo")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Collisions"]
+position = Vector2(100.5, -1116)
+shape = SubResource("RectangleShape2D_hproo")
+
+[node name="White4" type="Sprite2D" parent="Node2D/Collisions/CollisionShape2D4"]
+position = Vector2(-0.210298, -2.18548e-08)
+rotation = 1.5708
+scale = Vector2(1, 18.351)
+texture = ExtResource("3_ihmlp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("4_ip5ew")
