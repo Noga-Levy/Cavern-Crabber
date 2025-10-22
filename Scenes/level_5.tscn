@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://df2e3nhs4i4iy"]
+[gd_scene load_steps=14 format=3 uid="uid://df2e3nhs4i4iy"]
 
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_26dk1"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_hvaeu"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b0blo6tjknk8r" path="res://Scenes/memories.tscn" id="5_hproo"]
 [ext_resource type="Script" uid="uid://djvnvro0gpwe6" path="res://Scripts/opening-wall.gd" id="6_mb3x2"]
 [ext_resource type="Texture2D" uid="uid://dkgtplsknu0le" path="res://Sprites/Various Ground Sprites/broken-block.png" id="7_02esc"]
+[ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Other/Jacquard12-Regular.ttf" id="9_gfyxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ip5ew"]
 size = Vector2(100, 2201)
@@ -95,6 +96,17 @@ shape = SubResource("RectangleShape2D_hproo")
 
 [node name="Memories" parent="." instance=ExtResource("5_hproo")]
 position = Vector2(80, -1002)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -192.0
+offset_top = -950.0
+offset_right = 378.0
+offset_bottom = -788.0
+theme_override_fonts/normal_font = ExtResource("9_gfyxx")
+bbcode_enabled = true
+text = "[font_size=50]I offer you a boon
+before you meet me, Akamo.[/font_size]"
+horizontal_alignment = 1
 
 [connection signal="pause" from="Memories" to="." method="_on_mush_pause"]
 [connection signal="unpause" from="Memories" to="." method="_on_mush_unpause"]
