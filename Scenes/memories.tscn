@@ -98,7 +98,7 @@ shape = SubResource("RectangleShape2D_kyw7w")
 
 [node name="Memory1" type="Node2D" parent="." groups=["memory"]]
 visible = false
-z_index = 4
+z_index = 11
 
 [node name="Mushroom-zoomed-in" type="Sprite2D" parent="Memory1" groups=["frame"]]
 visible = false
@@ -179,7 +179,7 @@ horizontal_alignment = 1
 
 [node name="Memory2" type="Node2D" parent="." groups=["memory"]]
 visible = false
-z_index = 4
+z_index = 11
 
 [node name="Mushroom-half-eaten-zoom" type="Sprite2D" parent="Memory2" groups=["frame"]]
 texture = ExtResource("12_wr7uy")
@@ -309,7 +309,7 @@ horizontal_alignment = 1
 
 [node name="Memory3" type="Node2D" parent="." groups=["memory"]]
 visible = false
-z_index = 6
+z_index = 11
 
 [node name="Mushroom-zoomed-in" type="Sprite2D" parent="Memory3" groups=["frame"]]
 texture = ExtResource("16_ag1u2")
@@ -480,7 +480,7 @@ texture = ExtResource("9_erske")
 
 [node name="Memory4" type="Node2D" parent="." groups=["memory"]]
 visible = false
-z_index = 6
+z_index = 11
 
 [node name="zoomed-in-mushroom" type="Sprite2D" parent="Memory4" groups=["frame"]]
 texture = ExtResource("23_nsfae")
@@ -683,7 +683,7 @@ zoom = Vector2(1.2, 1.2)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 visible = false
-z_index = 7
+z_index = 12
 offset_left = -478.0
 offset_top = -274.0
 offset_right = -227.0

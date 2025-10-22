@@ -279,7 +279,6 @@ z_index = 5
 script = ExtResource("1_vgqql")
 
 [node name="Player (Crab)" type="AnimatedSprite2D" parent="."]
-position = Vector2(123, 82)
 sprite_frames = SubResource("SpriteFrames_3smsa")
 animation = &"walking_right"
 script = ExtResource("18_olqyp")
@@ -305,16 +304,15 @@ bus = &"ReverbBus"
 script = ExtResource("22_wpjfl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(120, 79.5)
 shape = SubResource("RectangleShape2D_x3wgy")
 
 [node name="damaged" type="AnimatedSprite2D" parent="."]
 visible = false
 modulate = Color(0, 1, 1, 1)
-position = Vector2(104, 76)
 sprite_frames = SubResource("SpriteFrames_nmr2m")
 frame = 1
 
 [node name="Shield" type="Sprite2D" parent="."]
-position = Vector2(130, 83)
 texture = ExtResource("37_11gg7")
+
+[node name="Camera2D" type="Camera2D" parent="."]

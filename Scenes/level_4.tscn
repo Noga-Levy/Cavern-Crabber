@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://bxgem3burr3xv"]
+[gd_scene load_steps=40 format=3 uid="uid://bhxdl41lbwp4w"]
 
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_a51ki"]
 [ext_resource type="Texture2D" uid="uid://b1to6cn5x35v7" path="res://Sprites/Various Ground Sprites/end_ground_square.png" id="1_di0d6"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dxsn0hl7nccx1" path="res://Sprites/Various Ground Sprites/moss.png" id="6_b8ytw"]
 [ext_resource type="PackedScene" uid="uid://cpl56ifkrmb0g" path="res://Scenes/health-box.tscn" id="7_54c2w"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="7_mbnb1"]
-[ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="8_cxe20"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="9_fmsuk"]
 [ext_resource type="PackedScene" uid="uid://c1qxvtnn4wrfe" path="res://Scenes/relu.tscn" id="11_di0d6"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="13_3v663"]
@@ -300,10 +299,6 @@ position = Vector2(7210, 53)
 
 [node name="Player" parent="." instance=ExtResource("7_mbnb1")]
 z_index = 2
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(76, -11)
-script = ExtResource("8_cxe20")
 
 [node name="info" parent="." instance=ExtResource("9_fmsuk")]
 

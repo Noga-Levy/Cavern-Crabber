@@ -1,10 +1,9 @@
-[gd_scene load_steps=35 format=3 uid="uid://d0y4ns64s8ssl"]
+[gd_scene load_steps=34 format=3 uid="uid://d0y4ns64s8ssl"]
 
 [ext_resource type="Texture2D" uid="uid://die65pvn3dt4c" path="res://Sprites/Various Ground Sprites/end_ground_block.png" id="1_76ybr"]
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_xjeco"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="2_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="3_vwg62"]
-[ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="4_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://dlrki3pi8omm8" path="res://Scenes/limmis/limmi.tscn" id="5_vwg62"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="6_qf6rc"]
 [ext_resource type="PackedScene" uid="uid://tig42hgfx32c" path="res://Scenes/limmis/big_limmi.tscn" id="7_5rvg2"]
@@ -163,9 +162,6 @@ position = Vector2(21, -2739)
 
 [node name="Player" parent="." instance=ExtResource("3_vwg62")]
 position = Vector2(60, 59)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-script = ExtResource("4_s8nj6")
 
 [node name="b-border" type="StaticBody2D" parent="." groups=["b-border", "border"]]
 modulate = Color(0.584314, 1, 1, 1)

@@ -1,9 +1,8 @@
-[gd_scene load_steps=24 format=3 uid="uid://dapf0o6nua77s"]
+[gd_scene load_steps=23 format=3 uid="uid://dapf0o6nua77s"]
 
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_055b2"]
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_hj5x7"]
 [ext_resource type="Texture2D" uid="uid://bnhtgy1pvd7v0" path="res://Sprites/Various Ground Sprites/ground_block.png" id="3_42uki"]
-[ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/camera_movement.gd" id="3_uhnj4"]
 [ext_resource type="PackedScene" uid="uid://c46nal4qk2m5a" path="res://Scenes/stairs.tscn" id="4_42uki"]
 [ext_resource type="PackedScene" uid="uid://bmw75e17qya2i" path="res://Scenes/info_corner.tscn" id="5_t7v2y"]
 [ext_resource type="Texture2D" uid="uid://vjfyimy2b7er" path="res://Sprites/arrow.png" id="6_yvrk7"]
@@ -109,10 +108,6 @@ shape = SubResource("RectangleShape2D_bl0du")
 [node name="Right" type="CollisionShape2D" parent="r-border" groups=["border", "r-border"]]
 position = Vector2(673, -1273.5)
 shape = SubResource("RectangleShape2D_18xhp")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(76, -11)
-script = ExtResource("3_uhnj4")
 
 [node name="Arrow" type="Sprite2D" parent="."]
 modulate = Color(0.351547, 0.43716, 0.272636, 1)
