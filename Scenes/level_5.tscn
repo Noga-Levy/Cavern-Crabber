@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://df2e3nhs4i4iy"]
+[gd_scene load_steps=13 format=3 uid="uid://df2e3nhs4i4iy"]
 
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_26dk1"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_hvaeu"]
@@ -7,13 +7,19 @@
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/halo_movement.gd" id="4_ip5ew"]
 [ext_resource type="PackedScene" uid="uid://b0blo6tjknk8r" path="res://Scenes/memories.tscn" id="5_hproo"]
 [ext_resource type="Script" uid="uid://djvnvro0gpwe6" path="res://Scripts/opening-wall.gd" id="6_mb3x2"]
-[ext_resource type="Texture2D" uid="uid://dkgtplsknu0le" path="res://Sprites/broken-block.png" id="7_02esc"]
+[ext_resource type="Texture2D" uid="uid://dkgtplsknu0le" path="res://Sprites/Various Ground Sprites/broken-block.png" id="7_02esc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ip5ew"]
 size = Vector2(100, 2201)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hproo"]
-size = Vector2(717, 82)
+size = Vector2(310, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02esc"]
+size = Vector2(31.76, 13.12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfyxx"]
+size = Vector2(33.68, 13.12)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_26dk1")
@@ -67,6 +73,16 @@ position = Vector2(101, -1117)
 scale = Vector2(6.25, 6.25)
 texture = ExtResource("7_02esc")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D/Collisions/Broken-block"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Collisions/Broken-block/StaticBody2D"]
+position = Vector2(-41.72, 0)
+shape = SubResource("RectangleShape2D_02esc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Collisions/Broken-block/StaticBody2D"]
+position = Vector2(40.6, 0)
+shape = SubResource("RectangleShape2D_gfyxx")
+
 [node name="White4" type="Sprite2D" parent="Node2D/Collisions"]
 position = Vector2(100.29, -1116.92)
 rotation = 1.5708
@@ -74,7 +90,7 @@ scale = Vector2(0.813494, 18.351)
 texture = ExtResource("3_ihmlp")
 
 [node name="Opening-wall" type="CollisionShape2D" parent="Node2D/Collisions"]
-position = Vector2(100.5, -1117)
+position = Vector2(95, -1117)
 shape = SubResource("RectangleShape2D_hproo")
 
 [node name="Memories" parent="." instance=ExtResource("5_hproo")]
