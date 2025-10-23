@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=39 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://j2j5wq8hao1e" path="res://Sprites/memories/memory4/bar-frame7.png" id="30_nsfae"]
 [ext_resource type="Texture2D" uid="uid://cervjjmsloy4l" path="res://Sprites/memories/memory4/bar-frame8.png" id="31_ebiy6"]
 [ext_resource type="Texture2D" uid="uid://c5gjmvdqchq0n" path="res://Sprites/tutorial/bunny-bubble-down.png" id="32_6by2m"]
+[ext_resource type="Texture2D" uid="uid://cef0y0atq0d7l" path="res://Sprites/memories/memory5/sad-crab.png" id="33_4qtpt"]
 [ext_resource type="Texture2D" uid="uid://ciwblpcbgroqi" path="res://Sprites/memories/memory5/map-vs-wasu.png" id="33_6by2m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u2rq7"]
@@ -713,16 +714,16 @@ text = "Memory 5"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Bar-frame10" type="Sprite2D" parent="Memory5" groups=["frame"]]
-texture = ExtResource("31_ebiy6")
+[node name="Sad-crab" type="Sprite2D" parent="Memory5" groups=["frame"]]
+texture = ExtResource("33_4qtpt")
 
-[node name="Bunny-bubble-down" type="Sprite2D" parent="Memory5/Bar-frame10"]
+[node name="Bunny-bubble-down" type="Sprite2D" parent="Memory5/Sad-crab"]
 position = Vector2(100, 187)
 rotation = 3.14159
 scale = Vector2(-1.255, 1.255)
 texture = ExtResource("32_6by2m")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Memory5/Bar-frame10"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory5/Sad-crab"]
 offset_left = -364.0
 offset_top = -116.0
 offset_right = 84.0

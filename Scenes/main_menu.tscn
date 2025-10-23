@@ -97,7 +97,7 @@ stream = ExtResource("9_trj04")
 [node name="Select-button" type="AudioStreamPlayer" parent="Border"]
 stream = ExtResource("8_16hvj")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Information" type="RichTextLabel" parent="."]
 offset_left = -169.0
 offset_top = -162.0
 offset_right = 169.0
@@ -110,6 +110,17 @@ horizontal_alignment = 1
 [node name="BG-music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_cp0ys")
 script = ExtResource("8_yhxw7")
+
+[node name="Trigger-warning" type="RichTextLabel" parent="."]
+offset_left = -277.0
+offset_top = 159.0
+offset_right = 278.0
+offset_bottom = 253.0
+text = "Trigger warning: 
+This game features loss of love ones and violence.
+Play responsibly"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [connection signal="area_entered" from="Start" to="Start" method="_on_area_entered"]
 [connection signal="area_exited" from="Start" to="Start" method="_on_area_exited"]
