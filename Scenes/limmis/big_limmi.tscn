@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b31uy1kuu8pqj" path="res://Sprites/limmi/lim-l2.png" id="3_5qf74"]
 [ext_resource type="Texture2D" uid="uid://u7qm1a7nk43i" path="res://Sprites/limmi/lim-r.png" id="4_4ab0o"]
 [ext_resource type="Texture2D" uid="uid://docs0lro6embx" path="res://Sprites/limmi/lim-r2.png" id="5_rg3da"]
-[ext_resource type="Script" uid="uid://4mgbf2u1mhep" path="res://Scripts/limmi-HP.gd" id="6_els07"]
+[ext_resource type="Script" uid="uid://cckcaruqxv1bi" path="res://Scripts/enemyHP.gd" id="7_7vdho"]
 [ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="7_td4dg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pi1cc"]
@@ -143,9 +143,9 @@ offset_bottom = -19.0
 theme_override_colors/default_color = Color(0.999331, 0.336299, 0.271501, 1)
 bbcode_enabled = true
 horizontal_alignment = 1
-script = ExtResource("6_els07")
+script = ExtResource("7_7vdho")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="send_health" from="." to="HP" method="_on_limmi_send_health"]
+[connection signal="send_health" from="." to="HP" method="_on_send_health"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
 [connection signal="body_exited" from="Collision" to="." method="_on_collision_body_exited"]

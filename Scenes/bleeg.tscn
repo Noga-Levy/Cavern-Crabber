@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bmo7vfw061y5d" path="res://Scripts/enemy_bleeg.gd" id="1_g588y"]
 [ext_resource type="Texture2D" uid="uid://c42xblj57xn5b" path="res://Sprites/Bleeg/bleeg.png" id="1_oy3v1"]
 [ext_resource type="Texture2D" uid="uid://6x5waciccdg2" path="res://Sprites/Bleeg/lbleeg-attack.png" id="2_amkd7"]
-[ext_resource type="Script" uid="uid://cckcaruqxv1bi" path="res://Scripts/bleegHP.gd" id="2_jvq0k"]
+[ext_resource type="Script" uid="uid://cckcaruqxv1bi" path="res://Scripts/enemyHP.gd" id="2_jvq0k"]
 [ext_resource type="Texture2D" uid="uid://v344mbruwk5s" path="res://Sprites/Bleeg/L-bleeg.png" id="2_ug08o"]
 [ext_resource type="Texture2D" uid="uid://0ckvcfx5sy7c" path="res://Sprites/Bleeg/L-bleeg2.png" id="3_iax02"]
 [ext_resource type="Texture2D" uid="uid://bngtomjoinuwp" path="res://Sprites/Bleeg/bleeg2.png" id="5_ug08o"]
@@ -172,6 +172,6 @@ modulate = Color(0.6, 0.572549, 0.184314, 1)
 position = Vector2(8, 4)
 sprite_frames = SubResource("SpriteFrames_ntc4x")
 
-[connection signal="send_health" from="." to="HP" method="_on_bleeg_send_health"]
+[connection signal="send_health" from="." to="HP" method="_on_send_health"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
 [connection signal="body_exited" from="Collision" to="." method="_on_collision_body_exited"]

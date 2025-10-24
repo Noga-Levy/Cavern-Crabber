@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bavq4r2a1qh6m" path="res://Scripts/enemy_warble.gd" id="1_qh6vf"]
 [ext_resource type="Texture2D" uid="uid://cu81fj773v10a" path="res://Sprites/Warble/warble_left.png" id="2_d4qjl"]
-[ext_resource type="Script" uid="uid://bfrg14qxccwtp" path="res://Scripts/enemyHP.gd" id="3_2q77u"]
+[ext_resource type="Script" uid="uid://bfrg14qxccwtp" path="res://Scripts/warbleHP.gd" id="3_2q77u"]
 [ext_resource type="Texture2D" uid="uid://blwg1g2ly6gq8" path="res://Sprites/Warble/lwarble-attack.png" id="3_aakr0"]
 [ext_resource type="Texture2D" uid="uid://d3s2lvk1ck1ys" path="res://Sprites/Warble/warble_right.png" id="3_erejn"]
 [ext_resource type="Texture2D" uid="uid://dd32cg3my04iu" path="res://Sprites/Warble/rwarble-attack.png" id="5_0kxo8"]

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bcpgaadrjg65b" path="res://Sprites/limmi/limmi-without-ball/left2.png" id="3_yoo01"]
 [ext_resource type="Texture2D" uid="uid://blgffaegqmady" path="res://Sprites/limmi/limmi-without-ball/right1.png" id="4_owvit"]
 [ext_resource type="Texture2D" uid="uid://dvlaim68xjjo2" path="res://Sprites/limmi/limmi-without-ball/right2.png" id="5_gkseq"]
-[ext_resource type="Script" uid="uid://4mgbf2u1mhep" path="res://Scripts/limmi-HP.gd" id="6_7k6pd"]
+[ext_resource type="Script" uid="uid://cckcaruqxv1bi" path="res://Scripts/enemyHP.gd" id="6_qppbo"]
 [ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="7_28e0r"]
 [ext_resource type="AudioStream" uid="uid://b75h12dj7lowv" path="res://Audio/limmi-attack/bite-potato-chips-83946 (mp3cut.net).mp3" id="8_2e5c5"]
 
@@ -133,7 +133,7 @@ scale = Vector2(0.667, 0.667)
 theme_override_colors/default_color = Color(0.999331, 0.336299, 0.271501, 1)
 bbcode_enabled = true
 horizontal_alignment = 1
-script = ExtResource("6_7k6pd")
+script = ExtResource("6_qppbo")
 
 [node name="damaged" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -148,6 +148,6 @@ frame_progress = 1.0
 stream = ExtResource("8_2e5c5")
 volume_db = 15.0
 
-[connection signal="send_health" from="." to="HP" method="_on_limmi_send_health"]
+[connection signal="send_health" from="." to="HP" method="_on_send_health"]
 [connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
 [connection signal="body_exited" from="Collision" to="." method="_on_collision_body_exited"]

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://fb27xi6srmfd" path="res://Sprites/Ghosts/ghost-right.png" id="5_168xi"]
 [ext_resource type="Texture2D" uid="uid://cd76gcpdsu3rj" path="res://Sprites/Ghosts/ghost-right2.png" id="6_bo0n1"]
 [ext_resource type="Texture2D" uid="uid://b6sjtbwl5l8p" path="res://Sprites/Ghosts/ghost-attackR.png" id="7_hif3r"]
-[ext_resource type="Script" uid="uid://cckcaruqxv1bi" path="res://Scripts/bleegHP.gd" id="8_lwt6e"]
+[ext_resource type="Script" uid="uid://cckcaruqxv1bi" path="res://Scripts/enemyHP.gd" id="8_lwt6e"]
 [ext_resource type="Texture2D" uid="uid://baty8revcoyim" path="res://Sprites/damage-spritesheet.png" id="9_ttgpu"]
 [ext_resource type="AudioStream" uid="uid://cjn7p17sybp72" path="res://Audio/ghost-attack.mp3" id="10_m4yw0"]
 
@@ -168,7 +168,7 @@ bus = &"ReverbBus"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Comfort-zone"]
 shape = SubResource("CircleShape2D_m4yw0")
 
-[connection signal="send_health" from="." to="HP" method="_on_bleeg_send_health"]
+[connection signal="send_health" from="." to="HP" method="_on_send_health"]
 [connection signal="body_entered" from="Collisions" to="." method="_on_collision_body_entered"]
 [connection signal="body_exited" from="Collisions" to="." method="_on_collision_body_exited"]
 [connection signal="body_entered" from="Comfort-zone" to="." method="_on_comfortzone_body_entered"]
