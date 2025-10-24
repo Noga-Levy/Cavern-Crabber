@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://3f8h3b32728d"]
+[gd_scene load_steps=11 format=3 uid="uid://3f8h3b32728d"]
 
 [ext_resource type="Texture2D" uid="uid://cvjgiqs8gwerj" path="res://Sprites/main-menu.png" id="1_r18jl"]
+[ext_resource type="Script" uid="uid://xqqtter2nio2" path="res://Scripts/scrolling-credits.gd" id="2_803yc"]
 [ext_resource type="Texture2D" uid="uid://kxaw0a2upjmr" path="res://Sprites/white.png" id="2_gryuy"]
 [ext_resource type="Script" uid="uid://dg48j47wny5hf" path="res://Scripts/return-to-menu.gd" id="3_1bamb"]
 [ext_resource type="Texture2D" uid="uid://dt8qctfjajhib" path="res://Sprites/border.png" id="3_ccovl"]
@@ -36,16 +37,25 @@ horizontal_alignment = 1
 offset_left = 19.0
 offset_top = -171.0
 offset_right = 471.0
-offset_bottom = 214.0
+offset_bottom = 141.0
 bbcode_enabled = true
-text = "[font_size=15]Code - Noga Levy
+text = "[font_size=16][color=pink]Use arrow keys to scroll up/down[/color]
+
+Code - Noga Levy
+
 
 Assets
 Ground - AI, [b]heavely[/b] editted by Noga Levy
+
 All other assets made by Noga levy
 
-Main Font - Silkscreen, from Google fonts
-Pearl font - Jacquard 12, from Google fonts
+
+Fonts
+Main Font - Silkscreen
+Pearl font - Jacquard 12
+
+All fonts are from the Google Fonts selection
+
 
 Audio
 Menu - Noga levy
@@ -53,9 +63,18 @@ Crab attack - Cisco
 Crab dodge - Cisco
 Scroll music - Cisco
 Warble and Bleeg attacks - Cisco
+
 All other audio is from the Pixabay selection
+
+
+Extra thanks to:
+All the lovely souls on Hack Club's #1250-yaps channel ~ thank you so much for keeping me going <3
+
+The organizers of the Shiba game jam ~ thank you for making this possible!
+
 [/font_size]"
 horizontal_alignment = 1
+script = ExtResource("2_803yc")
 
 [node name="Go-back" type="Area2D" parent="."]
 modulate = Color(0.584314, 1, 1, 1)
