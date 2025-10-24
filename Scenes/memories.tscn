@@ -405,7 +405,6 @@ vertical_alignment = 1
 texture = ExtResource("9_erske")
 
 [node name="Frame3-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
-visible = false
 texture = ExtResource("19_xgqd1")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame3-memory3"]
@@ -415,7 +414,7 @@ offset_right = -3.99998
 offset_bottom = -30.0
 rotation = -0.250753
 bbcode_enabled = true
-text = "[color=black]You said you could save her![/color]"
+text = "[color=black]You said she would survive![/color]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -736,9 +735,82 @@ I need her so, so badly.[/color]
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Sad-crab2" type="Sprite2D" parent="Memory5" groups=["frame"]]
+texture = ExtResource("33_4qtpt")
+
+[node name="Bunny-bubble-down" type="Sprite2D" parent="Memory5/Sad-crab2"]
+position = Vector2(100, 187)
+rotation = 3.14159
+scale = Vector2(-1.255, 1.255)
+texture = ExtResource("32_6by2m")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory5/Sad-crab2"]
+offset_left = -364.0
+offset_top = -116.0
+offset_right = 84.0
+offset_bottom = 42.0
+bbcode_enabled = true
+text = "[font_size=25][color=black]Does that make me evil?[/color]
+[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Map-vs-wasu" type="Sprite2D" parent="Memory5" groups=["frame"]]
-visible = false
 texture = ExtResource("33_6by2m")
+
+[node name="Map-vs-wasu2" type="Sprite2D" parent="Memory5" groups=["frame"]]
+texture = ExtResource("33_6by2m")
+
+[node name="Mystery-person-speech-bubble" type="Sprite2D" parent="Memory5/Map-vs-wasu2"]
+position = Vector2(-9, 6)
+scale = Vector2(-1, 1)
+texture = ExtResource("6_l0bc8")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory5/Map-vs-wasu2"]
+offset_left = -399.0
+offset_top = -247.0
+offset_right = 365.0
+offset_bottom = -90.0
+bbcode_enabled = true
+text = "[color=black][font_size=30]... Am I evil?[font_size=30][color=black]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="zoomed-in-mushroom2" type="Sprite2D" parent="Memory5" groups=["frame"]]
+visible = false
+texture = ExtResource("23_nsfae")
+
+[node name="Crab-talk2" type="Sprite2D" parent="Memory5/zoomed-in-mushroom2"]
+position = Vector2(-9, 54)
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("5_erske")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory5/zoomed-in-mushroom2/Crab-talk2"]
+offset_left = -307.0
+offset_top = 94.0
+offset_right = 446.0
+offset_bottom = 218.0
+bbcode_enabled = true
+text = "[color=black][font_size=27]That's... that's when I decided to forget everything, isn't it?[/font_size][/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Crab-talk2" type="Sprite2D" parent="Memory5" groups=["frame"]]
+position = Vector2(-9, 54)
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("5_erske")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Memory5/Crab-talk2"]
+offset_left = -307.0
+offset_top = 94.0
+offset_right = 446.0
+offset_bottom = 218.0
+bbcode_enabled = true
+text = "[color=black][font_size=27]That's when I finally figured it out. 
+
+Huh.[/font_size][/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false

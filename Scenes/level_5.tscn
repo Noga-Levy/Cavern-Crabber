@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://df2e3nhs4i4iy"]
+[gd_scene load_steps=16 format=3 uid="uid://df2e3nhs4i4iy"]
 
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_26dk1"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_hvaeu"]
@@ -7,11 +7,14 @@
 [ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/halo_movement.gd" id="4_ip5ew"]
 [ext_resource type="PackedScene" uid="uid://b0blo6tjknk8r" path="res://Scenes/memories.tscn" id="5_hproo"]
 [ext_resource type="Script" uid="uid://djvnvro0gpwe6" path="res://Scripts/opening-wall.gd" id="6_mb3x2"]
-[ext_resource type="Texture2D" uid="uid://dkgtplsknu0le" path="res://Sprites/Various Ground Sprites/broken-block.png" id="7_02esc"]
+[ext_resource type="Texture2D" uid="uid://dkgtplsknu0le" path="res://Sprites/Various Ground Sprites/Level-5/broken-block.png" id="7_02esc"]
 [ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Other/Jacquard12-Regular.ttf" id="9_gfyxx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ip5ew"]
-size = Vector2(100, 2201)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68k2k"]
+size = Vector2(100, 2919)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8l1h"]
+size = Vector2(100, 2919)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfwg7"]
 size = Vector2(717, 101)
@@ -41,13 +44,13 @@ script = ExtResource("4_ip5ew")
 position = Vector2(-14, -28)
 
 [node name="White" type="Sprite2D" parent="Node2D"]
-position = Vector2(509, -738)
-scale = Vector2(1, 44)
+position = Vector2(509, -1097)
+scale = Vector2(1, 58.36)
 texture = ExtResource("3_ihmlp")
 
 [node name="White2" type="Sprite2D" parent="Node2D"]
-position = Vector2(-308, -738)
-scale = Vector2(1, 44)
+position = Vector2(-308, -1097)
+scale = Vector2(1, 58.36)
 texture = ExtResource("3_ihmlp")
 
 [node name="White3" type="Sprite2D" parent="Node2D"]
@@ -56,16 +59,22 @@ rotation = 1.5708
 scale = Vector2(1, 18.331)
 texture = ExtResource("3_ihmlp")
 
+[node name="White4" type="Sprite2D" parent="Node2D"]
+position = Vector2(100.79, -2554)
+rotation = 1.5708
+scale = Vector2(1, 18.331)
+texture = ExtResource("3_ihmlp")
+
 [node name="Collisions" type="StaticBody2D" parent="Node2D"]
 script = ExtResource("6_mb3x2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Collisions"]
-position = Vector2(-308, -737.5)
-shape = SubResource("RectangleShape2D_ip5ew")
+position = Vector2(-308, -1096.5)
+shape = SubResource("RectangleShape2D_68k2k")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Collisions"]
-position = Vector2(509, -737.5)
-shape = SubResource("RectangleShape2D_ip5ew")
+position = Vector2(509, -1096.5)
+shape = SubResource("RectangleShape2D_r8l1h")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Collisions"]
 position = Vector2(100.5, 312.5)
@@ -96,6 +105,10 @@ texture = ExtResource("3_ihmlp")
 [node name="Opening-wall" type="CollisionShape2D" parent="Node2D/Collisions"]
 position = Vector2(95, -1117)
 shape = SubResource("RectangleShape2D_hproo")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Collisions"]
+position = Vector2(100.5, -2555)
+shape = SubResource("RectangleShape2D_xfwg7")
 
 [node name="Memories" parent="." instance=ExtResource("5_hproo")]
 position = Vector2(80, -1002)

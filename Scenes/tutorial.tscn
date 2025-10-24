@@ -81,7 +81,7 @@ offset_right = 406.0
 offset_bottom = 232.0
 bbcode_enabled = true
 text = "[font_size=20]I'll be honest, I am extremely. Do I know you? Is my name akamo?
-I woke up with a purple bottle in my right claw, and two notes in my left. One said to come here. Do you have any idea what happened?
+I woke up with a purple bottle in my right claw and a map in my left. Your shop was on the map, so I figured I should come here. Any idea what happened?
 [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -178,7 +178,7 @@ offset_top = 87.0
 offset_right = 406.0
 offset_bottom = 220.0
 bbcode_enabled = true
-text = "[font_size=25]That doesn't sound good... But it does explain the first note. It told me to go here if I was confused.[/font_size]"
+text = "[font_size=25]That doesn't sound good... But it does explain why I can't remember anything before this morning.[/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -197,8 +197,7 @@ offset_top = -258.0
 offset_right = 435.0
 offset_bottom = -6.0
 bbcode_enabled = true
-text = "[font_size=30]And what did the second note say?
-[/font_size]"
+text = "[font_size=30]And what did the map say? Where did it lead to?[/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
