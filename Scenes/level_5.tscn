@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://df2e3nhs4i4iy"]
+[gd_scene load_steps=17 format=3 uid="uid://df2e3nhs4i4iy"]
 
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_26dk1"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_hvaeu"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://djvnvro0gpwe6" path="res://Scripts/opening-wall.gd" id="6_mb3x2"]
 [ext_resource type="Texture2D" uid="uid://dkgtplsknu0le" path="res://Sprites/Various Ground Sprites/Level-5/broken-block.png" id="7_02esc"]
 [ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Other/Jacquard12-Regular.ttf" id="9_gfyxx"]
+[ext_resource type="Texture2D" uid="uid://ojp302jkewjx" path="res://Sprites/Various Ground Sprites/Level-5/cracks.png" id="10_xfwg7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68k2k"]
 size = Vector2(100, 2919)
@@ -42,6 +43,12 @@ script = ExtResource("4_ip5ew")
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(-14, -28)
+
+[node name="Cracks" type="Sprite2D" parent="Node2D"]
+texture_filter = 1
+position = Vector2(118, -1910)
+scale = Vector2(11.5, 11.5)
+texture = ExtResource("10_xfwg7")
 
 [node name="White" type="Sprite2D" parent="Node2D"]
 position = Vector2(509, -1097)
