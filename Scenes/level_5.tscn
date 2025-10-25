@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://df2e3nhs4i4iy"]
+[gd_scene load_steps=18 format=3 uid="uid://df2e3nhs4i4iy"]
 
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_26dk1"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_hvaeu"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://djvnvro0gpwe6" path="res://Scripts/opening-wall.gd" id="6_mb3x2"]
 [ext_resource type="Texture2D" uid="uid://dkgtplsknu0le" path="res://Sprites/Various Ground Sprites/Level-5/broken-block.png" id="7_02esc"]
 [ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Other/Jacquard12-Regular.ttf" id="9_gfyxx"]
+[ext_resource type="Texture2D" uid="uid://dq23lwx10qvvv" path="res://Sprites/pearl.png" id="9_r8l1h"]
 [ext_resource type="Texture2D" uid="uid://ojp302jkewjx" path="res://Sprites/Various Ground Sprites/Level-5/cracks.png" id="10_xfwg7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68k2k"]
@@ -116,6 +117,10 @@ shape = SubResource("RectangleShape2D_hproo")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Collisions"]
 position = Vector2(100.5, -2555)
 shape = SubResource("RectangleShape2D_xfwg7")
+
+[node name="Pearl" type="Sprite2D" parent="Node2D"]
+position = Vector2(90, -2414)
+texture = ExtResource("9_r8l1h")
 
 [node name="Memories" parent="." instance=ExtResource("5_hproo")]
 position = Vector2(80, -1002)

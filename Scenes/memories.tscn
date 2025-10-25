@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b0blo6tjknk8r"]
+[gd_scene load_steps=40 format=3 uid="uid://b0blo6tjknk8r"]
 
 [ext_resource type="Texture2D" uid="uid://cda1vqq2hve7h" path="res://Sprites/memories/memory1.png" id="1_iemk0"]
 [ext_resource type="Script" uid="uid://cktumpavcr3e0" path="res://Scripts/memories.gd" id="1_oqlbk"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://c5gjmvdqchq0n" path="res://Sprites/tutorial/bunny-bubble-down.png" id="32_6by2m"]
 [ext_resource type="Texture2D" uid="uid://cef0y0atq0d7l" path="res://Sprites/memories/memory5/sad-crab.png" id="33_4qtpt"]
 [ext_resource type="Texture2D" uid="uid://ciwblpcbgroqi" path="res://Sprites/memories/memory5/map-vs-wasu.png" id="33_6by2m"]
+[ext_resource type="Texture2D" uid="uid://dexa2bte8ddif" path="res://Sprites/memories/memory5/mushroom-zoomed-in-m5.png" id="33_lwews"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u2rq7"]
 animations = [{
@@ -683,7 +684,7 @@ visible = false
 z_index = 11
 
 [node name="zoomed-in-mushroom" type="Sprite2D" parent="Memory5" groups=["frame"]]
-texture = ExtResource("23_nsfae")
+texture = ExtResource("33_lwews")
 
 [node name="Crab-talk" type="Sprite2D" parent="Memory5" groups=["frame"]]
 position = Vector2(-9, 54)
@@ -778,7 +779,7 @@ vertical_alignment = 1
 
 [node name="zoomed-in-mushroom2" type="Sprite2D" parent="Memory5" groups=["frame"]]
 visible = false
-texture = ExtResource("23_nsfae")
+texture = ExtResource("33_lwews")
 
 [node name="Crab-talk2" type="Sprite2D" parent="Memory5/zoomed-in-mushroom2"]
 position = Vector2(-9, 54)
