@@ -1,8 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://4caxopcxwlj4"]
+[gd_scene load_steps=16 format=3 uid="uid://4caxopcxwlj4"]
 
 [ext_resource type="Texture2D" uid="uid://dq23lwx10qvvv" path="res://Sprites/Pearl/pearl.png" id="1_mxq4d"]
+[ext_resource type="Script" uid="uid://8yhuwtq8gd1t" path="res://Scripts/pearl.gd" id="1_ysmyw"]
 [ext_resource type="Texture2D" uid="uid://c3281kbdmdblv" path="res://Sprites/Pearl/Pearl-highlight.png" id="2_vk3tp"]
 [ext_resource type="Texture2D" uid="uid://yxw5afdsdjgg" path="res://Sprites/Pearl/pearl-ground.png" id="3_vk3tp"]
+[ext_resource type="Texture2D" uid="uid://c014p180k538u" path="res://Sprites/Pearl/pearl-spritesheet.png" id="4_5cfue"]
+[ext_resource type="Texture2D" uid="uid://k4s16hc3adpm" path="res://Sprites/Pearl/pearl-for-text.png" id="5_ysmyw"]
+[ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Other/Jacquard12-Regular.ttf" id="6_54x0m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dnrxm"]
 animations = [{
@@ -26,7 +30,51 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_mxq4d"]
 radius = 43.0116
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvkay"]
+atlas = ExtResource("4_5cfue")
+region = Rect2(0, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xp0hm"]
+atlas = ExtResource("4_5cfue")
+region = Rect2(960, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cng1y"]
+atlas = ExtResource("4_5cfue")
+region = Rect2(1920, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnuu5"]
+atlas = ExtResource("4_5cfue")
+region = Rect2(2880, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs0bx"]
+atlas = ExtResource("4_5cfue")
+region = Rect2(3840, 0, 960, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7kxkd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvkay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xp0hm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cng1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnuu5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cs0bx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_ysmyw")
 
 [node name="Pearl" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dnrxm")
@@ -39,6 +87,44 @@ position = Vector2(-3, -3)
 shape = SubResource("CircleShape2D_mxq4d")
 
 [node name="Talk" type="Node2D" parent="."]
+visible = false
 
 [node name="Pearl-ground" type="Sprite2D" parent="Talk"]
 texture = ExtResource("3_vk3tp")
+
+[node name="Animation-for-text" type="AnimatedSprite2D" parent="Talk"]
+sprite_frames = SubResource("SpriteFrames_7kxkd")
+frame = 4
+frame_progress = 0.612556
+
+[node name="Pearl-for-text" type="Sprite2D" parent="Talk"]
+texture = ExtResource("5_ysmyw")
+
+[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text"]
+visible = false
+offset_left = -250.0
+offset_top = -198.0
+offset_right = 252.0
+offset_bottom = -89.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=80]Hello Akamo[/font_size]"
+horizontal_alignment = 1
+
+[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text"]
+offset_left = -502.0
+offset_top = -198.0
+offset_right = 502.0
+offset_bottom = -89.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=80]Lovely to see you alive[/font_size]"
+horizontal_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.2, 1.2)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]
