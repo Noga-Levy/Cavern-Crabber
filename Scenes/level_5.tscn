@@ -132,9 +132,11 @@ text = "[font_size=50]I offer you a boon
 before you meet me, Akamo.[/font_size]"
 horizontal_alignment = 1
 
-[node name="Node2D2" parent="." instance=ExtResource("11_r8l1h")]
+[node name="Pearl" parent="." instance=ExtResource("11_r8l1h")]
 position = Vector2(57, -2428)
 
 [connection signal="pause" from="Memories" to="." method="_on_mush_pause"]
 [connection signal="unpause" from="Memories" to="." method="_on_mush_unpause"]
 [connection signal="unpause" from="Memories" to="Node2D/Collisions" method="_on_memories_unpause"]
+[connection signal="pause" from="Pearl" to="." method="_on_mush_pause"]
+[connection signal="unpause" from="Pearl" to="." method="_on_mush_unpause"]

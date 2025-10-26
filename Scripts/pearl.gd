@@ -33,18 +33,29 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _process(_delta: float) -> void:
 	if selected and Input.is_action_just_released("space"):
+		print("play pearl")
 		emit_signal("pause")
 		play_discussion()
+	
+	if $"Talk/Animation-for-text".is_visible_in_tree():
+		$"Talk/Animation-for-text".play("default")
 
 
 func play_discussion():
+	$Talk.show()
+	$Camera2D.make_current()
 	for frame in frames:
 		frame.show()
-		if frame is AnimatedSprite2D:
-			frame.play()
 		
+		await get_tree().create_timer(5).timeout
+		print("next frame")
+		if frame is RichTextLabel:
+			frame.hide()
+	
+	$Talk.hide()
+	emit_signal("unpause")
 
 
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_released("arrow-down"):
 		emit_signal("down_pressed")
