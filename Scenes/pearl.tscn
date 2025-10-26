@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://4caxopcxwlj4"]
+
+[ext_resource type="Texture2D" uid="uid://dq23lwx10qvvv" path="res://Sprites/Pearl/pearl.png" id="1_mxq4d"]
+[ext_resource type="Texture2D" uid="uid://c3281kbdmdblv" path="res://Sprites/Pearl/Pearl-highlight.png" id="2_vk3tp"]
+[ext_resource type="Texture2D" uid="uid://yxw5afdsdjgg" path="res://Sprites/Pearl/pearl-ground.png" id="3_vk3tp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dnrxm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mxq4d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vk3tp")
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mxq4d"]
+radius = 43.0116
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Pearl" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dnrxm")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, -3)
+shape = SubResource("CircleShape2D_mxq4d")
+
+[node name="Talk" type="Node2D" parent="."]
+
+[node name="Pearl-ground" type="Sprite2D" parent="Talk"]
+texture = ExtResource("3_vk3tp")

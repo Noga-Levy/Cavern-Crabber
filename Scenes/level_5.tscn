@@ -9,8 +9,8 @@
 [ext_resource type="Script" uid="uid://djvnvro0gpwe6" path="res://Scripts/opening-wall.gd" id="6_mb3x2"]
 [ext_resource type="Texture2D" uid="uid://dkgtplsknu0le" path="res://Sprites/Various Ground Sprites/Level-5/broken-block.png" id="7_02esc"]
 [ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Other/Jacquard12-Regular.ttf" id="9_gfyxx"]
-[ext_resource type="Texture2D" uid="uid://dq23lwx10qvvv" path="res://Sprites/pearl.png" id="9_r8l1h"]
 [ext_resource type="Texture2D" uid="uid://ojp302jkewjx" path="res://Sprites/Various Ground Sprites/Level-5/cracks.png" id="10_xfwg7"]
+[ext_resource type="PackedScene" uid="uid://4caxopcxwlj4" path="res://Scenes/pearl.tscn" id="11_r8l1h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68k2k"]
 size = Vector2(100, 2919)
@@ -118,10 +118,6 @@ shape = SubResource("RectangleShape2D_hproo")
 position = Vector2(100.5, -2555)
 shape = SubResource("RectangleShape2D_xfwg7")
 
-[node name="Pearl" type="Sprite2D" parent="Node2D"]
-position = Vector2(90, -2414)
-texture = ExtResource("9_r8l1h")
-
 [node name="Memories" parent="." instance=ExtResource("5_hproo")]
 position = Vector2(80, -1002)
 
@@ -135,6 +131,9 @@ bbcode_enabled = true
 text = "[font_size=50]I offer you a boon
 before you meet me, Akamo.[/font_size]"
 horizontal_alignment = 1
+
+[node name="Node2D2" parent="." instance=ExtResource("11_r8l1h")]
+position = Vector2(57, -2428)
 
 [connection signal="pause" from="Memories" to="." method="_on_mush_pause"]
 [connection signal="unpause" from="Memories" to="." method="_on_mush_unpause"]

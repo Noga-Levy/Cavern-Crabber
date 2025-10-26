@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dq23lwx10qvvv"
-path="res://.godot/imported/pearl.png-e6a217e90141909ce1de10cc29d71f93.ctex"
+path="res://.godot/imported/pearl.png-8776f765d3f164962cfbaef6760a16a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/pearl.png"
-dest_files=["res://.godot/imported/pearl.png-e6a217e90141909ce1de10cc29d71f93.ctex"]
+source_file="res://Sprites/Pearl/pearl.png"
+dest_files=["res://.godot/imported/pearl.png-8776f765d3f164962cfbaef6760a16a9.ctex"]
 
 [params]
 
