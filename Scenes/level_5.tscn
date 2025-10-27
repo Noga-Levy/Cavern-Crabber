@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://df2e3nhs4i4iy"]
+[gd_scene load_steps=19 format=3 uid="uid://df2e3nhs4i4iy"]
 
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_26dk1"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_hvaeu"]
@@ -11,6 +11,7 @@
 [ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Other/Jacquard12-Regular.ttf" id="9_gfyxx"]
 [ext_resource type="Texture2D" uid="uid://ojp302jkewjx" path="res://Sprites/Various Ground Sprites/Level-5/cracks.png" id="10_xfwg7"]
 [ext_resource type="PackedScene" uid="uid://4caxopcxwlj4" path="res://Scenes/pearl.tscn" id="11_r8l1h"]
+[ext_resource type="AudioStream" uid="uid://c5137ldyyyg4w" path="res://Audio/bg-music/kim-lightyear-dolls-and-candy.mp3" id="12_68k2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68k2k"]
 size = Vector2(100, 2919)
@@ -41,6 +42,10 @@ position = Vector2(1, 3)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_ihmlp")
 script = ExtResource("4_ip5ew")
+
+[node name="level5-bg-music" type="AudioStreamPlayer" parent="Cloudy-undersprite"]
+stream = ExtResource("12_68k2k")
+autoplay = true
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(-14, -28)

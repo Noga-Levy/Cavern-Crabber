@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://4caxopcxwlj4"]
+[gd_scene load_steps=17 format=3 uid="uid://4caxopcxwlj4"]
 
 [ext_resource type="Texture2D" uid="uid://dq23lwx10qvvv" path="res://Sprites/Pearl/pearl.png" id="1_mxq4d"]
 [ext_resource type="Script" uid="uid://8yhuwtq8gd1t" path="res://Scripts/pearl.gd" id="1_ysmyw"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c014p180k538u" path="res://Sprites/Pearl/pearl-spritesheet.png" id="4_5cfue"]
 [ext_resource type="Texture2D" uid="uid://k4s16hc3adpm" path="res://Sprites/Pearl/pearl-for-text.png" id="5_ysmyw"]
 [ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Other/Jacquard12-Regular.ttf" id="6_54x0m"]
+[ext_resource type="AudioStream" uid="uid://c5137ldyyyg4w" path="res://Audio/bg-music/kim-lightyear-dolls-and-candy.mp3" id="8_54x0m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dnrxm"]
 animations = [{
@@ -127,6 +128,10 @@ horizontal_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.2, 1.2)
+
+[node name="BGmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_54x0m")
+bus = &"ReverbBus"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]

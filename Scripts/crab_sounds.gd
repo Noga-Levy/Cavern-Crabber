@@ -1,7 +1,10 @@
 extends AnimatedSprite2D
 
 func _ready() -> void:
-	pass
+	if Global.level != 5:
+		$"bg-music".play()
+	else:
+		pass
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("attack"):
