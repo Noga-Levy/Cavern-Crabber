@@ -8,9 +8,6 @@ signal down_pressed()
 
 var frames = []
 
-var animation_complete = false
-var down_arrow_pressed = false
-
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -49,12 +46,11 @@ func play_discussion():
 		frame.show()
 		
 		if frame is AnimatedSprite2D:
-			connect("animation_finished", turn_animation_true())
-			connect("down_pressed", turn_down_arrow_true())
 			frame.play()
-			await (animation_complete or down_arrow_pressed)
+			await down_pressed # or animation complete, but I'll add that later
+		else:
+			await down_pressed
 		
-		await get_tree().create_timer(1).timeout
 		print("next frame")
 		if frame is RichTextLabel:
 			frame.hide()
@@ -66,11 +62,3 @@ func play_discussion():
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_released("arrow-down"):
 		emit_signal("down_pressed")
-
-
-func turn_animation_true():
-	animation_complete = true
-
-
-func turn_down_arrow_true():
-	down_arrow_pressed = true

@@ -68,12 +68,13 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cs0bx")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }]
 
 [node name="Pearl" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_ysmyw")
 
 [node name="Pearl" type="AnimatedSprite2D" parent="."]
