@@ -8,7 +8,7 @@ signal down_pressed()
 
 var frames = []
 
-var signal_sent = false
+signal signal_sent()
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -49,12 +49,16 @@ func play_discussion():
 		
 		if not frame.is_in_group("skippable"):
 			if frame is AnimatedSprite2D:
+				if not down_pressed.is_connected(signal_done) and not frame.animation_finished.is_connected(signal_done):
+					frame.animation_finished.connect(signal_done)
+					down_pressed.connect(signal_done)
+				
 				frame.play()
 				
-				await down_pressed # or animation complete, but I'll add that later
+				await signal_sent
+				
 			else:
 				await down_pressed
-		
 		
 		print("next frame")
 		if frame is RichTextLabel:
@@ -72,4 +76,4 @@ func _input(_event: InputEvent) -> void:
 
 
 func signal_done():
-	signal_sent = true
+	emit_signal("signal_sent")
