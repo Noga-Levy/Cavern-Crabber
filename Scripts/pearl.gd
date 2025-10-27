@@ -8,15 +8,8 @@ signal down_pressed()
 
 var frames = []
 
-
-func _ready() -> void:
-	$Talk.hide()
-	for child in $Talk.get_children(true):
-		child.hide()
-		frames.append(child)
-		for grandchild in child.get_children():
-			grandchild.hide()
-			frames.append(grandchild)
+var animation_complete = false
+var down_arrow_pressed = false
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -42,12 +35,26 @@ func _process(_delta: float) -> void:
 
 
 func play_discussion():
+	$Talk.hide()
+	for child in $Talk.get_children(true):
+		child.hide()
+		frames.append(child)
+		for grandchild in child.get_children():
+			grandchild.hide()
+			frames.append(grandchild)
+	
 	$Talk.show()
 	$Camera2D.make_current()
 	for frame in frames:
 		frame.show()
 		
-		await get_tree().create_timer(5).timeout
+		if frame is AnimatedSprite2D:
+			connect("animation_finished", turn_animation_true())
+			connect("down_pressed", turn_down_arrow_true())
+			frame.play()
+			await (animation_complete or down_arrow_pressed)
+		
+		await get_tree().create_timer(1).timeout
 		print("next frame")
 		if frame is RichTextLabel:
 			frame.hide()
@@ -59,3 +66,11 @@ func play_discussion():
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_released("arrow-down"):
 		emit_signal("down_pressed")
+
+
+func turn_animation_true():
+	animation_complete = true
+
+
+func turn_down_arrow_true():
+	down_arrow_pressed = true

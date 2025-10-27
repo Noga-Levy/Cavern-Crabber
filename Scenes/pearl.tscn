@@ -87,6 +87,7 @@ position = Vector2(-3, -3)
 shape = SubResource("CircleShape2D_mxq4d")
 
 [node name="Talk" type="Node2D" parent="."]
+visible = false
 
 [node name="Pearl-ground" type="Sprite2D" parent="Talk"]
 texture = ExtResource("3_vk3tp")
@@ -94,6 +95,7 @@ texture = ExtResource("3_vk3tp")
 [node name="Animation-for-text" type="AnimatedSprite2D" parent="Talk"]
 sprite_frames = SubResource("SpriteFrames_7kxkd")
 autoplay = "default"
+frame_progress = 0.055885
 
 [node name="Pearl-for-text" type="Sprite2D" parent="Talk"]
 visible = false
