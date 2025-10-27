@@ -8,6 +8,14 @@ signal down_pressed()
 
 var frames = []
 
+func _ready() -> void:
+	$Talk.hide()
+	for child in $Talk.get_children(true):
+		child.hide()
+		frames.append(child)
+		for grandchild in child.get_children():
+			grandchild.hide()
+			frames.append(grandchild)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -26,30 +34,22 @@ func _process(_delta: float) -> void:
 		print("play pearl")
 		emit_signal("pause")
 		play_discussion()
-	
-	if $"Talk/Animation-for-text".is_visible_in_tree():
-		$"Talk/Animation-for-text".play("default")
 
 
 func play_discussion():
-	$Talk.hide()
-	for child in $Talk.get_children(true):
-		child.hide()
-		frames.append(child)
-		for grandchild in child.get_children():
-			grandchild.hide()
-			frames.append(grandchild)
 	
 	$Talk.show()
 	$Camera2D.make_current()
 	for frame in frames:
 		frame.show()
 		
-		if frame is AnimatedSprite2D:
-			frame.play()
-			await down_pressed # or animation complete, but I'll add that later
-		else:
-			await down_pressed
+		if not frame.is_in_group("skippable"):
+			if frame is AnimatedSprite2D:
+				frame.play()
+				await down_pressed # or animation complete, but I'll add that later
+			else:
+				await down_pressed
+		
 		
 		print("next frame")
 		if frame is RichTextLabel:

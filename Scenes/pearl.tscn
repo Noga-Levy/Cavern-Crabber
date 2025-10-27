@@ -98,7 +98,7 @@ sprite_frames = SubResource("SpriteFrames_7kxkd")
 autoplay = "default"
 frame_progress = 0.055885
 
-[node name="Pearl-for-text" type="Sprite2D" parent="Talk"]
+[node name="Pearl-for-text" type="Sprite2D" parent="Talk" groups=["skippable"]]
 visible = false
 texture = ExtResource("5_ysmyw")
 
