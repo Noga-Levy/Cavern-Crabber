@@ -50,8 +50,8 @@ scale = Vector2(1.30172, 1.30172)
 texture = ExtResource("7_8pujc")
 
 [node name="level5" type="Sprite2D" parent="Enemy_Img"]
-position = Vector2(-4, -112)
-scale = Vector2(0.745, 0.745)
+position = Vector2(-4, -116)
+scale = Vector2(0.565, 0.565)
 texture = ExtResource("10_nq8kp")
 
 [node name="Enemy_info" type="RichTextLabel" parent="."]
