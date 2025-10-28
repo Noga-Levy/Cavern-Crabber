@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://fvhhjkl8kl1b"]
+[gd_scene load_steps=11 format=3 uid="uid://fvhhjkl8kl1b"]
 
 [ext_resource type="Texture2D" uid="uid://cwkfbwt82p3r6" path="res://Sprites/Various Ground Sprites/ground-in-between-levels.png" id="1_jg8b8"]
 [ext_resource type="Script" uid="uid://dfdept84bs1l7" path="res://Scripts/enemy_scroll.gd" id="1_wweiw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://da3yu671cxye1" path="res://Sprites/limmi/lim-l.png" id="5_nq8kp"]
 [ext_resource type="Texture2D" uid="uid://ck736visewhxx" path="res://Sprites/Relu/360relu.png" id="6_jr8ch"]
 [ext_resource type="Texture2D" uid="uid://b6sjtbwl5l8p" path="res://Sprites/Ghosts/ghost-attackR.png" id="7_8pujc"]
+[ext_resource type="Texture2D" uid="uid://vkm2b0psps45" path="res://Sprites/question-marks.png" id="10_nq8kp"]
 
 [node name="Scroll_Enemy_Info" type="Node2D"]
 script = ExtResource("1_wweiw")
@@ -47,6 +48,11 @@ texture = ExtResource("6_jr8ch")
 position = Vector2(200, 1.72415)
 scale = Vector2(1.30172, 1.30172)
 texture = ExtResource("7_8pujc")
+
+[node name="level5" type="Sprite2D" parent="Enemy_Img"]
+position = Vector2(-4, -112)
+scale = Vector2(0.745, 0.745)
+texture = ExtResource("10_nq8kp")
 
 [node name="Enemy_info" type="RichTextLabel" parent="."]
 offset_left = -103.0

@@ -13,7 +13,7 @@ var blink_increments = 101
 func _ready() -> void:
 	Global.level += 1
 	
-	var level_colors = {1 : "ffffff", 2 : "95ffff", 3 : "fda9a6", 4 : "ffff50"}
+	var level_colors = {1 : "ffffff", 2 : "95ffff", 3 : "fda9a6", 4 : "ffff50", 5 : "ffffff35"}
 	$"Ground-in-between-levels".modulate = level_colors[Global.level]
 	
 	$Level_complete.text = level_done
@@ -29,7 +29,7 @@ func _ready() -> void:
 	Global.crab_SPEED = 500 + (Global.level - 1) * 100
 	Global.crab_modulate = "ffffff"
 	
-	var enemies = ["Warbles", "Bleegs", "Limmis", "Relu and Sosts"]
+	var enemies = ["Warbles", "Bleegs", "Limmis", "Relu and Sosts", "???"]
 	$Next_Enemy.text = "[font_size=25][color=black]NEXT UP: " + enemies[Global.level - 1] + "[/color][/font_size]\n[color=black]Press space to continue[/color]"
 	
 	
