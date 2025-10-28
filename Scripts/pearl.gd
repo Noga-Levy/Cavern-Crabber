@@ -32,6 +32,7 @@ func _process(_delta: float) -> void:
 
 func play_discussion():
 	$Talk.hide()
+	$Instructions.show()
 	frames = []
 	for child in $Talk.get_children(true):
 		child.hide()
@@ -64,8 +65,10 @@ func play_discussion():
 		if frame is RichTextLabel:
 			frame.hide()
 	
+	$Instructions.hide()
 	$Talk.hide()
 	Global.music_pos = $BGmusic.get_playback_position()
+	print(Global.music_pos)
 	$BGmusic.stop()
 	emit_signal("unpause")
 

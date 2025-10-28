@@ -90,6 +90,7 @@ shape = SubResource("CircleShape2D_mxq4d")
 
 [node name="Talk" type="Node2D" parent="."]
 visible = false
+z_index = 6
 
 [node name="Pearl-ground" type="Sprite2D" parent="Talk"]
 texture = ExtResource("3_vk3tp")
@@ -132,6 +133,17 @@ zoom = Vector2(1.2, 1.2)
 [node name="BGmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_54x0m")
 bus = &"ReverbBus"
+
+[node name="Instructions" type="RichTextLabel" parent="."]
+visible = false
+z_index = 12
+offset_left = -466.0
+offset_top = -210.0
+offset_right = -215.0
+offset_bottom = -143.0
+scale = Vector2(0.829285, 0.760107)
+text = "*Press the down arrow
+to continue"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]
