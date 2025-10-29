@@ -62,7 +62,7 @@ func play_discussion():
 				await down_pressed
 		
 		print("next frame")
-		if frame is RichTextLabel:
+		if frame.is_in_group("hide"):
 			frame.hide()
 	
 	$Instructions.hide()

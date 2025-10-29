@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_26dk1"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_hvaeu"]
 [ext_resource type="Texture2D" uid="uid://kxaw0a2upjmr" path="res://Sprites/white.png" id="3_ihmlp"]
-[ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/halo_movement.gd" id="4_ip5ew"]
+[ext_resource type="Script" uid="uid://yekhjxrgvwcq" path="res://Scripts/level5-bg-music.gd" id="4_ip5ew"]
 [ext_resource type="PackedScene" uid="uid://b0blo6tjknk8r" path="res://Scenes/memories.tscn" id="5_hproo"]
 [ext_resource type="Script" uid="uid://djvnvro0gpwe6" path="res://Scripts/opening-wall.gd" id="6_mb3x2"]
 [ext_resource type="Texture2D" uid="uid://dkgtplsknu0le" path="res://Sprites/Various Ground Sprites/Level-5/broken-block.png" id="7_02esc"]
