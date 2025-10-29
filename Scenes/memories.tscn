@@ -736,6 +736,11 @@ I need her so, so badly.[/color]
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Cloudy-memory" type="Sprite2D" parent="Memory5/Sad-crab"]
+z_index = 1
+scale = Vector2(1, 1)
+texture = ExtResource("9_erske")
+
 [node name="Sad-crab2" type="Sprite2D" parent="Memory5" groups=["frame"]]
 texture = ExtResource("33_4qtpt")
 
@@ -757,9 +762,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Map-vs-wasu" type="Sprite2D" parent="Memory5" groups=["frame"]]
+visible = false
 texture = ExtResource("33_6by2m")
 
 [node name="Map-vs-wasu2" type="Sprite2D" parent="Memory5" groups=["frame"]]
+visible = false
 texture = ExtResource("33_6by2m")
 
 [node name="Mystery-person-speech-bubble" type="Sprite2D" parent="Memory5/Map-vs-wasu2"]
@@ -779,6 +786,7 @@ vertical_alignment = 1
 
 [node name="zoomed-in-mushroom2" type="Sprite2D" parent="Memory5" groups=["frame"]]
 visible = false
+z_index = 1
 texture = ExtResource("33_lwews")
 
 [node name="Crab-talk2" type="Sprite2D" parent="Memory5/zoomed-in-mushroom2"]
@@ -797,6 +805,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Crab-talk2" type="Sprite2D" parent="Memory5" groups=["frame"]]
+z_index = 1
 position = Vector2(-9, 54)
 scale = Vector2(0.765, 0.765)
 texture = ExtResource("5_erske")

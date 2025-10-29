@@ -307,7 +307,7 @@ position = Vector2(1876, -168)
 texture = ExtResource("14_w8kbg")
 
 [node name="bone" type="Sprite2D" parent="."]
-position = Vector2(3064, 369)
+position = Vector2(3064, 370)
 texture = ExtResource("15_mbnb1")
 
 [node name="spear" type="Sprite2D" parent="."]
@@ -318,16 +318,6 @@ texture = ExtResource("16_cxe20")
 [node name="ribs" type="Sprite2D" parent="."]
 position = Vector2(4811, -173)
 texture = ExtResource("17_fmsuk")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 477.0
-offset_top = -107.0
-offset_right = 1056.0
-offset_bottom = 363.0
-bbcode_enabled = true
-text = "[font_size=30]Level 4 is a work-in-progress. Please be kind in the reviews."
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="stairs-for-level-4" parent="." instance=ExtResource("18_cxe20")]
 position = Vector2(6936, -2060)

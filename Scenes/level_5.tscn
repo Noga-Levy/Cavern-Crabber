@@ -138,3 +138,4 @@ position = Vector2(57, -2428)
 [connection signal="unpause" from="Memories" to="Node2D/Collisions" method="_on_memories_unpause"]
 [connection signal="pause" from="Pearl" to="." method="_on_mush_pause"]
 [connection signal="unpause" from="Pearl" to="." method="_on_mush_unpause"]
+[connection signal="unpause" from="Pearl" to="level5-bg-music" method="_on_pearl_unpause"]
