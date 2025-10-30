@@ -68,9 +68,14 @@ func play_discussion():
 	$Instructions.hide()
 	$Talk.hide()
 	Global.music_pos = $BGmusic.get_playback_position()
-	print(Global.music_pos)
 	$BGmusic.stop()
+	
 	emit_signal("unpause")
+	
+	open_death_anim()
+	var portal_pos = Vector2(0, 0)
+	create_portal(portal_pos)
+	self.queue_free()
 
 
 func _input(_event: InputEvent) -> void:
@@ -80,3 +85,21 @@ func _input(_event: InputEvent) -> void:
 
 func signal_done():
 	emit_signal("signal_sent")
+
+
+func open_death_anim():
+	var death_scene = preload("res://Scenes/death_animation.tscn")
+	var death_instance = death_scene.instantiate()
+	
+	get_tree().root.get_node("Level_5").add_child(death_instance)
+	
+	death_instance.position = position
+
+
+func create_portal(portal_pos):
+	var portal_scene = preload("res://Scenes/Ghosts/ghost_summoner.tscn")
+	var portal_instance = portal_scene.instantiate()
+	
+	get_tree().root.get_node("Level_5").add_child(portal_instance)
+	
+	portal_instance.position = portal_pos

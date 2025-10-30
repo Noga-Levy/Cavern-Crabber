@@ -30,7 +30,7 @@ size = Vector2(33.68, 13.12)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hproo"]
 size = Vector2(310, 82)
 
-[node name="Node2D" type="Node2D"]
+[node name="Level_5" type="Node2D"]
 script = ExtResource("1_26dk1")
 
 [node name="Player" parent="." instance=ExtResource("1_hvaeu")]

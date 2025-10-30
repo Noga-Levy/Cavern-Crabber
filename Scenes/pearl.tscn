@@ -468,6 +468,30 @@ bbcode_enabled = true
 text = "[font_size=70]I am merely the escort to and fro.[/font_size]"
 horizontal_alignment = 1
 
+[node name="3" type="RichTextLabel" parent="Talk/Pearl-for-text7" groups=["hide"]]
+visible = false
+offset_left = -502.0
+offset_top = -198.0
+offset_right = 502.0
+offset_bottom = -89.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=60]Hmm... Akamo, it seems we are out of time[/font_size]"
+horizontal_alignment = 1
+
+[node name="4" type="RichTextLabel" parent="Talk/Pearl-for-text7"]
+visible = false
+offset_left = -502.0
+offset_top = -198.0
+offset_right = 502.0
+offset_bottom = -89.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=70]I will speak to you again soon.[/font_size]"
+horizontal_alignment = 1
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.2, 1.2)
 

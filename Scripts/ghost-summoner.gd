@@ -17,7 +17,8 @@ func create_evil_spirit():
 	var ghost_scene = preload("res://Scenes/Ghosts/evil_spirit.tscn")
 	var ghost_instance = ghost_scene.instantiate()
 	
-	get_tree().root.get_node("level4").add_child(ghost_instance)
+	var root_node = get_tree().current_scene
+	get_tree().root.get_node(NodePath(root_node.name)).add_child(ghost_instance)
 	
 	ghost_instance.position = self.position
 	

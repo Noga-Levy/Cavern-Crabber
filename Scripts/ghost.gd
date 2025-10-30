@@ -102,7 +102,8 @@ func open_death_anim():
 	var death_scene = preload("res://Scenes/death_animation.tscn")
 	var death_instance = death_scene.instantiate()
 	
-	get_tree().root.get_node("level4").add_child(death_instance)
+	var root_node = get_tree().current_scene
+	get_tree().root.get_node(NodePath(root_node.name)).add_child(death_instance)
 	
 	death_instance.position = position
 	death_instance.modulate = "ffb1b2"
