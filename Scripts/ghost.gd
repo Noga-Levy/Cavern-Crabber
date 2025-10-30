@@ -23,6 +23,9 @@ var total_health = health
 var damaged = Global.crab_damage
 signal send_health(HP, total_HP)
 
+func _ready() -> void:
+	send_health.emit(health, total_health)
+
 func _physics_process(_delta: float) -> void:
 	
 	damaged = Global.crab_damage
