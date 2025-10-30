@@ -34,7 +34,7 @@ size = Vector2(310, 82)
 script = ExtResource("1_26dk1")
 
 [node name="Player" parent="." instance=ExtResource("1_hvaeu")]
-position = Vector2(90, 0)
+position = Vector2(88, 0)
 
 [node name="level5-bg-music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_68k2k")

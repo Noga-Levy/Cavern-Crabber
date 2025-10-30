@@ -729,16 +729,14 @@ offset_top = -116.0
 offset_right = 84.0
 offset_bottom = 42.0
 bbcode_enabled = true
-text = "[font_size=25][color=black]I'm... I'm just trying to bring her back.
-
-I need her so, so badly.[/color]
+text = "[font_size=25][color=black]I'm trying to bring her back. That's a good thing!
+She would slay monsters, protect people, and, and...[/color]
 [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Cloudy-memory" type="Sprite2D" parent="Memory5/Sad-crab"]
 z_index = 1
-scale = Vector2(1, 1)
 texture = ExtResource("9_erske")
 
 [node name="Sad-crab2" type="Sprite2D" parent="Memory5" groups=["frame"]]
@@ -756,7 +754,7 @@ offset_top = -116.0
 offset_right = 84.0
 offset_bottom = 42.0
 bbcode_enabled = true
-text = "[font_size=25][color=black]Does that make me evil?[/color]
+text = "[font_size=25][color=black]She deserves to be protected too![/color]
 [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -780,7 +778,7 @@ offset_top = -247.0
 offset_right = 365.0
 offset_bottom = -90.0
 bbcode_enabled = true
-text = "[color=black][font_size=30]... Am I evil?[font_size=30][color=black]"
+text = "[color=black][font_size=25]... Just maybe I'm not the right crab to do it.[font_size=30][color=black]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
