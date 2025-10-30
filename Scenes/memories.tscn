@@ -724,13 +724,12 @@ scale = Vector2(-1.255, 1.255)
 texture = ExtResource("32_6by2m")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory5/Sad-crab"]
-offset_left = -364.0
-offset_top = -116.0
-offset_right = 84.0
-offset_bottom = 42.0
+offset_left = -402.0
+offset_top = -103.0
+offset_right = 128.0
+offset_bottom = 55.0
 bbcode_enabled = true
-text = "[font_size=25][color=black]I'm trying to bring her back. That's a good thing!
-She would slay monsters, protect people, and, and...[/color]
+text = "[font_size=25][color=black]I'm trying to bring her back. That's a good thing! She would slay monsters, protect people, and, and...[/color]
 [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -740,6 +739,7 @@ z_index = 1
 texture = ExtResource("9_erske")
 
 [node name="Sad-crab2" type="Sprite2D" parent="Memory5" groups=["frame"]]
+visible = false
 texture = ExtResource("33_4qtpt")
 
 [node name="Bunny-bubble-down" type="Sprite2D" parent="Memory5/Sad-crab2"]
@@ -778,7 +778,7 @@ offset_top = -247.0
 offset_right = 365.0
 offset_bottom = -90.0
 bbcode_enabled = true
-text = "[color=black][font_size=25]... Just maybe I'm not the right crab to do it.[font_size=30][color=black]"
+text = "[color=black][font_size=25]... Perhaps I'm not the crab for the job, though.[font_size=30][color=black]"
 horizontal_alignment = 1
 vertical_alignment = 1
 

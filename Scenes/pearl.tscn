@@ -227,7 +227,7 @@ offset_bottom = -89.0
 theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
 theme_override_fonts/normal_font = ExtResource("6_54x0m")
 bbcode_enabled = true
-text = "[font_size=80]Are you?[/font_size]"
+text = "[font_size=60]Are you truly doing such a thing?[/font_size]"
 horizontal_alignment = 1
 
 [node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text3"]
@@ -353,7 +353,7 @@ offset_bottom = -89.0
 theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
 theme_override_fonts/normal_font = ExtResource("6_54x0m")
 bbcode_enabled = true
-text = "[font_size=60]Do you intend to do any of that?[/font_size]"
+text = "[font_size=60]Have you done any of that?[/font_size]"
 horizontal_alignment = 1
 
 [node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text5"]
@@ -375,22 +375,10 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Pearl-for-text6" type="Sprite2D" parent="Talk" groups=["skippable"]]
-visible = false
 texture = ExtResource("5_ysmyw")
 
 [node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text6" groups=["hide"]]
 visible = false
-offset_left = -470.0
-offset_top = -198.0
-offset_right = 487.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
-bbcode_enabled = true
-text = "[font_size=60]The answer is the same for both queries.[/font_size]"
-horizontal_alignment = 1
-
-[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text6" groups=["hide"]]
 offset_left = -502.0
 offset_top = -198.0
 offset_right = 502.0
@@ -401,7 +389,7 @@ bbcode_enabled = true
 text = "[font_size=60]The same as I brought you to this world,[/font_size]"
 horizontal_alignment = 1
 
-[node name="3" type="RichTextLabel" parent="Talk/Pearl-for-text6"]
+[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text6" groups=["hide"]]
 visible = false
 offset_left = -502.0
 offset_top = -198.0
@@ -410,7 +398,31 @@ offset_bottom = -89.0
 theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
 theme_override_fonts/normal_font = ExtResource("6_54x0m")
 bbcode_enabled = true
-text = "[font_size=70]I brought the critters you found.[/font_size]"
+text = "[font_size=70]I took your late owner out.[/font_size]"
+horizontal_alignment = 1
+
+[node name="3" type="RichTextLabel" parent="Talk/Pearl-for-text6" groups=["hide"]]
+offset_left = -502.0
+offset_top = -217.0
+offset_right = 502.0
+offset_bottom = -108.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=60]Thus, it is only logical to assume[/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="4" type="RichTextLabel" parent="Talk/Pearl-for-text6"]
+visible = false
+offset_left = -502.0
+offset_top = -198.0
+offset_right = 502.0
+offset_bottom = -89.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=70]that I could guide her back.[/font_size]"
 horizontal_alignment = 1
 
 [node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text6"]
