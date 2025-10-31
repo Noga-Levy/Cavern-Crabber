@@ -73,7 +73,7 @@ func play_discussion():
 	emit_signal("unpause")
 	
 	open_death_anim()
-	var portal_pos = Vector2(0, 0)
+	var portal_pos = Vector2(-150, -1234)
 	create_portal(portal_pos)
 	self.queue_free()
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmw75e17qya2i"]
+[gd_scene load_steps=4 format=3 uid="uid://bmw75e17qya2i"]
 
 [ext_resource type="Script" uid="uid://ckcb6cv8wm00s" path="res://Scripts/enemies_left.gd" id="1_rft2l"]
+[ext_resource type="Theme" uid="uid://jtrkdfbdgknp" path="res://Other/info_corner_theme.tres" id="1_v0cyl"]
 [ext_resource type="Script" uid="uid://y47ds36s7lf2" path="res://Scripts/crab_hp.gd" id="2_ocyjs"]
 
 [node name="info" type="Node2D"]
@@ -11,6 +12,7 @@ offset_left = -573.0
 offset_top = -305.0
 offset_right = -347.0
 offset_bottom = -265.0
+theme = ExtResource("1_v0cyl")
 text = "HP: TBD"
 script = ExtResource("2_ocyjs")
 
@@ -19,6 +21,7 @@ offset_left = -573.0
 offset_top = -288.0
 offset_right = -347.0
 offset_bottom = -248.0
+theme = ExtResource("1_v0cyl")
 text = "ENEMIES LEFT: TBD"
 script = ExtResource("1_rft2l")
 
