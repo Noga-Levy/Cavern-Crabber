@@ -73,8 +73,6 @@ func play_discussion():
 	emit_signal("unpause")
 	
 	open_death_anim()
-	var portal_pos = Vector2(-150, -1234)
-	create_portal(portal_pos)
 	self.queue_free()
 
 
@@ -94,12 +92,3 @@ func open_death_anim():
 	get_tree().root.get_node("Level_5").add_child(death_instance)
 	
 	death_instance.position = position
-
-
-func create_portal(portal_pos):
-	var portal_scene = preload("res://Scenes/Ghosts/ghost_summoner.tscn")
-	var portal_instance = portal_scene.instantiate()
-	
-	get_tree().root.get_node("Level_5").add_child(portal_instance)
-	
-	portal_instance.position = portal_pos
