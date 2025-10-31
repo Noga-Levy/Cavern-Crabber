@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://yxw5afdsdjgg" path="res://Sprites/Pearl/pearl-ground.png" id="3_vk3tp"]
 [ext_resource type="Texture2D" uid="uid://c014p180k538u" path="res://Sprites/Pearl/pearl-spritesheet.png" id="4_5cfue"]
 [ext_resource type="Texture2D" uid="uid://k4s16hc3adpm" path="res://Sprites/Pearl/pearl-for-text.png" id="5_ysmyw"]
-[ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Other/Jacquard12-Regular.ttf" id="6_54x0m"]
+[ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Fonts/Jacquard12-Regular.ttf" id="6_54x0m"]
 [ext_resource type="AudioStream" uid="uid://c5137ldyyyg4w" path="res://Audio/bg-music/kim-lightyear-dolls-and-candy.mp3" id="8_54x0m"]
 [ext_resource type="Texture2D" uid="uid://bg41laoxibvgr" path="res://Sprites/crab-talk.png" id="8_nvkay"]
 

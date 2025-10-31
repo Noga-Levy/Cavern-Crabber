@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b0blo6tjknk8r" path="res://Scenes/memories.tscn" id="5_hproo"]
 [ext_resource type="Script" uid="uid://djvnvro0gpwe6" path="res://Scripts/opening-wall.gd" id="6_mb3x2"]
 [ext_resource type="Texture2D" uid="uid://dkgtplsknu0le" path="res://Sprites/Various Ground Sprites/Level-5/broken-block.png" id="7_02esc"]
-[ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Other/Jacquard12-Regular.ttf" id="9_gfyxx"]
+[ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Fonts/Jacquard12-Regular.ttf" id="9_gfyxx"]
 [ext_resource type="Texture2D" uid="uid://ojp302jkewjx" path="res://Sprites/Various Ground Sprites/Level-5/cracks.png" id="10_xfwg7"]
 [ext_resource type="PackedScene" uid="uid://4caxopcxwlj4" path="res://Scenes/pearl.tscn" id="11_r8l1h"]
 [ext_resource type="AudioStream" uid="uid://c5137ldyyyg4w" path="res://Audio/bg-music/kim-lightyear-dolls-and-candy.mp3" id="12_68k2k"]

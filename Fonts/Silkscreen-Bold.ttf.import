@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cofan024ws67i"
-path="res://.godot/imported/Silkscreen-Regular.ttf-d841460f3dd328c313f96de79634c05d.fontdata"
+uid="uid://u14b3iosdcdh"
+path="res://.godot/imported/Silkscreen-Bold.ttf-2a214ac248b8797b973e440c07e04948.fontdata"
 
 [deps]
 
-source_file="res://Other/Silkscreen-Regular.ttf"
-dest_files=["res://.godot/imported/Silkscreen-Regular.ttf-d841460f3dd328c313f96de79634c05d.fontdata"]
+source_file="res://Fonts/Silkscreen-Bold.ttf"
+dest_files=["res://.godot/imported/Silkscreen-Bold.ttf-2a214ac248b8797b973e440c07e04948.fontdata"]
 
 [params]
 
@@ -26,7 +26,7 @@ subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
-fallbacks=[]
+fallbacks=[Resource("res://Fonts/BestTen-DOT.otf")]
 Compress=null
 compress=true
 preload=[]

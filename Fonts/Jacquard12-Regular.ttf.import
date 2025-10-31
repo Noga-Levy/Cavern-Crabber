@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://u14b3iosdcdh"
-path="res://.godot/imported/Silkscreen-Bold.ttf-ce4e413899e9b2ee5748afeb6e1bf313.fontdata"
+uid="uid://c1as856u5gtjn"
+path="res://.godot/imported/Jacquard12-Regular.ttf-60462756f598a0d740db5e4e50702768.fontdata"
 
 [deps]
 
-source_file="res://Other/Silkscreen-Bold.ttf"
-dest_files=["res://.godot/imported/Silkscreen-Bold.ttf-ce4e413899e9b2ee5748afeb6e1bf313.fontdata"]
+source_file="res://Fonts/Jacquard12-Regular.ttf"
+dest_files=["res://.godot/imported/Jacquard12-Regular.ttf-60462756f598a0d740db5e4e50702768.fontdata"]
 
 [params]
 

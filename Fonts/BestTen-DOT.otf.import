@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c1as856u5gtjn"
-path="res://.godot/imported/Jacquard12-Regular.ttf-856a64724360b05aa609ecef506c113d.fontdata"
+uid="uid://cv2g5qinl4d3"
+path="res://.godot/imported/BestTen-DOT.otf-d4b2a8bbd91184bd3aa140f8a84d04be.fontdata"
 
 [deps]
 
-source_file="res://Other/Jacquard12-Regular.ttf"
-dest_files=["res://.godot/imported/Jacquard12-Regular.ttf-856a64724360b05aa609ecef506c113d.fontdata"]
+source_file="res://Fonts/BestTen-DOT.otf"
+dest_files=["res://.godot/imported/BestTen-DOT.otf-d4b2a8bbd91184bd3aa140f8a84d04be.fontdata"]
 
 [params]
 
