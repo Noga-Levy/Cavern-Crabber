@@ -38,16 +38,17 @@ texture = ExtResource("2_p8jf4")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="hello-akamo"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 102.0
-offset_top = -235.0
+offset_left = 109.0
+offset_top = -256.0
 offset_right = 439.0
-offset_bottom = -5.0
+offset_bottom = 21.0
 bbcode_enabled = true
 text = "[font_size=24]Hello, Akamo! Welcome back to dungeon delvers inc.
 
 Which dungeon would you like to reserve today?
 [/font_size]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="you-look-confused" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("4_koko0")
@@ -58,12 +59,17 @@ texture = ExtResource("2_p8jf4")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="you-look-confused"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 103.0
-offset_top = -243.0
-offset_right = 440.0
-offset_bottom = -13.0
+anchors_preset = -1
+anchor_left = 0.0385417
+anchor_top = 0.0407407
+anchor_right = 0.0427083
+anchor_bottom = 0.144444
+offset_left = 66.0
+offset_top = -284.0
+offset_right = 403.0
+offset_bottom = -54.0
 bbcode_enabled = true
-text = "[font_size=26]You doing okay, Akamo?
+text = "[font_size=30]You doing okay, Akamo?
 You look a bit confused.
 [/font_size]"
 horizontal_alignment = 1
@@ -80,8 +86,8 @@ offset_top = 78.0
 offset_right = 406.0
 offset_bottom = 232.0
 bbcode_enabled = true
-text = "[font_size=20]I'll be honest, I am extremely. Do I know you? Is my name akamo?
-I woke up with a purple bottle in my right claw and a map in my left. Your shop was on the map, so I figured I should come here. Any idea what happened?
+text = "[font_size=20]I'll be honest, I am extremely. Do I know you? Is my name Akamo?
+I woke up with a purple bottle in my right pincher and a map in my left. Your shop was on the map, so I figured I should come here. Any idea what happened?
 [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
