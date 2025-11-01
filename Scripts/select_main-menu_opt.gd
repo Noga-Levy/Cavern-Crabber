@@ -1,7 +1,7 @@
 extends Area2D
 
 var start_pos = Vector2(0, 0)
-
+var switch_lang_button
 
 func _on_start_send_pos(pos: Variant) -> void:
 	start_pos = pos
@@ -9,10 +9,17 @@ func _on_start_send_pos(pos: Variant) -> void:
 
 func _ready() -> void:
 	position = start_pos
+	
+	switch_lang_button = get_parent().get_node("SwitchLang/RichTextLabel")
+	
 	if not Global.is_en_at_the_beginning:
 		TranslationServer.set_locale("en")
 		Global.is_en_at_the_beginning = true
-
+	else:
+		if TranslationServer.get_locale() == "en":
+			switch_lang_button.text = "[color=black][font_size=30]Japanese/日本語[/font_size][/color]"
+		else:
+			switch_lang_button.text = "[color=black][font_size=30]英語/English[/font_size][/color]"
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_released("arrow-down") and position.y < 120:
@@ -41,7 +48,7 @@ func _on_credits_selected() -> void:
 
 func _on_switch_lang_selected() -> void:
 	if Input.is_action_just_pressed("space"):
-		var switch_lang_button = get_parent().get_node("SwitchLang/RichTextLabel")
+		
 		
 		$"Select-button".play()
 		if TranslationServer.get_locale() == "en":
