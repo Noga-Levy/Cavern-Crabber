@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhwq6yoi3an1"]
+[gd_scene load_steps=14 format=3 uid="uid://bhwq6yoi3an1"]
 
 [ext_resource type="Texture2D" uid="uid://cvjgiqs8gwerj" path="res://Sprites/main-menu.png" id="1_opfnp"]
-[ext_resource type="Script" uid="uid://cdq4o54lkm47r" path="res://Other/translation.gd" id="1_vr1f0"]
 [ext_resource type="Script" uid="uid://07myvaktphlo" path="res://Scripts/start_button.gd" id="2_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://kxaw0a2upjmr" path="res://Sprites/white.png" id="3_yhxw7"]
 [ext_resource type="Script" uid="uid://chv0a35hdchux" path="res://Scripts/credits_button.gd" id="4_trj04"]
@@ -21,7 +20,6 @@ size = Vector2(3.95e+07, 5.8e+06)
 [sub_resource type="GDScript" id="GDScript_t1dhk"]
 
 [node name="Main menu" type="Node2D"]
-script = ExtResource("1_vr1f0")
 
 [node name="Main-menu" type="Sprite2D" parent="."]
 texture = ExtResource("1_opfnp")
@@ -62,7 +60,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Credits" type="Area2D" parent="."]
-position = Vector2(0, 70)
+position = Vector2(0, 50)
 script = ExtResource("4_trj04")
 
 [node name="White" type="Sprite2D" parent="Credits"]
@@ -80,6 +78,28 @@ offset_right = 172.0
 offset_bottom = 19.0
 bbcode_enabled = true
 text = "[color=black][font_size=30]Credits[/font_size][/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SwitchLang" type="Area2D" parent="."]
+position = Vector2(0, 120)
+script = ExtResource("4_trj04")
+
+[node name="White" type="Sprite2D" parent="SwitchLang"]
+position = Vector2(-1, 0)
+scale = Vector2(3.92, 1.06)
+texture = ExtResource("3_yhxw7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwitchLang"]
+shape = SubResource("RectangleShape2D_fu7sn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SwitchLang"]
+offset_left = -159.0
+offset_top = -21.0
+offset_right = 172.0
+offset_bottom = 19.0
+bbcode_enabled = true
+text = "[color=black][font_size=30]Japanese/日本語[/font_size][/color]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -136,3 +156,6 @@ vertical_alignment = 2
 [connection signal="area_exited" from="Credits" to="Credits" method="_on_area_exited"]
 [connection signal="selected" from="Credits" to="Border" method="_on_credits_selected"]
 [connection signal="send_pos" from="Credits" to="Border" method="_on_credits_send_pos"]
+[connection signal="area_entered" from="SwitchLang" to="SwitchLang" method="_on_area_entered"]
+[connection signal="area_exited" from="SwitchLang" to="SwitchLang" method="_on_area_exited"]
+[connection signal="selected" from="SwitchLang" to="Border" method="_on_switch_lang_selected"]
