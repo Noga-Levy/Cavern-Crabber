@@ -109,7 +109,7 @@ offset_bottom = -10.0
 bbcode_enabled = true
 text = "[font_size=24]... That ... that is information. Uhm.
 
-Let's start with, yes, your name is akamo.
+Let's start with, yes, your name is Akamo.
 [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -166,7 +166,7 @@ offset_top = -243.0
 offset_right = 431.0
 offset_bottom = 9.0
 bbcode_enabled = true
-text = "[font_size=25]Wasu... byita... is an anemsia potion.
+text = "[font_size=25]Wasu... byita... is an amnesia potion.
 
 The most powerful one on the market.
 [/font_size]"

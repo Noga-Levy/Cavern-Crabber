@@ -148,6 +148,14 @@ text = "Trigger warning"
 horizontal_alignment = 1
 vertical_alignment = 2
 
+[node name="Unfinished_Translation" type="RichTextLabel" parent="."]
+offset_left = 209.0
+offset_top = 94.0
+offset_right = 430.0
+offset_bottom = 144.0
+text = "<-- Unfinished"
+vertical_alignment = 1
+
 [connection signal="area_entered" from="Start" to="Start" method="_on_area_entered"]
 [connection signal="area_exited" from="Start" to="Start" method="_on_area_exited"]
 [connection signal="selected" from="Start" to="Border" method="_on_start_selected"]
