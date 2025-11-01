@@ -155,7 +155,6 @@ vertical_alignment = 2
 [connection signal="area_entered" from="Credits" to="Credits" method="_on_area_entered"]
 [connection signal="area_exited" from="Credits" to="Credits" method="_on_area_exited"]
 [connection signal="selected" from="Credits" to="Border" method="_on_credits_selected"]
-[connection signal="send_pos" from="Credits" to="Border" method="_on_credits_send_pos"]
 [connection signal="area_entered" from="SwitchLang" to="SwitchLang" method="_on_area_entered"]
 [connection signal="area_exited" from="SwitchLang" to="SwitchLang" method="_on_area_exited"]
 [connection signal="selected" from="SwitchLang" to="Border" method="_on_switch_lang_selected"]

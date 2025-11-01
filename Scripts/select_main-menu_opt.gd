@@ -9,7 +9,9 @@ func _on_start_send_pos(pos: Variant) -> void:
 
 func _ready() -> void:
 	position = start_pos
-	TranslationServer.set_locale("en")
+	if not Global.is_en_at_the_beginning:
+		TranslationServer.set_locale("en")
+		Global.is_en_at_the_beginning = true
 
 
 func _process(_delta: float) -> void:

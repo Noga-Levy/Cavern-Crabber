@@ -12,3 +12,4 @@ var level = 1
 var special_abilities = "N/A"
 
 var is_timer_zero = false
+var is_en_at_the_beginning = false
