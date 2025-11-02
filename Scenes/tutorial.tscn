@@ -326,9 +326,9 @@ position = Vector2(-0.317879, 0.658432)
 shape = SubResource("RectangleShape2D_8mnmb")
 
 [node name="no-text" type="RichTextLabel" parent="C-yes-no"]
-offset_left = 69.0
+offset_left = 78.0
 offset_top = 138.0
-offset_right = 371.0
+offset_right = 361.0
 offset_bottom = 220.0
 bbcode_enabled = true
 text = "[font_size=25]No, can I have a quick tutorial?[/font_size]"

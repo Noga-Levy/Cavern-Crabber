@@ -190,9 +190,25 @@ I am not letting you go to that dun--
 Do you remember the basics of dungeoneering?[/font_size]","[font_size=24]The dungeon of decay it is!
 Do you remember the basics of dungeoneering?[/font_size]","[font_size=24]ご希望通り、ボス！
 ダンジョン技の基本を覚えていますか？[/font_size]"
-"[font_size=25]No, can I have a quick tutorial?[/font_size]","[font_size=25]No, can I have a quick tutorial?[/font_size]",[font_size=12]いいえ、簡単なチュートリアルをいただけますか？[/font_size]
+"[font_size=25]No, can I have a quick tutorial?[/font_size]","[font_size=25]No, can I have a quick tutorial?[/font_size]","[font_size=15]いいえ、
+簡単なチュートリアルをいただけますか？[/font_size]"
 [font_size=25]Yep! Send me to the dungeon! [/font_size],[font_size=25]Yep! Send me to the dungeon! [/font_size],[font_size=20]はい！ダンジョンに送って！[/font_size]
 "[font_size=14]*change the selected option with the left and right arrow keys.*
 *Press space to confirm your choice*[/font_size]","[font_size=14]*change the selected option with the left and right arrow keys.*
 *Press space to confirm your choice*[/font_size]","[font_size=14]*選択したオプションを左右の矢印キーで変更します。*
 *スペースを押して選択を確定します*[/font_size]"
+[font_size=26]Use the arrow keys to move[/font_size],[font_size=26]Use the arrow keys to move[/font_size],[font_size=26]矢印キーを使用して移動します[/font_size]
+"[color=black][font_size=26]Press [color=red]A[/color] to attack,
+and [color=blue]D[/color] to deflect[/font_size][/color]","[color=black][font_size=26]Press [color=red]A[/color] to attack,
+and [color=blue]D[/color] to deflect[/font_size][/color]","[color=black][font_size=26]攻撃するには[color=red]A[/color]を押してください
+そして[color=blue]D[/color]で[/font_size][/color]を偏向させる"
+[color=black][font_size=26]Avoid these guys like the plague. They suck. They are [color=red]enemies[/color].[/font_size][/color],[color=black][font_size=26]Avoid these guys like the plague. They suck. They are [color=red]enemies[/color].[/font_size][/color],[color=black][font_size=26]ペストのようにこいつらを避けろ。彼らは最悪だ。彼らは[color=red] 敵[/color].[/font_size][/color]
+[color=black][font_size=26]Destroy all the [color=red]enemies[/color] to proceed to the next level.[/font_size][/color],[color=black][font_size=26]Destroy all the [color=red]enemies[/color] to proceed to the next level.[/font_size][/color],[color=black][font_size=26]すべての[color=red]敵[/color]を破壊して次のレベルに進みます。[/font_size][/color]
+"[color=black][font_size=26]To help you out, there'll be these boxes scattered around.[/font_size][/color]","[color=black][font_size=26]To help you out, there'll be these boxes scattered around.[/font_size][/color]",[color=black][font_size=26]ダンジョンにいる間に役立つように、各レベルの周りにこれらのボックスが配置されています。[/font_size][/color]
+"[color=black][font_size=25]They're filled with all sorts of goodies, so make sure open them![/font_size][/color]","[color=black][font_size=25]They're filled with all sorts of goodies, so make sure open them![/font_size][/color]",[color=black][font_size=25]いろんなグッズがいっぱい入っているので、必ず開けてください！[/font_size][/color]
+"[color=black][font_size=23]When an item is highlighted, that means you can interact with it using space[/font_size][/color]","[color=black][font_size=23]When an item is highlighted, that means you can interact with it using space[/font_size][/color]",[color=black][font_size=23]アイテムが強調表示されている場合、スペースキーを使用してアイテムを操作できることを意味します[/font_size][/color]
+"[color=black][font_size=22]Now,
+ there are also these mushrooms. We don't know what they do, but I'd keep an eye on them.[/font_size][/color]","[color=black][font_size=22]Now,
+ there are also these mushrooms. We don't know what they do, but I'd keep an eye on them.[/font_size][/color]","[color=black][font_size=22]さて、
+ これらのキノコもあります。彼らが何をしているのかは分かりませんが、注目してみることをお勧めします。[/font_size][/color]"
+"[color=black][font_size=25]That's all my minimum-wage job pays me to say, so press the down arrow when you are ready to start the dungeon![/font_size][/color]","[color=black][font_size=25]That's all my minimum-wage job pays me to say, so press the down arrow when you are ready to start the dungeon![/font_size][/color]",[color=black][font_size=27]私の職務内容によると、私が言わなければならないことはこれだけです。ダンジョンを始める準備ができたら、下矢印を押してください！[/font_size][/color]

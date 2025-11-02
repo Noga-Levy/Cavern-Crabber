@@ -29,12 +29,13 @@ texture = ExtResource("2_pwwt5")
 modulate = Color(0, 0, 0, 1)
 texture_filter = 2
 offset_left = -375.0
-offset_top = 135.0
+offset_top = 107.0
 offset_right = 46.0
-offset_bottom = 205.0
+offset_bottom = 236.0
 bbcode_enabled = true
 text = "[font_size=26]Use the arrow keys to move[/font_size]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Abilities-bunny" type="Sprite2D" parent="." groups=["frame"]]
 visible = false
@@ -45,17 +46,17 @@ position = Vector2(28, -7)
 texture = ExtResource("2_pwwt5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Abilities-bunny"]
-offset_left = -375.0
-offset_top = 135.0
+offset_left = -342.0
+offset_top = 95.0
 offset_right = 46.0
-offset_bottom = 205.0
+offset_bottom = 240.0
 bbcode_enabled = true
 text = "[color=black][font_size=26]Press [color=red]A[/color] to attack,
-and [color=blue]D[/color] to dodge[/font_size][/color]"
+and [color=blue]D[/color] to deflect[/font_size][/color]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Bunny-distaste-for-enemies" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
 texture = ExtResource("4_op0nh")
 
 [node name="Bunny-bubble-down" type="Sprite2D" parent="Bunny-distaste-for-enemies"]
@@ -63,16 +64,16 @@ position = Vector2(18, 1)
 texture = ExtResource("2_pwwt5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Bunny-distaste-for-enemies"]
-offset_left = -380.0
-offset_top = 128.0
-offset_right = 41.0
-offset_bottom = 237.0
+offset_left = -366.0
+offset_top = 96.0
+offset_right = 27.0
+offset_bottom = 262.0
 bbcode_enabled = true
 text = "[color=black][font_size=26]Avoid these guys like the plague. They suck. They are [color=red]enemies[/color].[/font_size][/color]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Demonic-bunny" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
 texture = ExtResource("5_q1jr0")
 
 [node name="Bunny-bubble-down" type="Sprite2D" parent="Demonic-bunny"]
@@ -81,12 +82,13 @@ texture = ExtResource("2_pwwt5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Demonic-bunny"]
 offset_left = -379.0
-offset_top = 137.0
+offset_top = 135.0
 offset_right = 42.0
-offset_bottom = 246.0
+offset_bottom = 243.0
 bbcode_enabled = true
 text = "[color=black][font_size=26]Destroy all the [color=red]enemies[/color] to proceed to the next level.[/font_size][/color]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Bunnybox-with-tutorial-bunny" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("6_0wety")
@@ -96,10 +98,10 @@ position = Vector2(28, -7)
 texture = ExtResource("2_pwwt5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Bunnybox-with-tutorial-bunny"]
-offset_left = -367.0
-offset_top = 93.0
-offset_right = 54.0
-offset_bottom = 233.0
+offset_left = -372.0
+offset_top = 96.0
+offset_right = 49.0
+offset_bottom = 236.0
 bbcode_enabled = true
 text = "[color=black][font_size=26]To help you out, there'll be these boxes scattered around.[/font_size][/color]"
 horizontal_alignment = 1
@@ -114,12 +116,13 @@ texture = ExtResource("2_pwwt5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Box-smiley-bunny"]
 offset_left = -369.0
-offset_top = 116.0
+offset_top = 96.0
 offset_right = 52.0
-offset_bottom = 229.0
+offset_bottom = 242.0
 bbcode_enabled = true
 text = "[color=black][font_size=25]They're filled with all sorts of goodies, so make sure open them![/font_size][/color]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Bunnybox-with-tutorial-bunny2" type="Sprite2D" parent="." groups=["frame"]]
 texture = ExtResource("6_0wety")
@@ -135,14 +138,16 @@ texture = ExtResource("2_pwwt5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Bunnybox-with-tutorial-bunny2"]
 offset_left = -369.0
-offset_top = 106.0
+offset_top = 99.0
 offset_right = 52.0
 offset_bottom = 237.0
 bbcode_enabled = true
 text = "[color=black][font_size=23]When an item is highlighted, that means you can interact with it using space[/font_size][/color]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Bunny-distaste-for-mushrooms" type="Sprite2D" parent="." groups=["frame"]]
+visible = false
 texture = ExtResource("12_0wety")
 
 [node name="Bunny-bubble-down" type="Sprite2D" parent="Bunny-distaste-for-mushrooms"]
@@ -162,7 +167,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Tutorial-frame4" type="Sprite2D" parent="." groups=["frame"]]
-visible = false
 texture = ExtResource("8_vux01")
 
 [node name="Bunny-speech-bubble" type="Sprite2D" parent="Tutorial-frame4"]
@@ -177,6 +181,7 @@ offset_bottom = 7.0
 bbcode_enabled = true
 text = "[color=black][font_size=25]That's all my minimum-wage job pays me to say, so press the down arrow when you are ready to start the dungeon![/font_size][/color]"
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = 264.0
@@ -185,6 +190,7 @@ offset_right = 473.0
 offset_bottom = 272.0
 text = "*press the down arrow to go to the next frame"
 horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.2, 1.2)
