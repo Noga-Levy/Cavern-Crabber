@@ -124,7 +124,7 @@ Which dungeon would you like to reserve today?
 [/font_size]","[font_size=24]Hello, Akamo! Welcome back to dungeon delvers inc.
 
 Which dungeon would you like to reserve today?
-[/font_size]","[font_size=24]こんにちは、アカモ！ダンジョンデルバーズ社へようこそ。
+[/font_size]","[font_size=24]こんにちは、Akamo！ダンジョン デルバーズ社へようこそ。
 
 今日はどのダンジョンを予約しますか？
 [/font_size]"
@@ -132,15 +132,15 @@ Which dungeon would you like to reserve today?
 You look a bit confused.
 [/font_size]","[font_size=30]You doing okay, Akamo?
 You look a bit confused.
-[/font_size]","[font_size=30]大丈夫ですか、アカモ？
+[/font_size]","[font_size=30]元気ですか、Akamo？
 ちょっと混乱しているように見えますね。
 [/font_size]"
 "[font_size=20]I'll be honest, I am extremely. Do I know you? Is my name Akamo?
 I woke up with a purple bottle in my right pincher and a map in my left. Your shop was on the map, so I figured I should come here. Any idea what happened?
 [/font_size]","[font_size=20]I'll be honest, I am extremely. Do I know you? Is my name Akamo?
 I woke up with a purple bottle in my right pincher and a map in my left. Your shop was on the map, so I figured I should come here. Any idea what happened?
-[/font_size]","[font_size=20]正直に言うと、私は非常にそうです。私はあなたを知っていますか？私の名前は赤茂ですか？
-目が覚めると、右のピンチャーに紫色のボトル、左のピンチャーに地図が入っていました。あなたのお店は地図に載っていたので、ここに来るべきだと思いました。何が起こったのか知っていますか？
+[/font_size]","[font_size=20]正直に言うと、私は非常にそうです。私はあなたを知っていますか？私の名前は Akamo ですか？
+目が覚めると、右のピンチャーに紫色のボトル、左のピンチャーに地図が入っていました。あなたのお店は地図に載っていたので、ここに来るべきだと思いました。何か考えは？
 [/font_size]"
 *press the down arrow to go to the next frame,*press the down arrow to go to the next frame,*下矢印を押すと次のフレームに移動します
 "[font_size=24]... That ... that is information. Uhm.
@@ -151,7 +151,7 @@ Let's start with, yes, your name is Akamo.
 Let's start with, yes, your name is Akamo.
 [/font_size]","[font_size=24]… それは。..それは情報です。うーん。
 
-まずは、はい、あなたの名前はアカモです。
+まず、はい、あなたの名前は Akamo です。
 [/font_size]"
 "[font_size=30]What was the bottle labeled as?
 [/font_size]","[font_size=30]What was the bottle labeled as?
@@ -212,3 +212,43 @@ and [color=blue]D[/color] to deflect[/font_size][/color]","[color=black][font_si
  there are also these mushrooms. We don't know what they do, but I'd keep an eye on them.[/font_size][/color]","[color=black][font_size=22]さて、
  これらのキノコもあります。彼らが何をしているのかは分かりませんが、注目してみることをお勧めします。[/font_size][/color]"
 "[color=black][font_size=25]That's all my minimum-wage job pays me to say, so press the down arrow when you are ready to start the dungeon![/font_size][/color]","[color=black][font_size=25]That's all my minimum-wage job pays me to say, so press the down arrow when you are ready to start the dungeon![/font_size][/color]",[color=black][font_size=27]私の職務内容によると、私が言わなければならないことはこれだけです。ダンジョンを始める準備ができたら、下矢印を押してください！[/font_size][/color]
+"[color=black][font_size=25]Huh, why does this mushroom have a face? And why does it feel so famili--
+[/font_size][/color]","[color=black][font_size=25]Huh, why does this mushroom have a face? And why does it feel so famili--
+[/font_size][/color]","[color=black][font_size=25]ふーん、このキノコにはなぜ顔があるの？そして、なぜそれがとても馴染みのある感じがするのでしょうか--
+[/font_size][/color]"
+Memory 1,Memory 1,メモリ1
+"[color=black][font_size=30]OO, take a look at this quest--it's got a huge payout!
+Whattaya say, my little Akamo?[/font_size][/color]","[color=black][font_size=30]OO, take a look at this quest--it's got a huge payout!
+Whattaya say, my little Akamo?[/font_size][/color]","[color=black][font_size=30]OO、このクエストを見てください--莫大な報酬があります！
+何て言うんだ Akamo？[/font_size][/color]"
+"[color=black][font_size=25]That was... that was somebody important... wasn't it?
+I just can't make out the details
+[/font_size][/color]","[color=black][font_size=25]That was... that was somebody important... wasn't it?
+I just can't make out the details
+[/font_size][/color]","[color=black][font_size=25]あれは…あれは重要な人物だった…そうじゃなかったっけ？
+彼らの顔の特徴が思い出せない
+[/font_size][/color]"
+"[color=black][font_size=25]Something ate the mushroom? I thought it'd be poisonous...
+[/font_size][/color]","[color=black][font_size=25]Something ate the mushroom? I thought it'd be poisonous...
+[/font_size][/color]","[color=black][font_size=25]何かがキノコを食べましたか？有毒だろうと思ったのですが。..
+[/font_size][/color]"
+Memory 2,Memory 2,メモリ2
+"[font_size=20][color=black]Isn't this nice? No hydras, no killer spiders...
+
+Just you, me, and some mushrooms.[/color][/font_size]","[font_size=20][color=black]Isn't this nice? No hydras, no killer spiders...
+
+Just you, me, and some mushrooms.[/color][/font_size]","[font_size=20][color=black]これは素敵じゃないですか？ヒドラも殺人クモもいない。..
+
+あなたと私とキノコだけ。[/color][/font_size]"
+"[color=black][font_size=25]I can't remember her exact features, but she seems so familiar, so homey. 
+[/font_size][/color]","[color=black][font_size=25]I can't remember her exact features, but she seems so familiar, so homey. 
+[/font_size][/color]","[color=black][font_size=25]彼女の正確な特徴は思い出せませんが、とても馴染みがあり、とても家庭的なようです。
+[/font_size][/color]"
+"[color=black][font_size=25]Almost... motherly.
+[/font_size][/color]","[color=black][font_size=25]Almost... motherly.
+[/font_size][/color]","[color=black][font_size=25]ほぼ。..母親らしい。
+[/font_size][/color]"
+"[color=black][font_size=25]... And the bleegs attacked us. Of course they did.
+[/font_size][/color]","[color=black][font_size=25]... And the bleegs attacked us. Of course they did.
+[/font_size][/color]","[color=black][font_size=25]… そして bleegs が私たちを攻撃しました。もちろん彼らはそうしました。
+[/font_size][/color]"
