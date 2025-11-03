@@ -311,7 +311,6 @@ text = "[color=black][font_size=25]... And the bleegs attacked us. Of course the
 horizontal_alignment = 1
 
 [node name="Memory3" type="Node2D" parent="." groups=["memory"]]
-visible = false
 z_index = 11
 
 [node name="Mushroom-zoomed-in" type="Sprite2D" parent="Memory3" groups=["frame"]]
@@ -347,14 +346,12 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Frame1-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
-visible = false
 texture = ExtResource("16_nsmcx")
 
 [node name="Cloudy-memory" type="Sprite2D" parent="Memory3/Frame1-memory3"]
 texture = ExtResource("9_erske")
 
 [node name="Frame2-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
-visible = false
 texture = ExtResource("17_nsmcx")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame2-memory3"]
@@ -375,7 +372,7 @@ texture = ExtResource("18_xgqd1")
 [node name="RichTextLabel2" type="RichTextLabel" parent="Memory3/Frame2-memory3"]
 offset_left = -141.0
 offset_top = -87.0
-offset_right = -13.0
+offset_right = -21.0
 offset_bottom = -32.0
 bbcode_enabled = true
 text = "[color=black]What's the news?[/color]"
@@ -394,7 +391,7 @@ offset_top = -218.0
 offset_right = 395.0
 offset_bottom = 13.0
 bbcode_enabled = true
-text = "[font_size=20][color=black]unfortunately,
+text = "[font_size=20][color=black]Unfortunately,
  due to the toxic nature of the gas, we couldn't save her.
 
 I'm so sorry for your loss
@@ -409,10 +406,10 @@ texture = ExtResource("9_erske")
 texture = ExtResource("19_xgqd1")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame3-memory3"]
-offset_left = -203.0
-offset_top = -87.0
-offset_right = -3.99998
-offset_bottom = -30.0
+offset_left = -181.0
+offset_top = -91.0
+offset_right = -26.0
+offset_bottom = -34.0
 rotation = -0.250753
 bbcode_enabled = true
 text = "[color=black]You said she would survive![/color]"
@@ -423,7 +420,6 @@ vertical_alignment = 1
 texture = ExtResource("9_erske")
 
 [node name="Frame3,2-memory3" type="Sprite2D" parent="Memory3" groups=["frame"]]
-visible = false
 texture = ExtResource("20_7a467")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Memory3/Frame3,2-memory3"]
@@ -438,10 +434,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Memory3/Frame3,2-memory3"]
-offset_left = -187.0
-offset_top = -152.0
-offset_right = 12.0
-offset_bottom = -45.0
+offset_left = -169.0
+offset_top = -163.0
+offset_right = -9.0
+offset_bottom = -37.0
 bbcode_enabled = true
 text = "[font_size=20][color=darkred]You told me
 she would 
