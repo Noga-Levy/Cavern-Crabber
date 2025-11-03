@@ -33,7 +33,6 @@ func _ready() -> void:
 	for i in get_tree().get_nodes_in_group("memory"):
 		i.hide()
 		memories.append(i)
-		print("Hidden: ", i)
 	
 	memories_to_levels = {1 : memories[0], 2 : memories[1], 3 : memories[2], 4 : memories[3], 5 : memories[4]}
 	
@@ -43,7 +42,6 @@ func _ready() -> void:
 		if j in memory_of_interest.get_children():
 			frames.append(j)
 			j.hide()
-			print(j.name)
 
 
 func frame_sequence():
@@ -59,7 +57,6 @@ func frame_sequence():
 	
 	for k in frames:
 		k.show()
-		print(k)
 		
 		await down_pressed
 	
@@ -90,7 +87,6 @@ func memory4_sequence():
 	
 	for k in frames:
 		k.show()
-		print(k)
 		
 		if counter <= 2:
 			await get_tree().create_timer(1.8).timeout
@@ -131,7 +127,6 @@ func _on_body_exited(body: Node2D) -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_released("arrow-down") and touching_player and cutscene_in_progress and Global.level != 4:
 		emit_signal("down_pressed")
-		print("down is pressed")
 
 func _input(_event: InputEvent) -> void:
 	if touching_player and Input.is_action_just_released("space") and not cutscene_in_progress:

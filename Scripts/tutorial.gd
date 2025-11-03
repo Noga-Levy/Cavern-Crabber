@@ -12,7 +12,6 @@ func _ready() -> void:
 		frames.append(str(i.name))
 		var current_frame = get_node(str(i))
 		current_frame.hide()
-		print(i.name)
 	
 	last_frame = frames[-1]
 	
