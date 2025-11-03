@@ -39,7 +39,6 @@ func switch_levels():
 
 
 func _on_body_entered(_body: Node2D) -> void:
-	print("body entered")
 	if change_level > current_level:
 		
 		call_deferred("switch_levels")

@@ -18,7 +18,6 @@ func switch_levels():
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("body entered")
 	
 	if Global.is_timer_zero and body.is_in_group("Player"):
 		call_deferred("switch_levels")

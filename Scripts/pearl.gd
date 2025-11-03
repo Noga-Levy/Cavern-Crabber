@@ -25,7 +25,6 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _process(_delta: float) -> void:
 	if selected and Input.is_action_just_released("space"):
-		print("play pearl")
 		emit_signal("pause")
 		play_discussion()
 
@@ -61,7 +60,6 @@ func play_discussion():
 			else:
 				await down_pressed
 		
-		print("next frame")
 		if frame.is_in_group("hide"):
 			frame.hide()
 	

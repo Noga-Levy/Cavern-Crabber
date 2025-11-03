@@ -20,11 +20,17 @@ func _ready() -> void:
 
 
 func frame_sequence():
+	var counter = -1
 	
 	for j in frames:
+		counter += 1
 		var frame_of_interest = get_node(j)
 		frame_of_interest.show()
-			
+		
+		if counter >= 2:
+			var hide_frame = get_node(frames[counter - 2])
+			hide_frame.queue_free()
+		
 		await down_pressed
 		
 	if get_tree().current_scene.name == "basics-of-dungeoneering":
