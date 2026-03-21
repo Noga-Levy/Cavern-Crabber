@@ -533,7 +533,10 @@ theme_override_constants/line_separation = 10
 bbcode_enabled = true
 text = "[i][color=black][font_size=17]There was once was a lady
 who went to the sea.
-She a found crab,
+She found a crab,
+who was oh-so zesty[/font_size][/color][/i][i][color=black][font_size=17]There was once was a lady
+who went to the sea.
+She found a crab,
 who was oh-so zesty[/font_size][/color][/i]"
 horizontal_alignment = 1
 vertical_alignment = 1

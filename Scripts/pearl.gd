@@ -61,7 +61,7 @@ func play_discussion():
 				await down_pressed
 		
 		if frame.is_in_group("hide"):
-			frame.hide()
+			frame.queue_free()
 	
 	$Instructions.hide()
 	$Talk.hide()
