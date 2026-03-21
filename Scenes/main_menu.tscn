@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bhwq6yoi3an1"]
+[gd_scene load_steps=13 format=3 uid="uid://bhwq6yoi3an1"]
 
 [ext_resource type="Texture2D" uid="uid://cvjgiqs8gwerj" path="res://Sprites/main-menu.png" id="1_opfnp"]
 [ext_resource type="Script" uid="uid://07myvaktphlo" path="res://Scripts/start_button.gd" id="2_cp0ys"]
@@ -15,9 +15,7 @@
 size = Vector2(392.5, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlkkf"]
-size = Vector2(3.95e+07, 5.8e+06)
-
-[sub_resource type="GDScript" id="GDScript_t1dhk"]
+size = Vector2(39500000, 5800000)
 
 [node name="Main menu" type="Node2D"]
 
@@ -110,7 +108,6 @@ text = "Use the arrow keys to change the selected button.
 
 Use space to press the button."
 horizontal_alignment = 1
-script = SubResource("GDScript_t1dhk")
 
 [node name="BG-music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_cp0ys")

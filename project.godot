@@ -101,10 +101,6 @@ arrow-right={
 ]
 }
 
-[internationalization]
-
-locale/translations=PackedStringArray("res://translation.en.translation", "res://translation.jp.translation")
-
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

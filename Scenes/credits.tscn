@@ -13,7 +13,7 @@
 size = Vector2(392.5, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bamb"]
-size = Vector2(3.95e+07, 5.8e+06)
+size = Vector2(39500000, 5800000)
 
 [node name="Credits" type="Node2D"]
 
@@ -68,7 +68,7 @@ All other audio is from the Pixabay selection
 Extra thanks to:
 All the lovely souls on Hack Club's #1250-yaps channel ~ thank you so much for keeping me going <3
 
-My DnD group ~ thank you for giving me some sort of manic crab obession. Y'all are the craziest party I've ever had the honor of being a part of
+My DnD group ~ thank you for giving me some sort of manic crab obession. You all are the craziest party I've ever had the honor of being a part of
 
 The organizers of the Shiba game jam ~ thank you for making this possible!
 
