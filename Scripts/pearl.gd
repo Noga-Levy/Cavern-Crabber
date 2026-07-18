@@ -11,6 +11,7 @@ var playing_discussion = false
 
 signal signal_sent()
 
+var in_choice_frame = false
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
@@ -56,6 +57,10 @@ func play_discussion():
 					down_pressed.connect(signal_done)
 				frame.play()
 				await signal_sent
+			elif frame.is_in_group("choice-frame"):
+				in_choice_frame = true
+				await signal_sent
+				in_choice_frame = false
 			else:
 				await down_pressed
 		
@@ -76,6 +81,9 @@ func play_discussion():
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_released("arrow-down"):
 		emit_signal("down_pressed")
+	
+	if Input.is_action_just_released("space") and in_choice_frame:
+		emit_signal("signal_sent")
 
 
 func signal_done():
