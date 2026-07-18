@@ -7,6 +7,7 @@ signal unpause()
 signal down_pressed()
 
 var frames = []
+var playing_discussion = false
 
 signal signal_sent()
 
@@ -24,8 +25,9 @@ func _on_body_exited(body: Node2D) -> void:
 
 
 func _process(_delta: float) -> void:
-	if selected and Input.is_action_just_released("space"):
+	if selected and Input.is_action_just_released("space") and not playing_discussion:
 		emit_signal("pause")
+		playing_discussion = true
 		play_discussion()
 
 
@@ -52,11 +54,8 @@ func play_discussion():
 				if not down_pressed.is_connected(signal_done) and not frame.animation_finished.is_connected(signal_done):
 					frame.animation_finished.connect(signal_done)
 					down_pressed.connect(signal_done)
-				
 				frame.play()
-				
 				await signal_sent
-				
 			else:
 				await down_pressed
 		

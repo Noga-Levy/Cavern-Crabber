@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://4caxopcxwlj4"]
+[gd_scene format=3 uid="uid://4caxopcxwlj4"]
 
 [ext_resource type="Texture2D" uid="uid://dq23lwx10qvvv" path="res://Sprites/Pearl/pearl.png" id="1_mxq4d"]
 [ext_resource type="Script" uid="uid://8yhuwtq8gd1t" path="res://Scripts/pearl.gd" id="1_ysmyw"]
@@ -9,6 +9,12 @@
 [ext_resource type="FontFile" uid="uid://c1as856u5gtjn" path="res://Fonts/Jacquard12-Regular.ttf" id="6_54x0m"]
 [ext_resource type="AudioStream" uid="uid://c5137ldyyyg4w" path="res://Audio/bg-music/kim-lightyear-dolls-and-candy.mp3" id="8_54x0m"]
 [ext_resource type="Texture2D" uid="uid://bg41laoxibvgr" path="res://Sprites/crab-talk.png" id="8_nvkay"]
+[ext_resource type="Script" uid="uid://ca5nefcw3bwld" path="res://Scripts/tutorial-button.gd" id="9_ylsfx"]
+[ext_resource type="Texture2D" uid="uid://b177mopebxnhl" path="res://Sprites/darkness.png" id="10_52e04"]
+[ext_resource type="Script" uid="uid://dk4nxha3m0d4l" path="res://Scripts/tutorial-button-border.gd" id="11_k46e4"]
+[ext_resource type="Texture2D" uid="uid://dt8qctfjajhib" path="res://Sprites/border.png" id="12_7ds30"]
+[ext_resource type="AudioStream" uid="uid://bc67phyy1y0ie" path="res://Audio/buttons/beep.mp3" id="13_8g45n"]
+[ext_resource type="AudioStream" uid="uid://dr0osrqwxfxci" path="res://Audio/buttons/select.mp3" id="14_cik6v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dnrxm"]
 animations = [{
@@ -75,37 +81,43 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Pearl" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v1tji"]
+size = Vector2(198.993, 119.854)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyxpv"]
+size = Vector2(250.801, 125)
+
+[node name="Pearl" type="Node2D" unique_id=748907094]
 process_mode = 3
 script = ExtResource("1_ysmyw")
 
-[node name="Pearl" type="AnimatedSprite2D" parent="."]
+[node name="Pearl" type="AnimatedSprite2D" parent="." unique_id=1852295778]
 sprite_frames = SubResource("SpriteFrames_dnrxm")
 autoplay = "default"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=302233749]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1031264947]
 position = Vector2(-3, -3)
 shape = SubResource("CircleShape2D_mxq4d")
 
-[node name="Talk" type="Node2D" parent="."]
+[node name="Talk" type="Node2D" parent="." unique_id=1386970192]
 visible = false
 z_index = 11
 
-[node name="Pearl-ground" type="Sprite2D" parent="Talk"]
+[node name="Pearl-ground" type="Sprite2D" parent="Talk" unique_id=963344023]
 texture = ExtResource("3_vk3tp")
 
-[node name="Animation-for-text" type="AnimatedSprite2D" parent="Talk"]
+[node name="Animation-for-text" type="AnimatedSprite2D" parent="Talk" unique_id=1000808471]
 sprite_frames = SubResource("SpriteFrames_7kxkd")
 autoplay = "default"
 frame_progress = 0.055885
 
-[node name="Pearl-for-text" type="Sprite2D" parent="Talk" groups=["skippable"]]
+[node name="Pearl-for-text" type="Sprite2D" parent="Talk" unique_id=2084604601 groups=["skippable"]]
 visible = false
 texture = ExtResource("5_ysmyw")
 
-[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text" groups=["hide"]]
+[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text" unique_id=219780864 groups=["hide"]]
 visible = false
 offset_left = -250.0
 offset_top = -198.0
@@ -117,7 +129,7 @@ bbcode_enabled = true
 text = "[font_size=80]Hello Akamo[/font_size]"
 horizontal_alignment = 1
 
-[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text"]
+[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text" unique_id=1076976574]
 offset_left = -502.0
 offset_top = -198.0
 offset_right = 502.0
@@ -128,12 +140,12 @@ bbcode_enabled = true
 text = "[font_size=80]Lovely to see you alive[/font_size]"
 horizontal_alignment = 1
 
-[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text"]
+[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text" unique_id=196638494]
 position = Vector2(1, 57)
 scale = Vector2(0.825, 0.825)
 texture = ExtResource("8_nvkay")
 
-[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text/Crab-talk" groups=["skippable"]]
+[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text/Crab-talk" unique_id=1589250107 groups=["skippable"]]
 offset_left = -293.0
 offset_top = 107.0
 offset_right = 419.0
@@ -143,12 +155,11 @@ text = "[font_size=24][color=black]Uh, lovely to be alive.
 Are you the... creature? thing?... that gave me my last memory?[/color][/font_size]"
 horizontal_alignment = 1
 
-[node name="Pearl-for-text2" type="Sprite2D" parent="Talk" groups=["skippable"]]
+[node name="Pearl-for-text2" type="Sprite2D" parent="Talk" unique_id=77023636 groups=["skippable"]]
 visible = false
 texture = ExtResource("5_ysmyw")
 
-[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text2" groups=["hide"]]
-visible = false
+[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text2" unique_id=365495062 groups=["hide"]]
 offset_left = -415.0
 offset_top = -198.0
 offset_right = 413.0
@@ -159,7 +170,7 @@ bbcode_enabled = true
 text = "[font_size=80]I am not a creature[/font_size]"
 horizontal_alignment = 1
 
-[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text2" groups=["hide"]]
+[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text2" unique_id=1843363036 groups=["hide"]]
 visible = false
 offset_left = -415.0
 offset_top = -198.0
@@ -171,7 +182,8 @@ bbcode_enabled = true
 text = "[font_size=80]Nor am I a \"thing\"[/font_size]"
 horizontal_alignment = 1
 
-[node name="3" type="RichTextLabel" parent="Talk/Pearl-for-text2"]
+[node name="3" type="RichTextLabel" parent="Talk/Pearl-for-text2" unique_id=152744792]
+visible = false
 offset_left = -481.0
 offset_top = -197.0
 offset_right = 482.0
@@ -182,134 +194,114 @@ bbcode_enabled = true
 text = "[font_size=70]But yes. I inserted that mushroom[/font_size]"
 horizontal_alignment = 1
 
-[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text2"]
+[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text2" unique_id=1846337352]
 position = Vector2(1, 57)
 scale = Vector2(0.825, 0.825)
 texture = ExtResource("8_nvkay")
 
-[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text2/Crab-talk" groups=["skippable"]]
+[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text2/Crab-talk" unique_id=1548576772 groups=["skippable"]]
 offset_left = -293.0
 offset_top = 107.0
 offset_right = 419.0
 offset_bottom = 211.0
 bbcode_enabled = true
-text = "[font_size=24][color=black]In which case, thank you. It's... comforting to know how I got here.
+text = "[font_size=27][color=black]In which case, thank you. It's... comforting to know how I got here.
 [/color][/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Crab-talk2" type="Sprite2D" parent="Talk/Pearl-for-text2"]
+[node name="Pearl-for-text3" type="Sprite2D" parent="Talk" unique_id=321600654 groups=["skippable"]]
+visible = false
+texture = ExtResource("5_ysmyw")
+
+[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text3" unique_id=1546015042 groups=["hide"]]
+offset_left = -415.0
+offset_top = -198.0
+offset_right = 413.0
+offset_bottom = -89.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=55]Hmm. It is not often that I am thanked.[/font_size]"
+horizontal_alignment = 1
+
+[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text3" unique_id=467331540]
+offset_left = -415.0
+offset_top = -198.0
+offset_right = 413.0
+offset_bottom = -89.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=40]I suppose, just as there is a last for everything, there is a first, too. [/font_size]"
+horizontal_alignment = 1
+
+[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text3" unique_id=1384617483]
 position = Vector2(1, 57)
 scale = Vector2(0.825, 0.825)
 texture = ExtResource("8_nvkay")
 
-[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text2/Crab-talk2" groups=["skippable"]]
+[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text3/Crab-talk" unique_id=604454075 groups=["skippable"]]
 offset_left = -293.0
 offset_top = 107.0
 offset_right = 419.0
 offset_bottom = 211.0
 bbcode_enabled = true
-text = "[font_size=24][color=black]Though I am disturbed that, unwittingly, 
-I am continuing what evil-me started.
+text = "[font_size=25][color=black]I... I apologize, I'm afraid I don't quite understand.[/color][/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pearl-for-text4" type="Sprite2D" parent="Talk" unique_id=1953413352 groups=["skippable"]]
+visible = false
+texture = ExtResource("5_ysmyw")
+
+[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text4" unique_id=350639769 groups=["hide"]]
+visible = false
+offset_left = -415.0
+offset_top = -198.0
+offset_right = 413.0
+offset_bottom = -89.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=40]Well, I may just have time to entertain this one question--[/font_size]"
+horizontal_alignment = 1
+
+[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text4" unique_id=1787786367]
+visible = false
+offset_left = -415.0
+offset_top = -198.0
+offset_right = 413.0
+offset_bottom = -89.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=40]I more often hear the eulogies for the souls I escort to peace than I hear thanks for any job of mine.[/font_size]"
+horizontal_alignment = 1
+
+[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text4" unique_id=135767516]
+position = Vector2(1, 57)
+scale = Vector2(0.825, 0.825)
+texture = ExtResource("8_nvkay")
+
+[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text4/Crab-talk" unique_id=1158418957 groups=["skippable"]]
+offset_left = -293.0
+offset_top = 107.0
+offset_right = 419.0
+offset_bottom = 211.0
+bbcode_enabled = true
+text = "[font_size=35][color=black]ARE YOU THE EMBODIMENT OF LIFE?!
 [/color][/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Pearl-for-text3" type="Sprite2D" parent="Talk" groups=["skippable"]]
+[node name="Pearl-for-text5" type="Sprite2D" parent="Talk" unique_id=129832735 groups=["skippable"]]
 visible = false
 texture = ExtResource("5_ysmyw")
 
-[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text3"]
-offset_left = -415.0
-offset_top = -198.0
-offset_right = 413.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
-bbcode_enabled = true
-text = "[font_size=60]Are you truly doing such a thing?[/font_size]"
-horizontal_alignment = 1
-
-[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text3"]
-position = Vector2(1, 57)
-scale = Vector2(0.825, 0.825)
-texture = ExtResource("8_nvkay")
-
-[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text3/Crab-talk" groups=["skippable"]]
-offset_left = -293.0
-offset_top = 107.0
-offset_right = 419.0
-offset_bottom = 211.0
-bbcode_enabled = true
-text = "[font_size=25][color=black]Aren't I?
-I went into the dungeon of decay, and am now battling my way through to survive.[/color][/font_size]"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Crab-talk2" type="Sprite2D" parent="Talk/Pearl-for-text3"]
-position = Vector2(1, 57)
-scale = Vector2(0.825, 0.825)
-texture = ExtResource("8_nvkay")
-
-[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text3/Crab-talk2" groups=["skippable"]]
-offset_left = -293.0
-offset_top = 107.0
-offset_right = 419.0
-offset_bottom = 211.0
-bbcode_enabled = true
-text = "[font_size=40][color=black]Just as the old Akamo intended.[/color][/font_size]"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Pearl-for-text4" type="Sprite2D" parent="Talk" groups=["skippable"]]
+[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text5" unique_id=376373236 groups=["hide"]]
 visible = false
-texture = ExtResource("5_ysmyw")
-
-[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text4" groups=["hide"]]
-visible = false
-offset_left = -415.0
-offset_top = -198.0
-offset_right = 413.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
-bbcode_enabled = true
-text = "[font_size=60]You work under a false assumption[/font_size]"
-horizontal_alignment = 1
-
-[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text4"]
-offset_left = -415.0
-offset_top = -198.0
-offset_right = 413.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
-bbcode_enabled = true
-text = "[font_size=60]That is a folly on your end.[/font_size]"
-horizontal_alignment = 1
-
-[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text4"]
-position = Vector2(1, 57)
-scale = Vector2(0.825, 0.825)
-texture = ExtResource("8_nvkay")
-
-[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text4/Crab-talk" groups=["skippable"]]
-offset_left = -293.0
-offset_top = 107.0
-offset_right = 419.0
-offset_bottom = 211.0
-bbcode_enabled = true
-text = "[font_size=25][color=black]I... what? What do you mean?[/color][/font_size]"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Pearl-for-text5" type="Sprite2D" parent="Talk" groups=["skippable"]]
-texture = ExtResource("5_ysmyw")
-
-[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text5" groups=["hide"]]
 offset_left = -480.0
 offset_top = -198.0
 offset_right = 480.0
@@ -317,10 +309,53 @@ offset_bottom = -52.0
 theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
 theme_override_fonts/normal_font = ExtResource("6_54x0m")
 bbcode_enabled = true
-text = "[font_size=48]Your young self would have menaced the shopkeep,[/font_size]"
+text = "[font_size=60]Ha! No, nothing so demurely appreciated.[/font_size]"
 horizontal_alignment = 1
 
-[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text5" groups=["hide"]]
+[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text5" unique_id=480236288 groups=["hide"]]
+visible = false
+offset_left = -481.0
+offset_top = -213.0
+offset_right = 480.0
+offset_bottom = -104.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=50]I am merely the diplomat between the living and dead.[/font_size]"
+horizontal_alignment = 1
+
+[node name="3" type="RichTextLabel" parent="Talk/Pearl-for-text5" unique_id=2111470039]
+offset_left = -457.0
+offset_top = -213.0
+offset_right = 458.0
+offset_bottom = -104.0
+theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
+theme_override_fonts/normal_font = ExtResource("6_54x0m")
+bbcode_enabled = true
+text = "[font_size=55]Which brings me to the reason you are here.[/font_size]"
+horizontal_alignment = 1
+
+[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text5" unique_id=134596775]
+position = Vector2(1, 57)
+scale = Vector2(0.825, 0.825)
+texture = ExtResource("8_nvkay")
+
+[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text5/Crab-talk" unique_id=1894452993 groups=["skippable"]]
+offset_left = -293.0
+offset_top = 107.0
+offset_right = 419.0
+offset_bottom = 211.0
+bbcode_enabled = true
+text = "[font_size=50][color=black]?!
+[/color][/font_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pearl-for-text6" type="Sprite2D" parent="Talk" unique_id=1113749243 groups=["skippable"]]
+texture = ExtResource("5_ysmyw")
+
+[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text6" unique_id=980634701 groups=["hide"]]
 visible = false
 offset_left = -481.0
 offset_top = -198.0
@@ -329,91 +364,34 @@ offset_bottom = -89.0
 theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
 theme_override_fonts/normal_font = ExtResource("6_54x0m")
 bbcode_enabled = true
-text = "[font_size=60]tortured the creatures in this dungeon,[/font_size]"
+text = "[font_size=45]In your grief, you have killed too many. I cannot let you walk free.[/font_size]"
 horizontal_alignment = 1
 
-[node name="3" type="RichTextLabel" parent="Talk/Pearl-for-text5" groups=["hide"]]
+[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text6" unique_id=1480200730 groups=["hide"]]
 visible = false
-offset_left = -457.0
+offset_left = -481.0
 offset_top = -198.0
-offset_right = 458.0
+offset_right = 480.0
 offset_bottom = -89.0
 theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
 theme_override_fonts/normal_font = ExtResource("6_54x0m")
 bbcode_enabled = true
-text = "[font_size=60]and would have stolen me for his spell[/font_size]"
+text = "[font_size=45]But! I can give you a choice. I can bring peace to those either your late owner or those you killed.[/font_size]"
 horizontal_alignment = 1
 
-[node name="4" type="RichTextLabel" parent="Talk/Pearl-for-text5"]
-visible = false
-offset_left = -415.0
-offset_top = -198.0
-offset_right = 413.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
-bbcode_enabled = true
-text = "[font_size=60]Have you done any of that?[/font_size]"
-horizontal_alignment = 1
-
-[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text5"]
-position = Vector2(1, 57)
-scale = Vector2(0.825, 0.825)
-texture = ExtResource("8_nvkay")
-
-[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text5/Crab-talk" groups=["skippable"]]
-offset_left = -293.0
-offset_top = 107.0
-offset_right = 419.0
-offset_bottom = 211.0
-bbcode_enabled = true
-text = "[font_size=25][color=black]NO! NO, absolutely not!
-Why would I steal you for immortality?
-[/color][/font_size]"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Pearl-for-text6" type="Sprite2D" parent="Talk" groups=["skippable"]]
-texture = ExtResource("5_ysmyw")
-
-[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text6" groups=["hide"]]
-visible = false
-offset_left = -502.0
-offset_top = -198.0
-offset_right = 502.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
-bbcode_enabled = true
-text = "[font_size=60]The same as I brought you to this world,[/font_size]"
-horizontal_alignment = 1
-
-[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text6" groups=["hide"]]
-visible = false
-offset_left = -502.0
-offset_top = -198.0
-offset_right = 502.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
-bbcode_enabled = true
-text = "[font_size=70]I took your late owner out.[/font_size]"
-horizontal_alignment = 1
-
-[node name="3" type="RichTextLabel" parent="Talk/Pearl-for-text6" groups=["hide"]]
-offset_left = -502.0
+[node name="3" type="RichTextLabel" parent="Talk/Pearl-for-text6" unique_id=807923682 groups=["hide"]]
+offset_left = -480.0
 offset_top = -217.0
-offset_right = 502.0
+offset_right = 480.0
 offset_bottom = -108.0
 theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
 theme_override_fonts/normal_font = ExtResource("6_54x0m")
 bbcode_enabled = true
-text = "[font_size=60]Thus, it is only logical to assume[/font_size]"
+text = "[font_size=50]Before my servants dispose of you, which would you like me to consign to rest? [/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="4" type="RichTextLabel" parent="Talk/Pearl-for-text6"]
+[node name="4" type="RichTextLabel" parent="Talk/Pearl-for-text6" unique_id=1926037932]
 visible = false
 offset_left = -502.0
 offset_top = -198.0
@@ -425,93 +403,95 @@ bbcode_enabled = true
 text = "[font_size=70]that I could guide her back.[/font_size]"
 horizontal_alignment = 1
 
-[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text6"]
+[node name="Crab-talk" type="Sprite2D" parent="Talk/Pearl-for-text6" unique_id=172159993]
 position = Vector2(1, 57)
 scale = Vector2(0.825, 0.825)
 texture = ExtResource("8_nvkay")
 
-[node name="show" type="RichTextLabel" parent="Talk/Pearl-for-text6/Crab-talk" groups=["skippable"]]
-offset_left = -293.0
-offset_top = 107.0
-offset_right = 419.0
-offset_bottom = 211.0
+[node name="nope" type="Area2D" parent="Talk/Pearl-for-text6/Crab-talk" unique_id=127102114]
+position = Vector2(220, 179.00002)
+scale = Vector2(1.57292, 0.75925905)
+script = ExtResource("9_ylsfx")
+
+[node name="no" type="Sprite2D" parent="Talk/Pearl-for-text6/Crab-talk/nope" unique_id=495012517]
+texture = ExtResource("10_52e04")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk/Pearl-for-text6/Crab-talk/nope" unique_id=1029883112]
+position = Vector2(-0.317879, 0.658432)
+shape = SubResource("RectangleShape2D_v1tji")
+
+[node name="no-text" type="RichTextLabel" parent="Talk/Pearl-for-text6/Crab-talk" unique_id=118286490]
+offset_left = 78.0
+offset_top = 138.00002
+offset_right = 361.0
+offset_bottom = 220.00002
 bbcode_enabled = true
-text = "[font_size=40][color=black]Are you the embodiment of life?![/color][/font_size]"
+text = "[font_size=25]...Those I killed.[/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="Pearl-for-text7" type="Sprite2D" parent="Talk" groups=["skippable"]]
-visible = false
-texture = ExtResource("5_ysmyw")
+[node name="yep" type="Area2D" parent="Talk/Pearl-for-text6/Crab-talk" unique_id=1018861294]
+position = Vector2(-145.00002, 179.00002)
+scale = Vector2(1.57292, 0.75925905)
+script = ExtResource("9_ylsfx")
 
-[node name="1" type="RichTextLabel" parent="Talk/Pearl-for-text7" groups=["hide"]]
-visible = false
-offset_left = -470.0
-offset_top = -198.0
-offset_right = 487.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
+[node name="yes" type="Sprite2D" parent="Talk/Pearl-for-text6/Crab-talk/yep" unique_id=1858953035]
+texture = ExtResource("10_52e04")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk/Pearl-for-text6/Crab-talk/yep" unique_id=173727475]
+position = Vector2(-0.317879, 0.658432)
+shape = SubResource("RectangleShape2D_v1tji")
+
+[node name="yes-text" type="RichTextLabel" parent="Talk/Pearl-for-text6/Crab-talk" unique_id=859788904]
+offset_left = -296.0
+offset_top = 138.00002
+offset_right = 5.0
+offset_bottom = 220.00002
 bbcode_enabled = true
-text = "[font_size=80]Not quite.[/font_size]"
+text = "[font_size=25]... My owner.[/font_size]"
 horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="2" type="RichTextLabel" parent="Talk/Pearl-for-text7" groups=["hide"]]
-visible = false
-offset_left = -502.0
-offset_top = -198.0
-offset_right = 502.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
+[node name="border" type="Area2D" parent="Talk/Pearl-for-text6/Crab-talk" unique_id=617842310 groups=["select-button"]]
+position = Vector2(-145.00002, 180)
+scale = Vector2(1.248, 0.736)
+script = ExtResource("11_k46e4")
+
+[node name="Border" type="Sprite2D" parent="Talk/Pearl-for-text6/Crab-talk/border" unique_id=1036509922]
+texture = ExtResource("12_7ds30")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk/Pearl-for-text6/Crab-talk/border" unique_id=870321209]
+position = Vector2(0.400627, -1.35869)
+shape = SubResource("RectangleShape2D_dyxpv")
+
+[node name="Change-button" type="AudioStreamPlayer" parent="Talk/Pearl-for-text6/Crab-talk/border" unique_id=192198434]
+stream = ExtResource("13_8g45n")
+
+[node name="Select-button" type="AudioStreamPlayer" parent="Talk/Pearl-for-text6/Crab-talk/border" unique_id=369041248]
+stream = ExtResource("14_cik6v")
+
+[node name="instructions" type="RichTextLabel" parent="Talk/Pearl-for-text6/Crab-talk" unique_id=1708487831]
+modulate = Color(0, 0, 0, 1)
+offset_left = -328.00003
+offset_top = 87.0
+offset_right = 405.99997
+offset_bottom = 220.0
 bbcode_enabled = true
-text = "[font_size=70]I am merely the escort to and fro.[/font_size]"
+text = "[font_size=14]*change the selected option with the left and right arrow keys.*
+*Press space to confirm your choice*[/font_size]"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="3" type="RichTextLabel" parent="Talk/Pearl-for-text7" groups=["hide"]]
-visible = false
-offset_left = -502.0
-offset_top = -198.0
-offset_right = 502.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
-bbcode_enabled = true
-text = "[font_size=60]Hmm... Akamo, it seems we are out of time[/font_size]"
-horizontal_alignment = 1
-
-[node name="4" type="RichTextLabel" parent="Talk/Pearl-for-text7" groups=["hide"]]
-visible = false
-offset_left = -502.0
-offset_top = -198.0
-offset_right = 502.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
-bbcode_enabled = true
-text = "[font_size=70]I will speak to you again soon.[/font_size]"
-horizontal_alignment = 1
-
-[node name="5" type="RichTextLabel" parent="Talk/Pearl-for-text7"]
-visible = false
-offset_left = -502.0
-offset_top = -198.0
-offset_right = 502.0
-offset_bottom = -89.0
-theme_override_colors/default_color = Color(0.278431, 0.278431, 0.243137, 1)
-theme_override_fonts/normal_font = ExtResource("6_54x0m")
-bbcode_enabled = true
-text = "[font_size=70]More coming eventually[/font_size]"
-horizontal_alignment = 1
-
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=370523171]
 zoom = Vector2(1.2, 1.2)
 
-[node name="BGmusic" type="AudioStreamPlayer" parent="."]
+[node name="BGmusic" type="AudioStreamPlayer" parent="." unique_id=1585216340]
 stream = ExtResource("8_54x0m")
 bus = &"ReverbBus"
 
-[node name="Instructions" type="RichTextLabel" parent="."]
+[node name="Instructions" type="RichTextLabel" parent="." unique_id=892209171]
 z_index = 12
 offset_left = -474.0
 offset_top = -264.0
@@ -524,3 +504,5 @@ to continue [/color]"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]
+[connection signal="selected" from="Talk/Pearl-for-text6/Crab-talk/nope" to="Talk/Pearl-for-text6/Crab-talk/border" method="_on_nope_selected"]
+[connection signal="selected" from="Talk/Pearl-for-text6/Crab-talk/yep" to="Talk/Pearl-for-text6/Crab-talk/border" method="_on_yep_selected"]

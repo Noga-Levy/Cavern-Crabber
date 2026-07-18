@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://df2e3nhs4i4iy"]
+[gd_scene format=3 uid="uid://df2e3nhs4i4iy"]
 
 [ext_resource type="Script" uid="uid://y0scek30hvu" path="res://Scripts/pause-game.gd" id="1_26dk1"]
 [ext_resource type="PackedScene" uid="uid://coeqwi0sejihi" path="res://Scenes/player.tscn" id="1_hvaeu"]
@@ -31,99 +31,99 @@ size = Vector2(33.68, 13.12)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hproo"]
 size = Vector2(310, 82)
 
-[node name="Level_5" type="Node2D"]
+[node name="Level_5" type="Node2D" unique_id=726099704]
 script = ExtResource("1_26dk1")
 
-[node name="Player" parent="." instance=ExtResource("1_hvaeu")]
+[node name="Player" parent="." unique_id=994106557 instance=ExtResource("1_hvaeu")]
 position = Vector2(88, 0)
 
-[node name="info" parent="." instance=ExtResource("3_68k2k")]
+[node name="info" parent="." unique_id=522244322 instance=ExtResource("3_68k2k")]
 
-[node name="level5-bg-music" type="AudioStreamPlayer" parent="."]
+[node name="level5-bg-music" type="AudioStreamPlayer" parent="." unique_id=574189140]
 stream = ExtResource("12_68k2k")
 autoplay = true
 script = ExtResource("4_ip5ew")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="." unique_id=880700066]
 position = Vector2(-14, -28)
 
-[node name="Cracks" type="Sprite2D" parent="Node2D"]
+[node name="Cracks" type="Sprite2D" parent="Node2D" unique_id=1857638023]
 texture_filter = 1
 position = Vector2(118, -1910)
 scale = Vector2(11.5, 11.5)
 texture = ExtResource("10_xfwg7")
 
-[node name="White" type="Sprite2D" parent="Node2D"]
+[node name="White" type="Sprite2D" parent="Node2D" unique_id=1134653321]
 position = Vector2(509, -1097)
 scale = Vector2(1, 58.36)
 texture = ExtResource("3_ihmlp")
 
-[node name="White2" type="Sprite2D" parent="Node2D"]
+[node name="White2" type="Sprite2D" parent="Node2D" unique_id=1588724490]
 position = Vector2(-308, -1097)
 scale = Vector2(1, 58.36)
 texture = ExtResource("3_ihmlp")
 
-[node name="White3" type="Sprite2D" parent="Node2D"]
+[node name="White3" type="Sprite2D" parent="Node2D" unique_id=1109081177]
 position = Vector2(100.79, 312)
 rotation = 1.5708
 scale = Vector2(1, 18.331)
 texture = ExtResource("3_ihmlp")
 
-[node name="White4" type="Sprite2D" parent="Node2D"]
+[node name="White4" type="Sprite2D" parent="Node2D" unique_id=905401354]
 position = Vector2(100.79, -2554)
 rotation = 1.5708
 scale = Vector2(1, 18.331)
 texture = ExtResource("3_ihmlp")
 
-[node name="Collisions" type="StaticBody2D" parent="Node2D"]
+[node name="Collisions" type="StaticBody2D" parent="Node2D" unique_id=122897148]
 script = ExtResource("6_mb3x2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Collisions"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Collisions" unique_id=1647529574]
 position = Vector2(-308, -1096.5)
 shape = SubResource("RectangleShape2D_68k2k")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Collisions"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Collisions" unique_id=2010261275]
 position = Vector2(509, -1096.5)
 shape = SubResource("RectangleShape2D_r8l1h")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Collisions"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/Collisions" unique_id=1516828870]
 position = Vector2(100.5, 312.5)
 shape = SubResource("RectangleShape2D_xfwg7")
 
-[node name="Broken-block" type="Sprite2D" parent="Node2D/Collisions"]
+[node name="Broken-block" type="Sprite2D" parent="Node2D/Collisions" unique_id=940559756]
 texture_filter = 1
 position = Vector2(101, -1117)
 scale = Vector2(6.25, 6.25)
 texture = ExtResource("7_02esc")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D/Collisions/Broken-block"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D/Collisions/Broken-block" unique_id=127473627]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Collisions/Broken-block/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Collisions/Broken-block/StaticBody2D" unique_id=474144301]
 position = Vector2(-41.72, 0)
 shape = SubResource("RectangleShape2D_02esc")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Collisions/Broken-block/StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Collisions/Broken-block/StaticBody2D" unique_id=2046424606]
 position = Vector2(40.6, 0)
 shape = SubResource("RectangleShape2D_gfyxx")
 
-[node name="White4" type="Sprite2D" parent="Node2D/Collisions"]
+[node name="White4" type="Sprite2D" parent="Node2D/Collisions" unique_id=1346276038]
 position = Vector2(100.29, -1116.92)
 rotation = 1.5708
 scale = Vector2(0.813494, 18.351)
 texture = ExtResource("3_ihmlp")
 
-[node name="Opening-wall" type="CollisionShape2D" parent="Node2D/Collisions"]
+[node name="Opening-wall" type="CollisionShape2D" parent="Node2D/Collisions" unique_id=1337819644]
 position = Vector2(95, -1117)
 shape = SubResource("RectangleShape2D_hproo")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Collisions"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/Collisions" unique_id=622086865]
 position = Vector2(100.5, -2555)
 shape = SubResource("RectangleShape2D_xfwg7")
 
-[node name="Memories" parent="." instance=ExtResource("5_hproo")]
+[node name="Memories" parent="." unique_id=556029298 instance=ExtResource("5_hproo")]
 position = Vector2(80, -1002)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2071015795]
 offset_left = -192.0
 offset_top = -950.0
 offset_right = 378.0
@@ -134,7 +134,7 @@ text = "[font_size=50]I offer you a boon
 before you meet me, Akamo.[/font_size]"
 horizontal_alignment = 1
 
-[node name="Pearl" parent="." instance=ExtResource("11_r8l1h")]
+[node name="Pearl" parent="." unique_id=512126635 instance=ExtResource("11_r8l1h")]
 position = Vector2(57, -2428)
 
 [connection signal="pause" from="Memories" to="." method="_on_mush_pause"]
