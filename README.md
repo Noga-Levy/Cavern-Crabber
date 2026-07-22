@@ -21,25 +21,24 @@ Made for (and somehow won) the Shiba Game Jam by Hack Club.
 ## Gameplay
 Control an amnesiac crab through an eerie, decaying dungeon.
 
-Advance past mutated enemies, deadly traps, and environmental hazards to reach next floor of the dungeon.
+Advance past mutated enemies, deadly traps, and environmental hazards to reach the next floor of the dungeon.
 
-Explore the ecosytems in each level, and do your best to survive without losing yourself to your old memories.
+Explore the ecosystems in each level, and do your best to survive without losing yourself to your old memories.
 
 Finale is a WIP, though it should be complete by late 2026.
 
 ## Website
 To play, head on over to https://shiba.hackclub.com/games/U09B7QHNGCC/Cavern%20Crabber and play the most recent version.
 
-Alternatively, go to the terminal and run
+Alternatively, clone the repository and import the folder into the Godot Editor:
 
 ```
 git clone https://github.com/Noga-Levy/Cavern-Crabber
-run main_menu.tscn
 ```
 
 ## Themes
 
-The game found inspiration from the cliche trope of [Lost Pet Grievance](https://tvtropes.org/pmwiki/pmwiki.php/Main/LostPetGrievance)--rather of following the tried-and-true format, Cavern Crabber decided to flip that on its head. What if the **pet** lost their owner? With that, Cavern Crabber was born.
+The game found inspiration from the cliché trope of [Lost Pet Grievance](https://tvtropes.org/pmwiki/pmwiki.php/Main/LostPetGrievance)--rather than following the tried-and-true format, Cavern Crabber decided to flip that on its head. What if the **pet** lost their owner? With that, Cavern Crabber was born.
 
 From there, a myriad of features--all wrapped in hilarious dialogue and a silly style--came into play, including:
 - Memory reveals each level, uncovering the backstory of our beloved crab.
